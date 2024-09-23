@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
