@@ -7,7 +7,10 @@ reg [7:0]   rDIn;
 reg [31:0]  rADR;
 wire [31:0] wDAT;
 reg         rSTB;
+<<<<<<< HEAD
 reg         iWE;
+=======
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
 wire        wACK;
 
 // Instantiate DigInPort module
@@ -18,7 +21,10 @@ DigInPort UUT (
     .iADR(rADR),
     .oDAT(wDAT),
     .iSTB(rSTB),
+<<<<<<< HEAD
     .iWE(iWE),
+=======
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
     .oACK(wACK)
 );
 
@@ -32,7 +38,10 @@ initial begin
     rADR <= 32'h0000_0000;
     rSTB <= 1'b0;
     rDIn <= 8'h00;
+<<<<<<< HEAD
     iWE <= 1'b0;
+=======
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
     
     // Release reset after 20ns
     #20 rRST <= 1'b0;

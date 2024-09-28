@@ -1,6 +1,10 @@
 
 { 
+<<<<<<< HEAD
     crc :  9001636310343451136  , 
+=======
+    crc :  11031616614589830047  , 
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
     ccp_crc :  0  , 
     cmdline : " -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl" , 
     buildDate : "May 24 2019" , 

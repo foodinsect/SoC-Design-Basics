@@ -3,14 +3,22 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
+<<<<<<< HEAD
       <db_ref path="tb_CombinedIP_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="tb_CombinedIP" />
+=======
+      <db_ref path="tb_DigInPort_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_DigInPort" />
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
+<<<<<<< HEAD
       <ZoomStartTime time="0fs"></ZoomStartTime>
       <ZoomEndTime time="338974359fs"></ZoomEndTime>
       <Cursor1Time time="190000000fs"></Cursor1Time>
@@ -270,4 +278,59 @@
       <obj_property name="ElementShortName">sync3[7:0]</obj_property>
       <obj_property name="ObjectShortName">sync3[7:0]</obj_property>
    </wvobject>
+=======
+      <ZoomStartTime time="31636830fs"></ZoomStartTime>
+      <ZoomEndTime time="177436831fs"></ZoomEndTime>
+      <Cursor1Time time="177337000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="207"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/tb_DigInPort/rRST" type="logic">
+      <obj_property name="ElementShortName">rRST</obj_property>
+      <obj_property name="ObjectShortName">rRST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/rCLK" type="logic">
+      <obj_property name="ElementShortName">rCLK</obj_property>
+      <obj_property name="ObjectShortName">rCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/rDIn" type="array">
+      <obj_property name="ElementShortName">rDIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rDIn[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/rADR" type="array">
+      <obj_property name="ElementShortName">rADR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rADR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/wDAT" type="array">
+      <obj_property name="ElementShortName">wDAT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wDAT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/rSTB" type="logic">
+      <obj_property name="ElementShortName">rSTB</obj_property>
+      <obj_property name="ObjectShortName">rSTB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/wACK" type="logic">
+      <obj_property name="ElementShortName">wACK</obj_property>
+      <obj_property name="ObjectShortName">wACK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/UUT/sync1" type="array">
+      <obj_property name="ElementShortName">sync1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sync1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/UUT/sync2" type="array">
+      <obj_property name="ElementShortName">sync2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sync2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/UUT/sync3" type="array">
+      <obj_property name="ElementShortName">sync3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sync3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_DigInPort/UUT/wSel" type="logic">
+      <obj_property name="ElementShortName">wSel</obj_property>
+      <obj_property name="ObjectShortName">wSel</obj_property>
+   </wvobject>
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
 </wave_config>

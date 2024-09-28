@@ -11,12 +11,18 @@ module ConstReg #(
 (
     input           iRST,       // Reset input
     input           iCLK,       // Clock input
+<<<<<<< HEAD
     
     input   [31:0]  iADR,       // Address input
     output  [31:0]  oDAT,       // Data output (read value)
     
     input           iSTB,       // Strobe signal (active high)
     input           iWE,        // Write Enable (Read or Write Signal)
+=======
+    input   [31:0]  iADR,       // Address input
+    output  [31:0]  oDAT,       // Data output (read value)
+    input           iSTB,       // Strobe signal (active high)
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
     output          oACK        // Acknowledge signal (S -> M)
 );
 
@@ -31,9 +37,15 @@ assign wSel3 = iSTB & (iADR == BaseAddrC); // 3rd const Address
 assign oACK = wSel1 | wSel2 | wSel3;
 
 // Data output based on address
+<<<<<<< HEAD
 assign oDAT = (wSel1 & ~iWE) ? ID_VER1 :
               (wSel2 & ~iWE) ? ID_VER2 :
               (wSel3 & ~iWE) ? ID_VER3 :
+=======
+assign oDAT = (wSel1) ? ID_VER1 :
+              (wSel2) ? ID_VER2 :
+              (wSel3) ? ID_VER3 :
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
               32'hzzzzzzzz;  // High impedance for invalid addresses
 
 endmodule

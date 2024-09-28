@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SimLab01/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ConstReg
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SimLab01/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
@@ -11,4 +12,19 @@ INFO: [VRFC 10-311] analyzing module tb_ConstReg
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_DigInPort
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" into library xil_defaultlib
+=======
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" into library xil_defaultlib
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
 INFO: [VRFC 10-311] analyzing module tb_CombinedIP

@@ -14,6 +14,10 @@ reg         rWE;
 wire        wACK_OutPort;
 wire        wACK_ConstReg;
 wire        wACK_InPort;
+<<<<<<< HEAD
+=======
+wire        wACK_Final;
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
 wire [7:0]  wDOUTA, wDOUTB, wDOUTC;
 reg  [7:0]  rDIn;
 
@@ -50,7 +54,10 @@ ConstReg #(
     .iADR(rADR),
     .oDAT(wDAT_ConstReg),
     .iSTB(rSTB),
+<<<<<<< HEAD
     .iWE(rWE),
+=======
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
     .oACK(wACK_ConstReg)
 );
 
@@ -64,13 +71,28 @@ DigInPort #(
     .iADR(rADR),
     .oDAT(wDAT_InPort),
     .iSTB(rSTB),
+<<<<<<< HEAD
     .iWE(rWE),
+=======
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
     .oACK(wACK_InPort)
 );
 
 // Clock generation
 always #5 rCLK = ~rCLK;
 
+<<<<<<< HEAD
+=======
+// Final ACK signal: combination of all ACK signals
+assign wACK_Final = wACK_OutPort | wACK_ConstReg | wACK_InPort;
+
+// Final Data output
+wire [31:0] wDAT_Final = wACK_OutPort ? wDAT_OutPort :
+                         wACK_ConstReg ? wDAT_ConstReg :
+                         wACK_InPort ? wDAT_InPort :
+                         32'hzzzzzzzz;
+
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
 initial begin
     // Initialize signals
     rRST <= 1'b1;
@@ -91,6 +113,7 @@ initial begin
     rDAT <= 32'h0000_0012;
     #10 rSTB <= 1'b0;
     rWE <= 1'b0;
+<<<<<<< HEAD
 
     // Test DigOutPort: Read from 0x0200_0000
     #50 rSTB <= 1'b1;
@@ -98,6 +121,9 @@ initial begin
     rWE <= 1'b0;
     #10 rSTB <= 1'b0;
 
+=======
+    
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
     // Test ConstReg: Read from 0x0200_0100
     #50 rSTB <= 1'b1;
     rADR <= 32'h0200_0100;

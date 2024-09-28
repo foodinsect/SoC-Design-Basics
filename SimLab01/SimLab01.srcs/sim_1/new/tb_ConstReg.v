@@ -6,7 +6,10 @@ reg         rCLK;
 reg [31:0]  rADR;
 wire [31:0] wDAT;
 reg         rSTB;
+<<<<<<< HEAD
 reg         iWE;
+=======
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
 wire        wACK;
 
 // Instantiate ConstReg module
@@ -16,7 +19,10 @@ ConstReg UUT (
     .iADR(rADR),
     .oDAT(wDAT),
     .iSTB(rSTB),
+<<<<<<< HEAD
     .iWE(iWE),
+=======
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
     .oACK(wACK)
 );
 
@@ -29,7 +35,10 @@ initial begin
     rCLK <= 1'b1;
     rADR <= 32'h0000_0000;
     rSTB <= 1'b0;
+<<<<<<< HEAD
     iWE <= 1'b0;
+=======
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
     
     // Release reset
     #20 rRST <= 1'b0;
