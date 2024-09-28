@@ -2,6 +2,21 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+<<<<<<< HEAD
+# Start of session at: Sun Sep 29 02:39:02 2024
+# Process ID: 9196
+# Current directory: E:/SimLab01/SimLab01
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1840 E:\SimLab01\SimLab01\SimLab01.xpr
+# Log file: E:/SimLab01/SimLab01/vivado.log
+# Journal file: E:/SimLab01/SimLab01\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/SimLab01/SimLab01/SimLab01.xpr
+launch_simulation
+open_wave_config E:/SimLab01/SimLab01/tb_WB_behav.wcfg
+source tb_DigInPort.tcl
+save_wave_config {E:/SimLab01/SimLab01/tb_WB_behav.wcfg}
+=======
 # Start of session at: Mon Sep 23 20:39:30 2024
 # Process ID: 14320
 # Current directory: E:/SoC/SimLab01
@@ -75,6 +90,7 @@ close [ open E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v w ]
 add_files -fileset sim_1 E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v
 save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
 close_sim
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
 set_property top tb_CombinedIP [get_filesets sim_1]
@@ -82,6 +98,15 @@ set_property top_lib xil_defaultlib [get_filesets sim_1]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode DisplayOnly [current_project]
 launch_simulation
+<<<<<<< HEAD
+close_sim
+launch_simulation
+open_wave_config E:/SimLab01/SimLab01/tb_WB_behav.wcfg
+source tb_CombinedIP.tcl
+relaunch_sim
+relaunch_sim
+save_wave_config {E:/SimLab01/SimLab01/tb_WB_behav.wcfg}
+=======
 open_wave_config E:/SoC/SimLab01/tb_WB_behav.wcfg
 source tb_CombinedIP.tcl
 relaunch_sim
@@ -102,4 +127,5 @@ relaunch_sim
 relaunch_sim
 relaunch_sim
 save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+>>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
 close_sim
