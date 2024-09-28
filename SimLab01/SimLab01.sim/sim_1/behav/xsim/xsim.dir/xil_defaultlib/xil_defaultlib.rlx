@@ -1,0 +1,12 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+E:/SimLab01/SimLab01/SimLab01.sim/sim_1/behav/xsim/glbl.v,1727014213,verilog,,,,glbl,,,,,,,,
+E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v,1727547090,verilog,,,,tb_CombinedIP,,,,,,,,
+E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v,1727546374,verilog,,E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v,,tb_ConstReg,,,,,,,,
+E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v,1727546260,verilog,,E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v,,tb_DigInPort,,,,,,,,
+E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v,1727097829,verilog,,E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v,,tb_WB,,,,,,,,
+E:/SimLab01/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v,1727546322,verilog,,E:/SimLab01/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v,,ConstReg,,,,,,,,
+E:/SimLab01/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v,1727546216,verilog,,E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v,,DigInPort,,,,,,,,
+E:/SimLab01/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v,1727098155,verilog,,E:/SimLab01/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v,,DigOutPort,,,,,,,,

@@ -1,0 +1,1030 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Sep 23 20:39:30 2024
+# Process ID: 14320
+# Current directory: E:/SoC/SimLab01
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15496 E:\SoC\SimLab01\SimLab01.xpr
+# Log file: E:/SoC/SimLab01/vivado.log
+# Journal file: E:/SoC/SimLab01\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/SoC/SimLab01/SimLab01.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 709.605 ; gain = 115.270
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.tb_WB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_WB_behav -key {Behavioral:sim_1:Functional:tb_WB} -tclbatch {tb_WB.tcl} -view {E:/SoC/SimLab01/tb_WB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/SimLab01/tb_WB_behav.wcfg
+WARNING: Simulation object /tb_WB/DUT/wSel was not found in the design.
+source tb_WB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 860100 ps : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" Line 105
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_WB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 805.832 ; gain = 47.055
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.tb_WB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 860100 ps : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" Line 105
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 805.832 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.tb_WB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 860100 ps : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" Line 105
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 805.832 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.tb_WB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 860100 ps : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" Line 105
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 805.832 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.tb_WB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 860100 ps : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" Line 105
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 805.832 ; gain = 0.000
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close [ open E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v w ]
+add_files E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v w ]
+add_files -fileset sim_1 E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v
+set_property top tb_ConstReg [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ConstReg' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ConstReg_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ConstReg
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ConstReg
+Compiling module xil_defaultlib.tb_ConstReg
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ConstReg_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim/xsim.dir/tb_ConstReg_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 23 23:00:59 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ConstReg_behav -key {Behavioral:sim_1:Functional:tb_ConstReg} -tclbatch {tb_ConstReg.tcl} -view {E:/SoC/SimLab01/tb_WB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/SimLab01/tb_WB_behav.wcfg
+WARNING: Simulation object /tb_WB/rRST was not found in the design.
+WARNING: Simulation object /tb_WB/rCLK was not found in the design.
+WARNING: Simulation object /tb_WB/rADR was not found in the design.
+WARNING: Simulation object /tb_WB/rDAT was not found in the design.
+WARNING: Simulation object /tb_WB/wDAT was not found in the design.
+WARNING: Simulation object /tb_WB/rWE was not found in the design.
+WARNING: Simulation object /tb_WB/rSTB was not found in the design.
+WARNING: Simulation object /tb_WB/wACK was not found in the design.
+WARNING: Simulation object /tb_WB/wDOUTA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegC was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/wSelA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/wSelB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/wSelC was not found in the design.
+source tb_ConstReg.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 300 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" Line 50
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ConstReg_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 956.398 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ConstReg' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ConstReg_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 300 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" Line 50
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 956.398 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/DigOutPort.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/DigOutPort.v
+add_files -norecurse E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ConstReg' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ConstReg_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ConstReg_behav -key {Behavioral:sim_1:Functional:tb_ConstReg} -tclbatch {tb_ConstReg.tcl} -view {E:/SoC/SimLab01/tb_WB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/SimLab01/tb_WB_behav.wcfg
+WARNING: Simulation object /tb_WB/rRST was not found in the design.
+WARNING: Simulation object /tb_WB/rCLK was not found in the design.
+WARNING: Simulation object /tb_WB/rADR was not found in the design.
+WARNING: Simulation object /tb_WB/rDAT was not found in the design.
+WARNING: Simulation object /tb_WB/wDAT was not found in the design.
+WARNING: Simulation object /tb_WB/rWE was not found in the design.
+WARNING: Simulation object /tb_WB/rSTB was not found in the design.
+WARNING: Simulation object /tb_WB/wACK was not found in the design.
+WARNING: Simulation object /tb_WB/wDOUTA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegC was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/wSelA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/wSelB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/wSelC was not found in the design.
+source tb_ConstReg.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 300 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" Line 50
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ConstReg_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ConstReg' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ConstReg_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 300 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" Line 50
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+close [ open E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v w ]
+add_files E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v w ]
+add_files -fileset sim_1 E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v
+set_property top tb_DigInPort [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_DigInPort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_DigInPort_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim/xsim.dir/tb_DigInPort_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 23 23:20:30 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_DigInPort_behav -key {Behavioral:sim_1:Functional:tb_DigInPort} -tclbatch {tb_DigInPort.tcl} -view {E:/SoC/SimLab01/tb_WB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/SimLab01/tb_WB_behav.wcfg
+WARNING: Simulation object /tb_ConstReg/rRST was not found in the design.
+WARNING: Simulation object /tb_ConstReg/rCLK was not found in the design.
+WARNING: Simulation object /tb_ConstReg/rADR was not found in the design.
+WARNING: Simulation object /tb_ConstReg/wDAT was not found in the design.
+WARNING: Simulation object /tb_ConstReg/rSTB was not found in the design.
+WARNING: Simulation object /tb_ConstReg/wACK was not found in the design.
+source tb_DigInPort.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 320 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_DigInPort_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 956.398 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 320 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 956.398 ; gain = 0.000
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_DigInPort_behav -key {Behavioral:sim_1:Functional:tb_DigInPort} -tclbatch {tb_DigInPort.tcl} -view {E:/SoC/SimLab01/tb_WB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/SimLab01/tb_WB_behav.wcfg
+source tb_DigInPort.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 320 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_DigInPort_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 320 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 956.398 ; gain = 0.000
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v w ]
+add_files -fileset sim_1 E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top tb_CombinedIP [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_CombinedIP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_CombinedIP_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_CombinedIP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_CombinedIP_behav xil_defaultlib.tb_CombinedIP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_CombinedIP_behav xil_defaultlib.tb_CombinedIP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.ConstReg
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_CombinedIP
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_CombinedIP_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim/xsim.dir/tb_CombinedIP_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 23 23:32:44 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_CombinedIP_behav -key {Behavioral:sim_1:Functional:tb_CombinedIP} -tclbatch {tb_CombinedIP.tcl} -view {E:/SoC/SimLab01/tb_WB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/SimLab01/tb_WB_behav.wcfg
+WARNING: Simulation object /tb_DigInPort/rRST was not found in the design.
+WARNING: Simulation object /tb_DigInPort/rCLK was not found in the design.
+WARNING: Simulation object /tb_DigInPort/rDIn was not found in the design.
+WARNING: Simulation object /tb_DigInPort/rADR was not found in the design.
+WARNING: Simulation object /tb_DigInPort/wDAT was not found in the design.
+WARNING: Simulation object /tb_DigInPort/rSTB was not found in the design.
+WARNING: Simulation object /tb_DigInPort/wACK was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/wSel was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/sync1 was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/sync2 was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/sync3 was not found in the design.
+source tb_CombinedIP.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 350 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" Line 117
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_CombinedIP_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 956.398 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_CombinedIP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_CombinedIP_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_CombinedIP_behav xil_defaultlib.tb_CombinedIP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_CombinedIP_behav xil_defaultlib.tb_CombinedIP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 350 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" Line 117
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 956.398 ; gain = 0.000
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+set_property top tb_DigInPort [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_CombinedIP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_DigInPort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_DigInPort_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_DigInPort_behav -key {Behavioral:sim_1:Functional:tb_DigInPort} -tclbatch {tb_DigInPort.tcl} -view {E:/SoC/SimLab01/tb_WB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/SimLab01/tb_WB_behav.wcfg
+WARNING: Simulation object /tb_CombinedIP/rRST was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rCLK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_OutPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_ConstReg was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_InPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_OutPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_ConstReg was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_InPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_Final was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rDIn was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_Final was not found in the design.
+source tb_DigInPort.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 320 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_DigInPort_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 320 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 956.398 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_CombinedIP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_DigInPort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_DigInPort_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 277 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 956.398 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_CombinedIP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_DigInPort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_DigInPort_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 237 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 956.398 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_CombinedIP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_DigInPort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_DigInPort_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 247 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 956.398 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_CombinedIP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/SimLab01/SimLab01.sim/sim_1/behav/xsim'
+"xelab -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d37c42bbbd01400a9ccd620d5c86f79f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_DigInPort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_DigInPort_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 267 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 956.398 ; gain = 0.000
+save_wave_config {E:/SoC/SimLab01/tb_WB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 24 00:15:56 2024...
