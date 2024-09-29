@@ -1,7 +1,0 @@
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-<<<<<<< HEAD
-$finish called at time : 410 ns : File "E:/SimLab01/SimLab01/SimLab01.srcs/sim_1/new/tb_CombinedIP.v" Line 115
-=======
-$finish called at time : 267 ns : File "E:/SoC/SimLab01/SimLab01.srcs/sim_1/new/tb_DigInPort.v" Line 54
->>>>>>> 449bf3b4ec1b282ffaddda01f6845934e50168f2
