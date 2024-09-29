@@ -1,0 +1,8 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_ConstReg.v,1727623848,verilog,,,,tb_ConstReg,,,,,,,,
+E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/AddrDec.v,1727623234,verilog,,E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/ConstReg.v,,AddrDec,,,,,,,,
+E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/ConstReg.v,1727623552,verilog,,E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_ConstReg.v,,ConstReg,,,,,,,,
