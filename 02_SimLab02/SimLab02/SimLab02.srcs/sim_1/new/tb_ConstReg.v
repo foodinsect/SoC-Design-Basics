@@ -9,7 +9,15 @@ reg         rSTB;
 reg         iWE;
 wire        wACK;
 
-wire        wSTB_CReg;
+wire        wSTB_CReg, wSTB_DigOutPort, wSTB_DigInPort;
+
+AddrDec inst_AddrDec(
+    .iADR(rADR),
+    .iSTB(rSTB),
+    .oSTB_DigOutPort(wSTB_DigOutPort),
+    .oSTB_DigInPort(wSTB_DigInPort),
+    .oSTB_CReg(wSTB_CReg)
+);
 
 // Instantiate ConstReg module
 ConstReg UUT (
@@ -22,11 +30,7 @@ ConstReg UUT (
     .oACK(wACK)
 );
 
-AddrDec inst_AddrDec(
-    .iADR(rADR),
-    .iSTB(rSTB),
-    .oSTB_CReg(wSTB_CReg)
-);
+
 
 // Clock generation
 always #5 rCLK = ~rCLK;
