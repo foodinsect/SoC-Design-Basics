@@ -1,7 +1,6 @@
 
 # Combine IP Simulation Waveform
 
-![waveform](https://velog.velcdn.com/images/foodinsect/post/d3f3b401-2f52-442a-95b1-d444a874d737/image.png)
-
+![waveform](https://velog.velcdn.com/images/foodinsect/post/7d15ad5c-4d4b-4875-860d-0b7d7a754275/image.png)
 
 

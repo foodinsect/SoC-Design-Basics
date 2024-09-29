@@ -3,11 +3,11 @@
 May 24 2019
 15:06:07
 E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
-E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_CombinedIP.v,1727637466,verilog,,,,tb_CombinedIP,,,,,,,,
+E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_CombinedIP.v,1727639066,verilog,,,,tb_CombinedIP,,,,,,,,
 E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_ConstReg.v,1727623848,verilog,,,,tb_ConstReg,,,,,,,,
 E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_DigInPort.v,1727637239,verilog,,,,tb_DigInPort,,,,,,,,
 E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v,1727635998,verilog,,,,tb_WB,,,,,,,,
-E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/AddrDec.v,1727635892,verilog,,E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigInPort.v,,AddrDec,,,,,,,,
+E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/AddrDec.v,1727635892,verilog,,E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/ConstReg.v,,AddrDec,,,,,,,,
 E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/ConstReg.v,1727623552,verilog,,E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigInPort.v,,ConstReg,,,,,,,,
-E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigInPort.v,1727638762,verilog,,E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_DigInPort.v,,DigInPort,,,,,,,,
+E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigInPort.v,1727638762,verilog,,E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigOutPort.v,,DigInPort,,,,,,,,
 E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigOutPort.v,1727636257,verilog,,E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_CombinedIP.v,,DigOutPort,,,,,,,,

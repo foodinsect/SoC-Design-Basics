@@ -83,7 +83,7 @@ initial begin
     rDIn <= 8'h00;
 
     // Release reset
-    #20 rRST <= 1'b0;
+    #10 rRST <= 1'b0;
 
     // Test DigOutPort: Write 0x12 to 0x0200_0000
     #10 rSTB <= 1'b1;
@@ -94,26 +94,26 @@ initial begin
     rWE <= 1'b0;
 
     // Test DigOutPort: Read from 0x0200_0000
-    #20 rSTB <= 1'b1;
+    #10 rSTB <= 1'b1;
     rADR <= 32'h0200_0000;
     rWE <= 1'b0;
     #10 rSTB <= 1'b0;
 
     // Test ConstReg: Read from 0x0200_0100
-    #20 rSTB <= 1'b1;
+    #10 rSTB <= 1'b1;
     rADR <= 32'h0200_0100;
     rWE <= 1'b0;
     #10 rSTB <= 1'b0;
     
     // Test DigInPort: Set input to 0xCD and read from 0x0200_0800
-    #20 rDIn <= 8'hCD;
+    #10 rDIn <= 8'hCD;
     #30 rSTB <= 1'b1;
     rADR <= 32'h0200_0800;
     rWE <= 1'b0;
     #10 rSTB <= 1'b0;
 
     // End of simulation
-    #20 $finish;
+    #10 $finish;
 end
 
 endmodule
