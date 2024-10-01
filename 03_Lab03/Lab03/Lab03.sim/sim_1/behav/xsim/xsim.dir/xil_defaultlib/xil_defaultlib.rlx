@@ -1,0 +1,10 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/user/Lab03/Lab03.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/user/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v,1727665192,verilog,,,,tb_PWM_IP,,,,,,,,
+C:/Users/user/Lab03/Lab03.srcs/sim_1/new/tb_TimerIP.v,1727661805,verilog,,,,tb_TimerIP,,,,,,,,
+C:/Users/user/Lab03/Lab03.srcs/sources_1/new/AddrDec.v,1727664825,verilog,,C:/Users/user/Lab03/Lab03.srcs/sources_1/new/PWM_IP.v,,AddrDec,,,,,,,,
+C:/Users/user/Lab03/Lab03.srcs/sources_1/new/PWM_IP.v,1727663923,verilog,,C:/Users/user/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v,,PWM_IP,,,,,,,,
+C:/Users/user/Lab03/Lab03.srcs/sources_1/new/TimerIP.v,1727661252,verilog,,C:/Users/user/Lab03/Lab03.srcs/sim_1/new/tb_TimerIP.v,,TimerIP,,,,,,,,
