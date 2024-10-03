@@ -1,0 +1,326 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Oct  4 04:13:23 2024
+# Process ID: 33700
+# Current directory: E:/SoC/03_Lab03/Lab03
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32000 E:\SoC\03_Lab03\Lab03\Lab03.xpr
+# Log file: E:/SoC/03_Lab03/Lab03/vivado.log
+# Journal file: E:/SoC/03_Lab03/Lab03\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/SoC/03_Lab03/Lab03/Lab03.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+close [ open E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/LED_test.v w ]
+add_files E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/LED_test.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Fri Oct  4 04:25:57 2024] Launched synth_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1/runme.log
+[Fri Oct  4 04:25:57 2024] Launched impl_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Fri Oct  4 04:27:32 2024] Launched impl_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Fri Oct  4 04:27:55 2024] Launched synth_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1/runme.log
+[Fri Oct  4 04:27:55 2024] Launched impl_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 917.172 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+open_hw_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1927.520 ; gain = 1010.348
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Fri Oct  4 04:34:36 2024] Launched synth_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1/runme.log
+[Fri Oct  4 04:34:36 2024] Launched impl_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+close_hw
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Fri Oct  4 04:43:26 2024] Launched synth_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1/runme.log
+[Fri Oct  4 04:43:27 2024] Launched impl_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/edge_detector.v] -no_script -reset -force -quiet
+remove_files  E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/edge_detector.v
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_PWM_IP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PWM_IP_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWM_IP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/up_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module up_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PWM_IP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xelab -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.up_counter
+Compiling module xil_defaultlib.PWM_IP
+Compiling module xil_defaultlib.tb_PWM_IP
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PWM_IP_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim/xsim.dir/tb_PWM_IP_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct  4 04:45:21 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_PWM_IP_behav -key {Behavioral:sim_1:Functional:tb_PWM_IP} -tclbatch {tb_PWM_IP.tcl} -view {E:/SoC/03_Lab03/Lab03/tb_TimerIP_behav.wcfg} -view {E:/SoC/03_Lab03/Lab03/tb_PWM_IP_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/03_Lab03/Lab03/tb_TimerIP_behav.wcfg
+WARNING: Simulation object /tb_TimerIP/iRST was not found in the design.
+WARNING: Simulation object /tb_TimerIP/iCLK was not found in the design.
+WARNING: Simulation object /tb_TimerIP/iADR was not found in the design.
+WARNING: Simulation object /tb_TimerIP/iDAT was not found in the design.
+WARNING: Simulation object /tb_TimerIP/iWE was not found in the design.
+WARNING: Simulation object /tb_TimerIP/iSTB was not found in the design.
+WARNING: Simulation object /tb_TimerIP/oACK was not found in the design.
+WARNING: Simulation object /tb_TimerIP/oDAT was not found in the design.
+WARNING: Simulation object /tb_TimerIP/oTimer was not found in the design.
+WARNING: Simulation object /tb_TimerIP/wSTB_Timer was not found in the design.
+WARNING: Simulation object /tb_TimerIP/inst_AddrDec/BaseAddr_Timer was not found in the design.
+WARNING: Simulation object /tb_TimerIP/inst_AddrDec/iADR was not found in the design.
+WARNING: Simulation object /tb_TimerIP/inst_AddrDec/iSTB was not found in the design.
+WARNING: Simulation object /tb_TimerIP/inst_AddrDec/oSTB_Timer was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/RESET_VALUE was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/OPTION was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/iADR was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/iDAT was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/iWE was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/iSTB was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/oACK was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/oDAT was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/oTimer was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/rCounter was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/rResetValue was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/rOption was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/rDataOut was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/rPulse was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/rToggle was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/wPulse was not found in the design.
+WARNING: Simulation object /tb_TimerIP/Timer/wTimerON was not found in the design.
+open_wave_config E:/SoC/03_Lab03/Lab03/tb_PWM_IP_behav.wcfg
+source tb_PWM_IP.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_PWM_IP_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 2001.395 ; gain = 32.008
+run 10 us
+run all
+$finish called at time : 6000390 ns : File "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" Line 222
+save_wave_config {E:/SoC/03_Lab03/Lab03/tb_PWM_IP_behav.wcfg}
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_PWM_IP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PWM_IP_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xelab -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2022.629 ; gain = 0.695
+run 1 s
+$finish called at time : 6000390 ns : File "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" Line 222
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_PWM_IP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PWM_IP_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWM_IP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/up_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module up_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PWM_IP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+"xelab -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.up_counter
+Compiling module xil_defaultlib.PWM_IP
+Compiling module xil_defaultlib.tb_PWM_IP
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PWM_IP_behav
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'elaborate' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+INFO: [Common 17-344] 'relaunch_sim' was cancelled
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_PWM_IP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PWM_IP_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWM_IP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/up_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module up_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PWM_IP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xelab -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.up_counter
+Compiling module xil_defaultlib.PWM_IP
+Compiling module xil_defaultlib.tb_PWM_IP
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PWM_IP_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+run all
+$finish called at time : 6000390 ns : File "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" Line 222
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Fri Oct  4 04:55:55 2024] Launched synth_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1/runme.log
+[Fri Oct  4 04:55:55 2024] Launched impl_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/runme.log
+save_wave_config {E:/SoC/03_Lab03/Lab03/tb_PWM_IP_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  4 04:58:51 2024...

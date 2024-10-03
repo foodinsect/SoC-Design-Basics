@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Oct  4 04:08:36 2024
+# Process ID: 2964
+# Current directory: E:/SoC/03_Lab03/PWM_LED_test/PWM_LED_test.runs/synth_1
+# Command line: vivado.exe -log PWM_12bit_LED.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PWM_12bit_LED.tcl
+# Log file: E:/SoC/03_Lab03/PWM_LED_test/PWM_LED_test.runs/synth_1/PWM_12bit_LED.vds
+# Journal file: E:/SoC/03_Lab03/PWM_LED_test/PWM_LED_test.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source PWM_12bit_LED.tcl -notrace
