@@ -15,16 +15,16 @@ module PWM_IP #(
     output          oPWM        // PWM Output
 );
 
-wire [11:0] rCounter;        // 12-bit counter (0 to 4095)
-reg [11:0] rDutyCycle;      // 12-bit duty cycle register
-reg [31:0] rDataOut;        // Data output register
-reg CLK;              // Clock after gating
+wire    [11:0]  rCounter;        // 12-bit counter (000 to FFF)
+reg     [11:0]  rDutyCycle;      // 12-bit duty cycle register (Duty Ratio)
+reg     [31:0]  rDataOut;        // Data output register
+reg             CLK;             // Clock after gating
 
 // Acknowledge signal
 assign oACK = iSTB;
 
 // PWM logic
-assign oPWM = (rCounter < rDutyCycle) ? 1'b1 : 1'b0;  // High if counter < duty cycle, else low
+assign oPWM = (iEN) ? ((rCounter < rDutyCycle) ? 1'b1 : 1'b0) : 1'bz;  // High if counter < duty cycle, else low
 
 // Clock gating logic: only pass the clock when iEN is high
 always @(*) begin
@@ -38,11 +38,11 @@ end
 // Address-based selection logic for write
 always @(posedge CLK or posedge iRST) begin
     if (iRST) begin
-        rDutyCycle <= RESET_VALUE;   // Reset duty cycle to default value
+        rDutyCycle <= RESET_VALUE;      // Reset duty cycle to default value
     end else if (iSTB && iWE) begin
         case (iADR[3:0])
         4'h0: begin
-            rDutyCycle <= iDAT[11:0];    // Write to duty cycle register (only 12 bits)
+            rDutyCycle <= iDAT[11:0];   // Write to duty cycle register (only 12 bits)
         end
         default: begin
             rDutyCycle <= RESET_VALUE;
@@ -55,7 +55,7 @@ end
 up_counter #(
     .N(12)
 ) u_counter_12bit (
-    .iCLK(CLK),  // Use the gated clock
+    .iCLK(CLK),             // Use the gated clock
     .iRST(iRST),
     .rCounter(rCounter)
 );
@@ -65,14 +65,14 @@ always @(*) begin
     if (iSTB && ~iWE) begin
         case (iADR[3:0])
         4'h0: begin
-            rDataOut = {20'h0, rDutyCycle};  // Read duty cycle value (upper 20 bits are 0)
+            rDataOut = {20'h0, rDutyCycle};     // Read duty cycle value (upper 20 bits are 0)
         end
         default: begin
-            rDataOut = 32'hzzzzzzzz;  // High impedance for invalid addresses
+            rDataOut = 32'hzzzzzzzz;            // High impedance for invalid addresses
         end
         endcase
     end else begin
-        rDataOut = 32'hzzzzzzzz;  // High impedance for invalid addresses
+        rDataOut = 32'hzzzzzzzz;                // High impedance for invalid addresses
     end
 end
 

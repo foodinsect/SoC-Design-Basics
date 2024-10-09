@@ -1,29 +1,29 @@
 set_property SRC_FILE_INFO {cfile:E:/SoC/03_Lab03/Lab03/Lab03.srcs/constrs_1/new/PWM.xdc rfile:../../../Lab03.srcs/constrs_1/new/PWM.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN K17 [get_ports { iCLK }];
+set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { iCLK }]; #IO_L12P_T1_MRCC_35 Sch=sysclk
+set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G15   IOSTANDARD LVCMOS33 } [get_ports { iSW[0] }]; #IO_L19N_T3_VREF_35 Sch=sw[0]
 set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN G15 [get_ports { iSW[0] }];
+set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { iSW[1] }]; #IO_L24P_T3_34 Sch=sw[1]
+set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { iSW[2] }]; #IO_L4N_T0_34 Sch=sw[2]
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN P15 [get_ports { iSW[1] }];
-set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W13 [get_ports { iSW[2] }];
-set_property src_info {type:XDC file:1 line:15 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN T16 [get_ports { iSW[3] }];
-set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN K18 [get_ports { iRST }];
+set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { iSW[3] }]; #IO_L9P_T1_DQS_34 Sch=sw[3]
+set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { iRST }]; #IO_L12N_T1_MRCC_35 Sch=btn[0]
+set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { iWE }]; #IO_L7P_T1_34 Sch=btn[3]
+set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { oLED[0] }]; #IO_L23P_T3_35 Sch=led[0]
 set_property src_info {type:XDC file:1 line:22 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN Y16 [get_ports { iWE }];
+set_property -dict { PACKAGE_PIN M15   IOSTANDARD LVCMOS33 } [get_ports { oLED[1] }]; #IO_L23N_T3_35 Sch=led[1]
+set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { oLED[2] }]; #IO_0_35 Sch=led[2]
+set_property src_info {type:XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { oLED[3] }]; #IO_L3N_T0_DQS_AD1N_35 Sch=led[3]
 set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN M14 [get_ports { oLED[0] }];
+set_property -dict { PACKAGE_PIN Y11   IOSTANDARD LVCMOS33 } [get_ports { oPWM_r }]; #IO_L18N_T2_13 Sch=led5_r
+set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T5    IOSTANDARD LVCMOS33 } [get_ports { oPWM_g }]; #IO_L19P_T3_13 Sch=led5_g
 set_property src_info {type:XDC file:1 line:29 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN M15 [get_ports { oLED[1] }];
-set_property src_info {type:XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN G14 [get_ports { oLED[2] }];
-set_property src_info {type:XDC file:1 line:33 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN D18 [get_ports { oLED[3] }];
-set_property src_info {type:XDC file:1 line:37 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN Y11 [get_ports { oPWM_r }];
-set_property src_info {type:XDC file:1 line:39 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN T5 [get_ports { oPWM_g }];
-set_property src_info {type:XDC file:1 line:41 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN Y12 [get_ports { oPWM_b }];
+set_property -dict { PACKAGE_PIN Y12   IOSTANDARD LVCMOS33 } [get_ports { oPWM_b }]; #IO_L20P_T3_13 Sch=led5_b

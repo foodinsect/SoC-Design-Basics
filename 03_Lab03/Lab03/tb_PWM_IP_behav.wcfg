@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="6000350000001fs"></ZoomEndTime>
-      <Cursor1Time time="753532326000fs"></Cursor1Time>
+      <ZoomEndTime time="7260000000001fs"></ZoomEndTime>
+      <Cursor1Time time="6000350000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="26" />
    <wvobject type="divider" fp_name="divider181">

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Oct  4 04:56:55 2024
+| Date         : Wed Oct  9 21:18:54 2024
 | Host         : DESKTOP-LUJNASU running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file LED_test_timing_summary_routed.rpt -pb LED_test_timing_summary_routed.pb -rpx LED_test_timing_summary_routed.rpx -warn_on_violation
 | Design       : LED_test
