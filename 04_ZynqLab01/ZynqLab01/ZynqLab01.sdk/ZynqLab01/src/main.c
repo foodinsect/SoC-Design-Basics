@@ -9,6 +9,7 @@
 #include "xgpio.h"
 
 XGpio Gpio;
+XGpio Gpio1;
 
 int main()
 {
@@ -16,10 +17,12 @@ int main()
 	int j=0;
 
 	XGpio_Initialize(&Gpio, XPAR_AXI_GPIO_0_DEVICE_ID);
+	XGpio_Initialize(&Gpio1, XPAR_AXI_GPIO_1_DEVICE_ID);
 
 	while (1){
+		j = XGpio_DiscreteRead(&Gpio1, 1);
+		printf("Push Button State =0x%x \n", j);
 		XGpio_DiscreteWrite(&Gpio, 1, j);
-		printf("Hello World %d\n", j++);
 		for (i=0; i<1e8 ; i++) ;
 	}
 
