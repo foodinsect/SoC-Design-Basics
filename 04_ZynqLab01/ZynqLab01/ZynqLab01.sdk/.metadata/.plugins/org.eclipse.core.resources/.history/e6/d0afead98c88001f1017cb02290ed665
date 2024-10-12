@@ -1,0 +1,21 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 10. 12.
+ *      Author: opqrs
+ */
+
+#include "stdio.h"
+
+int main()
+{
+	volatile int i;
+	int j=0;
+
+	while (1){
+		printf("Hello World %d\n", j++);
+		for (i=0; i<1e8 ; i++) ;
+	}
+
+	return 0;
+}

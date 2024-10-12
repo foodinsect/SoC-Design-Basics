@@ -1,0 +1,8 @@
+20:28:15 **** Incremental Build of configuration Debug for project ZynqLab01 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+20:28:16 Build Finished (took 267ms)
+

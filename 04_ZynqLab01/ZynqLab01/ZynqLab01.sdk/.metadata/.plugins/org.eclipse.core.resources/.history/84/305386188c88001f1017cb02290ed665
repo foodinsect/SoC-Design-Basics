@@ -1,0 +1,20 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 10. 12.
+ *      Author: opqrs
+ */
+
+#include "stdio.h"
+
+int main()
+{
+
+	int j=0;
+
+	while (1){
+		printf("Hello World\n", j++);
+	}
+
+	return 0;
+}
