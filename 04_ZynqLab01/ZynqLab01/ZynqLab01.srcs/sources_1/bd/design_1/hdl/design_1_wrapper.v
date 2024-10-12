@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sat Oct 12 20:35:03 2024
+//Date        : Sat Oct 12 20:53:52 2024
 //Host        : DESKTOP-LUJNASU running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -32,7 +32,9 @@ module design_1_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     btns_4bits_tri_i,
-    leds_4bits_tri_o);
+    leds_4bits_tri_o,
+    rgb_led_tri_o,
+    sws_4bits_tri_i);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -56,6 +58,8 @@ module design_1_wrapper
   inout FIXED_IO_ps_srstb;
   input [3:0]btns_4bits_tri_i;
   output [3:0]leds_4bits_tri_o;
+  output [5:0]rgb_led_tri_o;
+  input [3:0]sws_4bits_tri_i;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -80,6 +84,8 @@ module design_1_wrapper
   wire FIXED_IO_ps_srstb;
   wire [3:0]btns_4bits_tri_i;
   wire [3:0]leds_4bits_tri_o;
+  wire [5:0]rgb_led_tri_o;
+  wire [3:0]sws_4bits_tri_i;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -104,5 +110,7 @@ module design_1_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .btns_4bits_tri_i(btns_4bits_tri_i),
-        .leds_4bits_tri_o(leds_4bits_tri_o));
+        .leds_4bits_tri_o(leds_4bits_tri_o),
+        .rgb_led_tri_o(rgb_led_tri_o),
+        .sws_4bits_tri_i(sws_4bits_tri_i));
 endmodule

@@ -42,10 +42,16 @@ set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/Zy
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0.xdc]
+set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0_board.xdc]
+set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0.xdc]
 set_property used_in_implementation false [get_files -all E:/SoC/04_ZynqLab01/ZynqLab01/ZynqLab01.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
