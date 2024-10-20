@@ -10,13 +10,15 @@
 #include "xparameters.h"
 #include "xil_io.h"
 #include "myPWM.h"
-//#include "mySimpleIO.h"
+#include "myTimer.h"
 
 
 int main()
 {
 	volatile int i;
 	int j;
+
+	MYTIMER_mWriteReg(XPAR_MYTIMER_0_S00_AXI_BASEADDR, 0, 6e6);
 
 	while (1){
 		for (j=0; j<0x1000; j++){

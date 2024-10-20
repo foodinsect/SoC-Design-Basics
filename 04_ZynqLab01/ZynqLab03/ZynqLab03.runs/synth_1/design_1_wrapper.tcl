@@ -31,7 +31,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.2 [current_project]
-set_property ip_repo_paths e:/SoC/04_ZynqLab01/ip_repo/myPWM_1.0 [current_project]
+set_property ip_repo_paths {
+  e:/SoC/04_ZynqLab01/ip_repo/myTimer_1.0
+  e:/SoC/04_ZynqLab01/ip_repo/myPWM_1.0
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo e:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -41,6 +44,7 @@ set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/Zy
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all E:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 

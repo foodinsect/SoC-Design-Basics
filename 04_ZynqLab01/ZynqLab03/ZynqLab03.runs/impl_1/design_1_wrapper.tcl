@@ -73,7 +73,10 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir E:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.cache/wt [current_project]
   set_property parent.project_path E:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.xpr [current_project]
-  set_property ip_repo_paths E:/SoC/04_ZynqLab01/ip_repo/myPWM_1.0 [current_project]
+  set_property ip_repo_paths {
+  E:/SoC/04_ZynqLab01/ip_repo/myTimer_1.0
+  E:/SoC/04_ZynqLab01/ip_repo/myPWM_1.0
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo E:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

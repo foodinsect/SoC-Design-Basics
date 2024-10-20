@@ -250,6 +250,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver MYTIMER */
+#define XPAR_MYTIMER_NUM_INSTANCES 1
+
+/* Definitions for peripheral MYTIMER_0 */
+#define XPAR_MYTIMER_0_DEVICE_ID 0
+#define XPAR_MYTIMER_0_S00_AXI_BASEADDR 0x43C10000
+#define XPAR_MYTIMER_0_S00_AXI_HIGHADDR 0x43C1FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver QSPIPS */
 #define XPAR_XQSPIPS_NUM_INSTANCES 1
 
