@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Oct 21 04:34:11 2024
+// Date        : Mon Oct 21 05:18:51 2024
 // Host        : DESKTOP-LUJNASU running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_myPWM_0_0_sim_netlist.v
@@ -13,18 +13,41 @@
 `timescale 1 ps / 1 ps
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
-   (oPWM,
+   (rCount_reg,
+    oPWM,
+    DI,
+    \rCount_reg[11]_0 ,
+    \rCount_reg[7]_0 ,
+    \rCount_reg[11]_1 ,
+    \rCount_reg[7]_1 ,
+    \rCount_reg[11]_2 ,
+    E,
     clear,
     s00_axi_aclk,
-    s00_axi_aresetn,
+    Q,
+    rPWM0_carry__0_0,
+    rPWM0_carry__0_1,
     D);
+  output [11:0]rCount_reg;
   output [0:0]oPWM;
+  output [3:0]DI;
+  output [1:0]\rCount_reg[11]_0 ;
+  output [3:0]\rCount_reg[7]_0 ;
+  output [1:0]\rCount_reg[11]_1 ;
+  output [3:0]\rCount_reg[7]_1 ;
+  output [1:0]\rCount_reg[11]_2 ;
+  output [0:0]E;
   input clear;
   input s00_axi_aclk;
-  input s00_axi_aresetn;
+  input [11:0]Q;
+  input [11:0]rPWM0_carry__0_0;
+  input [11:0]rPWM0_carry__0_1;
   input [11:0]D;
 
   wire [11:0]D;
+  wire [3:0]DI;
+  wire [0:0]E;
+  wire [11:0]Q;
   wire clear;
   wire [0:0]oPWM;
   wire \rCount[0]_i_2_n_0 ;
@@ -37,6 +60,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   wire \rCount_reg[0]_i_1_n_5 ;
   wire \rCount_reg[0]_i_1_n_6 ;
   wire \rCount_reg[0]_i_1_n_7 ;
+  wire [1:0]\rCount_reg[11]_0 ;
+  wire [1:0]\rCount_reg[11]_1 ;
+  wire [1:0]\rCount_reg[11]_2 ;
   wire \rCount_reg[4]_i_1_n_0 ;
   wire \rCount_reg[4]_i_1_n_1 ;
   wire \rCount_reg[4]_i_1_n_2 ;
@@ -45,6 +71,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   wire \rCount_reg[4]_i_1_n_5 ;
   wire \rCount_reg[4]_i_1_n_6 ;
   wire \rCount_reg[4]_i_1_n_7 ;
+  wire [3:0]\rCount_reg[7]_0 ;
+  wire [3:0]\rCount_reg[7]_1 ;
   wire \rCount_reg[8]_i_1_n_1 ;
   wire \rCount_reg[8]_i_1_n_2 ;
   wire \rCount_reg[8]_i_1_n_3 ;
@@ -55,7 +83,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   wire [11:0]rDuty;
   wire \rDuty[11]_i_2_n_0 ;
   wire \rDuty[11]_i_3_n_0 ;
-  wire rDuty_0;
+  wire [11:0]rPWM0_carry__0_0;
+  wire [11:0]rPWM0_carry__0_1;
   wire rPWM0_carry__0_i_1_n_0;
   wire rPWM0_carry__0_i_2_n_0;
   wire rPWM0_carry__0_i_3_n_0;
@@ -76,7 +105,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   wire rPWM0_carry_n_3;
   wire rPWM_i_1_n_0;
   wire s00_axi_aclk;
-  wire s00_axi_aresetn;
   wire [3:3]\NLW_rCount_reg[8]_i_1_CO_UNCONNECTED ;
   wire [3:0]NLW_rPWM0_carry_O_UNCONNECTED;
   wire [3:2]NLW_rPWM0_carry__0_CO_UNCONNECTED;
@@ -180,101 +208,101 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
         .D(\rCount_reg[8]_i_1_n_6 ),
         .Q(rCount_reg[9]),
         .R(clear));
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'h0000000000008000)) 
     \rDuty[11]_i_1 
-       (.I0(\rDuty[11]_i_2_n_0 ),
-        .I1(\rDuty[11]_i_3_n_0 ),
-        .O(rDuty_0));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
+       (.I0(rCount_reg[0]),
+        .I1(rCount_reg[1]),
+        .I2(rCount_reg[2]),
+        .I3(rCount_reg[3]),
+        .I4(\rDuty[11]_i_2_n_0 ),
+        .I5(\rDuty[11]_i_3_n_0 ),
+        .O(E));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
     \rDuty[11]_i_2 
-       (.I0(rCount_reg[2]),
-        .I1(rCount_reg[3]),
-        .I2(rCount_reg[0]),
-        .I3(rCount_reg[1]),
-        .I4(rCount_reg[5]),
-        .I5(rCount_reg[4]),
+       (.I0(rCount_reg[11]),
+        .I1(rCount_reg[10]),
+        .I2(rCount_reg[9]),
+        .I3(rCount_reg[8]),
         .O(\rDuty[11]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
+  LUT4 #(
+    .INIT(16'h7FFF)) 
     \rDuty[11]_i_3 
-       (.I0(rCount_reg[8]),
-        .I1(rCount_reg[9]),
-        .I2(rCount_reg[6]),
-        .I3(rCount_reg[7]),
-        .I4(rCount_reg[11]),
-        .I5(rCount_reg[10]),
+       (.I0(rCount_reg[7]),
+        .I1(rCount_reg[6]),
+        .I2(rCount_reg[5]),
+        .I3(rCount_reg[4]),
         .O(\rDuty[11]_i_3_n_0 ));
   FDRE \rDuty_reg[0] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[0]),
         .Q(rDuty[0]),
         .R(clear));
   FDRE \rDuty_reg[10] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[10]),
         .Q(rDuty[10]),
         .R(clear));
   FDRE \rDuty_reg[11] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[11]),
         .Q(rDuty[11]),
         .R(clear));
   FDRE \rDuty_reg[1] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[1]),
         .Q(rDuty[1]),
         .R(clear));
   FDRE \rDuty_reg[2] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[2]),
         .Q(rDuty[2]),
         .R(clear));
   FDRE \rDuty_reg[3] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[3]),
         .Q(rDuty[3]),
         .R(clear));
   FDRE \rDuty_reg[4] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[4]),
         .Q(rDuty[4]),
         .R(clear));
   FDRE \rDuty_reg[5] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[5]),
         .Q(rDuty[5]),
         .R(clear));
   FDRE \rDuty_reg[6] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[6]),
         .Q(rDuty[6]),
         .R(clear));
   FDRE \rDuty_reg[7] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[7]),
         .Q(rDuty[7]),
         .R(clear));
   FDRE \rDuty_reg[8] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[8]),
         .Q(rDuty[8]),
         .R(clear));
   FDRE \rDuty_reg[9] 
        (.C(s00_axi_aclk),
-        .CE(rDuty_0),
+        .CE(E),
         .D(D[9]),
         .Q(rDuty[9]),
         .R(clear));
@@ -302,12 +330,60 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
         .O(rPWM0_carry__0_i_1_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
+    rPWM0_carry__0_i_1__0
+       (.I0(rCount_reg[11]),
+        .I1(Q[11]),
+        .I2(rCount_reg[10]),
+        .I3(Q[10]),
+        .O(\rCount_reg[11]_0 [1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry__0_i_1__1
+       (.I0(rCount_reg[11]),
+        .I1(rPWM0_carry__0_0[11]),
+        .I2(rCount_reg[10]),
+        .I3(rPWM0_carry__0_0[10]),
+        .O(\rCount_reg[11]_1 [1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry__0_i_1__2
+       (.I0(rCount_reg[11]),
+        .I1(rPWM0_carry__0_1[11]),
+        .I2(rCount_reg[10]),
+        .I3(rPWM0_carry__0_1[10]),
+        .O(\rCount_reg[11]_2 [1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
     rPWM0_carry__0_i_2
        (.I0(rCount_reg[9]),
         .I1(rDuty[9]),
         .I2(rCount_reg[8]),
         .I3(rDuty[8]),
         .O(rPWM0_carry__0_i_2_n_0));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry__0_i_2__0
+       (.I0(rCount_reg[9]),
+        .I1(Q[9]),
+        .I2(rCount_reg[8]),
+        .I3(Q[8]),
+        .O(\rCount_reg[11]_0 [0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry__0_i_2__1
+       (.I0(rCount_reg[9]),
+        .I1(rPWM0_carry__0_0[9]),
+        .I2(rCount_reg[8]),
+        .I3(rPWM0_carry__0_0[8]),
+        .O(\rCount_reg[11]_1 [0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry__0_i_2__2
+       (.I0(rCount_reg[9]),
+        .I1(rPWM0_carry__0_1[9]),
+        .I2(rCount_reg[8]),
+        .I3(rPWM0_carry__0_1[8]),
+        .O(\rCount_reg[11]_2 [0]));
   LUT4 #(
     .INIT(16'h9009)) 
     rPWM0_carry__0_i_3
@@ -334,12 +410,60 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
         .O(rPWM0_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
+    rPWM0_carry_i_1__0
+       (.I0(rCount_reg[7]),
+        .I1(Q[7]),
+        .I2(rCount_reg[6]),
+        .I3(Q[6]),
+        .O(DI[3]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_1__1
+       (.I0(rCount_reg[7]),
+        .I1(rPWM0_carry__0_0[7]),
+        .I2(rCount_reg[6]),
+        .I3(rPWM0_carry__0_0[6]),
+        .O(\rCount_reg[7]_0 [3]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_1__2
+       (.I0(rCount_reg[7]),
+        .I1(rPWM0_carry__0_1[7]),
+        .I2(rCount_reg[6]),
+        .I3(rPWM0_carry__0_1[6]),
+        .O(\rCount_reg[7]_1 [3]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
     rPWM0_carry_i_2
        (.I0(rCount_reg[5]),
         .I1(rDuty[5]),
         .I2(rCount_reg[4]),
         .I3(rDuty[4]),
         .O(rPWM0_carry_i_2_n_0));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_2__0
+       (.I0(rCount_reg[5]),
+        .I1(Q[5]),
+        .I2(rCount_reg[4]),
+        .I3(Q[4]),
+        .O(DI[2]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_2__1
+       (.I0(rCount_reg[5]),
+        .I1(rPWM0_carry__0_0[5]),
+        .I2(rCount_reg[4]),
+        .I3(rPWM0_carry__0_0[4]),
+        .O(\rCount_reg[7]_0 [2]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_2__2
+       (.I0(rCount_reg[5]),
+        .I1(rPWM0_carry__0_1[5]),
+        .I2(rCount_reg[4]),
+        .I3(rPWM0_carry__0_1[4]),
+        .O(\rCount_reg[7]_1 [2]));
   LUT4 #(
     .INIT(16'h22B2)) 
     rPWM0_carry_i_3
@@ -350,12 +474,60 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
         .O(rPWM0_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
+    rPWM0_carry_i_3__0
+       (.I0(rCount_reg[3]),
+        .I1(Q[3]),
+        .I2(rCount_reg[2]),
+        .I3(Q[2]),
+        .O(DI[1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_3__1
+       (.I0(rCount_reg[3]),
+        .I1(rPWM0_carry__0_0[3]),
+        .I2(rCount_reg[2]),
+        .I3(rPWM0_carry__0_0[2]),
+        .O(\rCount_reg[7]_0 [1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_3__2
+       (.I0(rCount_reg[3]),
+        .I1(rPWM0_carry__0_1[3]),
+        .I2(rCount_reg[2]),
+        .I3(rPWM0_carry__0_1[2]),
+        .O(\rCount_reg[7]_1 [1]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
     rPWM0_carry_i_4
        (.I0(rCount_reg[1]),
         .I1(rDuty[1]),
         .I2(rCount_reg[0]),
         .I3(rDuty[0]),
         .O(rPWM0_carry_i_4_n_0));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_4__0
+       (.I0(rCount_reg[1]),
+        .I1(Q[1]),
+        .I2(rCount_reg[0]),
+        .I3(Q[0]),
+        .O(DI[0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_4__1
+       (.I0(rCount_reg[1]),
+        .I1(rPWM0_carry__0_0[1]),
+        .I2(rCount_reg[0]),
+        .I3(rPWM0_carry__0_0[0]),
+        .O(\rCount_reg[7]_0 [0]));
+  LUT4 #(
+    .INIT(16'h22B2)) 
+    rPWM0_carry_i_4__2
+       (.I0(rCount_reg[1]),
+        .I1(rPWM0_carry__0_1[1]),
+        .I2(rCount_reg[0]),
+        .I3(rPWM0_carry__0_1[0]),
+        .O(\rCount_reg[7]_1 [0]));
   LUT4 #(
     .INIT(16'h9009)) 
     rPWM0_carry_i_5
@@ -388,18 +560,599 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
         .I2(rDuty[0]),
         .I3(rCount_reg[0]),
         .O(rPWM0_carry_i_8_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     rPWM_i_1
-       (.I0(s00_axi_aresetn),
-        .I1(rPWM0_carry__0_n_2),
+       (.I0(rPWM0_carry__0_n_2),
         .O(rPWM_i_1_n_0));
   FDRE rPWM_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(rPWM_i_1_n_0),
         .Q(oPWM),
-        .R(1'b0));
+        .R(clear));
+endmodule
+
+(* ORIG_REF_NAME = "PWM" *) 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM_0
+   (oPWM,
+    Q,
+    DI,
+    rPWM_reg_0,
+    clear,
+    s00_axi_aclk,
+    rCount_reg,
+    E,
+    D);
+  output [0:0]oPWM;
+  output [11:0]Q;
+  input [3:0]DI;
+  input [1:0]rPWM_reg_0;
+  input clear;
+  input s00_axi_aclk;
+  input [11:0]rCount_reg;
+  input [0:0]E;
+  input [11:0]D;
+
+  wire [11:0]D;
+  wire [3:0]DI;
+  wire [0:0]E;
+  wire [11:0]Q;
+  wire clear;
+  wire [0:0]oPWM;
+  wire [11:0]rCount_reg;
+  wire rPWM0_carry__0_i_3__0_n_0;
+  wire rPWM0_carry__0_i_4__0_n_0;
+  wire rPWM0_carry__0_n_2;
+  wire rPWM0_carry__0_n_3;
+  wire rPWM0_carry_i_5__0_n_0;
+  wire rPWM0_carry_i_6__0_n_0;
+  wire rPWM0_carry_i_7__0_n_0;
+  wire rPWM0_carry_i_8__0_n_0;
+  wire rPWM0_carry_n_0;
+  wire rPWM0_carry_n_1;
+  wire rPWM0_carry_n_2;
+  wire rPWM0_carry_n_3;
+  wire rPWM_i_1__0_n_0;
+  wire [1:0]rPWM_reg_0;
+  wire s00_axi_aclk;
+  wire [3:0]NLW_rPWM0_carry_O_UNCONNECTED;
+  wire [3:2]NLW_rPWM0_carry__0_CO_UNCONNECTED;
+  wire [3:0]NLW_rPWM0_carry__0_O_UNCONNECTED;
+
+  FDRE \rDuty_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[0]),
+        .Q(Q[0]),
+        .R(clear));
+  FDRE \rDuty_reg[10] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[10]),
+        .Q(Q[10]),
+        .R(clear));
+  FDRE \rDuty_reg[11] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[11]),
+        .Q(Q[11]),
+        .R(clear));
+  FDRE \rDuty_reg[1] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[1]),
+        .Q(Q[1]),
+        .R(clear));
+  FDRE \rDuty_reg[2] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[2]),
+        .Q(Q[2]),
+        .R(clear));
+  FDRE \rDuty_reg[3] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[3]),
+        .Q(Q[3]),
+        .R(clear));
+  FDRE \rDuty_reg[4] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[4]),
+        .Q(Q[4]),
+        .R(clear));
+  FDRE \rDuty_reg[5] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[5]),
+        .Q(Q[5]),
+        .R(clear));
+  FDRE \rDuty_reg[6] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[6]),
+        .Q(Q[6]),
+        .R(clear));
+  FDRE \rDuty_reg[7] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[7]),
+        .Q(Q[7]),
+        .R(clear));
+  FDRE \rDuty_reg[8] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[8]),
+        .Q(Q[8]),
+        .R(clear));
+  FDRE \rDuty_reg[9] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[9]),
+        .Q(Q[9]),
+        .R(clear));
+  CARRY4 rPWM0_carry
+       (.CI(1'b0),
+        .CO({rPWM0_carry_n_0,rPWM0_carry_n_1,rPWM0_carry_n_2,rPWM0_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI(DI),
+        .O(NLW_rPWM0_carry_O_UNCONNECTED[3:0]),
+        .S({rPWM0_carry_i_5__0_n_0,rPWM0_carry_i_6__0_n_0,rPWM0_carry_i_7__0_n_0,rPWM0_carry_i_8__0_n_0}));
+  CARRY4 rPWM0_carry__0
+       (.CI(rPWM0_carry_n_0),
+        .CO({NLW_rPWM0_carry__0_CO_UNCONNECTED[3:2],rPWM0_carry__0_n_2,rPWM0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,rPWM_reg_0}),
+        .O(NLW_rPWM0_carry__0_O_UNCONNECTED[3:0]),
+        .S({1'b0,1'b0,rPWM0_carry__0_i_3__0_n_0,rPWM0_carry__0_i_4__0_n_0}));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry__0_i_3__0
+       (.I0(Q[11]),
+        .I1(rCount_reg[11]),
+        .I2(Q[10]),
+        .I3(rCount_reg[10]),
+        .O(rPWM0_carry__0_i_3__0_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry__0_i_4__0
+       (.I0(Q[9]),
+        .I1(rCount_reg[9]),
+        .I2(Q[8]),
+        .I3(rCount_reg[8]),
+        .O(rPWM0_carry__0_i_4__0_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_5__0
+       (.I0(Q[7]),
+        .I1(rCount_reg[7]),
+        .I2(Q[6]),
+        .I3(rCount_reg[6]),
+        .O(rPWM0_carry_i_5__0_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_6__0
+       (.I0(Q[5]),
+        .I1(rCount_reg[5]),
+        .I2(Q[4]),
+        .I3(rCount_reg[4]),
+        .O(rPWM0_carry_i_6__0_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_7__0
+       (.I0(Q[3]),
+        .I1(rCount_reg[3]),
+        .I2(Q[2]),
+        .I3(rCount_reg[2]),
+        .O(rPWM0_carry_i_7__0_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_8__0
+       (.I0(Q[1]),
+        .I1(rCount_reg[1]),
+        .I2(Q[0]),
+        .I3(rCount_reg[0]),
+        .O(rPWM0_carry_i_8__0_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    rPWM_i_1__0
+       (.I0(rPWM0_carry__0_n_2),
+        .O(rPWM_i_1__0_n_0));
+  FDRE rPWM_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rPWM_i_1__0_n_0),
+        .Q(oPWM),
+        .R(clear));
+endmodule
+
+(* ORIG_REF_NAME = "PWM" *) 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM_1
+   (oPWM,
+    Q,
+    rPWM0_carry__0_0,
+    rPWM_reg_0,
+    clear,
+    s00_axi_aclk,
+    rCount_reg,
+    E,
+    D);
+  output [0:0]oPWM;
+  output [11:0]Q;
+  input [3:0]rPWM0_carry__0_0;
+  input [1:0]rPWM_reg_0;
+  input clear;
+  input s00_axi_aclk;
+  input [11:0]rCount_reg;
+  input [0:0]E;
+  input [11:0]D;
+
+  wire [11:0]D;
+  wire [0:0]E;
+  wire [11:0]Q;
+  wire clear;
+  wire [0:0]oPWM;
+  wire [11:0]rCount_reg;
+  wire [3:0]rPWM0_carry__0_0;
+  wire rPWM0_carry__0_i_3__1_n_0;
+  wire rPWM0_carry__0_i_4__1_n_0;
+  wire rPWM0_carry__0_n_2;
+  wire rPWM0_carry__0_n_3;
+  wire rPWM0_carry_i_5__1_n_0;
+  wire rPWM0_carry_i_6__1_n_0;
+  wire rPWM0_carry_i_7__1_n_0;
+  wire rPWM0_carry_i_8__1_n_0;
+  wire rPWM0_carry_n_0;
+  wire rPWM0_carry_n_1;
+  wire rPWM0_carry_n_2;
+  wire rPWM0_carry_n_3;
+  wire rPWM_i_1__1_n_0;
+  wire [1:0]rPWM_reg_0;
+  wire s00_axi_aclk;
+  wire [3:0]NLW_rPWM0_carry_O_UNCONNECTED;
+  wire [3:2]NLW_rPWM0_carry__0_CO_UNCONNECTED;
+  wire [3:0]NLW_rPWM0_carry__0_O_UNCONNECTED;
+
+  FDRE \rDuty_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[0]),
+        .Q(Q[0]),
+        .R(clear));
+  FDRE \rDuty_reg[10] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[10]),
+        .Q(Q[10]),
+        .R(clear));
+  FDRE \rDuty_reg[11] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[11]),
+        .Q(Q[11]),
+        .R(clear));
+  FDRE \rDuty_reg[1] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[1]),
+        .Q(Q[1]),
+        .R(clear));
+  FDRE \rDuty_reg[2] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[2]),
+        .Q(Q[2]),
+        .R(clear));
+  FDRE \rDuty_reg[3] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[3]),
+        .Q(Q[3]),
+        .R(clear));
+  FDRE \rDuty_reg[4] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[4]),
+        .Q(Q[4]),
+        .R(clear));
+  FDRE \rDuty_reg[5] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[5]),
+        .Q(Q[5]),
+        .R(clear));
+  FDRE \rDuty_reg[6] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[6]),
+        .Q(Q[6]),
+        .R(clear));
+  FDRE \rDuty_reg[7] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[7]),
+        .Q(Q[7]),
+        .R(clear));
+  FDRE \rDuty_reg[8] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[8]),
+        .Q(Q[8]),
+        .R(clear));
+  FDRE \rDuty_reg[9] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[9]),
+        .Q(Q[9]),
+        .R(clear));
+  CARRY4 rPWM0_carry
+       (.CI(1'b0),
+        .CO({rPWM0_carry_n_0,rPWM0_carry_n_1,rPWM0_carry_n_2,rPWM0_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI(rPWM0_carry__0_0),
+        .O(NLW_rPWM0_carry_O_UNCONNECTED[3:0]),
+        .S({rPWM0_carry_i_5__1_n_0,rPWM0_carry_i_6__1_n_0,rPWM0_carry_i_7__1_n_0,rPWM0_carry_i_8__1_n_0}));
+  CARRY4 rPWM0_carry__0
+       (.CI(rPWM0_carry_n_0),
+        .CO({NLW_rPWM0_carry__0_CO_UNCONNECTED[3:2],rPWM0_carry__0_n_2,rPWM0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,rPWM_reg_0}),
+        .O(NLW_rPWM0_carry__0_O_UNCONNECTED[3:0]),
+        .S({1'b0,1'b0,rPWM0_carry__0_i_3__1_n_0,rPWM0_carry__0_i_4__1_n_0}));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry__0_i_3__1
+       (.I0(Q[11]),
+        .I1(rCount_reg[11]),
+        .I2(Q[10]),
+        .I3(rCount_reg[10]),
+        .O(rPWM0_carry__0_i_3__1_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry__0_i_4__1
+       (.I0(Q[9]),
+        .I1(rCount_reg[9]),
+        .I2(Q[8]),
+        .I3(rCount_reg[8]),
+        .O(rPWM0_carry__0_i_4__1_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_5__1
+       (.I0(Q[7]),
+        .I1(rCount_reg[7]),
+        .I2(Q[6]),
+        .I3(rCount_reg[6]),
+        .O(rPWM0_carry_i_5__1_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_6__1
+       (.I0(Q[5]),
+        .I1(rCount_reg[5]),
+        .I2(Q[4]),
+        .I3(rCount_reg[4]),
+        .O(rPWM0_carry_i_6__1_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_7__1
+       (.I0(Q[3]),
+        .I1(rCount_reg[3]),
+        .I2(Q[2]),
+        .I3(rCount_reg[2]),
+        .O(rPWM0_carry_i_7__1_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_8__1
+       (.I0(Q[1]),
+        .I1(rCount_reg[1]),
+        .I2(Q[0]),
+        .I3(rCount_reg[0]),
+        .O(rPWM0_carry_i_8__1_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    rPWM_i_1__1
+       (.I0(rPWM0_carry__0_n_2),
+        .O(rPWM_i_1__1_n_0));
+  FDRE rPWM_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rPWM_i_1__1_n_0),
+        .Q(oPWM),
+        .R(clear));
+endmodule
+
+(* ORIG_REF_NAME = "PWM" *) 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM_2
+   (oPWM,
+    Q,
+    rPWM0_carry__0_0,
+    rPWM_reg_0,
+    clear,
+    s00_axi_aclk,
+    rCount_reg,
+    E,
+    D);
+  output [0:0]oPWM;
+  output [11:0]Q;
+  input [3:0]rPWM0_carry__0_0;
+  input [1:0]rPWM_reg_0;
+  input clear;
+  input s00_axi_aclk;
+  input [11:0]rCount_reg;
+  input [0:0]E;
+  input [11:0]D;
+
+  wire [11:0]D;
+  wire [0:0]E;
+  wire [11:0]Q;
+  wire clear;
+  wire [0:0]oPWM;
+  wire [11:0]rCount_reg;
+  wire [3:0]rPWM0_carry__0_0;
+  wire rPWM0_carry__0_i_3__2_n_0;
+  wire rPWM0_carry__0_i_4__2_n_0;
+  wire rPWM0_carry__0_n_2;
+  wire rPWM0_carry__0_n_3;
+  wire rPWM0_carry_i_5__2_n_0;
+  wire rPWM0_carry_i_6__2_n_0;
+  wire rPWM0_carry_i_7__2_n_0;
+  wire rPWM0_carry_i_8__2_n_0;
+  wire rPWM0_carry_n_0;
+  wire rPWM0_carry_n_1;
+  wire rPWM0_carry_n_2;
+  wire rPWM0_carry_n_3;
+  wire rPWM_i_1__2_n_0;
+  wire [1:0]rPWM_reg_0;
+  wire s00_axi_aclk;
+  wire [3:0]NLW_rPWM0_carry_O_UNCONNECTED;
+  wire [3:2]NLW_rPWM0_carry__0_CO_UNCONNECTED;
+  wire [3:0]NLW_rPWM0_carry__0_O_UNCONNECTED;
+
+  FDRE \rDuty_reg[0] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[0]),
+        .Q(Q[0]),
+        .R(clear));
+  FDRE \rDuty_reg[10] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[10]),
+        .Q(Q[10]),
+        .R(clear));
+  FDRE \rDuty_reg[11] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[11]),
+        .Q(Q[11]),
+        .R(clear));
+  FDRE \rDuty_reg[1] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[1]),
+        .Q(Q[1]),
+        .R(clear));
+  FDRE \rDuty_reg[2] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[2]),
+        .Q(Q[2]),
+        .R(clear));
+  FDRE \rDuty_reg[3] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[3]),
+        .Q(Q[3]),
+        .R(clear));
+  FDRE \rDuty_reg[4] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[4]),
+        .Q(Q[4]),
+        .R(clear));
+  FDRE \rDuty_reg[5] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[5]),
+        .Q(Q[5]),
+        .R(clear));
+  FDRE \rDuty_reg[6] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[6]),
+        .Q(Q[6]),
+        .R(clear));
+  FDRE \rDuty_reg[7] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[7]),
+        .Q(Q[7]),
+        .R(clear));
+  FDRE \rDuty_reg[8] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[8]),
+        .Q(Q[8]),
+        .R(clear));
+  FDRE \rDuty_reg[9] 
+       (.C(s00_axi_aclk),
+        .CE(E),
+        .D(D[9]),
+        .Q(Q[9]),
+        .R(clear));
+  CARRY4 rPWM0_carry
+       (.CI(1'b0),
+        .CO({rPWM0_carry_n_0,rPWM0_carry_n_1,rPWM0_carry_n_2,rPWM0_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI(rPWM0_carry__0_0),
+        .O(NLW_rPWM0_carry_O_UNCONNECTED[3:0]),
+        .S({rPWM0_carry_i_5__2_n_0,rPWM0_carry_i_6__2_n_0,rPWM0_carry_i_7__2_n_0,rPWM0_carry_i_8__2_n_0}));
+  CARRY4 rPWM0_carry__0
+       (.CI(rPWM0_carry_n_0),
+        .CO({NLW_rPWM0_carry__0_CO_UNCONNECTED[3:2],rPWM0_carry__0_n_2,rPWM0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,rPWM_reg_0}),
+        .O(NLW_rPWM0_carry__0_O_UNCONNECTED[3:0]),
+        .S({1'b0,1'b0,rPWM0_carry__0_i_3__2_n_0,rPWM0_carry__0_i_4__2_n_0}));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry__0_i_3__2
+       (.I0(Q[11]),
+        .I1(rCount_reg[11]),
+        .I2(Q[10]),
+        .I3(rCount_reg[10]),
+        .O(rPWM0_carry__0_i_3__2_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry__0_i_4__2
+       (.I0(Q[9]),
+        .I1(rCount_reg[9]),
+        .I2(Q[8]),
+        .I3(rCount_reg[8]),
+        .O(rPWM0_carry__0_i_4__2_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_5__2
+       (.I0(Q[7]),
+        .I1(rCount_reg[7]),
+        .I2(Q[6]),
+        .I3(rCount_reg[6]),
+        .O(rPWM0_carry_i_5__2_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_6__2
+       (.I0(Q[5]),
+        .I1(rCount_reg[5]),
+        .I2(Q[4]),
+        .I3(rCount_reg[4]),
+        .O(rPWM0_carry_i_6__2_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_7__2
+       (.I0(Q[3]),
+        .I1(rCount_reg[3]),
+        .I2(Q[2]),
+        .I3(rCount_reg[2]),
+        .O(rPWM0_carry_i_7__2_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rPWM0_carry_i_8__2
+       (.I0(Q[1]),
+        .I1(rCount_reg[1]),
+        .I2(Q[0]),
+        .I3(rCount_reg[0]),
+        .O(rPWM0_carry_i_8__2_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    rPWM_i_1__2
+       (.I0(rPWM0_carry__0_n_2),
+        .O(rPWM_i_1__2_n_0));
+  FDRE rPWM_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rPWM_i_1__2_n_0),
+        .Q(oPWM),
+        .R(clear));
 endmodule
 
 (* CHECK_LICENSE_TYPE = "design_1_myPWM_0_0,myPWM_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "myPWM_v1_0,Vivado 2019.1" *) 
@@ -445,13 +1198,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 50000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s00_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 50000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s00_axi_rready;
   output [3:0]oPWM;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s00_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_axi_aresetn;
 
   wire \<const0> ;
-  wire [0:0]\^oPWM ;
+  wire [3:0]oPWM;
   wire s00_axi_aclk;
   wire [3:0]s00_axi_araddr;
   wire s00_axi_aresetn;
@@ -470,10 +1223,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
 
-  assign oPWM[3] = \^oPWM [0];
-  assign oPWM[2] = \^oPWM [0];
-  assign oPWM[1] = \^oPWM [0];
-  assign oPWM[0] = \^oPWM [0];
   assign s00_axi_bresp[1] = \<const0> ;
   assign s00_axi_bresp[0] = \<const0> ;
   assign s00_axi_rresp[1] = \<const0> ;
@@ -481,7 +1230,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   GND GND
        (.G(\<const0> ));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0 inst
-       (.oPWM(\^oPWM ),
+       (.oPWM(oPWM),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_araddr(s00_axi_araddr[3:2]),
         .s00_axi_aresetn(s00_axi_aresetn),
@@ -502,13 +1251,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0
-   (s00_axi_wready,
-    s00_axi_awready,
+   (s00_axi_awready,
+    s00_axi_wready,
     s00_axi_arready,
     s00_axi_rdata,
     s00_axi_rvalid,
-    s00_axi_bvalid,
     oPWM,
+    s00_axi_bvalid,
     s00_axi_aclk,
     s00_axi_araddr,
     s00_axi_arvalid,
@@ -520,13 +1269,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0
     s00_axi_aresetn,
     s00_axi_bready,
     s00_axi_rready);
-  output s00_axi_wready;
   output s00_axi_awready;
+  output s00_axi_wready;
   output s00_axi_arready;
   output [31:0]s00_axi_rdata;
   output s00_axi_rvalid;
+  output [3:0]oPWM;
   output s00_axi_bvalid;
-  output [0:0]oPWM;
   input s00_axi_aclk;
   input [1:0]s00_axi_araddr;
   input s00_axi_arvalid;
@@ -540,7 +1289,63 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0
   input s00_axi_rready;
 
   wire clear;
-  wire [0:0]oPWM;
+  wire [3:0]oPWM;
+  wire pwm0_n_13;
+  wire pwm0_n_14;
+  wire pwm0_n_15;
+  wire pwm0_n_16;
+  wire pwm0_n_17;
+  wire pwm0_n_18;
+  wire pwm0_n_19;
+  wire pwm0_n_20;
+  wire pwm0_n_21;
+  wire pwm0_n_22;
+  wire pwm0_n_23;
+  wire pwm0_n_24;
+  wire pwm0_n_25;
+  wire pwm0_n_26;
+  wire pwm0_n_27;
+  wire pwm0_n_28;
+  wire pwm0_n_29;
+  wire pwm0_n_30;
+  wire pwm1_n_1;
+  wire pwm1_n_10;
+  wire pwm1_n_11;
+  wire pwm1_n_12;
+  wire pwm1_n_2;
+  wire pwm1_n_3;
+  wire pwm1_n_4;
+  wire pwm1_n_5;
+  wire pwm1_n_6;
+  wire pwm1_n_7;
+  wire pwm1_n_8;
+  wire pwm1_n_9;
+  wire pwm2_n_1;
+  wire pwm2_n_10;
+  wire pwm2_n_11;
+  wire pwm2_n_12;
+  wire pwm2_n_2;
+  wire pwm2_n_3;
+  wire pwm2_n_4;
+  wire pwm2_n_5;
+  wire pwm2_n_6;
+  wire pwm2_n_7;
+  wire pwm2_n_8;
+  wire pwm2_n_9;
+  wire pwm3_n_1;
+  wire pwm3_n_10;
+  wire pwm3_n_11;
+  wire pwm3_n_12;
+  wire pwm3_n_2;
+  wire pwm3_n_3;
+  wire pwm3_n_4;
+  wire pwm3_n_5;
+  wire pwm3_n_6;
+  wire pwm3_n_7;
+  wire pwm3_n_8;
+  wire pwm3_n_9;
+  wire [11:0]rCount_reg;
+  wire rDuty;
   wire s00_axi_aclk;
   wire [1:0]s00_axi_araddr;
   wire s00_axi_aresetn;
@@ -559,9 +1364,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
   wire [11:0]slv_reg0;
+  wire [11:0]slv_reg1;
+  wire [11:0]slv_reg2;
+  wire [11:0]slv_reg3;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI myPWM_v1_0_S00_AXI_inst
-       (.Q(slv_reg0),
+       (.Q(slv_reg3),
         .clear(clear),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_araddr(s00_axi_araddr),
@@ -579,23 +1387,69 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0
         .s00_axi_wdata(s00_axi_wdata),
         .s00_axi_wready(s00_axi_wready),
         .s00_axi_wstrb(s00_axi_wstrb),
-        .s00_axi_wvalid(s00_axi_wvalid));
+        .s00_axi_wvalid(s00_axi_wvalid),
+        .\slv_reg0_reg[11]_0 (slv_reg0),
+        .\slv_reg1_reg[11]_0 (slv_reg1),
+        .\slv_reg2_reg[11]_0 (slv_reg2));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM pwm0
        (.D(slv_reg0),
+        .DI({pwm0_n_13,pwm0_n_14,pwm0_n_15,pwm0_n_16}),
+        .E(rDuty),
+        .Q({pwm1_n_1,pwm1_n_2,pwm1_n_3,pwm1_n_4,pwm1_n_5,pwm1_n_6,pwm1_n_7,pwm1_n_8,pwm1_n_9,pwm1_n_10,pwm1_n_11,pwm1_n_12}),
         .clear(clear),
-        .oPWM(oPWM),
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_aresetn(s00_axi_aresetn));
+        .oPWM(oPWM[0]),
+        .rCount_reg(rCount_reg),
+        .\rCount_reg[11]_0 ({pwm0_n_17,pwm0_n_18}),
+        .\rCount_reg[11]_1 ({pwm0_n_23,pwm0_n_24}),
+        .\rCount_reg[11]_2 ({pwm0_n_29,pwm0_n_30}),
+        .\rCount_reg[7]_0 ({pwm0_n_19,pwm0_n_20,pwm0_n_21,pwm0_n_22}),
+        .\rCount_reg[7]_1 ({pwm0_n_25,pwm0_n_26,pwm0_n_27,pwm0_n_28}),
+        .rPWM0_carry__0_0({pwm2_n_1,pwm2_n_2,pwm2_n_3,pwm2_n_4,pwm2_n_5,pwm2_n_6,pwm2_n_7,pwm2_n_8,pwm2_n_9,pwm2_n_10,pwm2_n_11,pwm2_n_12}),
+        .rPWM0_carry__0_1({pwm3_n_1,pwm3_n_2,pwm3_n_3,pwm3_n_4,pwm3_n_5,pwm3_n_6,pwm3_n_7,pwm3_n_8,pwm3_n_9,pwm3_n_10,pwm3_n_11,pwm3_n_12}),
+        .s00_axi_aclk(s00_axi_aclk));
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM_0 pwm1
+       (.D(slv_reg1),
+        .DI({pwm0_n_13,pwm0_n_14,pwm0_n_15,pwm0_n_16}),
+        .E(rDuty),
+        .Q({pwm1_n_1,pwm1_n_2,pwm1_n_3,pwm1_n_4,pwm1_n_5,pwm1_n_6,pwm1_n_7,pwm1_n_8,pwm1_n_9,pwm1_n_10,pwm1_n_11,pwm1_n_12}),
+        .clear(clear),
+        .oPWM(oPWM[1]),
+        .rCount_reg(rCount_reg),
+        .rPWM_reg_0({pwm0_n_17,pwm0_n_18}),
+        .s00_axi_aclk(s00_axi_aclk));
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM_1 pwm2
+       (.D(slv_reg2),
+        .E(rDuty),
+        .Q({pwm2_n_1,pwm2_n_2,pwm2_n_3,pwm2_n_4,pwm2_n_5,pwm2_n_6,pwm2_n_7,pwm2_n_8,pwm2_n_9,pwm2_n_10,pwm2_n_11,pwm2_n_12}),
+        .clear(clear),
+        .oPWM(oPWM[2]),
+        .rCount_reg(rCount_reg),
+        .rPWM0_carry__0_0({pwm0_n_19,pwm0_n_20,pwm0_n_21,pwm0_n_22}),
+        .rPWM_reg_0({pwm0_n_23,pwm0_n_24}),
+        .s00_axi_aclk(s00_axi_aclk));
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM_2 pwm3
+       (.D(slv_reg3),
+        .E(rDuty),
+        .Q({pwm3_n_1,pwm3_n_2,pwm3_n_3,pwm3_n_4,pwm3_n_5,pwm3_n_6,pwm3_n_7,pwm3_n_8,pwm3_n_9,pwm3_n_10,pwm3_n_11,pwm3_n_12}),
+        .clear(clear),
+        .oPWM(oPWM[3]),
+        .rCount_reg(rCount_reg),
+        .rPWM0_carry__0_0({pwm0_n_25,pwm0_n_26,pwm0_n_27,pwm0_n_28}),
+        .rPWM_reg_0({pwm0_n_29,pwm0_n_30}),
+        .s00_axi_aclk(s00_axi_aclk));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
-   (s00_axi_wready,
+   (s00_axi_awready,
     clear,
-    s00_axi_awready,
+    s00_axi_wready,
     s00_axi_arready,
     s00_axi_bvalid,
     s00_axi_rvalid,
     Q,
+    \slv_reg2_reg[11]_0 ,
+    \slv_reg1_reg[11]_0 ,
+    \slv_reg0_reg[11]_0 ,
     s00_axi_rdata,
     s00_axi_aclk,
     s00_axi_aresetn,
@@ -608,13 +1462,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
     s00_axi_awaddr,
     s00_axi_wdata,
     s00_axi_wstrb);
-  output s00_axi_wready;
-  output clear;
   output s00_axi_awready;
+  output clear;
+  output s00_axi_wready;
   output s00_axi_arready;
   output s00_axi_bvalid;
   output s00_axi_rvalid;
   output [11:0]Q;
+  output [11:0]\slv_reg2_reg[11]_0 ;
+  output [11:0]\slv_reg1_reg[11]_0 ;
+  output [11:0]\slv_reg0_reg[11]_0 ;
   output [31:0]s00_axi_rdata;
   input s00_axi_aclk;
   input s00_axi_aresetn;
@@ -663,21 +1520,24 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
   wire [31:12]slv_reg0;
-  wire \slv_reg0[15]_i_1_n_0 ;
-  wire \slv_reg0[23]_i_1_n_0 ;
-  wire \slv_reg0[31]_i_1_n_0 ;
-  wire \slv_reg0[7]_i_1_n_0 ;
-  wire [31:0]slv_reg1;
+  wire [11:0]\slv_reg0_reg[11]_0 ;
+  wire [31:12]slv_reg1;
   wire \slv_reg1[15]_i_1_n_0 ;
   wire \slv_reg1[23]_i_1_n_0 ;
   wire \slv_reg1[31]_i_1_n_0 ;
   wire \slv_reg1[7]_i_1_n_0 ;
-  wire [31:0]slv_reg2;
+  wire [11:0]\slv_reg1_reg[11]_0 ;
+  wire [31:12]slv_reg2;
   wire \slv_reg2[15]_i_1_n_0 ;
   wire \slv_reg2[23]_i_1_n_0 ;
   wire \slv_reg2[31]_i_1_n_0 ;
   wire \slv_reg2[7]_i_1_n_0 ;
-  wire [31:0]slv_reg3;
+  wire [11:0]\slv_reg2_reg[11]_0 ;
+  wire [31:12]slv_reg3;
+  wire \slv_reg3[15]_i_1_n_0 ;
+  wire \slv_reg3[23]_i_1_n_0 ;
+  wire \slv_reg3[31]_i_1_n_0 ;
+  wire \slv_reg3[7]_i_1_n_0 ;
   wire slv_reg_rden__0;
   wire slv_reg_wren__0;
 
@@ -809,32 +1669,32 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[0]_i_1 
-       (.I0(slv_reg1[0]),
-        .I1(Q[0]),
-        .I2(slv_reg3[0]),
+       (.I0(\slv_reg1_reg[11]_0 [0]),
+        .I1(\slv_reg0_reg[11]_0 [0]),
+        .I2(Q[0]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[0]),
+        .I5(\slv_reg2_reg[11]_0 [0]),
         .O(reg_data_out[0]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[10]_i_1 
-       (.I0(slv_reg1[10]),
-        .I1(Q[10]),
-        .I2(slv_reg3[10]),
+       (.I0(\slv_reg1_reg[11]_0 [10]),
+        .I1(\slv_reg0_reg[11]_0 [10]),
+        .I2(Q[10]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[10]),
+        .I5(\slv_reg2_reg[11]_0 [10]),
         .O(reg_data_out[10]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[11]_i_1 
-       (.I0(slv_reg1[11]),
-        .I1(Q[11]),
-        .I2(slv_reg3[11]),
+       (.I0(\slv_reg1_reg[11]_0 [11]),
+        .I1(\slv_reg0_reg[11]_0 [11]),
+        .I2(Q[11]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[11]),
+        .I5(\slv_reg2_reg[11]_0 [11]),
         .O(reg_data_out[11]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
@@ -919,12 +1779,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[1]_i_1 
-       (.I0(slv_reg1[1]),
-        .I1(Q[1]),
-        .I2(slv_reg3[1]),
+       (.I0(\slv_reg1_reg[11]_0 [1]),
+        .I1(\slv_reg0_reg[11]_0 [1]),
+        .I2(Q[1]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[1]),
+        .I5(\slv_reg2_reg[11]_0 [1]),
         .O(reg_data_out[1]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
@@ -1029,12 +1889,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[2]_i_1 
-       (.I0(slv_reg1[2]),
-        .I1(Q[2]),
-        .I2(slv_reg3[2]),
+       (.I0(\slv_reg1_reg[11]_0 [2]),
+        .I1(\slv_reg0_reg[11]_0 [2]),
+        .I2(Q[2]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[2]),
+        .I5(\slv_reg2_reg[11]_0 [2]),
         .O(reg_data_out[2]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
@@ -1059,72 +1919,72 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[3]_i_1 
-       (.I0(slv_reg1[3]),
-        .I1(Q[3]),
-        .I2(slv_reg3[3]),
+       (.I0(\slv_reg1_reg[11]_0 [3]),
+        .I1(\slv_reg0_reg[11]_0 [3]),
+        .I2(Q[3]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[3]),
+        .I5(\slv_reg2_reg[11]_0 [3]),
         .O(reg_data_out[3]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[4]_i_1 
-       (.I0(slv_reg1[4]),
-        .I1(Q[4]),
-        .I2(slv_reg3[4]),
+       (.I0(\slv_reg1_reg[11]_0 [4]),
+        .I1(\slv_reg0_reg[11]_0 [4]),
+        .I2(Q[4]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[4]),
+        .I5(\slv_reg2_reg[11]_0 [4]),
         .O(reg_data_out[4]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[5]_i_1 
-       (.I0(slv_reg1[5]),
-        .I1(Q[5]),
-        .I2(slv_reg3[5]),
+       (.I0(\slv_reg1_reg[11]_0 [5]),
+        .I1(\slv_reg0_reg[11]_0 [5]),
+        .I2(Q[5]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[5]),
+        .I5(\slv_reg2_reg[11]_0 [5]),
         .O(reg_data_out[5]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[6]_i_1 
-       (.I0(slv_reg1[6]),
-        .I1(Q[6]),
-        .I2(slv_reg3[6]),
+       (.I0(\slv_reg1_reg[11]_0 [6]),
+        .I1(\slv_reg0_reg[11]_0 [6]),
+        .I2(Q[6]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[6]),
+        .I5(\slv_reg2_reg[11]_0 [6]),
         .O(reg_data_out[6]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[7]_i_1 
-       (.I0(slv_reg1[7]),
-        .I1(Q[7]),
-        .I2(slv_reg3[7]),
+       (.I0(\slv_reg1_reg[11]_0 [7]),
+        .I1(\slv_reg0_reg[11]_0 [7]),
+        .I2(Q[7]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[7]),
+        .I5(\slv_reg2_reg[11]_0 [7]),
         .O(reg_data_out[7]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[8]_i_1 
-       (.I0(slv_reg1[8]),
-        .I1(Q[8]),
-        .I2(slv_reg3[8]),
+       (.I0(\slv_reg1_reg[11]_0 [8]),
+        .I1(\slv_reg0_reg[11]_0 [8]),
+        .I2(Q[8]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[8]),
+        .I5(\slv_reg2_reg[11]_0 [8]),
         .O(reg_data_out[8]));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \axi_rdata[9]_i_1 
-       (.I0(slv_reg1[9]),
-        .I1(Q[9]),
-        .I2(slv_reg3[9]),
+       (.I0(\slv_reg1_reg[11]_0 [9]),
+        .I1(\slv_reg0_reg[11]_0 [9]),
+        .I2(Q[9]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[9]),
+        .I5(\slv_reg2_reg[11]_0 [9]),
         .O(reg_data_out[9]));
   FDRE \axi_rdata_reg[0] 
        (.C(s00_axi_aclk),
@@ -1354,7 +2214,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(p_0_in[0]),
         .I3(s00_axi_wstrb[1]),
-        .O(\slv_reg0[15]_i_1_n_0 ));
+        .O(p_1_in[15]));
   LUT4 #(
     .INIT(16'h0200)) 
     \slv_reg0[23]_i_1 
@@ -1362,7 +2222,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(p_0_in[0]),
         .I3(s00_axi_wstrb[2]),
-        .O(\slv_reg0[23]_i_1_n_0 ));
+        .O(p_1_in[23]));
   LUT4 #(
     .INIT(16'h0200)) 
     \slv_reg0[31]_i_1 
@@ -1370,7 +2230,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(p_0_in[0]),
         .I3(s00_axi_wstrb[3]),
-        .O(\slv_reg0[31]_i_1_n_0 ));
+        .O(p_1_in[31]));
   LUT4 #(
     .INIT(16'h0200)) 
     \slv_reg0[7]_i_1 
@@ -1378,198 +2238,198 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
         .I1(p_0_in[1]),
         .I2(p_0_in[0]),
         .I3(s00_axi_wstrb[0]),
-        .O(\slv_reg0[7]_i_1_n_0 ));
+        .O(p_1_in[7]));
   FDRE \slv_reg0_reg[0] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[7]_i_1_n_0 ),
+        .CE(p_1_in[7]),
         .D(s00_axi_wdata[0]),
-        .Q(Q[0]),
+        .Q(\slv_reg0_reg[11]_0 [0]),
         .R(clear));
   FDRE \slv_reg0_reg[10] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[15]_i_1_n_0 ),
+        .CE(p_1_in[15]),
         .D(s00_axi_wdata[10]),
-        .Q(Q[10]),
+        .Q(\slv_reg0_reg[11]_0 [10]),
         .R(clear));
   FDRE \slv_reg0_reg[11] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[15]_i_1_n_0 ),
+        .CE(p_1_in[15]),
         .D(s00_axi_wdata[11]),
-        .Q(Q[11]),
+        .Q(\slv_reg0_reg[11]_0 [11]),
         .R(clear));
   FDRE \slv_reg0_reg[12] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[15]_i_1_n_0 ),
+        .CE(p_1_in[15]),
         .D(s00_axi_wdata[12]),
         .Q(slv_reg0[12]),
         .R(clear));
   FDRE \slv_reg0_reg[13] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[15]_i_1_n_0 ),
+        .CE(p_1_in[15]),
         .D(s00_axi_wdata[13]),
         .Q(slv_reg0[13]),
         .R(clear));
   FDRE \slv_reg0_reg[14] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[15]_i_1_n_0 ),
+        .CE(p_1_in[15]),
         .D(s00_axi_wdata[14]),
         .Q(slv_reg0[14]),
         .R(clear));
   FDRE \slv_reg0_reg[15] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[15]_i_1_n_0 ),
+        .CE(p_1_in[15]),
         .D(s00_axi_wdata[15]),
         .Q(slv_reg0[15]),
         .R(clear));
   FDRE \slv_reg0_reg[16] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[23]_i_1_n_0 ),
+        .CE(p_1_in[23]),
         .D(s00_axi_wdata[16]),
         .Q(slv_reg0[16]),
         .R(clear));
   FDRE \slv_reg0_reg[17] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[23]_i_1_n_0 ),
+        .CE(p_1_in[23]),
         .D(s00_axi_wdata[17]),
         .Q(slv_reg0[17]),
         .R(clear));
   FDRE \slv_reg0_reg[18] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[23]_i_1_n_0 ),
+        .CE(p_1_in[23]),
         .D(s00_axi_wdata[18]),
         .Q(slv_reg0[18]),
         .R(clear));
   FDRE \slv_reg0_reg[19] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[23]_i_1_n_0 ),
+        .CE(p_1_in[23]),
         .D(s00_axi_wdata[19]),
         .Q(slv_reg0[19]),
         .R(clear));
   FDRE \slv_reg0_reg[1] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[7]_i_1_n_0 ),
+        .CE(p_1_in[7]),
         .D(s00_axi_wdata[1]),
-        .Q(Q[1]),
+        .Q(\slv_reg0_reg[11]_0 [1]),
         .R(clear));
   FDRE \slv_reg0_reg[20] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[23]_i_1_n_0 ),
+        .CE(p_1_in[23]),
         .D(s00_axi_wdata[20]),
         .Q(slv_reg0[20]),
         .R(clear));
   FDRE \slv_reg0_reg[21] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[23]_i_1_n_0 ),
+        .CE(p_1_in[23]),
         .D(s00_axi_wdata[21]),
         .Q(slv_reg0[21]),
         .R(clear));
   FDRE \slv_reg0_reg[22] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[23]_i_1_n_0 ),
+        .CE(p_1_in[23]),
         .D(s00_axi_wdata[22]),
         .Q(slv_reg0[22]),
         .R(clear));
   FDRE \slv_reg0_reg[23] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[23]_i_1_n_0 ),
+        .CE(p_1_in[23]),
         .D(s00_axi_wdata[23]),
         .Q(slv_reg0[23]),
         .R(clear));
   FDRE \slv_reg0_reg[24] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[31]_i_1_n_0 ),
+        .CE(p_1_in[31]),
         .D(s00_axi_wdata[24]),
         .Q(slv_reg0[24]),
         .R(clear));
   FDRE \slv_reg0_reg[25] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[31]_i_1_n_0 ),
+        .CE(p_1_in[31]),
         .D(s00_axi_wdata[25]),
         .Q(slv_reg0[25]),
         .R(clear));
   FDRE \slv_reg0_reg[26] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[31]_i_1_n_0 ),
+        .CE(p_1_in[31]),
         .D(s00_axi_wdata[26]),
         .Q(slv_reg0[26]),
         .R(clear));
   FDRE \slv_reg0_reg[27] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[31]_i_1_n_0 ),
+        .CE(p_1_in[31]),
         .D(s00_axi_wdata[27]),
         .Q(slv_reg0[27]),
         .R(clear));
   FDRE \slv_reg0_reg[28] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[31]_i_1_n_0 ),
+        .CE(p_1_in[31]),
         .D(s00_axi_wdata[28]),
         .Q(slv_reg0[28]),
         .R(clear));
   FDRE \slv_reg0_reg[29] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[31]_i_1_n_0 ),
+        .CE(p_1_in[31]),
         .D(s00_axi_wdata[29]),
         .Q(slv_reg0[29]),
         .R(clear));
   FDRE \slv_reg0_reg[2] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[7]_i_1_n_0 ),
+        .CE(p_1_in[7]),
         .D(s00_axi_wdata[2]),
-        .Q(Q[2]),
+        .Q(\slv_reg0_reg[11]_0 [2]),
         .R(clear));
   FDRE \slv_reg0_reg[30] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[31]_i_1_n_0 ),
+        .CE(p_1_in[31]),
         .D(s00_axi_wdata[30]),
         .Q(slv_reg0[30]),
         .R(clear));
   FDRE \slv_reg0_reg[31] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[31]_i_1_n_0 ),
+        .CE(p_1_in[31]),
         .D(s00_axi_wdata[31]),
         .Q(slv_reg0[31]),
         .R(clear));
   FDRE \slv_reg0_reg[3] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[7]_i_1_n_0 ),
+        .CE(p_1_in[7]),
         .D(s00_axi_wdata[3]),
-        .Q(Q[3]),
+        .Q(\slv_reg0_reg[11]_0 [3]),
         .R(clear));
   FDRE \slv_reg0_reg[4] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[7]_i_1_n_0 ),
+        .CE(p_1_in[7]),
         .D(s00_axi_wdata[4]),
-        .Q(Q[4]),
+        .Q(\slv_reg0_reg[11]_0 [4]),
         .R(clear));
   FDRE \slv_reg0_reg[5] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[7]_i_1_n_0 ),
+        .CE(p_1_in[7]),
         .D(s00_axi_wdata[5]),
-        .Q(Q[5]),
+        .Q(\slv_reg0_reg[11]_0 [5]),
         .R(clear));
   FDRE \slv_reg0_reg[6] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[7]_i_1_n_0 ),
+        .CE(p_1_in[7]),
         .D(s00_axi_wdata[6]),
-        .Q(Q[6]),
+        .Q(\slv_reg0_reg[11]_0 [6]),
         .R(clear));
   FDRE \slv_reg0_reg[7] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[7]_i_1_n_0 ),
+        .CE(p_1_in[7]),
         .D(s00_axi_wdata[7]),
-        .Q(Q[7]),
+        .Q(\slv_reg0_reg[11]_0 [7]),
         .R(clear));
   FDRE \slv_reg0_reg[8] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[15]_i_1_n_0 ),
+        .CE(p_1_in[15]),
         .D(s00_axi_wdata[8]),
-        .Q(Q[8]),
+        .Q(\slv_reg0_reg[11]_0 [8]),
         .R(clear));
   FDRE \slv_reg0_reg[9] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg0[15]_i_1_n_0 ),
+        .CE(p_1_in[15]),
         .D(s00_axi_wdata[9]),
-        .Q(Q[9]),
+        .Q(\slv_reg0_reg[11]_0 [9]),
         .R(clear));
   LUT4 #(
     .INIT(16'h2000)) 
@@ -1607,19 +2467,19 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
-        .Q(slv_reg1[0]),
+        .Q(\slv_reg1_reg[11]_0 [0]),
         .R(clear));
   FDRE \slv_reg1_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
-        .Q(slv_reg1[10]),
+        .Q(\slv_reg1_reg[11]_0 [10]),
         .R(clear));
   FDRE \slv_reg1_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
-        .Q(slv_reg1[11]),
+        .Q(\slv_reg1_reg[11]_0 [11]),
         .R(clear));
   FDRE \slv_reg1_reg[12] 
        (.C(s00_axi_aclk),
@@ -1673,7 +2533,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
-        .Q(slv_reg1[1]),
+        .Q(\slv_reg1_reg[11]_0 [1]),
         .R(clear));
   FDRE \slv_reg1_reg[20] 
        (.C(s00_axi_aclk),
@@ -1739,7 +2599,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
-        .Q(slv_reg1[2]),
+        .Q(\slv_reg1_reg[11]_0 [2]),
         .R(clear));
   FDRE \slv_reg1_reg[30] 
        (.C(s00_axi_aclk),
@@ -1757,43 +2617,43 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
-        .Q(slv_reg1[3]),
+        .Q(\slv_reg1_reg[11]_0 [3]),
         .R(clear));
   FDRE \slv_reg1_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
-        .Q(slv_reg1[4]),
+        .Q(\slv_reg1_reg[11]_0 [4]),
         .R(clear));
   FDRE \slv_reg1_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
-        .Q(slv_reg1[5]),
+        .Q(\slv_reg1_reg[11]_0 [5]),
         .R(clear));
   FDRE \slv_reg1_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
-        .Q(slv_reg1[6]),
+        .Q(\slv_reg1_reg[11]_0 [6]),
         .R(clear));
   FDRE \slv_reg1_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
-        .Q(slv_reg1[7]),
+        .Q(\slv_reg1_reg[11]_0 [7]),
         .R(clear));
   FDRE \slv_reg1_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
-        .Q(slv_reg1[8]),
+        .Q(\slv_reg1_reg[11]_0 [8]),
         .R(clear));
   FDRE \slv_reg1_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
-        .Q(slv_reg1[9]),
+        .Q(\slv_reg1_reg[11]_0 [9]),
         .R(clear));
   LUT4 #(
     .INIT(16'h0080)) 
@@ -1831,19 +2691,19 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
-        .Q(slv_reg2[0]),
+        .Q(\slv_reg2_reg[11]_0 [0]),
         .R(clear));
   FDRE \slv_reg2_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
-        .Q(slv_reg2[10]),
+        .Q(\slv_reg2_reg[11]_0 [10]),
         .R(clear));
   FDRE \slv_reg2_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
-        .Q(slv_reg2[11]),
+        .Q(\slv_reg2_reg[11]_0 [11]),
         .R(clear));
   FDRE \slv_reg2_reg[12] 
        (.C(s00_axi_aclk),
@@ -1897,7 +2757,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
-        .Q(slv_reg2[1]),
+        .Q(\slv_reg2_reg[11]_0 [1]),
         .R(clear));
   FDRE \slv_reg2_reg[20] 
        (.C(s00_axi_aclk),
@@ -1963,7 +2823,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
-        .Q(slv_reg2[2]),
+        .Q(\slv_reg2_reg[11]_0 [2]),
         .R(clear));
   FDRE \slv_reg2_reg[30] 
        (.C(s00_axi_aclk),
@@ -1981,43 +2841,43 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
-        .Q(slv_reg2[3]),
+        .Q(\slv_reg2_reg[11]_0 [3]),
         .R(clear));
   FDRE \slv_reg2_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
-        .Q(slv_reg2[4]),
+        .Q(\slv_reg2_reg[11]_0 [4]),
         .R(clear));
   FDRE \slv_reg2_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
-        .Q(slv_reg2[5]),
+        .Q(\slv_reg2_reg[11]_0 [5]),
         .R(clear));
   FDRE \slv_reg2_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
-        .Q(slv_reg2[6]),
+        .Q(\slv_reg2_reg[11]_0 [6]),
         .R(clear));
   FDRE \slv_reg2_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
-        .Q(slv_reg2[7]),
+        .Q(\slv_reg2_reg[11]_0 [7]),
         .R(clear));
   FDRE \slv_reg2_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
-        .Q(slv_reg2[8]),
+        .Q(\slv_reg2_reg[11]_0 [8]),
         .R(clear));
   FDRE \slv_reg2_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
-        .Q(slv_reg2[9]),
+        .Q(\slv_reg2_reg[11]_0 [9]),
         .R(clear));
   LUT4 #(
     .INIT(16'h8000)) 
@@ -2026,7 +2886,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
         .I1(s00_axi_wstrb[1]),
         .I2(p_0_in[0]),
         .I3(p_0_in[1]),
-        .O(p_1_in[15]));
+        .O(\slv_reg3[15]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg3[23]_i_1 
@@ -2034,7 +2894,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
         .I1(s00_axi_wstrb[2]),
         .I2(p_0_in[0]),
         .I3(p_0_in[1]),
-        .O(p_1_in[23]));
+        .O(\slv_reg3[23]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg3[31]_i_1 
@@ -2042,7 +2902,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
         .I1(s00_axi_wstrb[3]),
         .I2(p_0_in[0]),
         .I3(p_0_in[1]),
-        .O(p_1_in[31]));
+        .O(\slv_reg3[31]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h8000)) 
@@ -2059,198 +2919,198 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myPWM_v1_0_S00_AXI
         .I1(s00_axi_wstrb[0]),
         .I2(p_0_in[0]),
         .I3(p_0_in[1]),
-        .O(p_1_in[7]));
+        .O(\slv_reg3[7]_i_1_n_0 ));
   FDRE \slv_reg3_reg[0] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
-        .Q(slv_reg3[0]),
+        .Q(Q[0]),
         .R(clear));
   FDRE \slv_reg3_reg[10] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
-        .Q(slv_reg3[10]),
+        .Q(Q[10]),
         .R(clear));
   FDRE \slv_reg3_reg[11] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
-        .Q(slv_reg3[11]),
+        .Q(Q[11]),
         .R(clear));
   FDRE \slv_reg3_reg[12] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[12]),
         .Q(slv_reg3[12]),
         .R(clear));
   FDRE \slv_reg3_reg[13] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[13]),
         .Q(slv_reg3[13]),
         .R(clear));
   FDRE \slv_reg3_reg[14] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[14]),
         .Q(slv_reg3[14]),
         .R(clear));
   FDRE \slv_reg3_reg[15] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[15]),
         .Q(slv_reg3[15]),
         .R(clear));
   FDRE \slv_reg3_reg[16] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[16]),
         .Q(slv_reg3[16]),
         .R(clear));
   FDRE \slv_reg3_reg[17] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[17]),
         .Q(slv_reg3[17]),
         .R(clear));
   FDRE \slv_reg3_reg[18] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[18]),
         .Q(slv_reg3[18]),
         .R(clear));
   FDRE \slv_reg3_reg[19] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[19]),
         .Q(slv_reg3[19]),
         .R(clear));
   FDRE \slv_reg3_reg[1] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
-        .Q(slv_reg3[1]),
+        .Q(Q[1]),
         .R(clear));
   FDRE \slv_reg3_reg[20] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[20]),
         .Q(slv_reg3[20]),
         .R(clear));
   FDRE \slv_reg3_reg[21] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[21]),
         .Q(slv_reg3[21]),
         .R(clear));
   FDRE \slv_reg3_reg[22] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[22]),
         .Q(slv_reg3[22]),
         .R(clear));
   FDRE \slv_reg3_reg[23] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[23]),
+        .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[23]),
         .Q(slv_reg3[23]),
         .R(clear));
   FDRE \slv_reg3_reg[24] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[24]),
         .Q(slv_reg3[24]),
         .R(clear));
   FDRE \slv_reg3_reg[25] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[25]),
         .Q(slv_reg3[25]),
         .R(clear));
   FDRE \slv_reg3_reg[26] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[26]),
         .Q(slv_reg3[26]),
         .R(clear));
   FDRE \slv_reg3_reg[27] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[27]),
         .Q(slv_reg3[27]),
         .R(clear));
   FDRE \slv_reg3_reg[28] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[28]),
         .Q(slv_reg3[28]),
         .R(clear));
   FDRE \slv_reg3_reg[29] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[29]),
         .Q(slv_reg3[29]),
         .R(clear));
   FDRE \slv_reg3_reg[2] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
-        .Q(slv_reg3[2]),
+        .Q(Q[2]),
         .R(clear));
   FDRE \slv_reg3_reg[30] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[30]),
         .Q(slv_reg3[30]),
         .R(clear));
   FDRE \slv_reg3_reg[31] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[31]),
+        .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[31]),
         .Q(slv_reg3[31]),
         .R(clear));
   FDRE \slv_reg3_reg[3] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
-        .Q(slv_reg3[3]),
+        .Q(Q[3]),
         .R(clear));
   FDRE \slv_reg3_reg[4] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
-        .Q(slv_reg3[4]),
+        .Q(Q[4]),
         .R(clear));
   FDRE \slv_reg3_reg[5] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
-        .Q(slv_reg3[5]),
+        .Q(Q[5]),
         .R(clear));
   FDRE \slv_reg3_reg[6] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
-        .Q(slv_reg3[6]),
+        .Q(Q[6]),
         .R(clear));
   FDRE \slv_reg3_reg[7] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
-        .Q(slv_reg3[7]),
+        .Q(Q[7]),
         .R(clear));
   FDRE \slv_reg3_reg[8] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
-        .Q(slv_reg3[8]),
+        .Q(Q[8]),
         .R(clear));
   FDRE \slv_reg3_reg[9] 
        (.C(s00_axi_aclk),
-        .CE(p_1_in[15]),
+        .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
-        .Q(slv_reg3[9]),
+        .Q(Q[9]),
         .R(clear));
   LUT3 #(
     .INIT(8'h20)) 

@@ -46,7 +46,11 @@
 		output [3:0] oPWM
 	);
 	
-	wire [11:0] wDuty;
+	wire [11:0] wDuty0;
+	wire [11:0] wDuty1;
+	wire [11:0] wDuty2;
+	wire [11:0] wDuty3;
+
 	wire [3:0]  wPWM;
 
 // Instantiation of Axi Bus Interface S00_AXI
@@ -54,6 +58,11 @@
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) myPWM_v1_0_S00_AXI_inst (
+		.oDuty0(wDuty0),
+		.oDuty1(wDuty1),
+		.oDuty2(wDuty2),
+		.oDuty3(wDuty3),
+
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -74,15 +83,14 @@
 		.S_AXI_RDATA(s00_axi_rdata),
 		.S_AXI_RRESP(s00_axi_rresp),
 		.S_AXI_RVALID(s00_axi_rvalid),
-		.S_AXI_RREADY(s00_axi_rready),
-		.oDuty(wDuty)
+		.S_AXI_RREADY(s00_axi_rready)
 	);
 
 	// Add user logic here
 	PWM pwm0(
 		.inReset(s00_axi_aresetn),
 		.iCLK(s00_axi_aclk),
-		.iDuty(wDuty[11:0]),
+		.iDuty(wDuty0[11:0]),
 
 		.oPWM(wPWM[0])
 	);
@@ -91,7 +99,7 @@
 	PWM pwm1(
 		.inReset(s00_axi_aresetn),
 		.iCLK(s00_axi_aclk),
-		.iDuty(wDuty[11:0]),
+		.iDuty(wDuty1[11:0]),
 
 		.oPWM(wPWM[1])
 	);
@@ -100,7 +108,7 @@
 	PWM pwm2(
 		.inReset(s00_axi_aresetn),
 		.iCLK(s00_axi_aclk),
-		.iDuty(wDuty[11:0]),
+		.iDuty(wDuty2[11:0]),
 
 		.oPWM(wPWM[2])
 	);
@@ -109,7 +117,7 @@
 	PWM pwm3(
 		.inReset(s00_axi_aresetn),
 		.iCLK(s00_axi_aclk),
-		.iDuty(wDuty[11:0]),
+		.iDuty(wDuty3[11:0]),
 
 		.oPWM(wPWM[3])
 	);

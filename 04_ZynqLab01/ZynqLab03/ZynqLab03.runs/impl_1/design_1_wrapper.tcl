@@ -75,6 +75,8 @@ set rc [catch {
   set_property parent.project_path E:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.xpr [current_project]
   set_property ip_repo_paths {
   E:/SoC/04_ZynqLab01/ip_repo/myTimer_1.0
+  E:/SoC/04_ZynqLab01/ip_repo/myip_1.0
+  E:/SoC/04_ZynqLab01/ip_repo/myTimer_1.0
   E:/SoC/04_ZynqLab01/ip_repo/myPWM_1.0
 } [current_project]
   update_ip_catalog

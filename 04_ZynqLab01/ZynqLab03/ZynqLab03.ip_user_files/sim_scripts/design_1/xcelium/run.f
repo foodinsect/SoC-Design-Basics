@@ -44,6 +44,9 @@
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
   "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
+-makelib xcelium_lib/axi_register_slice_v2_1_19 \
+  "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/4d88/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-endlib
 -makelib xcelium_lib/fifo_generator_v13_2_4 \
   "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/1f5a/simulation/fifo_generator_vlog_beh.v" \
 -endlib
@@ -56,8 +59,15 @@
 -makelib xcelium_lib/axi_data_fifo_v2_1_18 \
   "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/5b9c/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 -endlib
--makelib xcelium_lib/axi_register_slice_v2_1_19 \
-  "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/4d88/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-makelib xcelium_lib/axi_crossbar_v2_1_20 \
+  "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ace7/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+  "../../../bd/design_1/ipshared/b9e9/hdl/Timer.v" \
+  "../../../bd/design_1/ipshared/b9e9/hdl/myTimer_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/b9e9/hdl/myTimer_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_myTimer_0_0/sim/design_1_myTimer_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_19 \
   "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/c83a/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

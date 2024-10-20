@@ -11,6 +11,10 @@
 #define MYTIMER_S00_AXI_SLV_REG1_OFFSET 4
 #define MYTIMER_S00_AXI_SLV_REG2_OFFSET 8
 #define MYTIMER_S00_AXI_SLV_REG3_OFFSET 12
+#define MYTIMER_S00_AXI_SLV_REG4_OFFSET 16
+#define MYTIMER_S00_AXI_SLV_REG5_OFFSET 20
+#define MYTIMER_S00_AXI_SLV_REG6_OFFSET 24
+#define MYTIMER_S00_AXI_SLV_REG7_OFFSET 28
 
 
 /**************************** Type Definitions *****************************/

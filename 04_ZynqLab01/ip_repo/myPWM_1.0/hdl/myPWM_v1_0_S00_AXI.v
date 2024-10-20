@@ -15,7 +15,10 @@
 	)
 	(
 		// Users to add ports here
-
+		output [11:0] oDuty0,
+		output [11:0] oDuty1,
+		output [11:0] oDuty2,
+		output [11:0] oDuty3,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -78,9 +81,7 @@
 		output wire  S_AXI_RVALID,
 		// Read ready. This signal indicates that the master can
     		// accept the read data and response information.
-		input wire  S_AXI_RREADY,
-
-		output [11:0] oDuty
+		input wire  S_AXI_RREADY
 	);
 
 	// AXI4LITE signals
@@ -400,7 +401,10 @@
 	end    
 
 	// Add user logic here
-	assign oDuty[11:0] = slv_reg0[11:0];
+	assign oDuty0[11:0] = slv_reg0[11:0];
+	assign oDuty1[11:0] = slv_reg1[11:0];
+	assign oDuty2[11:0] = slv_reg2[11:0];
+	assign oDuty3[11:0] = slv_reg3[11:0];
 	// User logic ends
 
 	endmodule

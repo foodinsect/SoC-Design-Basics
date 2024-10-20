@@ -102,9 +102,16 @@
         }
       },
       "RGB": {
+        "type": "data",
         "direction": "O",
         "left": "2",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -1412,30 +1419,6 @@
           }
         },
         "interface_nets": {
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
-          "m00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
-          "m01_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
           "xbar_to_m01_couplers": {
             "interface_ports": [
               "xbar/M01_AXI",
@@ -1446,6 +1429,30 @@
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
+            ]
+          },
+          "m00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
+          "m01_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           }
         },
@@ -1486,16 +1493,10 @@
       },
       "myTimer_0": {
         "vlnv": "xilinx.com:user:myTimer:1.0",
-        "xci_name": "design_1_myTimer_0_0"
+        "xci_name": "design_1_myTimer_0_2"
       }
     },
     "interface_nets": {
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "myTimer_0/S00_AXI"
-        ]
-      },
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
@@ -1519,6 +1520,12 @@
           "processing_system7_0/M_AXI_GP0",
           "ps7_0_axi_periph/S00_AXI"
         ]
+      },
+      "ps7_0_axi_periph_M01_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M01_AXI",
+          "myTimer_0/S00_AXI"
+        ]
       }
     },
     "nets": {
@@ -1530,9 +1537,9 @@
           "rst_ps7_0_50M/slowest_sync_clk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
+          "ps7_0_axi_periph/M01_ACLK",
           "myPWM_0/s00_axi_aclk",
-          "myTimer_0/s00_axi_aclk",
-          "ps7_0_axi_periph/M01_ACLK"
+          "myTimer_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1547,9 +1554,9 @@
           "ps7_0_axi_periph/S00_ARESETN",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
+          "ps7_0_axi_periph/M01_ARESETN",
           "myPWM_0/s00_axi_aresetn",
-          "myTimer_0/s00_axi_aresetn",
-          "ps7_0_axi_periph/M01_ARESETN"
+          "myTimer_0/s00_axi_aresetn"
         ]
       },
       "myPWM_0_oPWM": {
@@ -1558,9 +1565,9 @@
           "LED"
         ]
       },
-      "myTimer_0_oLED": {
+      "myTimer_0_oRGB": {
         "ports": [
-          "myTimer_0/oLED",
+          "myTimer_0/oRGB",
           "RGB"
         ]
       }

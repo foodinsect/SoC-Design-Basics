@@ -163,7 +163,7 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set LED [ create_bd_port -dir O -from 3 -to 0 -type data LED ]
-  set RGB [ create_bd_port -dir O -from 2 -to 0 RGB ]
+  set RGB [ create_bd_port -dir O -from 2 -to 0 -type data RGB ]
 
   # Create instance: myPWM_0, and set properties
   set myPWM_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:myPWM:1.0 myPWM_0 ]
@@ -664,7 +664,7 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net myPWM_0_oPWM [get_bd_ports LED] [get_bd_pins myPWM_0/oPWM]
-  connect_bd_net -net myTimer_0_oLED [get_bd_ports RGB] [get_bd_pins myTimer_0/oLED]
+  connect_bd_net -net myTimer_0_oRGB [get_bd_ports RGB] [get_bd_pins myTimer_0/oRGB]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins myPWM_0/s00_axi_aclk] [get_bd_pins myTimer_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins myPWM_0/s00_axi_aresetn] [get_bd_pins myTimer_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]

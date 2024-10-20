@@ -10,9 +10,10 @@ vlib modelsim_lib/msim/processing_system7_vip_v1_0_7
 vlib modelsim_lib/msim/lib_cdc_v1_0_2
 vlib modelsim_lib/msim/proc_sys_reset_v5_0_13
 vlib modelsim_lib/msim/generic_baseblocks_v2_1_0
+vlib modelsim_lib/msim/axi_register_slice_v2_1_19
 vlib modelsim_lib/msim/fifo_generator_v13_2_4
 vlib modelsim_lib/msim/axi_data_fifo_v2_1_18
-vlib modelsim_lib/msim/axi_register_slice_v2_1_19
+vlib modelsim_lib/msim/axi_crossbar_v2_1_20
 vlib modelsim_lib/msim/axi_protocol_converter_v2_1_19
 
 vmap xilinx_vip modelsim_lib/msim/xilinx_vip
@@ -24,9 +25,10 @@ vmap processing_system7_vip_v1_0_7 modelsim_lib/msim/processing_system7_vip_v1_0
 vmap lib_cdc_v1_0_2 modelsim_lib/msim/lib_cdc_v1_0_2
 vmap proc_sys_reset_v5_0_13 modelsim_lib/msim/proc_sys_reset_v5_0_13
 vmap generic_baseblocks_v2_1_0 modelsim_lib/msim/generic_baseblocks_v2_1_0
+vmap axi_register_slice_v2_1_19 modelsim_lib/msim/axi_register_slice_v2_1_19
 vmap fifo_generator_v13_2_4 modelsim_lib/msim/fifo_generator_v13_2_4
 vmap axi_data_fifo_v2_1_18 modelsim_lib/msim/axi_data_fifo_v2_1_18
-vmap axi_register_slice_v2_1_19 modelsim_lib/msim/axi_register_slice_v2_1_19
+vmap axi_crossbar_v2_1_20 modelsim_lib/msim/axi_crossbar_v2_1_20
 vmap axi_protocol_converter_v2_1_19 modelsim_lib/msim/axi_protocol_converter_v2_1_19
 
 vlog -work xilinx_vip -64 -incr -sv -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
@@ -75,6 +77,9 @@ vcom -work xil_defaultlib -64 -93 \
 vlog -work generic_baseblocks_v2_1_0 -64 -incr "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
+vlog -work axi_register_slice_v2_1_19 -64 -incr "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/4d88/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+
 vlog -work fifo_generator_v13_2_4 -64 -incr "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/1f5a/simulation/fifo_generator_vlog_beh.v" \
 
@@ -87,8 +92,15 @@ vlog -work fifo_generator_v13_2_4 -64 -incr "+incdir+../../../../ZynqLab03.srcs/
 vlog -work axi_data_fifo_v2_1_18 -64 -incr "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/5b9c/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 
-vlog -work axi_register_slice_v2_1_19 -64 -incr "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
-"../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/4d88/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+vlog -work axi_crossbar_v2_1_20 -64 -incr "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ace7/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+"../../../bd/design_1/ipshared/b9e9/hdl/Timer.v" \
+"../../../bd/design_1/ipshared/b9e9/hdl/myTimer_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/b9e9/hdl/myTimer_v1_0.v" \
+"../../../bd/design_1/ip/design_1_myTimer_0_0/sim/design_1_myTimer_0_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_19 -64 -incr "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/c83a/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

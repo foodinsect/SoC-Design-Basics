@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 21 04:55:19 2024" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 21 05:56:28 2024" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.2" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -114,9 +114,9 @@
         <CONNECTION INSTANCE="myPWM_0" PORT="oPWM"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="2" NAME="RGB" RIGHT="0" SIGIS="undef" SIGNAME="myTimer_0_oLED">
+    <PORT DIR="O" LEFT="2" NAME="RGB" RIGHT="0" SIGIS="data" SIGNAME="myTimer_0_oRGB">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="myTimer_0" PORT="oLED"/>
+        <CONNECTION INSTANCE="myTimer_0" PORT="oRGB"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -361,13 +361,13 @@
       <PARAMETERS>
         <PARAMETER NAME="C_S00_AXI_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_S00_AXI_ADDR_WIDTH" VALUE="5"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_myTimer_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_myTimer_0_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_S00_AXI_BASEADDR" VALUE="0x43C10000"/>
         <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x43C1FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="2" NAME="oLED" RIGHT="0" SIGIS="undef" SIGNAME="myTimer_0_oLED">
+        <PORT DIR="O" LEFT="2" NAME="oRGB" RIGHT="0" SIGIS="undef" SIGNAME="myTimer_0_oRGB">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="RGB"/>
           </CONNECTIONS>
@@ -481,7 +481,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="ps7_0_axi_periph_M01_AXI" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="WIZ_NUM_REG" VALUE="4"/>
+          <PARAMETER NAME="WIZ_NUM_REG" VALUE="8"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
@@ -1684,9 +1684,9 @@
             <CONNECTION INSTANCE="rst_ps7_0_50M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ACLK"/>
             <CONNECTION INSTANCE="myPWM_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="myTimer_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ACLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -2882,9 +2882,9 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ARESETN"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ARESETN"/>
             <CONNECTION INSTANCE="myPWM_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="myTimer_0" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ARESETN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
