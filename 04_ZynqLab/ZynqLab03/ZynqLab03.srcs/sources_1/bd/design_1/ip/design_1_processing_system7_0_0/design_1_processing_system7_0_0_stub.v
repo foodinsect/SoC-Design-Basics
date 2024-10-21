@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Oct 21 03:42:01 2024
-// Host        : DESKTOP-LUJNASU running 64-bit major release  (build 9200)
+// Date        : Mon Oct 21 10:34:36 2024
+// Host        : 401-05 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               e:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_stub.v
+//               D:/SoC-Design-Basics-main/04_ZynqLab/ZynqLab03/ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_stub.v
 // Design      : design_1_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

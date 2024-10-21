@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Oct 21 11:22:24 2024
-# Process ID: 5220
-# Current directory: D:/SoC-Design-Basics-main/04_ZynqLab/ZynqLab04/ZynqLab04.runs/synth_1
+# Start of session at: Tue Oct 22 02:27:42 2024
+# Process ID: 24256
+# Current directory: E:/01_SoC/04_ZynqLab/ZynqLab04/ZynqLab04.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: D:/SoC-Design-Basics-main/04_ZynqLab/ZynqLab04/ZynqLab04.runs/synth_1/design_1_wrapper.vds
-# Journal file: D:/SoC-Design-Basics-main/04_ZynqLab/ZynqLab04/ZynqLab04.runs/synth_1\vivado.jou
+# Log file: E:/01_SoC/04_ZynqLab/ZynqLab04/ZynqLab04.runs/synth_1/design_1_wrapper.vds
+# Journal file: E:/01_SoC/04_ZynqLab/ZynqLab04/ZynqLab04.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

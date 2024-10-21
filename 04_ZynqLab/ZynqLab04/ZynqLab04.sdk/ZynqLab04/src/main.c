@@ -1,10 +1,9 @@
 /*
  * main.c
  *
- *  Created on: 2024. 10. 21.
- *      Author: user
+ *  Created on: 2024. 10. 22.
+ *      Author: opqrs
  */
-
 
 #include "stdio.h"
 #include "xparameters.h"
@@ -24,12 +23,11 @@ int main()
 	int j=0;
 
 	while (1) {
-		for (j=0; j<128; j++)
+		for (j=0; j<255; j++)
 		{
 			MYFND_mWriteReg(XPAR_MYFND_0_S00_AXI_BASEADDR, 0, j);
-			MYFND_mWriteReg(XPAR_MYFND_0_S00_AXI_BASEADDR, 4, j + 1);
 			printf("Input Value: %x\n", j);
-			Delay(1e8);
+			Delay(1e7);
 		}
 
 	}

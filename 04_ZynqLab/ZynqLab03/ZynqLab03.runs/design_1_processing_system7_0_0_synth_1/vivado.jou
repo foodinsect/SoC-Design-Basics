@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Oct 21 03:41:34 2024
-# Process ID: 30392
-# Current directory: E:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.runs/design_1_processing_system7_0_0_synth_1
+# Start of session at: Mon Oct 21 10:34:07 2024
+# Process ID: 9896
+# Current directory: D:/SoC-Design-Basics-main/04_ZynqLab/ZynqLab03/ZynqLab03.runs/design_1_processing_system7_0_0_synth_1
 # Command line: vivado.exe -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
-# Log file: E:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
-# Journal file: E:/SoC/04_ZynqLab01/ZynqLab03/ZynqLab03.runs/design_1_processing_system7_0_0_synth_1\vivado.jou
+# Log file: D:/SoC-Design-Basics-main/04_ZynqLab/ZynqLab03/ZynqLab03.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
+# Journal file: D:/SoC-Design-Basics-main/04_ZynqLab/ZynqLab03/ZynqLab03.runs/design_1_processing_system7_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_processing_system7_0_0.tcl -notrace

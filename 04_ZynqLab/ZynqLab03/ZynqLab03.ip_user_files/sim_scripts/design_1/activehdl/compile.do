@@ -97,10 +97,10 @@ vlog -work axi_crossbar_v2_1_20  -v2k5 "+incdir+../../../../ZynqLab03.srcs/sourc
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
-"../../../bd/design_1/ipshared/b9e9/hdl/Timer.v" \
-"../../../bd/design_1/ipshared/b9e9/hdl/myTimer_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/b9e9/hdl/myTimer_v1_0.v" \
-"../../../bd/design_1/ip/design_1_myTimer_0_0/sim/design_1_myTimer_0_0.v" \
+"../../../bd/design_1/ipshared/3bc3/hdl/Timer.v" \
+"../../../bd/design_1/ipshared/3bc3/hdl/myTimer_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/3bc3/hdl/myTimer_v1_0.v" \
+"../../../bd/design_1/ip/design_1_myTimer_0_2/sim/design_1_myTimer_0_2.v" \
 
 vlog -work axi_protocol_converter_v2_1_19  -v2k5 "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab03.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/c83a/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

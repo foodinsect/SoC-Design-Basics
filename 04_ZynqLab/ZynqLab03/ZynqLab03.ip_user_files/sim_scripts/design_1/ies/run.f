@@ -64,10 +64,10 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
-  "../../../bd/design_1/ipshared/b9e9/hdl/Timer.v" \
-  "../../../bd/design_1/ipshared/b9e9/hdl/myTimer_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/b9e9/hdl/myTimer_v1_0.v" \
-  "../../../bd/design_1/ip/design_1_myTimer_0_0/sim/design_1_myTimer_0_0.v" \
+  "../../../bd/design_1/ipshared/3bc3/hdl/Timer.v" \
+  "../../../bd/design_1/ipshared/3bc3/hdl/myTimer_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/3bc3/hdl/myTimer_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_myTimer_0_2/sim/design_1_myTimer_0_2.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_19 \
   "../../../../ZynqLab03.srcs/sources_1/bd/design_1/ipshared/c83a/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
