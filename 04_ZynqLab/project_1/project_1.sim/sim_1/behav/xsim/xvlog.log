@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/01_SoC/04_ZynqLab/project_1/project_1.srcs/sources_1/new/Hex2Dex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hex2Dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/01_SoC/04_ZynqLab/project_1/project_1.srcs/sim_1/new/tb_Hex2Dex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_Hex2Dec

@@ -1,3 +1,4 @@
+
 /*
  * main.c
  *
@@ -23,12 +24,19 @@ int main()
 	int j=0;
 
 	while (1) {
-		for (j=0; j<255; j++)
+		for (j=0; j<100; j++)
 		{
 			MYFND_mWriteReg(XPAR_MYFND_0_S00_AXI_BASEADDR, 0, j);
-			printf("Input Value: %x\n", j);
+			MYFND_mWriteReg(XPAR_MYFND_0_S00_AXI_BASEADDR, 4, 1);
+			printf("Input Value: %02d\n", j);
 			Delay(1e7);
 		}
-
+		for (j=0; j<100; j++)
+		{
+			MYFND_mWriteReg(XPAR_MYFND_0_S00_AXI_BASEADDR, 0, j);
+			MYFND_mWriteReg(XPAR_MYFND_0_S00_AXI_BASEADDR, 4, 0);
+			printf("Input Value: %02x\n", j);
+			Delay(1e7);
+		}
 	}
 }

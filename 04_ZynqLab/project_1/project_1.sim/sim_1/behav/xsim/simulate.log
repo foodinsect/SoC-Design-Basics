@@ -1,0 +1,7 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+HEX: Input=0x2A, oTen= 2, oOne=10
+DEC: Input=0x2A, oTen= 4, oOne= 2
+HEX: Input=0x7F, oTen= 7, oOne=15
+DEC: Input=0x7F, oTen= 2, oOne= 7
+$finish called at time : 70 ns : File "E:/01_SoC/04_ZynqLab/project_1/project_1.srcs/sim_1/new/tb_Hex2Dex.v" Line 76
