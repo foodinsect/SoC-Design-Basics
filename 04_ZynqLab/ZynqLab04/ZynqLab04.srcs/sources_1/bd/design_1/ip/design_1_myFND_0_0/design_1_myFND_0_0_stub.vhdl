@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sat Nov  9 16:55:31 2024
+-- Date        : Sun Nov 10 20:43:15 2024
 -- Host        : DESKTOP-LUJNASU running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               E:/01_SoC/04_ZynqLab/ZynqLab04/ZynqLab04.srcs/sources_1/bd/design_1/ip/design_1_myFND_0_0/design_1_myFND_0_0_stub.vhdl

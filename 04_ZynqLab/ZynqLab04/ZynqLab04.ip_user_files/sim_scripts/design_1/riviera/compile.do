@@ -58,10 +58,10 @@ vlog -work processing_system7_vip_v1_0_7  -sv2k12 "+incdir+../../../../ZynqLab04
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ZynqLab04.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZynqLab04.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../ZynqLab04.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
-"../../../bd/design_1/ipshared/a12f/hdl/FND.v" \
-"../../../bd/design_1/ipshared/a12f/hdl/Hex2Dec.v" \
-"../../../bd/design_1/ipshared/a12f/hdl/myFND_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/a12f/hdl/myFND_v1_0.v" \
+"../../../bd/design_1/ipshared/f5ad/hdl/FND.v" \
+"../../../bd/design_1/ipshared/f5ad/hdl/Hex2Dec.v" \
+"../../../bd/design_1/ipshared/f5ad/hdl/myFND_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/f5ad/hdl/myFND_v1_0.v" \
 "../../../bd/design_1/ip/design_1_myFND_0_0/sim/design_1_myFND_0_0.v" \
 
 vcom -work lib_cdc_v1_0_2 -93 \

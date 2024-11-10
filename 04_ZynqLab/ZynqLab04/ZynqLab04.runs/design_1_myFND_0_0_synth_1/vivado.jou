@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Nov  9 16:55:08 2024
-# Process ID: 4312
+# Start of session at: Sun Nov 10 20:42:50 2024
+# Process ID: 22320
 # Current directory: E:/01_SoC/04_ZynqLab/ZynqLab04/ZynqLab04.runs/design_1_myFND_0_0_synth_1
 # Command line: vivado.exe -log design_1_myFND_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_myFND_0_0.tcl
 # Log file: E:/01_SoC/04_ZynqLab/ZynqLab04/ZynqLab04.runs/design_1_myFND_0_0_synth_1/design_1_myFND_0_0.vds
