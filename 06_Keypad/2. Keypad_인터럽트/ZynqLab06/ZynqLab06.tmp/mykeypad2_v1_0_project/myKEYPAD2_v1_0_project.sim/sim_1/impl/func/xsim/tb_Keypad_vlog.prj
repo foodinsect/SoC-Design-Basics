@@ -1,8 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  \
-"tb_Keypad_func_impl.v" \
-"../../../../../../../../../ip_repo/myKEYPAD2_1.0/hdl/Keypad.v" \
-"../../../../../../../../../ip_repo/myKEYPAD2_1.0/hdl/tb_Keypad.v" \
-
-# Do not sort compile order
-nosort
