@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_CombinedIP_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_CombinedIP" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="420879890fs"></ZoomEndTime>
+      <Cursor1Time time="74596000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="214"></NameColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="62" />
+   <wvobject fp_name="/tb_CombinedIP/rRST" type="logic">
+      <obj_property name="ElementShortName">rRST</obj_property>
+      <obj_property name="ObjectShortName">rRST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/rCLK" type="logic">
+      <obj_property name="ElementShortName">rCLK</obj_property>
+      <obj_property name="ObjectShortName">rCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/rADR" type="array">
+      <obj_property name="ElementShortName">rADR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rADR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/rDAT" type="array">
+      <obj_property name="ElementShortName">rDAT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rDAT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/wDAT_OutPort" type="array">
+      <obj_property name="ElementShortName">wDAT_OutPort[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wDAT_OutPort[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/wDAT_ConstReg" type="array">
+      <obj_property name="ElementShortName">wDAT_ConstReg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wDAT_ConstReg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/wDAT_InPort" type="array">
+      <obj_property name="ElementShortName">wDAT_InPort[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wDAT_InPort[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/rSTB" type="logic">
+      <obj_property name="ElementShortName">rSTB</obj_property>
+      <obj_property name="ObjectShortName">rSTB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/rWE" type="logic">
+      <obj_property name="ElementShortName">rWE</obj_property>
+      <obj_property name="ObjectShortName">rWE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/wACK_OutPort" type="logic">
+      <obj_property name="ElementShortName">wACK_OutPort</obj_property>
+      <obj_property name="ObjectShortName">wACK_OutPort</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/wACK_ConstReg" type="logic">
+      <obj_property name="ElementShortName">wACK_ConstReg</obj_property>
+      <obj_property name="ObjectShortName">wACK_ConstReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/wACK_InPort" type="logic">
+      <obj_property name="ElementShortName">wACK_InPort</obj_property>
+      <obj_property name="ObjectShortName">wACK_InPort</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/wDOUTA" type="array">
+      <obj_property name="ElementShortName">wDOUTA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wDOUTA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/wDOUTB" type="array">
+      <obj_property name="ElementShortName">wDOUTB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wDOUTB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/wDOUTC" type="array">
+      <obj_property name="ElementShortName">wDOUTC[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wDOUTC[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/rDIn" type="array">
+      <obj_property name="ElementShortName">rDIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rDIn[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider17">
+      <obj_property name="label">DigOutPort</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/BaseAddrA" type="array">
+      <obj_property name="ElementShortName">BaseAddrA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BaseAddrA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/BaseAddrB" type="array">
+      <obj_property name="ElementShortName">BaseAddrB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BaseAddrB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/BaseAddrC" type="array">
+      <obj_property name="ElementShortName">BaseAddrC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BaseAddrC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/iADR" type="array">
+      <obj_property name="ElementShortName">iADR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">iADR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/iDAT" type="array">
+      <obj_property name="ElementShortName">iDAT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">iDAT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/oDAT" type="array">
+      <obj_property name="ElementShortName">oDAT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">oDAT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/iWE" type="logic">
+      <obj_property name="ElementShortName">iWE</obj_property>
+      <obj_property name="ObjectShortName">iWE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/iSTB" type="logic">
+      <obj_property name="ElementShortName">iSTB</obj_property>
+      <obj_property name="ObjectShortName">iSTB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/wSelA" type="logic">
+      <obj_property name="ElementShortName">wSelA</obj_property>
+      <obj_property name="ObjectShortName">wSelA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/wSelB" type="logic">
+      <obj_property name="ElementShortName">wSelB</obj_property>
+      <obj_property name="ObjectShortName">wSelB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/wSelC" type="logic">
+      <obj_property name="ElementShortName">wSelC</obj_property>
+      <obj_property name="ObjectShortName">wSelC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/oACK" type="logic">
+      <obj_property name="ElementShortName">oACK</obj_property>
+      <obj_property name="ObjectShortName">oACK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/oDOUTA" type="array">
+      <obj_property name="ElementShortName">oDOUTA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">oDOUTA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/oDOUTB" type="array">
+      <obj_property name="ElementShortName">oDOUTB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">oDOUTB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/oDOUTC" type="array">
+      <obj_property name="ElementShortName">oDOUTC[7:0]</obj_property>
+      <obj_property name="ObjectShortName">oDOUTC[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/rRegA" type="array">
+      <obj_property name="ElementShortName">rRegA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rRegA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/rRegB" type="array">
+      <obj_property name="ElementShortName">rRegB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rRegB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigOutPort_inst/rRegC" type="array">
+      <obj_property name="ElementShortName">rRegC[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rRegC[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider17">
+      <obj_property name="label">DigInPort</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/BaseAddr" type="array">
+      <obj_property name="ElementShortName">BaseAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BaseAddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/iDIn" type="array">
+      <obj_property name="ElementShortName">iDIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">iDIn[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/iADR" type="array">
+      <obj_property name="ElementShortName">iADR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">iADR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/oDAT" type="array">
+      <obj_property name="ElementShortName">oDAT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">oDAT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/iWE" type="logic">
+      <obj_property name="ElementShortName">iWE</obj_property>
+      <obj_property name="ObjectShortName">iWE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/iSTB" type="logic">
+      <obj_property name="ElementShortName">iSTB</obj_property>
+      <obj_property name="ObjectShortName">iSTB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/wSel" type="logic">
+      <obj_property name="ElementShortName">wSel</obj_property>
+      <obj_property name="ObjectShortName">wSel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/oACK" type="logic">
+      <obj_property name="ElementShortName">oACK</obj_property>
+      <obj_property name="ObjectShortName">oACK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/sync1" type="array">
+      <obj_property name="ElementShortName">sync1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sync1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/sync2" type="array">
+      <obj_property name="ElementShortName">sync2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sync2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/DigInPort_inst/sync3" type="array">
+      <obj_property name="ElementShortName">sync3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sync3[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider17">
+      <obj_property name="label">ConstReg</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/BaseAddrA" type="array">
+      <obj_property name="ElementShortName">BaseAddrA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BaseAddrA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/BaseAddrB" type="array">
+      <obj_property name="ElementShortName">BaseAddrB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BaseAddrB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/BaseAddrC" type="array">
+      <obj_property name="ElementShortName">BaseAddrC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BaseAddrC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/ID_VER1" type="array">
+      <obj_property name="ElementShortName">ID_VER1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_VER1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/ID_VER2" type="array">
+      <obj_property name="ElementShortName">ID_VER2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_VER2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/ID_VER3" type="array">
+      <obj_property name="ElementShortName">ID_VER3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_VER3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/iADR" type="array">
+      <obj_property name="ElementShortName">iADR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">iADR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/oDAT" type="array">
+      <obj_property name="ElementShortName">oDAT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">oDAT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/iSTB" type="logic">
+      <obj_property name="ElementShortName">iSTB</obj_property>
+      <obj_property name="ObjectShortName">iSTB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/iWE" type="logic">
+      <obj_property name="ElementShortName">iWE</obj_property>
+      <obj_property name="ObjectShortName">iWE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/oACK" type="logic">
+      <obj_property name="ElementShortName">oACK</obj_property>
+      <obj_property name="ObjectShortName">oACK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/wSel1" type="logic">
+      <obj_property name="ElementShortName">wSel1</obj_property>
+      <obj_property name="ObjectShortName">wSel1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/wSel2" type="logic">
+      <obj_property name="ElementShortName">wSel2</obj_property>
+      <obj_property name="ObjectShortName">wSel2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CombinedIP/ConstReg_inst/wSel3" type="logic">
+      <obj_property name="ElementShortName">wSel3</obj_property>
+      <obj_property name="ObjectShortName">wSel3</obj_property>
+   </wvobject>
+</wave_config>

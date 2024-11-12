@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Nov 10 21:06:05 2024
+# Process ID: 25416
+# Current directory: e:/01_soc/04_zynqlab/zynqlab04/zynqlab04.tmp/myfnd_v1_0_project/myFND_v1_0_project.sim/sim_1/impl/func/xsim
+# Command line: wbtcv.exe -mode batch -source e:/01_soc/04_zynqlab/zynqlab04/zynqlab04.tmp/myfnd_v1_0_project/myFND_v1_0_project.sim/sim_1/impl/func/xsim/xsim.dir/myFND_v1_0_func_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: e:/01_soc/04_zynqlab/zynqlab04/zynqlab04.tmp/myfnd_v1_0_project/myFND_v1_0_project.sim/sim_1/impl/func/xsim/webtalk.log
+# Journal file: e:/01_soc/04_zynqlab/zynqlab04/zynqlab04.tmp/myfnd_v1_0_project/myFND_v1_0_project.sim/sim_1/impl/func/xsim\webtalk.jou
+#-----------------------------------------------------------
+source e:/01_soc/04_zynqlab/zynqlab04/zynqlab04.tmp/myfnd_v1_0_project/myFND_v1_0_project.sim/sim_1/impl/func/xsim/xsim.dir/myFND_v1_0_func_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Nov 10 21:06:05 2024...

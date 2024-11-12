@@ -1,0 +1,857 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Sep 30 03:23:49 2024
+# Process ID: 26160
+# Current directory: E:/SoC/02_SimLab02/SimLab02
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22512 E:\SoC\02_SimLab02\SimLab02\SimLab02.xpr
+# Log file: E:/SoC/02_SimLab02/SimLab02/vivado.log
+# Journal file: E:/SoC/02_SimLab02/SimLab02\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/SoC/02_SimLab02/SimLab02/SimLab02.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ConstReg' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_ConstReg_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConstReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_ConstReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ConstReg
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_ConstReg_behav xil_defaultlib.tb_ConstReg xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.ConstReg
+Compiling module xil_defaultlib.tb_ConstReg
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ConstReg_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ConstReg_behav -key {Behavioral:sim_1:Functional:tb_ConstReg} -tclbatch {tb_ConstReg.tcl} -view {E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/imports/SimLab01/tb_CombinedIP_behav.wcfg} -view {E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/imports/SimLab01/tb_CombinedIP_behav.wcfg
+WARNING: Simulation object /tb_CombinedIP/rRST was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rCLK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_OutPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_ConstReg was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_InPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_OutPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_ConstReg was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_InPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rDIn was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oACK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDOUTA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDOUTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDOUTC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/rRegA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/rRegB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/rRegC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/BaseAddr was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iDIn was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/oDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/wSel was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/oACK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/sync1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/sync2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/sync3 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/ID_VER1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/ID_VER2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/ID_VER3 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/iADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/oDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/iSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/iWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/oACK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel3 was not found in the design.
+open_wave_config E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg
+WARNING: Simulation object /tb_ConstReg/UUT/BaseAddr was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/wSel was not found in the design.
+source tb_ConstReg.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 160 ns : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_ConstReg.v" Line 70
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ConstReg_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 740.934 ; gain = 32.480
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top tb_WB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.tb_WB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WB_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim/xsim.dir/tb_WB_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 30 03:48:14 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_WB_behav -key {Behavioral:sim_1:Functional:tb_WB} -tclbatch {tb_WB.tcl} -view {E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/imports/SimLab01/tb_CombinedIP_behav.wcfg} -view {E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/imports/SimLab01/tb_CombinedIP_behav.wcfg
+WARNING: Simulation object /tb_CombinedIP/rRST was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rCLK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_OutPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_ConstReg was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_InPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_OutPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_ConstReg was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_InPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rDIn was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oACK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDOUTA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDOUTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDOUTC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/rRegA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/rRegB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/rRegC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/BaseAddr was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iDIn was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/oDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/wSel was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/oACK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/sync1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/sync2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/sync3 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/ID_VER1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/ID_VER2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/ID_VER3 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/iADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/oDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/iSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/iWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/oACK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel3 was not found in the design.
+open_wave_config E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/BaseAddr_CReg was not found in the design.
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/iADR was not found in the design.
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/iSTB was not found in the design.
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/oSTB_CReg was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/BaseAddr was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/ID_VER1 was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/ID_VER2 was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/ID_VER3 was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iRST was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iCLK was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iADR was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/oDAT was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iSTB was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iWE was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/oACK was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/wSel was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/rCReg was not found in the design.
+source tb_WB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 860100 ps : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v" Line 110
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_WB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 745.523 ; gain = 0.000
+create_wave_config
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 860100 ps : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v" Line 110
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 745.523 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.tb_WB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 300100 ps : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v" Line 110
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 745.523 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.tb_WB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 150100 ps : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v" Line 110
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 745.523 ; gain = 0.000
+save_wave_config {E:/SoC/02_SimLab02/SimLab02/tb_WB_behav.wcfg}
+add_files -fileset sim_1 -norecurse E:/SoC/02_SimLab02/SimLab02/tb_WB_behav.wcfg
+set_property xsim.view {E:/01_SimLab01/SimLab01/tb_CombinedIP_behav.wcfg E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg E:/SoC/02_SimLab02/SimLab02/tb_WB_behav.wcfg} [get_filesets sim_1]
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_WB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigOutPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigOutPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WB_behav xil_defaultlib.tb_WB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.tb_WB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 150100 ps : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_WB.v" Line 110
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 747.547 ; gain = 0.000
+save_wave_config {E:/SoC/02_SimLab02/SimLab02/tb_WB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top tb_DigInPort [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_DigInPort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_DigInPort_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim/xsim.dir/tb_DigInPort_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 30 04:11:26 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_DigInPort_behav -key {Behavioral:sim_1:Functional:tb_DigInPort} -tclbatch {tb_DigInPort.tcl} -view {E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/imports/SimLab01/tb_CombinedIP_behav.wcfg} -view {E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg} -view {E:/SoC/02_SimLab02/SimLab02/tb_WB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/imports/SimLab01/tb_CombinedIP_behav.wcfg
+WARNING: Simulation object /tb_CombinedIP/rRST was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rCLK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_OutPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_ConstReg was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDAT_InPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_OutPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_ConstReg was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wACK_InPort was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/wDOUTC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/rDIn was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/iSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oACK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDOUTA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDOUTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/oDOUTC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/rRegA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/rRegB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/rRegC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/BaseAddr was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iDIn was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/oDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/iSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/wSel was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/oACK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/sync1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/sync2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/sync3 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/ID_VER1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/ID_VER2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/ID_VER3 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/iADR was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/oDAT was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/iSTB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/iWE was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/oACK was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel3 was not found in the design.
+open_wave_config E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/BaseAddr_CReg was not found in the design.
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/iADR was not found in the design.
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/iSTB was not found in the design.
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/oSTB_CReg was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/BaseAddr was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/ID_VER1 was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/ID_VER2 was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/ID_VER3 was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iRST was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iCLK was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iADR was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/oDAT was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iSTB was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iWE was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/oACK was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/wSel was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/rCReg was not found in the design.
+open_wave_config E:/SoC/02_SimLab02/SimLab02/tb_WB_behav.wcfg
+WARNING: Simulation object /tb_WB/inst_AddrDec/BaseAddr_CReg was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/BaseAddr_DigOutPort was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/BaseAddr_DigInPort was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/iADR was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/iSTB was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/oSTB_DigOutPort was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/oSTB_DigInPort was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/oSTB_CReg was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iRST was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iCLK was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iADR was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iDAT was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iSTB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oACK was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oDAT was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iWE was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oDOUTA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oDOUTB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegC was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oDOUTC was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rDataOut was not found in the design.
+source tb_DigInPort.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 267 ns : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_DigInPort.v" Line 67
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_DigInPort_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 747.547 ; gain = 0.000
+create_wave_config
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 267 ns : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_DigInPort.v" Line 67
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 780.980 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_DigInPort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_DigInPort_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 160 ns : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_DigInPort.v" Line 67
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 780.980 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_DigInPort' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_DigInPort_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sources_1/new/DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigInPort
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_DigInPort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_DigInPort
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_DigInPort_behav xil_defaultlib.tb_DigInPort xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_DigInPort
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_DigInPort_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 160 ns : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_DigInPort.v" Line 67
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 781.734 ; gain = 0.000
+save_wave_config {E:/SoC/02_SimLab02/SimLab02/tb_DigInPort_behav.wcfg}
+add_files -fileset sim_1 -norecurse E:/SoC/02_SimLab02/SimLab02/tb_DigInPort_behav.wcfg
+set_property xsim.view {E:/01_SimLab01/SimLab01/tb_CombinedIP_behav.wcfg E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg E:/SoC/02_SimLab02/SimLab02/tb_WB_behav.wcfg E:/SoC/02_SimLab02/SimLab02/tb_DigInPort_behav.wcfg} [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top tb_CombinedIP [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_CombinedIP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_CombinedIP_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_CombinedIP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_CombinedIP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+"xelab -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_CombinedIP_behav xil_defaultlib.tb_CombinedIP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 97dd5797182b4b219e19dd788edd8c18 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_CombinedIP_behav xil_defaultlib.tb_CombinedIP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.DigOutPort
+Compiling module xil_defaultlib.ConstReg
+Compiling module xil_defaultlib.DigInPort
+Compiling module xil_defaultlib.tb_CombinedIP
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_CombinedIP_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim/xsim.dir/tb_CombinedIP_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 30 04:17:52 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/02_SimLab02/SimLab02/SimLab02.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_CombinedIP_behav -key {Behavioral:sim_1:Functional:tb_CombinedIP} -tclbatch {tb_CombinedIP.tcl} -view {E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/imports/SimLab01/tb_CombinedIP_behav.wcfg} -view {E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg} -view {E:/SoC/02_SimLab02/SimLab02/tb_WB_behav.wcfg} -view {E:/SoC/02_SimLab02/SimLab02/tb_DigInPort_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/imports/SimLab01/tb_CombinedIP_behav.wcfg
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/BaseAddrC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigOutPort_inst/wSelC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/BaseAddr was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/DigInPort_inst/wSel was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrA was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrB was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/BaseAddrC was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel1 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel2 was not found in the design.
+WARNING: Simulation object /tb_CombinedIP/ConstReg_inst/wSel3 was not found in the design.
+open_wave_config E:/SoC/02_SimLab02/SimLab02/tb_ConstReg_behav.wcfg
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/BaseAddr_CReg was not found in the design.
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/iADR was not found in the design.
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/iSTB was not found in the design.
+WARNING: Simulation object /tb_ConstReg/inst_AddrDec/oSTB_CReg was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/BaseAddr was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/ID_VER1 was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/ID_VER2 was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/ID_VER3 was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iRST was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iCLK was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iADR was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/oDAT was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iSTB was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/iWE was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/oACK was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/wSel was not found in the design.
+WARNING: Simulation object /tb_ConstReg/UUT/rCReg was not found in the design.
+open_wave_config E:/SoC/02_SimLab02/SimLab02/tb_WB_behav.wcfg
+WARNING: Simulation object /tb_WB/inst_AddrDec/BaseAddr_CReg was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/BaseAddr_DigOutPort was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/BaseAddr_DigInPort was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/iADR was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/iSTB was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/oSTB_DigOutPort was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/oSTB_DigInPort was not found in the design.
+WARNING: Simulation object /tb_WB/inst_AddrDec/oSTB_CReg was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iRST was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iCLK was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iADR was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iDAT was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iSTB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oACK was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oDAT was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/iWE was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oDOUTA was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oDOUTB was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rRegC was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/oDOUTC was not found in the design.
+WARNING: Simulation object /tb_WB/DUT/rDataOut was not found in the design.
+open_wave_config E:/SoC/02_SimLab02/SimLab02/tb_DigInPort_behav.wcfg
+WARNING: Simulation object /tb_DigInPort/inst_AddrDec/BaseAddr_CReg was not found in the design.
+WARNING: Simulation object /tb_DigInPort/inst_AddrDec/BaseAddr_DigOutPort was not found in the design.
+WARNING: Simulation object /tb_DigInPort/inst_AddrDec/BaseAddr_DigInPort was not found in the design.
+WARNING: Simulation object /tb_DigInPort/inst_AddrDec/iADR was not found in the design.
+WARNING: Simulation object /tb_DigInPort/inst_AddrDec/iSTB was not found in the design.
+WARNING: Simulation object /tb_DigInPort/inst_AddrDec/oSTB_DigOutPort was not found in the design.
+WARNING: Simulation object /tb_DigInPort/inst_AddrDec/oSTB_DigInPort was not found in the design.
+WARNING: Simulation object /tb_DigInPort/inst_AddrDec/oSTB_CReg was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/iRST was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/iCLK was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/iDIn was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/iADR was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/oDAT was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/iWE was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/iSTB was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/oACK was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/sync1 was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/sync2 was not found in the design.
+WARNING: Simulation object /tb_DigInPort/UUT/sync3 was not found in the design.
+source tb_CombinedIP.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 180 ns : File "E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/new/tb_CombinedIP.v" Line 116
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_CombinedIP_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 781.734 ; gain = 0.000
+save_wave_config {E:/SoC/02_SimLab02/SimLab02/SimLab02.srcs/sim_1/imports/SimLab01/tb_CombinedIP_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 30 04:23:47 2024...

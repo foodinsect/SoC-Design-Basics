@@ -1,0 +1,49 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 10. 12.
+ *      Author: opqrs
+ */
+
+#include "stdio.h"
+#include "xgpio.h"
+
+XGpio Gpio;		// 4 LED
+XGpio Gpio1;	// 4 Btn
+XGpio Gpio2;	// 2 RGB
+XGpio Gpio3;	// 4 SW
+
+int main()
+{
+	volatile int i;
+	int btn_state=0;
+    int sw_state;
+    int rgb1_output, rgb2_output;
+
+	XGpio_Initialize(&Gpio, XPAR_AXI_GPIO_0_DEVICE_ID);
+	XGpio_Initialize(&Gpio1, XPAR_AXI_GPIO_1_DEVICE_ID);
+	XGpio_Initialize(&Gpio2, XPAR_AXI_GPIO_2_DEVICE_ID);
+	XGpio_Initialize(&Gpio3, XPAR_AXI_GPIO_3_DEVICE_ID);
+
+	while (1){
+		// Read SW state
+		sw_state = XGpio_DiscreteRead(&Gpio3, 1);
+
+		// Map SW state to RGB LED outputs
+		rgb1_output = (sw_state & 0x3);      // Using SW[0] and SW[1] for RGB LED1
+		rgb2_output = (sw_state >> 2) & 0x3; // Using SW[2] and SW[3] for RGB LED2
+
+		// Output the RGB values to the LEDs
+		XGpio_DiscreteWrite(&Gpio2, 1, (rgb1_output | (rgb2_output << 3)));
+
+		// Read Btn State
+		btn_state = XGpio_DiscreteRead(&Gpio1, 1);
+		// printf("Push Button State =0x%x \n", btn_state);
+		// Write Btn Value to LED
+		XGpio_DiscreteWrite(&Gpio, 1, btn_state);
+
+		for (i=0; i<1e8 ; i++) ;
+	}
+
+	return 0;
+}

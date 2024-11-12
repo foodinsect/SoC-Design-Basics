@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Nov 12 23:08:38 2024
+# Process ID: 11796
+# Current directory: F:/01_SoC/06_Keypad/ZynqLab06
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9224 F:\01_SoC\06_Keypad\ZynqLab06\ZynqLab06.xpr
+# Log file: F:/01_SoC/06_Keypad/ZynqLab06/vivado.log
+# Journal file: F:/01_SoC/06_Keypad/ZynqLab06\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/01_SoC/06_Keypad/ZynqLab06/ZynqLab06.xpr
+update_compile_order -fileset sources_1
+save_project_as ZynqLab06 F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06 -force
+open_bd_design {F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+regenerate_bd_layout
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets myFND_0_oSel] [get_bd_nets myFND_0_oSeg] [get_bd_cells myFND_0]
+delete_bd_objs [get_bd_ports SEL]
+delete_bd_objs [get_bd_ports SEG]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M02_AXI] [get_bd_nets ROW_1] [get_bd_nets myKEYPAD2_0_oCOL] [get_bd_nets myKEYPAD2_0_oIRQ] [get_bd_cells myKEYPAD2_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myKEYPAD:1.0 myKEYPAD_0
+endgroup
+regenerate_bd_layout
+set_property location {43 1} [get_bd_ports ROW]
+undo
+connect_bd_net [get_bd_ports ROW] [get_bd_pins myKEYPAD_0/iROW]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/myKEYPAD_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins myKEYPAD_0/S00_AXI]
+regenerate_bd_layout
+connect_bd_net [get_bd_ports COL] [get_bd_pins myKEYPAD_0/oCOL]
+regenerate_bd_layout
+validate_bd_design
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {design_1_rst_ps7_0_50M_0 design_1_processing_system7_0_0 design_1_axi_gpio_0_1}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {design_1_rst_ps7_0_50M_0 design_1_processing_system7_0_0 design_1_axi_gpio_0_1}] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_gpio_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_myKEYPAD_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 {design_1_processing_system7_0_0_synth_1 design_1_rst_ps7_0_50M_0_synth_1 design_1_xbar_0_synth_1 design_1_axi_gpio_0_1_synth_1 design_1_myKEYPAD_0_0_synth_1 design_1_auto_pc_0_synth_1}
+export_simulation -of_objects [get_files F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.ip_user_files -ipstatic_source_dir F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.cache/compile_simlib/modelsim} {questa=F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.cache/compile_simlib/questa} {riviera=F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/06_Keypad/Keypad_1/ZynqLab06/ZynqLab06.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+regenerate_bd_layout
+validate_bd_design -force
+report_ip_status -name ip_status 
+save_bd_design
+reset_run synth_1
+reset_run design_1_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1

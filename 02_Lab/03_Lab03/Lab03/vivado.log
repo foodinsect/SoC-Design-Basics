@@ -1,0 +1,276 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Oct  9 20:40:52 2024
+# Process ID: 14616
+# Current directory: E:/SoC/03_Lab03/Lab03
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11828 E:\SoC\03_Lab03\Lab03\Lab03.xpr
+# Log file: E:/SoC/03_Lab03/Lab03/vivado.log
+# Journal file: E:/SoC/03_Lab03/Lab03\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/SoC/03_Lab03/Lab03/Lab03.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_PWM_IP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PWM_IP_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWM_IP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/up_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module up_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PWM_IP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xelab -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.up_counter
+Compiling module xil_defaultlib.PWM_IP
+Compiling module xil_defaultlib.tb_PWM_IP
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PWM_IP_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_PWM_IP_behav -key {Behavioral:sim_1:Functional:tb_PWM_IP} -tclbatch {tb_PWM_IP.tcl} -view {E:/SoC/03_Lab03/Lab03/tb_PWM_IP_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/03_Lab03/Lab03/tb_PWM_IP_behav.wcfg
+source tb_PWM_IP.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_PWM_IP_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 738.324 ; gain = 14.691
+run 1 s
+$finish called at time : 6000350 ns : File "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" Line 227
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_PWM_IP' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_PWM_IP_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/AddrDec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddrDec
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWM_IP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sources_1/new/up_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module up_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_PWM_IP
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+"xelab -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0824fe6c8962483ca42537ded7bf6d7a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PWM_IP_behav xil_defaultlib.tb_PWM_IP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.AddrDec
+Compiling module xil_defaultlib.up_counter
+Compiling module xil_defaultlib.PWM_IP
+Compiling module xil_defaultlib.tb_PWM_IP
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_PWM_IP_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/SoC/03_Lab03/Lab03/Lab03.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_PWM_IP_behav -key {Behavioral:sim_1:Functional:tb_PWM_IP} -tclbatch {tb_PWM_IP.tcl} -view {E:/SoC/03_Lab03/Lab03/tb_PWM_IP_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/SoC/03_Lab03/Lab03/tb_PWM_IP_behav.wcfg
+source tb_PWM_IP.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_PWM_IP_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 769.285 ; gain = 0.000
+run 1 s
+$finish called at time : 7000350 ns : File "E:/SoC/03_Lab03/Lab03/Lab03.srcs/sim_1/new/tb_PWM_IP.v" Line 236
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Wed Oct  9 20:57:38 2024] Launched synth_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1/runme.log
+[Wed Oct  9 20:57:38 2024] Launched impl_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+open_hw_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1957.387 ; gain = 1121.918
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Wed Oct  9 21:01:34 2024] Launched synth_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1/runme.log
+[Wed Oct  9 21:01:34 2024] Launched impl_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Wed Oct  9 21:17:50 2024] Launched synth_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/synth_1/runme.log
+[Wed Oct  9 21:17:50 2024] Launched impl_1...
+Run output will be captured here: E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351BA1F56A
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/SoC/03_Lab03/Lab03/Lab03.runs/impl_1/LED_test.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 21:37:23 2024...
