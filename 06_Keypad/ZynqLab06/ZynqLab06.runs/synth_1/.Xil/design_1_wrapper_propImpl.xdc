@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:E:/01_SoC/06_ZynqLab/ZynqLab06/ZynqLab06.srcs/constrs_1/imports/01_SoC/Zybo-Z7-Master.xdc rfile:../../../ZynqLab06.srcs/constrs_1/imports/01_SoC/Zybo-Z7-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:E:/01_SoC/06_Keypad/ZynqLab06/ZynqLab06.srcs/constrs_1/imports/01_SoC/Zybo-Z7-Master.xdc rfile:../../../ZynqLab06.srcs/constrs_1/imports/01_SoC/Zybo-Z7-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:115 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V8    IOSTANDARD LVCMOS33     } [get_ports { SEG[0] }]; #IO_L15P_T2_DQS_13 Sch=jb_p[1]
 set_property src_info {type:XDC file:1 line:116 export:INPUT save:INPUT read:READ} [current_design]

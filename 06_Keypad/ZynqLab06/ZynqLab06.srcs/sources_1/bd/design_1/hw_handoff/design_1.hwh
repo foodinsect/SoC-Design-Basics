@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 12 04:14:58 2024" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 12 12:37:31 2024" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.2" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -12,6 +12,16 @@
     <PORT DIR="O" LEFT="4" NAME="COL" RIGHT="1" SIGIS="undef" SIGNAME="myKEYPAD2_0_oCOL">
       <CONNECTIONS>
         <CONNECTION INSTANCE="myKEYPAD2_0" PORT="oCOL"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="SEL" RIGHT="0" SIGIS="data" SIGNAME="myFND_0_oSel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="myFND_0" PORT="oSel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="SEG" RIGHT="0" SIGIS="data" SIGNAME="myFND_0_oSeg">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="myFND_0" PORT="oSeg"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -122,16 +132,6 @@
     <PORT DIR="O" LEFT="3" NAME="leds_4bits_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="0" NAME="SEL" RIGHT="0" SIGIS="data" SIGNAME="myFND_0_oSel">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="myFND_0" PORT="oSel"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="6" NAME="SEG" RIGHT="0" SIGIS="data" SIGNAME="myFND_0_oSeg">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="myFND_0" PORT="oSeg"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>

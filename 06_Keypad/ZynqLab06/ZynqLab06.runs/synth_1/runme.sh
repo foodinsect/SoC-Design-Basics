@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/01_SoC/06_ZynqLab/ZynqLab06/ZynqLab06.runs/synth_1'
+HD_PWD='E:/01_SoC/06_Keypad/ZynqLab06/ZynqLab06.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

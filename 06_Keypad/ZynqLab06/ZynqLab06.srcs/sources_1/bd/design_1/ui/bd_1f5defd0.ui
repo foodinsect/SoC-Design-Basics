@@ -1,6 +1,6 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
 #  -string -flagsOSRD
 preplace port DDR -pg 1 -lvl 4 -x 1050 -y 330 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -lvl 4 -x 1050 -y 350 -defaultsOSRD
@@ -23,13 +23,13 @@ preplace netloc ROW_1 1 0 3 20J 700 NJ 700 750J
 preplace netloc myKEYPAD2_0_oIRQ 1 0 4 20 10 NJ 10 NJ 10 1030
 preplace netloc myFND_0_oSel 1 3 1 NJ 420
 preplace netloc myFND_0_oSeg 1 3 1 NJ 440
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 150n
 preplace netloc processing_system7_0_DDR 1 1 3 NJ 330 NJ 330 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 350 NJ 350 NJ
 preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 N 190
 preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 760 170n
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 350 NJ 350 NJ
 preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 430 70n
 preplace netloc axi_gpio_0_GPIO 1 3 1 NJ 570
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 150n
 levelinfo -pg 1 0 230 600 910 1050
 pagesize -pg 1 -db -bbox -sgen -120 0 1170 710
 "

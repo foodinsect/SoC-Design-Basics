@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="e:/01_soc/06_zynqlab/zynqlab06/zynqlab06.tmp/mykeypad2_v1_0_project/myKEYPAD2_v1_0_project.xpr">
+<Project Version="7" Minor="40" Path="e:/01_soc/06_keypad/zynqlab06/zynqlab06.tmp/mykeypad2_v1_0_project/myKEYPAD2_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="5c8c2f5337924d6c937c30a9a3d048a6"/>
+    <Option Name="Id" Val="acea54720d61402987277c04ad46addf"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -22,8 +22,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../01_SoC/ip_repo/myKEYPAD2_1.0"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../01_SoC/ip_repo/myKEYPAD_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../01_SoC/ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -35,7 +34,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="zybo-z7-20"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="1"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -65,7 +64,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PPRDIR/../../../../../01_SoC/ip_repo/myKEYPAD2_1.0/hdl/Keypad.v">
         <FileInfo>
-          <Attr Name="Library" Val=""/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -73,7 +72,7 @@
       </File>
       <File Path="$PPRDIR/../../../../../01_SoC/ip_repo/myKEYPAD2_1.0/hdl/myKEYPAD2_v1_0_S00_AXI.v">
         <FileInfo>
-          <Attr Name="Library" Val=""/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -81,14 +80,16 @@
       </File>
       <File Path="$PPRDIR/../../../../../01_SoC/ip_repo/myKEYPAD2_1.0/hdl/myKEYPAD2_v1_0.v">
         <FileInfo>
-          <Attr Name="Library" Val=""/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../../01_SoC/ip_repo/myKEYPAD2_1.0/component.xml">
-        <FileInfo SFType="IPXACT"/>
+        <FileInfo SFType="IPXACT">
+          <Attr Name="Library" Val="xil_defaultlib"/>
+        </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
@@ -105,7 +106,7 @@
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <File Path="$PPRDIR/../../../../../01_SoC/ip_repo/myKEYPAD2_1.0/hdl/tb_Keypad.v">
         <FileInfo>
-          <Attr Name="Library" Val=""/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="simulation"/>
           <Attr Name="UsedIn" Val="testbench"/>
         </FileInfo>

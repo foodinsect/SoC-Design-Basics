@@ -1,4 +1,4 @@
-04:24:45 **** Auto Build of configuration Debug for project ZynqLab06 ****
+12:48:30 **** Auto Build of configuration Debug for project ZynqLab06 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -19,5 +19,5 @@ arm-none-eabi-size ZynqLab06.elf  |tee "ZynqLab06.elf.size"
 'Finished building: ZynqLab06.elf.size'
 ' '
 
-04:24:46 Build Finished (took 1s.244ms)
+12:48:31 Build Finished (took 1s.276ms)
 

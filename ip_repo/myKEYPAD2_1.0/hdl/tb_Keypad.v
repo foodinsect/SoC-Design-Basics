@@ -58,13 +58,13 @@ module tb_Keypad;
         iROW = 4'b1111;    // No keys pressed
 
         // Apply reset
-        #15;
+        #10;
         iRST = 0;
-        #15;
+        #10;
         iRST = 1;
 
         // Test case 1: Press Key 0 (Column 1, Row 4)
-        #20;
+        #25;
         iROW = 4'b0111;    // Row 4 active
         #20;
 
