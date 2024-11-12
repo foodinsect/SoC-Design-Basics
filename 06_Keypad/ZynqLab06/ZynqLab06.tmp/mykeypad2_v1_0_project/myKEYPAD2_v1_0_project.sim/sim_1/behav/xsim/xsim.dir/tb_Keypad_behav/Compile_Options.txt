@@ -1,1 +1,0 @@
--wto "acea54720d61402987277c04ad46addf" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_Keypad_behav" "xil_defaultlib.tb_Keypad" "xil_defaultlib.glbl" -log "elaborate.log" 
