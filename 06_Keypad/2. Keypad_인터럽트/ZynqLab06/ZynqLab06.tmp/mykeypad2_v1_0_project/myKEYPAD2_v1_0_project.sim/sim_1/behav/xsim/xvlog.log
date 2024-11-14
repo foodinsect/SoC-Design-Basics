@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "e:/01_soc/ip_repo/myKEYPAD2_1.0/hdl/Keypad.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Keypad
-INFO: [VRFC 10-2263] Analyzing Verilog file "e:/01_soc/ip_repo/myKEYPAD2_1.0/hdl/tb_Keypad.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_Keypad
-INFO: [VRFC 10-2263] Analyzing Verilog file "e:/01_soc/06_keypad/zynqlab06/zynqlab06.tmp/mykeypad2_v1_0_project/myKEYPAD2_v1_0_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
