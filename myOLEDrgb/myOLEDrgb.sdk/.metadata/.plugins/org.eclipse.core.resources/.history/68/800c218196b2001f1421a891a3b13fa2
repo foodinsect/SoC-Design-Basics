@@ -1,0 +1,89 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 12. 4.
+ *      Author: foodbug
+ */
+
+#include "myoledrgb.h"
+#include "xparameters.h"   // Hardware parameter definitions
+#include "xil_io.h"        // AXI I/O functions
+#include "xil_types.h"     // Data types
+#include "sleep.h"         // Delay functions
+#include "xil_printf.h"
+
+// Base address of the OLED controller
+#define OLED_BASEADDR XPAR_MYOLEDRGB_0_S00_AXI_BASEADDR
+
+// OLED controller register offsets
+#define REG_START         0x00  // Start register
+#define REG_BUSY          0x04  // Busy status register
+#define REG_PIXEL_DATA    0x08  // Pixel data register
+#define REG_PIXEL_VALID   0x0C  // Pixel valid register
+
+// Function prototypes
+void oled_init();
+void send_pixel_data(u8 *pixel_data, u32 pixel_count);
+
+int main() {
+    u8 pixel_data[12288];  // Buffer for 96x64 RGB565 pixels (8-bit per transfer)
+    u32 i;
+
+    // Initialize pixel data (example: fill with blue)
+    for (i = 0; i < 12288; i += 2) {
+        pixel_data[i] = 0x00;    // Upper 8 bits (R and G)
+        pixel_data[i + 1] = 0x1F; // Lower 8 bits (B)
+    }
+
+    // Initialize the OLED display
+    oled_init();
+
+    // Send pixel data to the OLED controller
+    send_pixel_data(pixel_data, 12288);
+
+    // Main loop
+    while (1) {
+        // You can update the display with new data here
+    }
+
+    return 0;
+}
+
+// OLED initialization function
+void oled_init() {
+    xil_printf("Initializing OLED...\n");
+    MYOLEDRGB_mWriteReg(OLED_BASEADDR, REG_START, 1);
+    xil_printf("Start register written.\n");
+    u32 start_reg = MYOLEDRGB_mReadReg(OLED_BASEADDR, REG_START);
+    xil_printf("REG_START = 0x%08X\n", start_reg);
+
+    MYOLEDRGB_mWriteReg(OLED_BASEADDR, REG_START, 0);
+    xil_printf("Start register written.\n");
+    u32 start_reg2 = MYOLEDRGB_mReadReg(OLED_BASEADDR, REG_START);
+    xil_printf("REG_START = 0x%08X\n", start_reg2);
+
+
+    xil_printf("Initialization complete.\n");
+}
+
+// Function to send pixel data to the OLED controller
+void send_pixel_data(u8 *pixel_data, u32 pixel_count) {
+    u32 i;
+
+    for (i = 0; i < pixel_count; i++) {
+        // Wait for the controller to be ready
+        while (MYOLEDRGB_mReadReg(OLED_BASEADDR, REG_BUSY) & 0x1);
+
+        // Write pixel data and trigger valid signal
+        MYOLEDRGB_mWriteReg(OLED_BASEADDR, REG_PIXEL_DATA, pixel_data[i]);
+        MYOLEDRGB_mWriteReg(OLED_BASEADDR, REG_PIXEL_VALID, 1);
+
+        // Wait for the controller to acknowledge
+        while (MYOLEDRGB_mReadReg(OLED_BASEADDR, REG_PIXEL_VALID) & 0x1);
+
+        // Pixel data processed
+        xil_printf("Pixel %d sent: 0x%02X\n", i, pixel_data[i]);
+    }
+
+    xil_printf("Pixel data transmission complete.\n");
+}

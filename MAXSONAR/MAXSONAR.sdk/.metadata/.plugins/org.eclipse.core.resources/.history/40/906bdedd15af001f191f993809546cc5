@@ -1,0 +1,65 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 11. 30.
+ *      Author: foodbug
+ */
+
+#include "xil_io.h"
+#include "stdio.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xtmrctr.h"
+#include "mymaxsonar.h"
+
+#define CUSTOM_IP_BASEADDR XPAR_MYMAXSONAR_0_S00_AXI_BASEADDR
+#define GPIO_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID   // AXI GPIO Device ID
+
+#define GPIO_CHANNEL 1                             // GPIO 채널 번호
+
+XGpio Gpio;           // GPIO 인스턴스
+
+// GPIO 초기화 함수
+void init_gpio() {
+    int Status;
+
+    // GPIO 초기화
+    Status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("GPIO Initialization Failed\n");
+    }
+
+    // GPIO를 입력 모드로 설정
+    XGpio_SetDataDirection(&Gpio, GPIO_CHANNEL, 0xFFFFFFFF); // 모든 핀을 입력으로 설정
+}
+
+
+int main() {
+    xil_printf("Starting GPIO to Custom IP Write and Read\n");
+
+    // GPIO 초기화
+    init_gpio();
+
+    u32 pwm_state;
+    u32 distance;
+
+    while (1) {
+        // GPIO에서 PWM 값 읽기
+        pwm_state = XGpio_DiscreteRead(&Gpio, GPIO_CHANNEL);
+
+        // 커스텀 IP로 PWM 값 전달 (Base Address + 0)
+        Xil_Out32(CUSTOM_IP_BASEADDR, pwm_state);
+
+        xil_printf("PWM Value Written to Custom IP: %d\n", pwm_state);
+
+        // 커스텀 IP에서 계산된 거리 값 읽기 (Base Address + 4)
+        distance = Xil_In32(CUSTOM_IP_BASEADDR + 4);
+
+        xil_printf("Distance from Custom IP: %d inches\n", distance);
+
+        // 간단한 딜레이
+        for (volatile int i = 0; i < 100000; i++);
+    }
+
+    return 0;
+}

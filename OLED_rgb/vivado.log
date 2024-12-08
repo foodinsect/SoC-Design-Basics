@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Dec  7 00:02:11 2024
+# Process ID: 10376
+# Current directory: F:/01_SoC/OLED_rgb
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31096 F:\01_SoC\OLED_rgb\OLED_rgb.xpr
+# Log file: F:/01_SoC/OLED_rgb/vivado.log
+# Journal file: F:/01_SoC/OLED_rgb\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/01_SoC/OLED_rgb/OLED_rgb.xpr
+WARNING: [Board 49-91] Board repository path 'C:/Users/foodbug/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' does not exist, it will not be used to search board files.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/foodbug/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: see 'xilinx:packagingInfo' : Bad end of element
+CRITICAL WARNING: [IP_Flow 19-1977] Unable to read IP file f:/vivado-library-master/ip/Zmods/ZmodDigitizerController/component.xml. This IP will not be included in the IP Catalog.
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: see 'xilinx:packagingInfo' : Bad end of element
+CRITICAL WARNING: [IP_Flow 19-1977] Unable to read IP file f:/vivado-library-master/ip/Zmods/ZmodSDRController/component.xml. This IP will not be included in the IP Catalog.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/vivado-library-master'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 766.312 ; gain = 137.379
+launch_sdk -workspace F:/01_SoC/OLED_rgb/OLED_rgb.sdk -hwspec F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace F:/01_SoC/OLED_rgb/OLED_rgb.sdk -hwspec F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  7 01:23:46 2024...

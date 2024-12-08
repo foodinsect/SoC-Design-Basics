@@ -1,0 +1,32 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 11. 30.
+ *      Author: foodbug
+ */
+
+#include "xparameters.h"
+#include "stdio.h"
+#include "mymaxsonar.h"
+
+
+int main() {
+    xil_printf("Starting GPIO PWM to LED Output\n");
+
+    u32 pwm_state;
+
+    while (1) {
+        // GPIO0에서 PWM 상태 읽기
+        pwm_state = XGpio_DiscreteRead(&Gpio0, GPIO_CHANNEL);
+
+        // GPIO1로 PWM 상태 쓰기 (LED 제어)
+        XGpio_DiscreteWrite(&Gpio1, GPIO_CHANNEL, pwm_state);
+
+        xil_printf("PWM State: %d, LED Output Updated\n", pwm_state);
+
+        // 간단한 딜레이
+        for (volatile int i = 0; i < 1e6; i++);
+    }
+
+    return 0;
+}

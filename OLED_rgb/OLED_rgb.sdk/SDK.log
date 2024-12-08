@@ -1,0 +1,507 @@
+23:21:52 INFO  : Registering command handlers for SDK TCF services
+23:21:52 INFO  : Launching XSCT server: xsct.bat -interactive F:\01_SoC\OLED_rgb\OLED_rgb.sdk\temp_xsdb_launch_script.tcl
+23:21:55 INFO  : XSCT server has started successfully.
+23:21:55 INFO  : Successfully done setting XSCT server connection channel  
+23:21:57 INFO  : Successfully done setting SDK workspace  
+23:21:57 INFO  : Processing command line option -hwspec F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf.
+23:25:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:25:35 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+23:25:35 INFO  : 'jtag frequency' command is executed.
+23:25:35 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:25:36 INFO  : Context for 'APU' is selected.
+23:25:36 INFO  : System reset is completed.
+23:25:39 INFO  : 'after 3000' command is executed.
+23:25:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+23:25:42 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:25:43 INFO  : Context for 'APU' is selected.
+23:25:43 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:25:43 INFO  : 'configparams force-mem-access 1' command is executed.
+23:25:44 INFO  : Context for 'APU' is selected.
+23:25:45 INFO  : 'ps7_init' command is executed.
+23:25:45 INFO  : 'ps7_post_config' command is executed.
+23:25:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:25:45 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:25:45 INFO  : 'configparams force-mem-access 0' command is executed.
+23:25:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:25:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:25:45 INFO  : 'con' command is executed.
+23:25:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+23:25:45 INFO  : Disconnected from the channel tcfchan#1.
+23:26:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:26:13 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+23:26:13 INFO  : 'jtag frequency' command is executed.
+23:26:13 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:26:13 INFO  : Context for 'APU' is selected.
+23:26:13 INFO  : System reset is completed.
+23:26:16 INFO  : 'after 3000' command is executed.
+23:26:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+23:26:18 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:26:19 INFO  : Context for 'APU' is selected.
+23:26:20 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:26:20 INFO  : 'configparams force-mem-access 1' command is executed.
+23:26:20 INFO  : Context for 'APU' is selected.
+23:26:20 INFO  : 'ps7_init' command is executed.
+23:26:20 INFO  : 'ps7_post_config' command is executed.
+23:26:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:26:20 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:26:20 INFO  : 'configparams force-mem-access 0' command is executed.
+23:26:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:26:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:26:20 INFO  : 'con' command is executed.
+23:26:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+23:26:20 INFO  : Disconnected from the channel tcfchan#2.
+23:29:08 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1732976929690,  Project:1732976457869
+23:29:08 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:29:11 INFO  : Copied contents of F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+23:29:12 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:29:14 INFO  : 
+23:29:15 INFO  : Updating hardware inferred compiler options for PmodOLEDrgb.
+23:29:15 INFO  : Clearing existing target manager status.
+23:29:15 INFO  : Closing and re-opening the MSS file of ther project PmodOLEDrgb_bsp
+23:29:16 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+23:29:17 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+23:29:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:29:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+23:29:43 INFO  : 'jtag frequency' command is executed.
+23:29:43 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:29:43 INFO  : Context for 'APU' is selected.
+23:29:43 INFO  : System reset is completed.
+23:29:46 INFO  : 'after 3000' command is executed.
+23:29:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+23:29:49 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:29:49 INFO  : Context for 'APU' is selected.
+23:29:49 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:29:49 INFO  : 'configparams force-mem-access 1' command is executed.
+23:29:49 INFO  : Context for 'APU' is selected.
+23:29:49 INFO  : 'ps7_init' command is executed.
+23:29:49 INFO  : 'ps7_post_config' command is executed.
+23:29:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:29:49 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:29:49 INFO  : 'configparams force-mem-access 0' command is executed.
+23:29:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:29:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:29:49 INFO  : 'con' command is executed.
+23:29:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+23:29:49 INFO  : Disconnected from the channel tcfchan#3.
+23:46:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1732977955554,  Project:1732976929690
+23:46:19 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:46:21 INFO  : Copied contents of F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+23:46:23 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:46:25 INFO  : 
+23:46:26 INFO  : Updating hardware inferred compiler options for PmodOLEDrgb.
+23:46:26 INFO  : Clearing existing target manager status.
+23:46:26 INFO  : Closing and re-opening the MSS file of ther project PmodOLEDrgb_bsp
+23:46:26 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+23:46:28 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+23:46:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:46:54 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+23:46:54 INFO  : 'jtag frequency' command is executed.
+23:46:54 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:46:54 INFO  : Context for 'APU' is selected.
+23:46:54 INFO  : System reset is completed.
+23:46:57 INFO  : 'after 3000' command is executed.
+23:46:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+23:47:00 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:47:00 INFO  : Context for 'APU' is selected.
+23:47:00 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:47:00 INFO  : 'configparams force-mem-access 1' command is executed.
+23:47:00 INFO  : Context for 'APU' is selected.
+23:47:00 INFO  : 'ps7_init' command is executed.
+23:47:00 INFO  : 'ps7_post_config' command is executed.
+23:47:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:47:00 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:47:00 INFO  : 'configparams force-mem-access 0' command is executed.
+23:47:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:47:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:47:00 INFO  : 'con' command is executed.
+23:47:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+23:47:00 INFO  : Disconnected from the channel tcfchan#4.
+23:47:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:47:46 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+23:47:46 INFO  : 'jtag frequency' command is executed.
+23:47:46 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:47:47 INFO  : Context for 'APU' is selected.
+23:47:47 INFO  : System reset is completed.
+23:47:50 INFO  : 'after 3000' command is executed.
+23:47:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+23:47:53 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:47:54 INFO  : Context for 'APU' is selected.
+23:47:54 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:47:54 INFO  : 'configparams force-mem-access 1' command is executed.
+23:47:55 INFO  : Context for 'APU' is selected.
+23:47:55 INFO  : 'ps7_init' command is executed.
+23:47:55 INFO  : 'ps7_post_config' command is executed.
+23:47:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:47:55 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:47:55 INFO  : 'configparams force-mem-access 0' command is executed.
+23:47:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:47:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:47:55 INFO  : 'con' command is executed.
+23:47:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+23:47:55 INFO  : Disconnected from the channel tcfchan#5.
+00:04:47 INFO  : Registering command handlers for SDK TCF services
+00:04:48 INFO  : Launching XSCT server: xsct.bat -interactive F:\01_SoC\OLED_rgb\OLED_rgb.sdk\temp_xsdb_launch_script.tcl
+00:04:50 INFO  : XSCT server has started successfully.
+00:04:50 INFO  : Successfully done setting XSCT server connection channel  
+00:04:50 INFO  : Successfully done setting SDK workspace  
+00:04:50 INFO  : Processing command line option -hwspec F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf.
+00:04:50 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+00:18:11 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1732979882045,  Project:1732977955554
+00:18:11 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+00:18:13 INFO  : Copied contents of F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+00:18:15 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+00:18:16 INFO  : 
+00:18:17 INFO  : Updating hardware inferred compiler options for PmodOLEDrgb.
+00:18:17 INFO  : Clearing existing target manager status.
+00:18:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:18:37 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+00:18:37 INFO  : 'jtag frequency' command is executed.
+00:18:37 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:18:38 INFO  : Context for 'APU' is selected.
+00:18:38 INFO  : System reset is completed.
+00:18:41 INFO  : 'after 3000' command is executed.
+00:18:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+00:18:44 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+00:18:45 INFO  : Context for 'APU' is selected.
+00:18:45 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+00:18:45 INFO  : 'configparams force-mem-access 1' command is executed.
+00:18:46 INFO  : Context for 'APU' is selected.
+00:18:47 INFO  : 'ps7_init' command is executed.
+00:18:47 INFO  : 'ps7_post_config' command is executed.
+00:18:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:18:47 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:18:47 INFO  : 'configparams force-mem-access 0' command is executed.
+00:18:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:18:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:18:47 INFO  : 'con' command is executed.
+00:18:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+00:18:47 INFO  : Disconnected from the channel tcfchan#1.
+00:21:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:21:38 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+00:21:38 INFO  : 'jtag frequency' command is executed.
+00:21:38 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:21:38 INFO  : Context for 'APU' is selected.
+00:21:38 INFO  : System reset is completed.
+00:21:41 INFO  : 'after 3000' command is executed.
+00:21:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+00:21:44 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+00:21:44 INFO  : Context for 'APU' is selected.
+00:21:44 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+00:21:44 INFO  : 'configparams force-mem-access 1' command is executed.
+00:21:44 INFO  : Context for 'APU' is selected.
+00:21:44 INFO  : 'ps7_init' command is executed.
+00:21:44 INFO  : 'ps7_post_config' command is executed.
+00:21:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:21:44 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:21:44 INFO  : 'configparams force-mem-access 0' command is executed.
+00:21:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:21:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:21:44 INFO  : 'con' command is executed.
+00:21:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+00:21:44 INFO  : Disconnected from the channel tcfchan#2.
+00:22:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:22:45 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+00:22:45 INFO  : 'jtag frequency' command is executed.
+00:22:45 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:22:45 INFO  : Context for 'APU' is selected.
+00:22:45 INFO  : System reset is completed.
+00:22:48 INFO  : 'after 3000' command is executed.
+00:22:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+00:22:51 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+00:22:51 INFO  : Context for 'APU' is selected.
+00:22:51 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+00:22:51 INFO  : 'configparams force-mem-access 1' command is executed.
+00:22:51 INFO  : Context for 'APU' is selected.
+00:22:51 INFO  : 'ps7_init' command is executed.
+00:22:51 INFO  : 'ps7_post_config' command is executed.
+00:22:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:22:51 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:22:51 INFO  : 'configparams force-mem-access 0' command is executed.
+00:22:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:22:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:22:51 INFO  : 'con' command is executed.
+00:22:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+00:22:51 INFO  : Disconnected from the channel tcfchan#3.
+20:00:13 INFO  : Registering command handlers for SDK TCF services
+20:00:14 INFO  : Launching XSCT server: xsct.bat -interactive F:\01_SoC\OLED_rgb\OLED_rgb.sdk\temp_xsdb_launch_script.tcl
+20:00:16 INFO  : XSCT server has started successfully.
+20:00:16 INFO  : Successfully done setting XSCT server connection channel  
+20:00:18 INFO  : Successfully done setting SDK workspace  
+20:00:18 INFO  : Processing command line option -hwspec F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf.
+20:00:18 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+20:08:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:08:17 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+20:08:17 INFO  : 'jtag frequency' command is executed.
+20:08:17 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:08:18 INFO  : Context for 'APU' is selected.
+20:08:18 INFO  : System reset is completed.
+20:08:21 INFO  : 'after 3000' command is executed.
+20:08:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+20:08:24 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+20:08:25 INFO  : Context for 'APU' is selected.
+20:08:25 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+20:08:25 INFO  : 'configparams force-mem-access 1' command is executed.
+20:08:26 INFO  : Context for 'APU' is selected.
+20:08:26 INFO  : 'ps7_init' command is executed.
+20:08:26 INFO  : 'ps7_post_config' command is executed.
+20:08:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:08:26 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:08:26 INFO  : 'configparams force-mem-access 0' command is executed.
+20:08:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:08:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:08:26 INFO  : 'con' command is executed.
+20:08:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+20:08:26 INFO  : Disconnected from the channel tcfchan#1.
+00:02:51 INFO  : Registering command handlers for SDK TCF services
+00:02:51 INFO  : Launching XSCT server: xsct.bat -interactive F:\01_SoC\OLED_rgb\OLED_rgb.sdk\temp_xsdb_launch_script.tcl
+00:02:53 INFO  : XSCT server has started successfully.
+00:02:55 INFO  : Successfully done setting XSCT server connection channel  
+00:02:55 INFO  : Successfully done setting SDK workspace  
+00:02:55 INFO  : Processing command line option -hwspec F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper.hdf.
+00:02:56 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+00:03:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:03:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351B7AC1BA' is selected.
+00:03:36 INFO  : 'jtag frequency' command is executed.
+00:03:36 INFO  : Sourcing of 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:03:36 INFO  : Context for 'APU' is selected.
+00:03:36 INFO  : System reset is completed.
+00:03:39 INFO  : 'after 3000' command is executed.
+00:03:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1' command is executed.
+00:03:41 INFO  : FPGA configured successfully with bitstream "F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+00:03:41 INFO  : Context for 'APU' is selected.
+00:03:41 INFO  : Hardware design information is loaded from 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+00:03:41 INFO  : 'configparams force-mem-access 1' command is executed.
+00:03:41 INFO  : Context for 'APU' is selected.
+00:03:42 INFO  : 'ps7_init' command is executed.
+00:03:42 INFO  : 'ps7_post_config' command is executed.
+00:03:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:03:42 INFO  : The application 'F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:03:42 INFO  : 'configparams force-mem-access 0' command is executed.
+00:03:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA" && level==0} -index 1
+fpga -file F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+loadhw -hw F:/01_SoC/OLED_rgb/OLED_rgb.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+dow F:/01_SoC/OLED_rgb/OLED_rgb.sdk/PmodOLEDrgb/Debug/PmodOLEDrgb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:03:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:03:42 INFO  : 'con' command is executed.
+00:03:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351B7AC1BA"} -index 0
+con
+----------------End of Script----------------
+
+00:03:42 INFO  : Disconnected from the channel tcfchan#1.

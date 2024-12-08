@@ -1,0 +1,79 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 12. 4.
+ *      Author: foodbug
+ */
+
+
+#include "xparameters.h"   // Hardware parameter definitions
+#include "xil_io.h"        // AXI I/O functions
+#include "xil_types.h"     // Data types
+#include "sleep.h"         // Delay functions
+#include "myoledrgb.h"
+
+// OLED controller macros
+#define OLED_mWriteReg(BaseAddress, RegOffset, Data) \
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+
+#define OLED_mReadReg(BaseAddress, RegOffset) \
+    Xil_In32((BaseAddress) + (RegOffset))
+
+// Base address of the OLED controller
+#define OLED_BASEADDR XPAR_MYOLEDRGB_0_S00_AXI_BASEADDR
+
+// OLED controller register offsets
+#define REG_START         0x00  // Start register
+#define REG_PIXEL_DATA    0x04  // Pixel data register
+#define REG_PIXEL_VALID   0x08  // Pixel valid register
+
+void oled_init();
+void send_pixel_data(u16 *pixel_data, u32 pixel_count);
+
+int main() {
+    u16 pixel_data[6144];
+    u32 i;
+
+    // Initialize pixel data to blue
+    for (i = 0; i < 6144; i++) {
+        pixel_data[i] = 0x001F; // Blue in RGB565
+    }
+
+    // Initialize OLED
+    oled_init();
+
+    // Send pixel data
+    send_pixel_data(pixel_data, 6144);
+
+    while (1) {
+        // Continuous operation
+    }
+
+    return 0;
+}
+
+// Function to initialize the OLED controller
+void oled_init() {
+    // Write to start register
+    OLED_mWriteReg(OLED_BASEADDR, REG_START, 1);
+
+}
+
+// Function to send pixel data to the OLED controller
+void send_pixel_data(u16 *pixel_data, u32 pixel_count) {
+    u32 i;
+
+    for (i = 0; i < pixel_count; i++) {
+        // Write pixel data
+        OLED_mWriteReg(OLED_BASEADDR, REG_PIXEL_DATA, pixel_data[i]);
+
+        // Signal pixel valid
+        OLED_mWriteReg(OLED_BASEADDR, REG_PIXEL_VALID, 1);
+
+        // Wait until pixel valid is processed
+        while (OLED_mReadReg(OLED_BASEADDR, REG_PIXEL_VALID) & 0x1);
+
+        // Clear pixel valid signal
+        OLED_mWriteReg(OLED_BASEADDR, REG_PIXEL_VALID, 0);
+    }
+}

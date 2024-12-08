@@ -1,0 +1,8 @@
+03:48:18 **** Auto Build of configuration Debug for project oled_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+03:48:18 Build Finished (took 210ms)
+

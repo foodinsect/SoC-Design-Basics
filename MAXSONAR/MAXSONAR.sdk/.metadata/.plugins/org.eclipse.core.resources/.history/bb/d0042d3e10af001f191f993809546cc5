@@ -1,0 +1,134 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 11. 30.
+ *      Author: foodbug
+ */
+
+#include "xil_io.h"
+#include "stdio.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xparameters.h"
+
+#define GPIO_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID // AXI GPIO Device ID
+#define TIMER_DEVICE_ID XPAR_TMRCTR_0_DEVICE_ID  // Timer Device ID
+
+#define GPIO_CHANNEL 1                           // GPIO 채널 번호
+#define TIMER_COUNTER 0 // 타이머 카운터 번호
+
+XTmrCtr Timer;    // 타이머 인스턴스
+XGpio Gpio; // GPIO 인스턴스
+
+void init_gpio() {
+    int Status;
+
+    // AXI GPIO 초기화
+    Status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("GPIO Initialization Failed\n");
+    }
+
+    // GPIO를 입력 모드로 설정
+    XGpio_SetDataDirection(&Gpio, GPIO_CHANNEL, 0xFFFFFFFF); // 모든 핀을 입력으로 설정
+}
+
+void init_timer() {
+    int Status;
+
+    // 타이머 초기화
+    Status = XTmrCtr_Initialize(&Timer, TIMER_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Timer Initialization Failed\n");
+    }
+
+    // 타이머 자동 재로드 비활성화
+    XTmrCtr_SetOptions(&Timer, TIMER_COUNTER, XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION);
+
+}
+
+int measure_pulse_width() {
+    u32 pwm_state, start_time, end_time;
+
+    // PWM 신호가 HIGH 상태가 될 때까지 대기
+    do {
+        pwm_state = XGpio_DiscreteRead(&Gpio, GPIO_CHANNEL) & 0x1;
+    } while (pwm_state == 0);
+
+    // HIGH 상태가 시작되면 타이머 시작
+    XTmrCtr_Reset(&Timer, TIMER_COUNTER);
+    XTmrCtr_Start(&Timer, TIMER_COUNTER);
+    start_time = XTmrCtr_GetValue(&Timer, TIMER_COUNTER);
+
+    // PWM 신호가 LOW 상태가 될 때까지 대기
+    do {
+        pwm_state = XGpio_DiscreteRead(&Gpio, GPIO_CHANNEL) & 0x1;
+    } while (pwm_state == 1);
+
+    // LOW 상태가 되면 타이머 정지
+    end_time = XTmrCtr_GetValue(&Timer, TIMER_COUNTER);
+    XTmrCtr_Stop(&Timer, TIMER_COUNTER);
+
+    // 펄스 폭 계산
+    return start_time - end_time; // 타이머 값은 클럭 사이클 단위
+}
+
+float pulse_width_to_distance(int pulse_width, float clock_period_us) {
+    // 펄스 폭(클럭 사이클)을 μs로 변환
+    float pulse_width_us = pulse_width * clock_period_us;
+
+    // 거리 계산: 147μs = 1인치
+    return pulse_width_us / 147.0;
+}
+
+
+void read_pwm() {
+    u32 pwm_state;
+
+    while (1) {
+        // GPIO 상태 읽기
+        pwm_state = XGpio_DiscreteRead(&Gpio, GPIO_CHANNEL);
+
+        // PWM 신호 출력
+        xil_printf("PWM State: %d\n", pwm_state & 0x1); // 첫 번째 비트만 출력
+
+        for (volatile int i = 0; i < 100000; i++); // 간단한 딜레이
+    }
+}
+
+
+
+// Delay 함수: 간단한 루프를 사용한 딜레이
+void Delay(unsigned int n)
+{
+    volatile unsigned int i;
+    for (i = 0; i < n; i++);
+}
+
+int main() {
+    xil_printf("Starting PWM to Distance Conversion\n");
+
+    // GPIO 및 타이머 초기화
+    init_gpio();
+    init_timer();
+
+    // 타이머 클럭 주기 계산 (예: 100MHz 클럭 = 10ns 주기)
+    float clock_period_us = 0.01; // 10ns = 0.01μs
+
+    while (1) {
+        // PWM 펄스 폭 측정
+        int pulse_width = measure_pulse_width();
+
+        // 펄스 폭을 거리로 변환
+        float distance = pulse_width_to_distance(pulse_width, clock_period_us);
+
+        // 거리 출력
+        xil_printf("Distance: %.2f inches\n", distance);
+
+        // 간단한 딜레이
+        for (volatile int i = 0; i < 100000; i++);
+    }
+
+    return 0;
+}
+

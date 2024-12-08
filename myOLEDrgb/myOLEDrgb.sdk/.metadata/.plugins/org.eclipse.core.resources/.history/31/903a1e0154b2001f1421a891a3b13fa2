@@ -1,0 +1,89 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 12. 4.
+ *      Author: foodbug
+ */
+
+
+#include "xparameters.h"   // Hardware parameter definitions
+#include "xil_io.h"        // AXI I/O functions
+#include "xil_types.h"     // Data types
+#include "sleep.h"         // Delay functions
+#include "myoledrgb.h"
+
+// OLED controller macros
+#define OLED_mWriteReg(BaseAddress, RegOffset, Data) \
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+
+#define OLED_mReadReg(BaseAddress, RegOffset) \
+    Xil_In32((BaseAddress) + (RegOffset))
+
+// Base address of the OLED controller
+#define OLED_BASEADDR XPAR_MYOLEDRGB_0_S00_AXI_BASEADDR
+
+// OLED controller register offsets
+#define REG_START         0x00  // Start register
+#define REG_BUSY          0x04  // Busy status register
+#define REG_PIXEL_DATA    0x04  // Pixel data register
+#define REG_PIXEL_VALID   0x08  // Pixel valid register
+
+// Function prototypes
+void oled_init();
+void send_pixel_data(u16 *pixel_data, u32 pixel_count);
+
+int main() {
+    u16 pixel_data[6144];  // Buffer for 96x64 RGB565 pixels
+    u32 i;
+
+    // Initialize pixel data (example: fill with blue)
+    for (i = 0; i < 6144; i++) {
+        pixel_data[i] = 0x001F;  // Blue color in RGB565
+    }
+
+    // Initialize the OLED display
+    oled_init();
+
+    // Send pixel data to the OLED controller
+    send_pixel_data(pixel_data, 6144);
+
+    // Main loop
+    while (1) {
+        // You can update the display with new data here
+    }
+
+    return 0;
+}
+
+// Function to initialize the OLED display
+void oled_init() {
+    // Write '1' to the start register to begin initialization
+    Xil_Out32(OLED_BASEADDR + REG_START, 1);
+
+    // Wait until the controller is not busy
+    while (Xil_In32(OLED_BASEADDR + REG_BUSY) & 0x1);
+
+    // Initialization is complete
+}
+
+// Function to send pixel data to the OLED controller
+void send_pixel_data(u16 *pixel_data, u32 pixel_count) {
+    u32 i;
+
+    for (i = 0; i < pixel_count; i++) {
+        // Wait until the controller is not busy
+        while (Xil_In32(OLED_BASEADDR + REG_BUSY) & 0x1);
+
+        // Write pixel data
+        Xil_Out32(OLED_BASEADDR + REG_PIXEL_DATA, pixel_data[i]);
+
+        // Set pixel valid to indicate data is ready
+        Xil_Out32(OLED_BASEADDR + REG_PIXEL_VALID, 1);
+
+        // Wait for the controller to acknowledge
+        while (Xil_In32(OLED_BASEADDR + REG_PIXEL_VALID) & 0x1);
+
+        // Clear pixel valid signal
+        Xil_Out32(OLED_BASEADDR + REG_PIXEL_VALID, 0);
+    }
+}

@@ -1,0 +1,64 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 11. 30.
+ *      Author: foodbug
+ */
+
+#include "xil_io.h"
+#include "stdio.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xtmrctr.h"
+
+#define GPIO_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID // AXI GPIO Device ID
+#define GPIO_CHANNEL 1                           // GPIO 채널 번호
+
+XGpio Gpio;                                      // GPIO 인스턴스
+
+// GPIO 초기화 함수
+void init_gpio() {
+    int Status;
+
+    // AXI GPIO 초기화
+    Status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("GPIO Initialization Failed\n");
+    }
+
+    // GPIO를 입력 모드로 설정
+    XGpio_SetDataDirection(&Gpio, GPIO_CHANNEL, 0xFFFFFFFF); // 모든 핀을 입력으로 설정
+}
+
+// 메인 함수
+int main() {
+    xil_printf("Starting PWM State Change Monitoring\n");
+
+    // GPIO 초기화
+    init_gpio();
+
+    u32 previous_state = 0; // 이전 상태 저장 변수
+    u32 current_state;      // 현재 상태 저장 변수
+
+    while (1) {
+        // GPIO에서 현재 상태 읽기
+        current_state = XGpio_DiscreteRead(&Gpio, GPIO_CHANNEL) & 0x1;
+
+        // 상태가 변경되었을 때만 출력
+        if (current_state != previous_state) {
+            if (current_state == 1) {
+                xil_printf("PWM State Changed: LOW to HIGH\n");
+            } else {
+                xil_printf("PWM State Changed: HIGH to LOW\n");
+            }
+        }
+
+        // 이전 상태 갱신
+        previous_state = current_state;
+
+        // 간단한 딜레이
+        for (volatile int i = 0; i < 100000; i++);
+    }
+
+    return 0;
+}

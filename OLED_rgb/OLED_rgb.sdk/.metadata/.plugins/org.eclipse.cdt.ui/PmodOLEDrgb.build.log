@@ -1,0 +1,8 @@
+00:03:32 **** Incremental Build of configuration Debug for project PmodOLEDrgb ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+00:03:32 Build Finished (took 311ms)
+

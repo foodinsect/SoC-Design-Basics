@@ -1,0 +1,8 @@
+04:21:44 **** Incremental Build of configuration Debug for project oled_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+04:21:45 Build Finished (took 197ms)
+

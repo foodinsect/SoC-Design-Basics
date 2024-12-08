@@ -1,0 +1,31 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 11. 30.
+ *      Author: foodbug
+ */
+
+#include "xparameters.h"
+#include "stdio.h"
+#include "mymaxsonar.h"
+
+#define CUSTOM_IP_BASEADDR XPAR_MYMAXSONAR_0_S00_AXI_BASEADDR // Custom IP Base Address
+
+int main() {
+    xil_printf("-----------Starting READ----------- \n");
+
+    u32 distance; // 거리 데이터를 저장할 변수
+
+    while (1) {
+        // Custom IP Base Address + 4에서 거리 값 읽기
+        distance = Xil_In32(CUSTOM_IP_BASEADDR + 4);
+
+        // 거리 값을 출력
+        xil_printf("Distance from Custom IP: %d inches\n", distance);
+
+        // 간단한 딜레이
+        for (volatile int i = 0; i < 1e6; i++);
+    }
+
+    return 0;
+}
