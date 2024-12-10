@@ -1,6 +1,16 @@
 set_property SRC_FILE_INFO {cfile:F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/constrs_1/imports/01_SoC/Zybo-Z7-Master.xdc rfile:../../../myOLEDrgb.srcs/constrs_1/imports/01_SoC/Zybo-Z7-Master.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { start }]; #IO_L7P_T1_34 Sch=btn[3]
+set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { spi_en }]; #IO_L23P_T3_35 Sch=led[0]
+set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M15   IOSTANDARD LVCMOS33 } [get_ports { MOSI }]; #IO_L23N_T3_35 Sch=led[1]
+set_property src_info {type:XDC file:1 line:29 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { spi_busy }]; #IO_0_35 Sch=led[2]
+set_property src_info {type:XDC file:1 line:30 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { spi_done }]; #IO_L3N_T0_DQS_AD1N_35 Sch=led[3]
+set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y11   IOSTANDARD LVCMOS33 } [get_ports { VCCEN }]; #IO_L18N_T2_13 Sch=led5_r
+set_property src_info {type:XDC file:1 line:39 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { PMODEN }]; #IO_L18P_T2_34 Sch=led6_r
 set_property src_info {type:XDC file:1 line:126 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33     } [get_ports { CS }]; #IO_L10P_T1_34 Sch=jc_p[1]
 set_property src_info {type:XDC file:1 line:127 export:INPUT save:INPUT read:READ} [current_design]

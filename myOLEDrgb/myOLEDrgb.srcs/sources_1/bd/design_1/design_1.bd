@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC5447B2D6836AC6D",
+      "boundary_crc": "0xB67CD9B8016EBED4",
       "device": "xc7z020clg400-1",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
@@ -144,8 +144,14 @@
       "PMODEN": {
         "direction": "O"
       },
-      "start": {
-        "direction": "I"
+      "spi_en": {
+        "direction": "O"
+      },
+      "spi_busy": {
+        "direction": "O"
+      },
+      "spi_done": {
+        "direction": "O"
       }
     },
     "components": {
@@ -1315,16 +1321,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1403,16 +1409,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_m00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "m00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_m00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1561,28 +1567,28 @@
       }
     },
     "interface_nets": {
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "myOLEDrgb_0/S00_AXI"
-        ]
-      },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
-        ]
-      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
           "processing_system7_0/DDR"
         ]
       },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M00_AXI",
+          "myOLEDrgb_0/S00_AXI"
+        ]
+      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
         ]
       }
     },
@@ -1657,10 +1663,22 @@
           "PMODEN"
         ]
       },
-      "start_1": {
+      "myOLEDrgb_0_spi_en": {
         "ports": [
-          "start",
-          "myOLEDrgb_0/start"
+          "myOLEDrgb_0/spi_en",
+          "spi_en"
+        ]
+      },
+      "myOLEDrgb_0_spi_busy": {
+        "ports": [
+          "myOLEDrgb_0/spi_busy",
+          "spi_busy"
+        ]
+      },
+      "myOLEDrgb_0_spi_done": {
+        "ports": [
+          "myOLEDrgb_0/spi_done",
+          "spi_done"
         ]
       }
     },

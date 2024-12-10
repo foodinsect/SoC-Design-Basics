@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Dec  9 04:25:21 2024
+//Date        : Tue Dec 10 14:25:29 2024
 //Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -38,7 +38,9 @@ module design_1_wrapper
     RES,
     SCK,
     VCCEN,
-    start);
+    spi_busy,
+    spi_done,
+    spi_en);
   output CS;
   output DC;
   inout [14:0]DDR_addr;
@@ -67,7 +69,9 @@ module design_1_wrapper
   output RES;
   output SCK;
   output VCCEN;
-  input start;
+  output spi_busy;
+  output spi_done;
+  output spi_en;
 
   wire CS;
   wire DC;
@@ -97,7 +101,9 @@ module design_1_wrapper
   wire RES;
   wire SCK;
   wire VCCEN;
-  wire start;
+  wire spi_busy;
+  wire spi_done;
+  wire spi_en;
 
   design_1 design_1_i
        (.CS(CS),
@@ -128,5 +134,7 @@ module design_1_wrapper
         .RES(RES),
         .SCK(SCK),
         .VCCEN(VCCEN),
-        .start(start));
+        .spi_busy(spi_busy),
+        .spi_done(spi_done),
+        .spi_en(spi_en));
 endmodule

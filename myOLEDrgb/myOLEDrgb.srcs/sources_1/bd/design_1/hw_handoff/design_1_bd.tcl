@@ -169,7 +169,9 @@ proc create_root_design { parentCell } {
   set RES [ create_bd_port -dir O -type rst RES ]
   set SCK [ create_bd_port -dir O -type clk SCK ]
   set VCCEN [ create_bd_port -dir O VCCEN ]
-  set start [ create_bd_port -dir I start ]
+  set spi_busy [ create_bd_port -dir O spi_busy ]
+  set spi_done [ create_bd_port -dir O spi_done ]
+  set spi_en [ create_bd_port -dir O spi_en ]
 
   # Create instance: myOLEDrgb_0, and set properties
   set myOLEDrgb_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:myOLEDrgb:1.0 myOLEDrgb_0 ]
@@ -672,10 +674,12 @@ proc create_root_design { parentCell } {
   connect_bd_net -net myOLEDrgb_0_RES [get_bd_ports RES] [get_bd_pins myOLEDrgb_0/RES]
   connect_bd_net -net myOLEDrgb_0_SCK [get_bd_ports SCK] [get_bd_pins myOLEDrgb_0/SCK]
   connect_bd_net -net myOLEDrgb_0_VCCEN [get_bd_ports VCCEN] [get_bd_pins myOLEDrgb_0/VCCEN]
+  connect_bd_net -net myOLEDrgb_0_spi_busy [get_bd_ports spi_busy] [get_bd_pins myOLEDrgb_0/spi_busy]
+  connect_bd_net -net myOLEDrgb_0_spi_done [get_bd_ports spi_done] [get_bd_pins myOLEDrgb_0/spi_done]
+  connect_bd_net -net myOLEDrgb_0_spi_en [get_bd_ports spi_en] [get_bd_pins myOLEDrgb_0/spi_en]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins myOLEDrgb_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins myOLEDrgb_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
-  connect_bd_net -net start_1 [get_bd_ports start] [get_bd_pins myOLEDrgb_0/start]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs myOLEDrgb_0/S00_AXI/S00_AXI_reg] SEG_myOLEDrgb_0_S00_AXI_reg

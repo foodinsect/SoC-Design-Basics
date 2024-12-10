@@ -2,10 +2,10 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Dec  9 04:24:39 2024
-# Process ID: 18428
+# Start of session at: Tue Dec 10 13:31:38 2024
+# Process ID: 1080
 # Current directory: F:/01_SoC/myOLEDrgb
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21340 F:\01_SoC\myOLEDrgb\myOLEDrgb.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30856 F:\01_SoC\myOLEDrgb\myOLEDrgb.xpr
 # Log file: F:/01_SoC/myOLEDrgb/vivado.log
 # Journal file: F:/01_SoC/myOLEDrgb\vivado.jou
 #-----------------------------------------------------------
@@ -23,6 +23,7 @@ WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.b
 List of locked IPs:
 design_1_myOLEDrgb_0_0
 
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 753.160 ; gain = 130.945
 update_compile_order -fileset sources_1
 open_bd_design {F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd}
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
@@ -35,11 +36,11 @@ Adding component instance block -- xilinx.com:user:myOLEDrgb:1.0 - myOLEDrgb_0
 WARNING: [BD 41-1731] Type mismatch between connected pins: /myOLEDrgb_0/RES(undef) and /RES(rst)
 WARNING: [BD 41-1731] Type mismatch between connected pins: /myOLEDrgb_0/SCK(undef) and /SCK(clk)
 Successfully read diagram <design_1> from BD file <F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 972.852 ; gain = 77.781
+open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 960.703 ; gain = 0.000
 report_ip_status -name ip_status 
 upgrade_ip -vlnv xilinx.com:user:myOLEDrgb:1.0 [get_ips  design_1_myOLEDrgb_0_0] -log ip_upgrade.log
 Upgrading 'F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd'
-INFO: [IP_Flow 19-3422] Upgraded design_1_myOLEDrgb_0_0 (myOLEDrgb_v1.0 1.0) from revision 21 to revision 22
+INFO: [IP_Flow 19-3422] Upgraded design_1_myOLEDrgb_0_0 (myOLEDrgb_v1.0 1.0) from revision 22 to revision 23
 WARNING: [BD 41-1731] Type mismatch between connected pins: /SCK(clk) and /myOLEDrgb_0_upgraded_ipi/SCK(undef)
 WARNING: [BD 41-1731] Type mismatch between connected pins: /RES(rst) and /myOLEDrgb_0_upgraded_ipi/RES(undef)
 Wrote  : <F:\01_SoC\myOLEDrgb\myOLEDrgb.srcs\sources_1\bd\design_1\design_1.bd> 
@@ -64,13 +65,13 @@ Generated Block Design Tcl file F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/
 Generated Hardware Definition File F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/synth/design_1.hwdef
 catch { config_ip_cache -export [get_ips -all design_1_myOLEDrgb_0_0] }
 catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7f93ad82727e8416; cache size = 20.346 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7f93ad82727e8416; cache size = 20.674 MB.
 catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c2a07eeb756def28; cache size = 20.346 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c2a07eeb756def28; cache size = 20.674 MB.
 export_ip_user_files -of_objects [get_files F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd]
 launch_runs -jobs 12 design_1_myOLEDrgb_0_0_synth_1
-[Mon Dec  9 04:25:23 2024] Launched design_1_myOLEDrgb_0_0_synth_1...
+[Tue Dec 10 13:32:40 2024] Launched design_1_myOLEDrgb_0_0_synth_1...
 Run output will be captured here: F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/design_1_myOLEDrgb_0_0_synth_1/runme.log
 export_simulation -of_objects [get_files F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/myOLEDrgb/myOLEDrgb.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/myOLEDrgb/myOLEDrgb.ip_user_files -ipstatic_source_dir F:/01_SoC/myOLEDrgb/myOLEDrgb.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/modelsim} {questa=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/questa} {riviera=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
@@ -90,7 +91,20 @@ WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Ver
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/oled_receiver.v:]
 WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/tb_oled_spi.v:]
 update_compile_order -fileset sources_1
-set_property core_revision 23 [ipx::current_core]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/cursor_controller.v'.
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/cursor_controller.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/cursor_controller.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/cursor_controller.v'.
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 24 [ipx::current_core]
 ipx::update_source_project_archive -component [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
@@ -100,5 +114,373 @@ close_project -delete
 update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
 INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
 WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:myOLEDrgb:1.0 [get_ips  design_1_myOLEDrgb_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myOLEDrgb_0_0 (myOLEDrgb_v1.0 1.0) from revision 23 to revision 24
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'start'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'spi_busy'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'spi_done'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'spi_en'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_myOLEDrgb_0_0'. These changes may impact your design.
+CRITICAL WARNING: [BD 41-1167] The pin 'start' is not found on the upgraded version of the cell '/myOLEDrgb_0'. Its connection to the net 'start_1' has been removed.
+WARNING: [BD 41-1731] Type mismatch between connected pins: /SCK(clk) and /myOLEDrgb_0_upgraded_ipi/SCK(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /RES(rst) and /myOLEDrgb_0_upgraded_ipi/RES(undef)
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_myOLEDrgb_0_0' has identified issues that may require user intervention. Please review the upgrade log 'f:/01_SoC/myOLEDrgb/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <F:\01_SoC\myOLEDrgb\myOLEDrgb.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/myOLEDrgb/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myOLEDrgb_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\myOLEDrgb\myOLEDrgb.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/auto_pc .
+Exporting to file F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_myOLEDrgb_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7f93ad82727e8416; cache size = 21.003 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c2a07eeb756def28; cache size = 21.003 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 design_1_myOLEDrgb_0_0_synth_1
+[Tue Dec 10 13:34:53 2024] Launched design_1_myOLEDrgb_0_0_synth_1...
+Run output will be captured here: F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/design_1_myOLEDrgb_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/myOLEDrgb/myOLEDrgb.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/myOLEDrgb/myOLEDrgb.ip_user_files -ipstatic_source_dir F:/01_SoC/myOLEDrgb/myOLEDrgb.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/modelsim} {questa=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/questa} {riviera=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+regenerate_bd_layout
+create_bd_port -dir O spi_en
+create_bd_port -dir I spi_busy
+delete_bd_objs [get_bd_ports spi_busy]
+delete_bd_objs [get_bd_nets start_1] [get_bd_ports start]
+startgroup
+connect_bd_net [get_bd_ports spi_en] [get_bd_pins myOLEDrgb_0/spi_en]
+endgroup
+create_bd_port -dir O spi_busy
+startgroup
+connect_bd_net [get_bd_ports spi_busy] [get_bd_pins myOLEDrgb_0/spi_busy]
+endgroup
+create_bd_port -dir O spi_done
+startgroup
+connect_bd_net [get_bd_ports spi_done] [get_bd_pins myOLEDrgb_0/spi_done]
+endgroup
+regenerate_bd_layout
+save_bd_design
+Wrote  : <F:\01_SoC\myOLEDrgb\myOLEDrgb.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+Wrote  : <F:\01_SoC\myOLEDrgb\myOLEDrgb.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/auto_pc .
+Exporting to file F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c2a07eeb756def28; cache size = 21.533 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7f93ad82727e8416; cache size = 21.533 MB.
+[Tue Dec 10 13:36:57 2024] Launched synth_1...
+Run output will be captured here: F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/synth_1/runme.log
+[Tue Dec 10 13:36:57 2024] Launched impl_1...
+Run output will be captured here: F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/impl_1/runme.log
+launch_sdk -workspace F:/01_SoC/myOLEDrgb/myOLEDrgb.sdk -hwspec F:/01_SoC/myOLEDrgb/myOLEDrgb.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace F:/01_SoC/myOLEDrgb/myOLEDrgb.sdk -hwspec F:/01_SoC/myOLEDrgb/myOLEDrgb.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+report_ip_status -name ip_status 
+regenerate_bd_layout
+validate_bd_design -force
+report_ip_status -name ip_status 
+reset_run impl_1
+save_bd_design
+Wrote  : <F:\01_SoC\myOLEDrgb\myOLEDrgb.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/auto_pc .
+Exporting to file F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c2a07eeb756def28; cache size = 21.533 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7f93ad82727e8416; cache size = 21.533 MB.
+[Tue Dec 10 13:37:55 2024] Launched synth_1...
+Run output will be captured here: F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/synth_1/runme.log
+[Tue Dec 10 13:37:56 2024] Launched impl_1...
+Run output will be captured here: F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1389.730 ; gain = 31.320
+file copy -force F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/impl_1/design_1_wrapper.sysdef F:/01_SoC/myOLEDrgb/myOLEDrgb.sdk/design_1_wrapper.hdf
+
+ipx::edit_ip_in_project -upgrade true -name myOLEDrgb_v1_0_project -directory F:/01_SoC/myOLEDrgb/myOLEDrgb.tmp/myOLEDrgb_v1_0_project f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/myOLEDrgb_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/oled_controller.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/spi_master.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/myOLEDrgb_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/oled_receiver.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/tb_oled_spi.v:]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property library xil_defaultlib [get_files]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_testbench (Test Bench)': File 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/oled_receiver.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'f:/01_soc/myoledrgb/myoledrgb.tmp/myoledrgb_v1_0_project/myOLEDrgb_v1_0_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_oled' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'f:/01_soc/myoledrgb/myoledrgb.tmp/myoledrgb_v1_0_project/myOLEDrgb_v1_0_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_oled_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "f:/01_soc/ip_repo/myOLEDrgb_1.0/hdl/oled_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "f:/01_soc/ip_repo/myOLEDrgb_1.0/hdl/spi_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "f:/01_soc/ip_repo/myOLEDrgb_1.0/hdl/tb_oled_spi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_oled
+INFO: [VRFC 10-2458] undeclared symbol CS, assumed default net type wire [f:/01_soc/ip_repo/myOLEDrgb_1.0/hdl/tb_oled_spi.v:68]
+INFO: [VRFC 10-2263] Analyzing Verilog file "f:/01_soc/myoledrgb/myoledrgb.tmp/myoledrgb_v1_0_project/myOLEDrgb_v1_0_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'f:/01_soc/myoledrgb/myoledrgb.tmp/myoledrgb_v1_0_project/myOLEDrgb_v1_0_project.sim/sim_1/behav/xsim'
+"xelab -wto 380ffec54e074a439267627de3e30028 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_oled_behav xil_defaultlib.tb_oled xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 380ffec54e074a439267627de3e30028 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_oled_behav xil_defaultlib.tb_oled xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.spi_master
+Compiling module xil_defaultlib.spi_controller
+Compiling module xil_defaultlib.tb_oled
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_oled_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source f:/01_soc/myoledrgb/myoledrgb.tmp/myoledrgb_v1_0_project/myOLEDrgb_v1_0_project.sim/sim_1/behav/xsim/xsim.dir/tb_oled_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Dec 10 14:13:14 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'f:/01_soc/myoledrgb/myoledrgb.tmp/myoledrgb_v1_0_project/myOLEDrgb_v1_0_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_oled_behav -key {Behavioral:sim_1:Functional:tb_oled} -tclbatch {tb_oled.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source tb_oled.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time: 0 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: xx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_oled_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1455.141 ; gain = 53.762
+run 5 ms
+$finish called at time : 100 us : File "f:/01_soc/ip_repo/myOLEDrgb_1.0/hdl/tb_oled_spi.v" Line 74
+run all
+Time: 20000130 | DC: 0 | RES: 0 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: xx
+Time: 40000150 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: xx
+Time: 40000170 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: ae
+Time: 40003250 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: ae
+Time: 40003570 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: a0
+Time: 40006770 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: a0
+Time: 40007090 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 74
+Time: 40010290 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 74
+Time: 40010610 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: a1
+Time: 40013810 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: a1
+Time: 40014130 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 00
+Time: 40017330 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 00
+Time: 40017650 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: a2
+Time: 40020850 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: a2
+Time: 40021170 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 00
+Time: 40024370 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 00
+Time: 40024690 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: a4
+Time: 40027890 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: a4
+Time: 40028210 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: a8
+Time: 40031410 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: a8
+Time: 40031730 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 3f
+Time: 40034930 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 3f
+Time: 40035250 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: ad
+Time: 40038450 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: ad
+Time: 40038770 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 8e
+Time: 40041970 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 8e
+Time: 40042290 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: b0
+Time: 40045490 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: b0
+Time: 40045810 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 0b
+Time: 40049010 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 0b
+Time: 40049330 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: b1
+Time: 40052530 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: b1
+Time: 40052850 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 31
+Time: 40056050 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 31
+Time: 40056370 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: b3
+Time: 40059570 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: b3
+Time: 40059890 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: f0
+Time: 40063090 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: f0
+Time: 40063410 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: bb
+Time: 40066610 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: bb
+Time: 40066930 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 3a
+Time: 40070130 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 3a
+Time: 40070450 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: be
+Time: 40073650 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: be
+Time: 40073970 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 3e
+Time: 40077170 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 3e
+Time: 40077490 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 87
+Time: 40080690 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 87
+Time: 40081010 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 06
+Time: 40084210 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 06
+Time: 40084530 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 81
+Time: 40087730 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 81
+Time: 40088050 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 91
+Time: 40091250 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 91
+Time: 40091570 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 82
+Time: 40094770 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 82
+Time: 40095090 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 50
+Time: 40098290 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 50
+Time: 40098610 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 15
+Time: 40101810 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 15
+Time: 40102130 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 00
+Time: 40105330 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 00
+Time: 40105650 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 5f
+Time: 40108850 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 5f
+Time: 40109170 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 75
+Time: 40112370 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 75
+Time: 40112690 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 00
+Time: 40115890 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 00
+Time: 40116210 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 1 | SPI_DATA: 3f
+Time: 40119410 | DC: 0 | RES: 1 | VCCEN: 0 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 3f
+Time: 40119430 | DC: 0 | RES: 1 | VCCEN: 1 | PMODEN: 0 | SPI_EN: 0 | SPI_DATA: 3f
+Time: 240000170 | DC: 0 | RES: 1 | VCCEN: 1 | PMODEN: 1 | SPI_EN: 0 | SPI_DATA: 3f
+Time: 440000190 | DC: 0 | RES: 1 | VCCEN: 1 | PMODEN: 1 | SPI_EN: 1 | SPI_DATA: af
+Time: 440003250 | DC: 0 | RES: 1 | VCCEN: 1 | PMODEN: 1 | SPI_EN: 0 | SPI_DATA: af
+Time: 440003570 | DC: 1 | RES: 1 | VCCEN: 1 | PMODEN: 1 | SPI_EN: 1 | SPI_DATA: ff
+run: Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 1709.152 ; gain = 236.430
+set_property core_revision 25 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 26 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+ERROR: [Project 1-161] Failed to remove the directory 'f:/01_soc/myoledrgb/myoledrgb.tmp/myoledrgb_v1_0_project/myOLEDrgb_v1_0_project.sim'. The directory might be in use by some other process.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:myOLEDrgb:1.0 [get_ips  design_1_myOLEDrgb_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/design_1_myOLEDrgb_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_myOLEDrgb_0_0 (myOLEDrgb_v1.0 1.0) from revision 24 to revision 26
+WARNING: [BD 41-1731] Type mismatch between connected pins: /SCK(clk) and /myOLEDrgb_0_upgraded_ipi/SCK(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /RES(rst) and /myOLEDrgb_0_upgraded_ipi/RES(undef)
+Wrote  : <F:\01_SoC\myOLEDrgb\myOLEDrgb.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/myOLEDrgb/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myOLEDrgb_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\myOLEDrgb\myOLEDrgb.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/auto_pc .
+Exporting to file F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_myOLEDrgb_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7f93ad82727e8416; cache size = 21.003 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c2a07eeb756def28; cache size = 21.003 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 design_1_myOLEDrgb_0_0_synth_1
+[Tue Dec 10 14:15:14 2024] Launched design_1_myOLEDrgb_0_0_synth_1...
+Run output will be captured here: F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/design_1_myOLEDrgb_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/myOLEDrgb/myOLEDrgb.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/myOLEDrgb/myOLEDrgb.ip_user_files -ipstatic_source_dir F:/01_SoC/myOLEDrgb/myOLEDrgb.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/modelsim} {questa=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/questa} {riviera=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/myOLEDrgb/myOLEDrgb.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Dec 10 14:15:53 2024] Launched synth_1...
+Run output will be captured here: F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/synth_1/runme.log
+[Tue Dec 10 14:15:53 2024] Launched impl_1...
+Run output will be captured here: F:/01_SoC/myOLEDrgb/myOLEDrgb.runs/impl_1/runme.log
+ipx::edit_ip_in_project -upgrade true -name myOLEDrgb_v1_0_project -directory F:/01_SoC/myOLEDrgb/myOLEDrgb.tmp/myOLEDrgb_v1_0_project f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml
+ERROR: [Project 1-161] Failed to remove the directory 'f:/01_soc/myoledrgb/myoledrgb.tmp/myoledrgb_v1_0_project/myOLEDrgb_v1_0_project.sim'. The directory might be in use by some other process.
+ERROR: [Ipptcl 7-562] Cannot create project 'myOLEDrgb_v1_0_project'.
+ERROR: [Common 17-39] 'ipx::edit_ip_in_project' failed due to earlier errors.
+ipx::edit_ip_in_project -upgrade true -name myOLEDrgb_v1_0_project -directory F:/01_SoC/myOLEDrgb/myOLEDrgb.tmp/myOLEDrgb_v1_0_project f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml
+ERROR: [Project 1-161] Failed to remove the directory 'f:/01_soc/myoledrgb/myoledrgb.tmp/myoledrgb_v1_0_project/myOLEDrgb_v1_0_project.sim'. The directory might be in use by some other process.
+ERROR: [Ipptcl 7-562] Cannot create project 'myOLEDrgb_v1_0_project'.
+ERROR: [Common 17-39] 'ipx::edit_ip_in_project' failed due to earlier errors.
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 08:12:39 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 10 14:17:52 2024...

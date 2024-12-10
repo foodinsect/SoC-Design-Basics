@@ -1,0 +1,60 @@
+/*
+ * main.c
+ *
+ *  Created on: 2024. 12. 9.
+ *      Author: foodbug
+ */
+
+
+/*
+ * main.c
+ *
+ *  Created on: 2024. 12. 5.
+ *      Author: foodbug
+ */
+
+#include "stdio.h"
+#include "xparameters.h"
+
+// Base address of the OLED controller
+#define OLED_BASEADDR XPAR_MYOLEDRGB_0_S00_AXI_BASEADDR
+
+// OLED controller register offsets
+#define SPI_START   0x00  // Data/Command control
+#define SPI_DATA    0x04  // Reset control
+#define CS       	0x08  // VCC Enable
+#define MOSI      	0x0C  // PMOD Enable
+#define SCK   		0x10  // SPI Start
+
+unsigned char SPIDAT[2];
+
+void Delay(unsigned int delay) {
+    volatile unsigned int d;
+    for (d = 0; d < delay; d++);
+}
+
+
+void SetEN(unsigned int value) {
+    if (value)
+    	MYOLEDRGB_mWriteReg(OLED_BASEADDR, SPI_START, 1);  // Reset Inactive
+    else
+    	MYOLEDRGB_mWriteReg(OLED_BASEADDR, SPI_START, 0);  // Reset Active (Low)
+}
+
+
+int main() {
+//	unsigned int i;
+
+	printf("Start\n");
+	SetEN(1);
+	Delay(30000);
+	SetEN(0);
+
+    printf("End\n");
+
+	while (1) {};
+
+
+    return 0;
+}
+

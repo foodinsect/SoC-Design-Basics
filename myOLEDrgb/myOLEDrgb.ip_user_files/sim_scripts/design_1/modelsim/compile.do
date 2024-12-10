@@ -50,11 +50,10 @@ vcom -work xpm -64 -93 \
 "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../myOLEDrgb.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../myOLEDrgb.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
-"../../../bd/design_1/ipshared/d7ca/hdl/cursor_controller.v" \
-"../../../bd/design_1/ipshared/d7ca/hdl/myOLEDrgb_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/d7ca/hdl/oled_controller.v" \
-"../../../bd/design_1/ipshared/d7ca/hdl/spi_master.v" \
-"../../../bd/design_1/ipshared/d7ca/hdl/myOLEDrgb_v1_0.v" \
+"../../../bd/design_1/ipshared/fd16/hdl/myOLEDrgb_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/fd16/hdl/oled_controller.v" \
+"../../../bd/design_1/ipshared/fd16/hdl/spi_master.v" \
+"../../../bd/design_1/ipshared/fd16/hdl/myOLEDrgb_v1_0.v" \
 "../../../bd/design_1/ip/design_1_myOLEDrgb_0_0/sim/design_1_myOLEDrgb_0_0.v" \
 
 vlog -work axi_infrastructure_v1_1_0 -64 -incr "+incdir+../../../../myOLEDrgb.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../myOLEDrgb.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Dec  9 04:25:21 2024
+//Date        : Tue Dec 10 14:25:29 2024
 //Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -39,7 +39,9 @@ module design_1
     RES,
     SCK,
     VCCEN,
-    start);
+    spi_busy,
+    spi_done,
+    spi_en);
   output CS;
   output DC;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
@@ -68,7 +70,9 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RES RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RES, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) output RES;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SCK, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) output SCK;
   output VCCEN;
-  input start;
+  output spi_busy;
+  output spi_done;
+  output spi_en;
 
   wire myOLEDrgb_0_CS;
   wire myOLEDrgb_0_DC;
@@ -77,6 +81,9 @@ module design_1
   wire myOLEDrgb_0_RES;
   wire myOLEDrgb_0_SCK;
   wire myOLEDrgb_0_VCCEN;
+  wire myOLEDrgb_0_spi_busy;
+  wire myOLEDrgb_0_spi_done;
+  wire myOLEDrgb_0_spi_en;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -158,7 +165,6 @@ module design_1
   wire [3:0]ps7_0_axi_periph_M00_AXI_WSTRB;
   wire ps7_0_axi_periph_M00_AXI_WVALID;
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
-  wire start_1;
 
   assign CS = myOLEDrgb_0_CS;
   assign DC = myOLEDrgb_0_DC;
@@ -167,7 +173,9 @@ module design_1
   assign RES = myOLEDrgb_0_RES;
   assign SCK = myOLEDrgb_0_SCK;
   assign VCCEN = myOLEDrgb_0_VCCEN;
-  assign start_1 = start;
+  assign spi_busy = myOLEDrgb_0_spi_busy;
+  assign spi_done = myOLEDrgb_0_spi_done;
+  assign spi_en = myOLEDrgb_0_spi_en;
   design_1_myOLEDrgb_0_0 myOLEDrgb_0
        (.CS(myOLEDrgb_0_CS),
         .DC(myOLEDrgb_0_DC),
@@ -197,7 +205,9 @@ module design_1
         .s00_axi_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s00_axi_wstrb(ps7_0_axi_periph_M00_AXI_WSTRB),
         .s00_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
-        .start(start_1));
+        .spi_busy(myOLEDrgb_0_spi_busy),
+        .spi_done(myOLEDrgb_0_spi_done),
+        .spi_en(myOLEDrgb_0_spi_en));
   design_1_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
