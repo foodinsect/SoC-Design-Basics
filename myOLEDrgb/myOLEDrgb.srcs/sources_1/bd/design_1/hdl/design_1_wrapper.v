@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Dec 10 14:25:29 2024
+//Date        : Wed Dec 11 01:30:51 2024
 //Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -35,12 +35,11 @@ module design_1_wrapper
     FIXED_IO_ps_srstb,
     MOSI,
     PMODEN,
+    PWM,
     RES,
+    RX,
     SCK,
-    VCCEN,
-    spi_busy,
-    spi_done,
-    spi_en);
+    VCCEN);
   output CS;
   output DC;
   inout [14:0]DDR_addr;
@@ -66,12 +65,11 @@ module design_1_wrapper
   inout FIXED_IO_ps_srstb;
   output MOSI;
   output PMODEN;
+  input PWM;
   output RES;
+  output RX;
   output SCK;
   output VCCEN;
-  output spi_busy;
-  output spi_done;
-  output spi_en;
 
   wire CS;
   wire DC;
@@ -98,12 +96,11 @@ module design_1_wrapper
   wire FIXED_IO_ps_srstb;
   wire MOSI;
   wire PMODEN;
+  wire PWM;
   wire RES;
+  wire RX;
   wire SCK;
   wire VCCEN;
-  wire spi_busy;
-  wire spi_done;
-  wire spi_en;
 
   design_1 design_1_i
        (.CS(CS),
@@ -131,10 +128,9 @@ module design_1_wrapper
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .MOSI(MOSI),
         .PMODEN(PMODEN),
+        .PWM(PWM),
         .RES(RES),
+        .RX(RX),
         .SCK(SCK),
-        .VCCEN(VCCEN),
-        .spi_busy(spi_busy),
-        .spi_done(spi_done),
-        .spi_en(spi_en));
+        .VCCEN(VCCEN));
 endmodule

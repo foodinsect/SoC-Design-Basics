@@ -7,6 +7,7 @@
  */
 
 #include "myoledrgb.h"
+#include "mymaxsonar.h"
 #include "stdio.h"
 #include "xparameters.h"
 #include "xil_io.h"
@@ -14,15 +15,12 @@
 
 // Base address of the OLED controller
 #define OLED_BASEADDR XPAR_MYOLEDRGB_0_S00_AXI_BASEADDR
+#define MAXSONAR_BASEADDR XPAR_MYMAXSONAR_0_S00_AXI_BASEADDR
 
 // OLED controller register offsets
-#define SPI_START   0x00  // Data/Command control
-#define SPI_DATA    0x04  // Reset control
-#define CS       	0x08  // VCC Enable
-#define MOSI      	0x0C  // PMOD Enable
-#define SCK   		0x10  // SPI Start
-
-unsigned char SPIDAT[2];
+#define INIT_START  0x00  // INIT_START
+#define MODE    	0x04  // MODE
+#define INIT_DONE   0x08  // INIT DONE
 
 void Delay(unsigned int delay) {
     volatile unsigned int d;
@@ -30,25 +28,45 @@ void Delay(unsigned int delay) {
 }
 
 
-void SetEN(unsigned int value) {
+void StartINIT(unsigned int value) {
     if (value)
-    	MYOLEDRGB_mWriteReg(OLED_BASEADDR, SPI_START, 1);  // Reset Inactive
+    	MYOLEDRGB_mWriteReg(OLED_BASEADDR, INIT_START, 1);  // Reset Inactive
     else
-    	MYOLEDRGB_mWriteReg(OLED_BASEADDR, SPI_START, 0);  // Reset Active (Low)
+    	MYOLEDRGB_mWriteReg(OLED_BASEADDR, INIT_START, 0);  // Reset Active (Low)
 }
 
+void SetMODE(unsigned int value) {
+	MYOLEDRGB_mWriteReg(OLED_BASEADDR, MODE, value);  // Reset Inactive
+}
 
 int main() {
-//	unsigned int i;
 
 	printf("Start\n");
-	SetEN(1);
+
+//	SetMODE(0);
 	Delay(30000);
-	SetEN(0);
+	StartINIT(1);
+	Delay(30000);
+	StartINIT(0);
+	xil_printf("INIT DONE : %d\n",MYOLEDRGB_mReadReg(OLED_BASEADDR, INIT_DONE) & 0x1);
+//	xil_printf("MODE : %d\n",MYOLEDRGB_mReadReg(OLED_BASEADDR, MODE));
 
-    printf("End\n");
 
-	while (1) {};
+
+//	SetMODE(1);
+
+	xil_printf("INIT DONE : %d\n",MYOLEDRGB_mReadReg(OLED_BASEADDR, INIT_DONE) & 0x1);
+//	xil_printf("MODE : %d\n",MYOLEDRGB_mReadReg(OLED_BASEADDR, MODE));
+	xil_printf("End\n");
+
+	while (1) {
+//		xil_printf("Distance : %d\n",MYMAXSONAR_mReadReg(MAXSONAR_BASEADDR, 4));
+//		xil_printf("Y value : %d\n",MYMAXSONAR_mReadReg(MAXSONAR_BASEADDR, 12));
+//		xil_printf("INIT DONE : %d\n",MYOLEDRGB_mReadReg(OLED_BASEADDR, INIT_DONE) & 0x1);
+//		xil_printf("MODE : %d\n\n",MYOLEDRGB_mReadReg(OLED_BASEADDR, MODE));
+
+		Delay(1e8);
+	};
 
 
     return 0;

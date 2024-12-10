@@ -48,12 +48,13 @@
 
 
 // IP VLNV: xilinx.com:user:myOLEDrgb:1.0
-// IP Revision: 28
+// IP Revision: 40
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_myOLEDrgb_0_0 (
+  y,
   CS,
   MOSI,
   SCK,
@@ -61,9 +62,6 @@ module design_1_myOLEDrgb_0_0 (
   RES,
   VCCEN,
   PMODEN,
-  spi_en,
-  spi_busy,
-  spi_done,
   s00_axi_awaddr,
   s00_axi_awprot,
   s00_axi_awvalid,
@@ -87,6 +85,7 @@ module design_1_myOLEDrgb_0_0 (
   s00_axi_aresetn
 );
 
+input wire [7 : 0] y;
 output wire CS;
 output wire MOSI;
 output wire SCK;
@@ -94,9 +93,6 @@ output wire DC;
 output wire RES;
 output wire VCCEN;
 output wire PMODEN;
-output wire spi_en;
-output wire spi_busy;
-output wire spi_done;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [5 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
@@ -148,6 +144,7 @@ input wire s00_axi_aresetn;
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_S00_AXI_ADDR_WIDTH(6)  // Width of S_AXI address bus
   ) inst (
+    .y(y),
     .CS(CS),
     .MOSI(MOSI),
     .SCK(SCK),
@@ -155,9 +152,6 @@ input wire s00_axi_aresetn;
     .RES(RES),
     .VCCEN(VCCEN),
     .PMODEN(PMODEN),
-    .spi_en(spi_en),
-    .spi_busy(spi_busy),
-    .spi_done(spi_done),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
     .s00_axi_awvalid(s00_axi_awvalid),

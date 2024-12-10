@@ -42,7 +42,6 @@ set_property used_in_implementation false [get_files -all f:/01_SoC/myOLEDrgb/my
 set_property used_in_implementation false [get_files -all f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all f:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all F:/01_SoC/myOLEDrgb/myOLEDrgb.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 

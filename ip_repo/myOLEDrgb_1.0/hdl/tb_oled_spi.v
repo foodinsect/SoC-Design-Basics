@@ -2,82 +2,109 @@
 
 module tb_oled;
 
-    // Testbench signals
+    // Parameters
+    parameter CLK_PERIOD = 10; // 100 MHz clock (10 ns period)
+
+    // DUT signals
     reg clk;
     reg rstn;
-    reg ctrl_start;
-    wire SCK, MOSI, DC, RES, VCCEN, PMODEN;
-    wire spi_done, spi_busy;
-    wire spi_en;
+    reg init_start;
+    reg [7:0] y; // New bar height
+    wire RES, VCCEN, PMODEN, DC, SCK, MOSI;
+    wire init_done;
+    reg mode;
+
+    wire spi_done;
+    wire spi_busy;
     wire [7:0] spi_data;
+    wire [7:0] init_data;
+    wire [7:0] rect_data;
+    wire spi_en;
+
+    // Instantiate DUT
+    spi_master spi (
+        .clk_i(clk),
+        .rstn_i(rstn),
+        .en_i(spi_en),
+        .data_i(spi_data),
+        .sclk(SCK),
+        .MOSI(MOSI),
+        .done(spi_done),
+        .busy_o(spi_busy)
+    );
+
+    init_controller init_ctrl (
+        .clk_i(clk),
+        .rstn_i(rstn),
+        .start_i(init_start),
+        .spi_done_i(spi_done),
+        .spi_en(init_en),
+        .data_o(init_data),
+        .dc_o(init_dc),
+        .res_o(RES),
+        .vccen_o(VCCEN),
+        .pmoden_o(PMODEN),
+        .init_done(init_done)
+    );
+
+    bar_graph_controller bar_graph_ctrl (
+        .clk_i(clk),
+        .rstn_i(rstn),
+        .start_i(mode == 1),
+        .y(y),
+        .spi_done_i(spi_done),
+        .spi_en(rect_en),
+        .data_o(rect_data),
+        .dc_o(rect_dc),
+        .busy_o()
+    );
+
+    assign spi_data = (mode == 0) ? init_data : rect_data;
+    assign DC = (mode == 0) ? init_dc : rect_dc;
+    assign spi_en = (mode == 0) ? init_en : rect_en;
 
     // Clock generation
     initial begin
         clk = 0;
-        forever #10 clk = ~clk; // 50 MHz clock
+        forever #(CLK_PERIOD / 2) clk = ~clk;
     end
 
-    // Reset generation
+    // Testbench process
     initial begin
-        rstn = 0; // Assert reset
-        #50;
-        rstn = 1; // Deassert reset
+        // Initialize signals
+        rstn = 0;
+        init_start = 0;
+        mode = 0;
+        y = 8'd32; // Example bar height
+        #(CLK_PERIOD * 5);
+        rstn = 1;
+
+        // Test 1: Initialization (Mode 0)
+        $display("Starting initialization...");
+        init_start = 1;
+        #(CLK_PERIOD * 5);
+        init_start = 0;
+
+        // Wait for initialization to complete
+        wait(init_done);
+        $display("Initialization complete.");
+
+        // Test 2: Bar Graph Update (Mode 1)
+        mode = 1; // Switch to bar graph mode
+        #(CLK_PERIOD * 5);
+
+        $display("Updating bar graph...");
+        #(CLK_PERIOD * 500); // Wait for bar graph update to complete
+
+        // Finish simulation
+        $display("Simulation complete.");
+        $stop;
     end
 
-    // Start signal generation
+    // Monitor signals
     initial begin
-        ctrl_start = 0;
-        #100;
-        ctrl_start = 1; // Start initialization
-        #20;
-        ctrl_start = 0;
-    end
-
-    // SPI Master instance
-    spi_master spi(
-        .clk_i  (clk),
-        .rstn_i (rstn),
-        .en_i   (spi_en),
-        .data_i (spi_data),
-        .sclk   (SCK),
-        .MOSI   (MOSI),
-        .done   (spi_done),
-        .busy_o (spi_busy)
-    );
-
-    // SPI Controller instance
-    spi_controller controller(
-        .clk_i          (clk),
-        .rstn_i         (rstn),
-        .start_i        (ctrl_start),
-        .spi_done_i     (spi_done),
-        .spi_busy_i     (spi_busy),
-        .pixel_i        (8'hFF),          // Example pixel data
-        .pixel_valid_i  (1'b1),           // Pixel data valid signal
-
-        .spi_en         (spi_en),
-        .data_o         (spi_data),
-        .dc_o           (DC),
-        .res_o          (RES),
-        .vccen_o        (VCCEN),
-        .pmoden_o       (PMODEN),
-        .busy_o         ()                // Busy signal
-    );
-
-    // Chip select signal
-    assign CS = 1'b0;
-
-    // Testbench control logic
-    initial begin
-        // Simulation duration
-        #100000;
-        $finish;
-    end
-
-    // Monitor outputs
-    initial begin
-        $monitor("Time: %0d | DC: %b | RES: %b | VCCEN: %b | PMODEN: %b | SPI_EN: %b | SPI_DATA: %h",
-                 $time, DC, RES, VCCEN, PMODEN, spi_en, spi_data);
+        $monitor("Time: %0t | Mode: %b | init_done: %b | spi_en: %b | data_o: %h | DC: %b", 
+                 $time, mode, init_done, spi_en, spi_data, DC);
     end
 
 endmodule

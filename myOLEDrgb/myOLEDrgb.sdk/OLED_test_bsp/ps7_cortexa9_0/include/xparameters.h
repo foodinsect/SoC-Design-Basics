@@ -239,6 +239,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver MYMAXSONAR */
+#define XPAR_MYMAXSONAR_NUM_INSTANCES 1
+
+/* Definitions for peripheral MYMAXSONAR_0 */
+#define XPAR_MYMAXSONAR_0_DEVICE_ID 0
+#define XPAR_MYMAXSONAR_0_S00_AXI_BASEADDR 0x43C10000
+#define XPAR_MYMAXSONAR_0_S00_AXI_HIGHADDR 0x43C1FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver MYOLEDRGB */
 #define XPAR_MYOLEDRGB_NUM_INSTANCES 1
 

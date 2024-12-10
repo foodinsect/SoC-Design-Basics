@@ -1,6 +1,362 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 01:30:47 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 39) to (Rev. 40)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 01:24:57 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 38) to (Rev. 39)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 01:15:18 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 35) to (Rev. 38)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_myOLEDrgb_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'spi_busy'
+
+-Upgrade has removed port 'spi_done'
+
+-Upgrade has removed port 'spi_en'
+
+-Upgrade has added port 'y'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 01:12:47 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 34) to (Rev. 35)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_myOLEDrgb_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'y'
+
+-Upgrade has added port 'spi_busy'
+
+-Upgrade has added port 'spi_done'
+
+-Upgrade has added port 'spi_en'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 01:03:39 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 33) to (Rev. 34)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 00:50:31 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 32) to (Rev. 33)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 00:40:05 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 31) to (Rev. 32)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 00:32:06 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myMAXSONAR_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myMAXSONAR_0_0 (xilinx.com:user:myMAXSONAR:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 00:22:02 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myMAXSONAR_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myMAXSONAR_0_0 (xilinx.com:user:myMAXSONAR:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 00:19:37 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myMAXSONAR_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myMAXSONAR_0_0 (xilinx.com:user:myMAXSONAR:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Dec 11 00:05:19 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 30) to (Rev. 31)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Dec 10 23:53:05 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 29) to (Rev. 30)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Dec 10 23:18:06 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 28) to (Rev. 29)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_myOLEDrgb_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'spi_busy'
+
+-Upgrade has removed port 'spi_done'
+
+-Upgrade has removed port 'spi_en'
+
+-Upgrade has added port 'y'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Dec 10 22:25:30 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myMAXSONAR_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_myMAXSONAR_0_0 (xilinx.com:user:myMAXSONAR:1.0) from (Rev. 5) to (Rev. 6)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_myMAXSONAR_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'y'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Tue Dec 10 14:25:25 2024
 | Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
