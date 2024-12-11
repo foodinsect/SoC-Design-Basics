@@ -581,11 +581,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 10 15:32:27 UTC 2024</spirit:value>
+            <spirit:value>Tue Dec 10 21:10:07 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bbfb1930</spirit:value>
+            <spirit:value>9:34f2baba</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -596,7 +596,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bbfb1930</spirit:value>
+            <spirit:value>9:34f2baba</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -612,11 +612,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 10 15:32:27 UTC 2024</spirit:value>
+            <spirit:value>Tue Dec 10 21:10:07 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bbfb1930</spirit:value>
+            <spirit:value>9:34f2baba</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -632,11 +632,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 10 15:32:27 UTC 2024</spirit:value>
+            <spirit:value>Tue Dec 10 21:10:07 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c4a03ffe</spirit:value>
+            <spirit:value>9:48510e2b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -652,11 +652,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 10 15:32:27 UTC 2024</spirit:value>
+            <spirit:value>Tue Dec 10 21:10:07 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c4a03ffe</spirit:value>
+            <spirit:value>9:48510e2b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -670,11 +670,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 10 15:32:52 UTC 2024</spirit:value>
+            <spirit:value>Tue Dec 10 21:10:36 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bbfb1930</spirit:value>
+            <spirit:value>9:34f2baba</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1068,11 +1068,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/192e/hdl/myMAXSONAR_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/ff82/hdl/myMAXSONAR_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/192e/hdl/myMAXSONAR_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/ff82/hdl/myMAXSONAR_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1087,11 +1087,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/192e/hdl/myMAXSONAR_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/ff82/hdl/myMAXSONAR_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/192e/hdl/myMAXSONAR_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/ff82/hdl/myMAXSONAR_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1200,7 +1200,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>myMAXSONAR_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>9</xilinx:coreRevision>
+      <xilinx:coreRevision>10</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@18a19f87_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@b81562d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
@@ -1314,6 +1314,17 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@773f772c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@fbf25ad_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6f506ac0_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76775dae_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@595b7581_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f2f1d51_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@718c0e69_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b2bd950_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9788092_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c809a21_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47019973_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@571ed53a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@243f262e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@135a807b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -1348,7 +1359,7 @@
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="616027be"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a9b396b3"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cd2b6017"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="854c9a01"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="2e811c89"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="072902f2"/>

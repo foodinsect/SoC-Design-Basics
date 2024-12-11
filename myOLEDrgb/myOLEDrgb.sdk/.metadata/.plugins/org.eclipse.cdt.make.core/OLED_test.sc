@@ -10,6 +10,7 @@
 <includePath path="#undef __ARM_FEATURE_SAT" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_CRYPTO" removed="true"/>
 <includePath path="c:\xilinx\sdk\2019.1\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/8.2.0/include"/>
+<includePath path="#undef __ARM_NEON_FP" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_FP16_SCALAR_ARITHMETIC" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_IDIV" removed="true"/>
 <includePath path="#undef __thumb2__" removed="true"/>

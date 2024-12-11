@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Dec 11 01:33:05 2024
+| Date             : Wed Dec 11 08:36:30 2024
 | Host             : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.554        |
+| Total On-Chip Power (W)  | 1.548        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.414        |
+| Dynamic (W)              | 1.407        |
 | Device Static (W)        | 0.141        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 67.1         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |        3 |       --- |             --- |
-| Slice Logic             |     0.005 |     3859 |       --- |             --- |
-|   LUT as Logic          |     0.005 |     1604 |     53200 |            3.02 |
-|   CARRY4                |    <0.001 |      191 |     13300 |            1.44 |
-|   Register              |    <0.001 |     1386 |    106400 |            1.30 |
+| Slice Logic             |     0.002 |     3402 |       --- |             --- |
+|   LUT as Logic          |     0.002 |     1245 |     53200 |            2.34 |
+|   CARRY4                |    <0.001 |      108 |     13300 |            0.81 |
+|   Register              |    <0.001 |     1462 |    106400 |            1.37 |
+|   F7/F8 Muxes           |    <0.001 |        1 |     53200 |           <0.01 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
 |   Others                |     0.000 |      202 |       --- |             --- |
-|   F7/F8 Muxes           |     0.000 |        3 |     53200 |           <0.01 |
-| Signals                 |     0.005 |     3107 |       --- |             --- |
-| I/O                     |    <0.001 |        9 |       125 |            7.20 |
+| Signals                 |     0.002 |     2747 |       --- |             --- |
+| I/O                     |     0.001 |        9 |       125 |            7.20 |
 | PS7                     |     1.399 |        1 |       --- |             --- |
 | Static Power            |     0.141 |          |           |                 |
-| Total                   |     1.554 |          |           |                 |
+| Total                   |     1.548 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.014 |      0.014 |
+| Vccint    |       1.000 |     0.021 |       0.007 |      0.014 |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -150,10 +150,10 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.414 |
-|   design_1_i             |     1.413 |
-|     myMAXSONAR_0         |     0.010 |
-|       inst               |     0.010 |
+| design_1_wrapper         |     1.407 |
+|   design_1_i             |     1.406 |
+|     myMAXSONAR_0         |     0.003 |
+|       inst               |     0.003 |
 |     myOLEDrgb_0          |     0.001 |
 |       inst               |     0.001 |
 |     processing_system7_0 |     1.399 |

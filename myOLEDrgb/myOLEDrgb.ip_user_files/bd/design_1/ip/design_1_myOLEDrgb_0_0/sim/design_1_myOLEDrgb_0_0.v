@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:myOLEDrgb:1.0
-// IP Revision: 40
+// IP Revision: 70
 
 `timescale 1ns/1ps
 

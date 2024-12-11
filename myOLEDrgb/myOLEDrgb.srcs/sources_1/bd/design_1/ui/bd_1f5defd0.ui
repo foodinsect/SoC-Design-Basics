@@ -31,9 +31,9 @@ preplace netloc myOLEDrgb_0_PMODEN 1 3 1 NJ 180
 preplace netloc PWM_1 1 0 3 10J 130 NJ 130 780J
 preplace netloc myMAXSONAR_0_y 1 2 2 800 240 1040
 preplace netloc myMAXSONAR_0_RX 1 3 1 NJ 320
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 530 NJ 530 NJ
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 90n
 preplace netloc processing_system7_0_DDR 1 1 3 NJ 510 NJ 510 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 90n
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 530 NJ 530 NJ
 preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 450 210n
 preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 300
 levelinfo -pg 1 -10 230 610 920 1060

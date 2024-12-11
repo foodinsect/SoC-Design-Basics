@@ -11,14 +11,10 @@ module tb_oled;
     reg init_start;
     reg [7:0] y; // New bar height
     wire RES, VCCEN, PMODEN, DC, SCK, MOSI;
-    wire init_done;
     reg mode;
-
     wire spi_done;
     wire spi_busy;
     wire [7:0] spi_data;
-    wire [7:0] init_data;
-    wire [7:0] rect_data;
     wire spi_en;
 
     // Instantiate DUT
@@ -33,35 +29,23 @@ module tb_oled;
         .busy_o(spi_busy)
     );
 
-    init_controller init_ctrl (
-        .clk_i(clk),
-        .rstn_i(rstn),
-        .start_i(init_start),
-        .spi_done_i(spi_done),
-        .spi_en(init_en),
-        .data_o(init_data),
-        .dc_o(init_dc),
-        .res_o(RES),
-        .vccen_o(VCCEN),
-        .pmoden_o(PMODEN),
-        .init_done(init_done)
-    );
+    spi_controller controller (
+        .clk_i(clk),           // System clock
+        .rstn_i(rstn),         // Asynchronous reset (active low)
+        .start_i(init_start),  // Start initialization signal
+        .spi_done_i(spi_done), // SPI transfer complete signal
+        .spi_busy_i(spi_busy), // SPI busy signal
+        .y(y),                 // Input bar height
+        .pixel_valid_i(1'b1),  // Pixel data valid signal
 
-    bar_graph_controller bar_graph_ctrl (
-        .clk_i(clk),
-        .rstn_i(rstn),
-        .start_i(mode == 1),
-        .y(y),
-        .spi_done_i(spi_done),
-        .spi_en(rect_en),
-        .data_o(rect_data),
-        .dc_o(rect_dc),
-        .busy_o()
+        .spi_en(spi_en),       // SPI enable signal
+        .data_o(spi_data),     // SPI command/data output
+        .dc_o(DC),             // Command/Data select (0: Command, 1: Data)
+        .res_o(RES),           // Reset control
+        .vccen_o(VCCEN),       // VCC enable
+        .pmoden_o(PMODEN),     // PMOD enable
+        .busy_o()              // Busy signal
     );
-
-    assign spi_data = (mode == 0) ? init_data : rect_data;
-    assign DC = (mode == 0) ? init_dc : rect_dc;
-    assign spi_en = (mode == 0) ? init_en : rect_en;
 
     // Clock generation
     initial begin
@@ -79,22 +63,25 @@ module tb_oled;
         #(CLK_PERIOD * 5);
         rstn = 1;
 
-        // Test 1: Initialization (Mode 0)
+        // Test 1: Initialization
         $display("Starting initialization...");
         init_start = 1;
         #(CLK_PERIOD * 5);
         init_start = 0;
 
-        // Wait for initialization to complete
-        wait(init_done);
+        // Wait for SPI initialization to complete
+        wait(!spi_busy);
         $display("Initialization complete.");
 
-        // Test 2: Bar Graph Update (Mode 1)
-        mode = 1; // Switch to bar graph mode
+        // Test 2: Switch to Bar Graph Mode
+        $display("Switching to bar graph mode...");
+        mode = 1;
+        y = 8'd48; // Update bar height for test
         #(CLK_PERIOD * 5);
 
-        $display("Updating bar graph...");
-        #(CLK_PERIOD * 500); // Wait for bar graph update to complete
+        // Wait for SPI bar graph update to complete
+        wait(!spi_busy);
+        $display("Bar graph updated.");
 
         // Finish simulation
         $display("Simulation complete.");
@@ -103,8 +90,8 @@ module tb_oled;
 
     // Monitor signals
     initial begin
-        $monitor("Time: %0t | Mode: %b | init_done: %b | spi_en: %b | data_o: %h | DC: %b", 
-                 $time, mode, init_done, spi_en, spi_data, DC);
+        $monitor("Time: %0t | Mode: %b | RES: %b | VCCEN: %b | PMODEN: %b | DC: %b | SPI_EN: %b | SPI_DATA: %h | Y: %d", 
+                 $time, mode, RES, VCCEN, PMODEN, DC, spi_en, spi_data, y);
     end
 
 endmodule
