@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sun Dec 15 20:23:46 2024
+-- Date        : Sun Dec 15 23:42:06 2024
 -- Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_myBuzzer_0_0/design_1_myBuzzer_0_0_sim_netlist.vhdl
@@ -83,9 +83,10 @@ architecture STRUCTURE of design_1_myBuzzer_0_0_BeepMaker is
   signal \counter[29]_i_1_n_0\ : STD_LOGIC;
   signal \counter[2]_i_1_n_0\ : STD_LOGIC;
   signal \counter[30]_i_10_n_0\ : STD_LOGIC;
+  signal \counter[30]_i_11_n_0\ : STD_LOGIC;
   signal \counter[30]_i_2_n_0\ : STD_LOGIC;
   signal \counter[30]_i_3_n_0\ : STD_LOGIC;
-  signal \counter[30]_i_4_n_0\ : STD_LOGIC;
+  signal \counter[30]_i_5_n_0\ : STD_LOGIC;
   signal \counter[30]_i_6_n_0\ : STD_LOGIC;
   signal \counter[30]_i_7_n_0\ : STD_LOGIC;
   signal \counter[30]_i_8_n_0\ : STD_LOGIC;
@@ -157,38 +158,40 @@ architecture STRUCTURE of design_1_myBuzzer_0_0_BeepMaker is
   signal \NLW_oBUZ0_carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_oBUZ0_carry__2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \counter[10]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \counter[11]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \counter[12]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \counter[13]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \counter[14]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \counter[15]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \counter[16]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \counter[17]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \counter[18]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \counter[19]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \counter[1]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \counter[20]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \counter[21]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \counter[22]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \counter[23]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \counter[24]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \counter[25]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \counter[26]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \counter[27]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \counter[28]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \counter[29]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \counter[2]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \counter[30]_i_10\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \counter[30]_i_2\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \counter[30]_i_8\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \counter[3]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \counter[4]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \counter[5]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \counter[6]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \counter[7]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \counter[8]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \counter[9]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \counter[10]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \counter[11]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \counter[12]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \counter[13]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \counter[14]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \counter[15]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \counter[16]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \counter[17]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \counter[18]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \counter[19]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \counter[1]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \counter[20]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \counter[21]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \counter[22]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \counter[23]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \counter[24]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \counter[25]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \counter[26]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \counter[27]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \counter[28]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \counter[29]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \counter[2]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \counter[30]_i_11\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \counter[30]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \counter[30]_i_6\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \counter[30]_i_8\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \counter[30]_i_9\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \counter[3]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \counter[4]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \counter[5]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \counter[6]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \counter[7]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \counter[8]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \counter[9]_i_1\ : label is "soft_lutpair12";
 begin
   wBUZ <= \^wbuz\;
 buzzer_INST_0: unisim.vcomponents.LUT2
@@ -505,12 +508,12 @@ counter0_carry: unisim.vcomponents.CARRY4
     );
 \counter[30]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"EFEFEFEE"
+      INIT => X"FFBBFFBA"
     )
         port map (
       I0 => \counter[30]_i_3_n_0\,
-      I1 => \counter[30]_i_4_n_0\,
-      I2 => threshold110_out,
+      I1 => threshold110_out,
+      I2 => \counter[30]_i_5_n_0\,
       I3 => \counter[30]_i_6_n_0\,
       I4 => \counter[30]_i_7_n_0\,
       O => oBUZ1
@@ -520,9 +523,19 @@ counter0_carry: unisim.vcomponents.CARRY4
       INIT => X"E"
     )
         port map (
-      I0 => distance(6),
-      I1 => distance(7),
+      I0 => distance(1),
+      I1 => distance(2),
       O => \counter[30]_i_10_n_0\
+    );
+\counter[30]_i_11\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"1F"
+    )
+        port map (
+      I0 => distance(2),
+      I1 => distance(1),
+      I2 => distance(3),
+      O => \counter[30]_i_11_n_0\
     );
 \counter[30]_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -535,66 +548,66 @@ counter0_carry: unisim.vcomponents.CARRY4
     );
 \counter[30]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"ECEDCDCDECCDCDCD"
+      INIT => X"1414144414041444"
     )
         port map (
-      I0 => distance(3),
-      I1 => \counter[30]_i_8_n_0\,
-      I2 => distance(4),
-      I3 => distance(1),
-      I4 => distance(2),
+      I0 => \counter[30]_i_8_n_0\,
+      I1 => distance(4),
+      I2 => distance(3),
+      I3 => distance(2),
+      I4 => distance(1),
       I5 => distance(0),
       O => \counter[30]_i_3_n_0\
     );
 \counter[30]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"000037FC00000000"
+      INIT => X"00000000000007C0"
     )
         port map (
       I0 => distance(0),
-      I1 => distance(3),
-      I2 => distance(1),
-      I3 => distance(2),
-      I4 => \counter[30]_i_8_n_0\,
-      I5 => distance(4),
-      O => \counter[30]_i_4_n_0\
-    );
-\counter[30]_i_5\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"11111002"
-    )
-        port map (
-      I0 => distance(4),
-      I1 => \counter[30]_i_8_n_0\,
+      I1 => distance(1),
       I2 => distance(2),
-      I3 => distance(1),
-      I4 => distance(3),
+      I3 => distance(3),
+      I4 => distance(4),
+      I5 => \counter[30]_i_8_n_0\,
       O => threshold110_out
     );
-\counter[30]_i_6\: unisim.vcomponents.LUT6
+\counter[30]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000010F8000"
+      INIT => X"0300000000103030"
     )
         port map (
-      I0 => \counter[30]_i_9_n_0\,
-      I1 => distance(2),
-      I2 => distance(4),
-      I3 => distance(3),
-      I4 => distance(5),
-      I5 => \counter[30]_i_10_n_0\,
+      I0 => distance(0),
+      I1 => \counter[30]_i_9_n_0\,
+      I2 => distance(5),
+      I3 => \counter[30]_i_10_n_0\,
+      I4 => distance(3),
+      I5 => distance(4),
+      O => \counter[30]_i_5_n_0\
+    );
+\counter[30]_i_6\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFC813"
+    )
+        port map (
+      I0 => distance(1),
+      I1 => distance(3),
+      I2 => distance(2),
+      I3 => distance(4),
+      I4 => \counter[30]_i_8_n_0\,
       O => \counter[30]_i_6_n_0\
     );
 \counter[30]_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0400044004400040"
+      INIT => X"0404400004044444"
     )
         port map (
-      I0 => \counter[30]_i_10_n_0\,
+      I0 => \counter[30]_i_9_n_0\,
       I1 => distance(5),
-      I2 => distance(4),
-      I3 => distance(3),
-      I4 => \counter[30]_i_9_n_0\,
-      I5 => distance(2),
+      I2 => distance(3),
+      I3 => distance(0),
+      I4 => distance(4),
+      I5 => \counter[30]_i_11_n_0\,
       O => \counter[30]_i_7_n_0\
     );
 \counter[30]_i_8\: unisim.vcomponents.LUT3
@@ -612,8 +625,8 @@ counter0_carry: unisim.vcomponents.CARRY4
       INIT => X"E"
     )
         port map (
-      I0 => distance(1),
-      I1 => distance(0),
+      I0 => distance(6),
+      I1 => distance(7),
       O => \counter[30]_i_9_n_0\
     );
 \counter[3]_i_1\: unisim.vcomponents.LUT2
@@ -965,98 +978,98 @@ oBUZ0_carry: unisim.vcomponents.CARRY4
     );
 \oBUZ0_carry__0_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7F770700"
+      INIT => X"2FFF0222"
     )
         port map (
-      I0 => \counter[30]_i_3_n_0\,
-      I1 => \counter[30]_i_6_n_0\,
-      I2 => \counter[30]_i_4_n_0\,
-      I3 => counter(14),
+      I0 => counter(14),
+      I1 => \counter[30]_i_3_n_0\,
+      I2 => \counter[30]_i_6_n_0\,
+      I3 => \counter[30]_i_5_n_0\,
       I4 => counter(15),
       O => \oBUZ0_carry__0_i_1_n_0\
     );
 \oBUZ0_carry__0_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AFBFAA2A"
+      INIT => X"EFFF02AA"
     )
         port map (
-      I0 => counter(13),
-      I1 => \counter[30]_i_7_n_0\,
-      I2 => \counter[30]_i_3_n_0\,
+      I0 => counter(12),
+      I1 => \counter[30]_i_5_n_0\,
+      I2 => \counter[30]_i_7_n_0\,
       I3 => \counter[30]_i_6_n_0\,
-      I4 => counter(12),
+      I4 => counter(13),
       O => \oBUZ0_carry__0_i_2_n_0\
     );
 \oBUZ0_carry__0_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7F070F00"
+      INIT => X"2AFF002A"
     )
         port map (
-      I0 => oBUZ0_carry_i_9_n_0,
-      I1 => \counter[30]_i_3_n_0\,
-      I2 => \counter[30]_i_4_n_0\,
-      I3 => counter(11),
-      I4 => counter(10),
+      I0 => counter(10),
+      I1 => \counter[30]_i_6_n_0\,
+      I2 => oBUZ0_carry_i_9_n_0,
+      I3 => \counter[30]_i_3_n_0\,
+      I4 => counter(11),
       O => \oBUZ0_carry__0_i_3_n_0\
     );
 \oBUZ0_carry__0_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00FB00A2"
+      INIT => X"32332022"
     )
         port map (
-      I0 => counter(9),
-      I1 => \counter[30]_i_6_n_0\,
+      I0 => counter(8),
+      I1 => \counter[30]_i_3_n_0\,
       I2 => threshold110_out,
-      I3 => \counter[30]_i_4_n_0\,
-      I4 => counter(8),
+      I3 => \counter[30]_i_5_n_0\,
+      I4 => counter(9),
       O => \oBUZ0_carry__0_i_4_n_0\
     );
 \oBUZ0_carry__0_i_5\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"95000095"
+      INIT => X"87000087"
     )
         port map (
-      I0 => counter(15),
+      I0 => \counter[30]_i_5_n_0\,
       I1 => \counter[30]_i_6_n_0\,
-      I2 => \counter[30]_i_3_n_0\,
-      I3 => \counter[30]_i_4_n_0\,
+      I2 => counter(15),
+      I3 => \counter[30]_i_3_n_0\,
       I4 => counter(14),
       O => \oBUZ0_carry__0_i_5_n_0\
     );
 \oBUZ0_carry__0_i_6\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"50000595"
+      INIT => X"00A00857"
     )
         port map (
-      I0 => counter(13),
+      I0 => \counter[30]_i_6_n_0\,
       I1 => \counter[30]_i_7_n_0\,
-      I2 => \counter[30]_i_3_n_0\,
-      I3 => \counter[30]_i_6_n_0\,
+      I2 => \counter[30]_i_5_n_0\,
+      I3 => counter(13),
       I4 => counter(12),
       O => \oBUZ0_carry__0_i_6_n_0\
     );
 \oBUZ0_carry__0_i_7\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"95000095"
+      INIT => X"90000999"
     )
         port map (
-      I0 => counter(10),
-      I1 => \counter[30]_i_3_n_0\,
-      I2 => oBUZ0_carry_i_9_n_0,
-      I3 => \counter[30]_i_4_n_0\,
-      I4 => counter(11),
+      I0 => \counter[30]_i_3_n_0\,
+      I1 => counter(11),
+      I2 => \counter[30]_i_6_n_0\,
+      I3 => oBUZ0_carry_i_9_n_0,
+      I4 => counter(10),
       O => \oBUZ0_carry__0_i_7_n_0\
     );
 \oBUZ0_carry__0_i_8\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AA100045"
+      INIT => X"F000020D"
     )
         port map (
-      I0 => \counter[30]_i_4_n_0\,
+      I0 => \counter[30]_i_5_n_0\,
       I1 => threshold110_out,
-      I2 => \counter[30]_i_6_n_0\,
-      I3 => counter(8),
-      I4 => counter(9),
+      I2 => \counter[30]_i_3_n_0\,
+      I3 => counter(9),
+      I4 => counter(8),
       O => \oBUZ0_carry__0_i_8_n_0\
     );
 \oBUZ0_carry__1\: unisim.vcomponents.CARRY4
@@ -1079,40 +1092,40 @@ oBUZ0_carry: unisim.vcomponents.CARRY4
     );
 \oBUZ0_carry__1_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFDFFF1F0F10000"
+      INIT => X"FFFFFFA3AAAA0002"
     )
         port map (
-      I0 => \counter[30]_i_7_n_0\,
-      I1 => \counter[30]_i_6_n_0\,
-      I2 => threshold110_out,
+      I0 => counter(22),
+      I1 => \counter[30]_i_7_n_0\,
+      I2 => \counter[30]_i_5_n_0\,
       I3 => \oBUZ0_carry__1_i_9_n_0\,
-      I4 => counter(22),
+      I4 => threshold110_out,
       I5 => counter(23),
       O => \oBUZ0_carry__1_i_1_n_0\
     );
 \oBUZ0_carry__1_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AF3FAA2A"
+      INIT => X"CFFF02AA"
     )
         port map (
-      I0 => counter(21),
-      I1 => \counter[30]_i_7_n_0\,
-      I2 => \counter[30]_i_3_n_0\,
+      I0 => counter(20),
+      I1 => \counter[30]_i_5_n_0\,
+      I2 => \counter[30]_i_7_n_0\,
       I3 => \counter[30]_i_6_n_0\,
-      I4 => counter(20),
+      I4 => counter(21),
       O => \oBUZ0_carry__1_i_2_n_0\
     );
 \oBUZ0_carry__1_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00FF00F100F30000"
+      INIT => X"0F0C0F0F0C000C04"
     )
         port map (
       I0 => \counter[30]_i_7_n_0\,
-      I1 => \counter[30]_i_6_n_0\,
-      I2 => threshold110_out,
-      I3 => \counter[30]_i_4_n_0\,
-      I4 => counter(19),
-      I5 => counter(18),
+      I1 => counter(18),
+      I2 => \counter[30]_i_3_n_0\,
+      I3 => threshold110_out,
+      I4 => \counter[30]_i_5_n_0\,
+      I5 => counter(19),
       O => \oBUZ0_carry__1_i_3_n_0\
     );
 \oBUZ0_carry__1_i_4\: unisim.vcomponents.LUT2
@@ -1126,40 +1139,40 @@ oBUZ0_carry: unisim.vcomponents.CARRY4
     );
 \oBUZ0_carry__1_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0102010058585859"
+      INIT => X"00020F00000CF0F1"
     )
         port map (
-      I0 => counter(22),
-      I1 => \oBUZ0_carry__1_i_9_n_0\,
+      I0 => \counter[30]_i_7_n_0\,
+      I1 => \counter[30]_i_5_n_0\,
       I2 => threshold110_out,
-      I3 => \counter[30]_i_6_n_0\,
-      I4 => \counter[30]_i_7_n_0\,
-      I5 => counter(23),
+      I3 => \oBUZ0_carry__1_i_9_n_0\,
+      I4 => counter(23),
+      I5 => counter(22),
       O => \oBUZ0_carry__1_i_5_n_0\
     );
 \oBUZ0_carry__1_i_6\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"08009195"
+      INIT => X"08A00057"
     )
         port map (
-      I0 => counter(20),
-      I1 => \counter[30]_i_3_n_0\,
-      I2 => \counter[30]_i_6_n_0\,
-      I3 => \counter[30]_i_7_n_0\,
-      I4 => counter(21),
+      I0 => \counter[30]_i_6_n_0\,
+      I1 => \counter[30]_i_7_n_0\,
+      I2 => \counter[30]_i_5_n_0\,
+      I3 => counter(21),
+      I4 => counter(20),
       O => \oBUZ0_carry__1_i_6_n_0\
     );
 \oBUZ0_carry__1_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAA101001004445"
+      INIT => X"FF000004005000AB"
     )
         port map (
-      I0 => \counter[30]_i_4_n_0\,
-      I1 => threshold110_out,
-      I2 => \counter[30]_i_6_n_0\,
-      I3 => \counter[30]_i_7_n_0\,
-      I4 => counter(18),
-      I5 => counter(19),
+      I0 => threshold110_out,
+      I1 => \counter[30]_i_7_n_0\,
+      I2 => \counter[30]_i_5_n_0\,
+      I3 => \counter[30]_i_3_n_0\,
+      I4 => counter(19),
+      I5 => counter(18),
       O => \oBUZ0_carry__1_i_7_n_0\
     );
 \oBUZ0_carry__1_i_8\: unisim.vcomponents.LUT2
@@ -1173,15 +1186,15 @@ oBUZ0_carry: unisim.vcomponents.CARRY4
     );
 \oBUZ0_carry__1_i_9\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"000037000000FC00"
+      INIT => X"1144104414441444"
     )
         port map (
-      I0 => distance(0),
-      I1 => distance(2),
-      I2 => distance(1),
-      I3 => distance(4),
-      I4 => \counter[30]_i_8_n_0\,
-      I5 => distance(3),
+      I0 => \counter[30]_i_8_n_0\,
+      I1 => distance(4),
+      I2 => distance(2),
+      I3 => distance(3),
+      I4 => distance(0),
+      I5 => distance(1),
       O => \oBUZ0_carry__1_i_9_n_0\
     );
 \oBUZ0_carry__2\: unisim.vcomponents.CARRY4
@@ -1266,13 +1279,13 @@ oBUZ0_carry: unisim.vcomponents.CARRY4
     );
 oBUZ0_carry_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7F770700"
+      INIT => X"2FFF0222"
     )
         port map (
-      I0 => \counter[30]_i_3_n_0\,
-      I1 => \counter[30]_i_6_n_0\,
-      I2 => \counter[30]_i_4_n_0\,
-      I3 => counter(6),
+      I0 => counter(6),
+      I1 => \counter[30]_i_3_n_0\,
+      I2 => \counter[30]_i_6_n_0\,
+      I3 => \counter[30]_i_5_n_0\,
       I4 => counter(7),
       O => oBUZ0_carry_i_1_n_0
     );
@@ -1299,7 +1312,7 @@ oBUZ0_carry_i_4: unisim.vcomponents.LUT4
       INIT => X"FFD0"
     )
         port map (
-      I0 => \counter[30]_i_3_n_0\,
+      I0 => \counter[30]_i_6_n_0\,
       I1 => oBUZ0_carry_i_9_n_0,
       I2 => counter(0),
       I3 => counter(1),
@@ -1307,13 +1320,13 @@ oBUZ0_carry_i_4: unisim.vcomponents.LUT4
     );
 oBUZ0_carry_i_5: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"95000095"
+      INIT => X"87000087"
     )
         port map (
-      I0 => counter(7),
+      I0 => \counter[30]_i_5_n_0\,
       I1 => \counter[30]_i_6_n_0\,
-      I2 => \counter[30]_i_3_n_0\,
-      I3 => \counter[30]_i_4_n_0\,
+      I2 => counter(7),
+      I3 => \counter[30]_i_3_n_0\,
       I4 => counter(6),
       O => oBUZ0_carry_i_5_n_0
     );
@@ -1340,23 +1353,22 @@ oBUZ0_carry_i_8: unisim.vcomponents.LUT4
       INIT => X"002D"
     )
         port map (
-      I0 => \counter[30]_i_3_n_0\,
+      I0 => \counter[30]_i_6_n_0\,
       I1 => oBUZ0_carry_i_9_n_0,
       I2 => counter(0),
       I3 => counter(1),
       O => oBUZ0_carry_i_8_n_0
     );
-oBUZ0_carry_i_9: unisim.vcomponents.LUT6
+oBUZ0_carry_i_9: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000000007FF8000"
+      INIT => X"00005F80"
     )
         port map (
-      I0 => distance(2),
-      I1 => \counter[30]_i_9_n_0\,
-      I2 => distance(3),
-      I3 => distance(4),
-      I4 => distance(5),
-      I5 => \counter[30]_i_10_n_0\,
+      I0 => distance(3),
+      I1 => \counter[30]_i_10_n_0\,
+      I2 => distance(4),
+      I3 => distance(5),
+      I4 => \counter[30]_i_9_n_0\,
       O => oBUZ0_carry_i_9_n_0
     );
 oBUZ_i_1: unisim.vcomponents.LUT6
@@ -1366,7 +1378,7 @@ oBUZ_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => \oBUZ0_carry__2_n_0\,
       I1 => \counter[30]_i_7_n_0\,
-      I2 => \counter[30]_i_6_n_0\,
+      I2 => \counter[30]_i_5_n_0\,
       I3 => threshold110_out,
       I4 => \oBUZ0_carry__1_i_9_n_0\,
       I5 => \^wbuz\,
@@ -1475,10 +1487,10 @@ architecture STRUCTURE of design_1_myBuzzer_0_0_myBuzzer_v1_0_S00_AXI is
   signal \slv_reg_rden__0\ : STD_LOGIC;
   signal \slv_reg_wren__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \slv_reg2[31]_i_2\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \slv_reg2[31]_i_2\ : label is "soft_lutpair18";
 begin
   Q(0) <= \^q\(0);
   SR(0) <= \^sr\(0);

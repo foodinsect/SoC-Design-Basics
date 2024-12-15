@@ -1,6 +1,90 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Dec 15 23:41:25 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myBuzzer_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myBuzzer_0_0 (xilinx.com:user:myBuzzer:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Dec 15 23:27:52 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myBuzzer_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myBuzzer_0_0 (xilinx.com:user:myBuzzer:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Dec 15 23:26:34 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myOLEDrgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myOLEDrgb_0_0 (xilinx.com:user:myOLEDrgb:1.0) from (Rev. 74) to (Rev. 75)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Dec 15 23:26:34 2024
+| Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_myDCMotor_0_3'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_myDCMotor_0_3 (xilinx.com:user:myDCMotor:1.0) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Sun Dec 15 22:43:39 2024
 | Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

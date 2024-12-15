@@ -98,20 +98,20 @@ vcom -work xil_defaultlib -93 \
 "../../../bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../TermProject.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../TermProject.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" "+incdir+../../../../TermProject.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
-"../../../bd/design_1/ipshared/31e0/hdl/init_controller.v" \
-"../../../bd/design_1/ipshared/31e0/hdl/myOLEDrgb_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/31e0/hdl/spi_master.v" \
-"../../../bd/design_1/ipshared/31e0/hdl/myOLEDrgb_v1_0.v" \
+"../../../bd/design_1/ipshared/b8bf/hdl/init_controller.v" \
+"../../../bd/design_1/ipshared/b8bf/hdl/myOLEDrgb_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/b8bf/hdl/spi_master.v" \
+"../../../bd/design_1/ipshared/b8bf/hdl/myOLEDrgb_v1_0.v" \
 "../../../bd/design_1/ip/design_1_myOLEDrgb_0_0/sim/design_1_myOLEDrgb_0_0.v" \
-"../../../bd/design_1/ipshared/e048/hdl/BeepMaker.v" \
-"../../../bd/design_1/ipshared/e048/hdl/myBuzzer_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/e048/hdl/myBuzzer_v1_0.v" \
+"../../../bd/design_1/ipshared/6ffe/hdl/BeepMaker.v" \
+"../../../bd/design_1/ipshared/6ffe/hdl/myBuzzer_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/6ffe/hdl/myBuzzer_v1_0.v" \
 "../../../bd/design_1/ip/design_1_myBuzzer_0_0/sim/design_1_myBuzzer_0_0.v" \
-"../../../bd/design_1/ipshared/635b/hdl/PWM.v" \
-"../../../bd/design_1/ipshared/635b/hdl/clock_divider.v" \
-"../../../bd/design_1/ipshared/635b/hdl/myDCMotor_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/635b/hdl/pwm_controller.v" \
-"../../../bd/design_1/ipshared/635b/hdl/myDCMotor_v1_0.v" \
+"../../../bd/design_1/ipshared/c6f4/hdl/PWM.v" \
+"../../../bd/design_1/ipshared/c6f4/hdl/clock_divider.v" \
+"../../../bd/design_1/ipshared/c6f4/hdl/myDCMotor_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/c6f4/hdl/pwm_controller.v" \
+"../../../bd/design_1/ipshared/c6f4/hdl/myDCMotor_v1_0.v" \
 "../../../bd/design_1/ip/design_1_myDCMotor_0_3/sim/design_1_myDCMotor_0_3.v" \
 "../../../bd/design_1/ipshared/9dc9/hdl/mySwitch_v1_0_S00_AXI.v" \
 "../../../bd/design_1/ipshared/9dc9/hdl/mySwitch_v1_0.v" \

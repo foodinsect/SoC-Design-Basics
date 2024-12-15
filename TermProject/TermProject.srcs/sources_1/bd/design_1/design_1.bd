@@ -22,11 +22,11 @@
         "m04_couplers": {}
       },
       "rst_ps7_0_50M": "",
-      "myBuzzer_0": "",
       "myMAXSONAR_0": "",
-      "myOLEDrgb_0": "",
       "mySwitch_0": "",
-      "myDCMotor_0": ""
+      "myDCMotor_0": "",
+      "myOLEDrgb_0": "",
+      "myBuzzer_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1667,12 +1667,6 @@
           }
         },
         "interface_nets": {
-          "ps7_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "s00_couplers_to_xbar": {
             "interface_ports": [
               "s00_couplers/M_AXI",
@@ -1685,16 +1679,16 @@
               "m00_couplers/M_AXI"
             ]
           },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
           "m01_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           },
           "m02_couplers_to_ps7_0_axi_periph": {
@@ -1737,6 +1731,12 @@
             "interface_ports": [
               "xbar/M04_AXI",
               "m04_couplers/S_AXI"
+            ]
+          },
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -1783,17 +1783,9 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_ps7_0_50M_0"
       },
-      "myBuzzer_0": {
-        "vlnv": "xilinx.com:user:myBuzzer:1.0",
-        "xci_name": "design_1_myBuzzer_0_0"
-      },
       "myMAXSONAR_0": {
         "vlnv": "xilinx.com:user:myMAXSONAR:1.0",
         "xci_name": "design_1_myMAXSONAR_0_0"
-      },
-      "myOLEDrgb_0": {
-        "vlnv": "xilinx.com:user:myOLEDrgb:1.0",
-        "xci_name": "design_1_myOLEDrgb_0_0"
       },
       "mySwitch_0": {
         "vlnv": "xilinx.com:user:mySwitch:1.0",
@@ -1802,6 +1794,14 @@
       "myDCMotor_0": {
         "vlnv": "xilinx.com:user:myDCMotor:1.0",
         "xci_name": "design_1_myDCMotor_0_3"
+      },
+      "myOLEDrgb_0": {
+        "vlnv": "xilinx.com:user:myOLEDrgb:1.0",
+        "xci_name": "design_1_myOLEDrgb_0_0"
+      },
+      "myBuzzer_0": {
+        "vlnv": "xilinx.com:user:myBuzzer:1.0",
+        "xci_name": "design_1_myBuzzer_0_0"
       }
     },
     "interface_nets": {
@@ -1867,11 +1867,11 @@
           "ps7_0_axi_periph/M02_ACLK",
           "ps7_0_axi_periph/M03_ACLK",
           "ps7_0_axi_periph/M04_ACLK",
-          "myBuzzer_0/s00_axi_aclk",
           "myMAXSONAR_0/s00_axi_aclk",
-          "myOLEDrgb_0/s00_axi_aclk",
           "mySwitch_0/s00_axi_aclk",
-          "myDCMotor_0/s00_axi_aclk"
+          "myDCMotor_0/s00_axi_aclk",
+          "myOLEDrgb_0/s00_axi_aclk",
+          "myBuzzer_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1890,11 +1890,11 @@
           "ps7_0_axi_periph/M02_ARESETN",
           "ps7_0_axi_periph/M03_ARESETN",
           "ps7_0_axi_periph/M04_ARESETN",
-          "myBuzzer_0/s00_axi_aresetn",
           "myMAXSONAR_0/s00_axi_aresetn",
-          "myOLEDrgb_0/s00_axi_aresetn",
           "mySwitch_0/s00_axi_aresetn",
-          "myDCMotor_0/s00_axi_aresetn"
+          "myDCMotor_0/s00_axi_aresetn",
+          "myOLEDrgb_0/s00_axi_aresetn",
+          "myBuzzer_0/s00_axi_aresetn"
         ]
       },
       "PWM_1": {
@@ -1948,9 +1948,9 @@
       "myMAXSONAR_0_distance": {
         "ports": [
           "myMAXSONAR_0/distance",
-          "myBuzzer_0/distance",
+          "myDCMotor_0/distance",
           "myOLEDrgb_0/distance",
-          "myDCMotor_0/distance"
+          "myBuzzer_0/distance"
         ]
       },
       "myBuzzer_0_buzzer": {

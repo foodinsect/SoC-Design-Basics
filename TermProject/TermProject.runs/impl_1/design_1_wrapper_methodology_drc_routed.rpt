@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Dec 15 22:46:27 2024
+| Date         : Sun Dec 15 23:43:44 2024
 | Host         : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -232,82 +232,82 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -7.288 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.531 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -7.289 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.531 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -7.298 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.535 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -7.299 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.536 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -7.325 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.543 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -7.329 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.547 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -7.339 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.658 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -7.395 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[15]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.663 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -7.402 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.677 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -7.466 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.681 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -7.471 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.692 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -7.574 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.693 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -7.581 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.699 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -7.611 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.703 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -7.621 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.731 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[15]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -7.638 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[7]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.736 ns between design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/pulse_width_reg[6]/C (clocked by clk_fpga_0) and design_1_i/myMAXSONAR_0/inst/myMAXSONAR_v1_0_S00_AXI_inst/new_distance_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

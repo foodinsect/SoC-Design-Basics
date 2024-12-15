@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec 15 22:43:45 2024" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec 15 23:41:28 2024" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -219,7 +219,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="10" FULLNAME="/myBuzzer_0" HWVERSION="1.0" INSTANCE="myBuzzer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="myBuzzer" VLNV="xilinx.com:user:myBuzzer:1.0">
+    <MODULE COREREVISION="12" FULLNAME="/myBuzzer_0" HWVERSION="1.0" INSTANCE="myBuzzer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="myBuzzer" VLNV="xilinx.com:user:myBuzzer:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -408,7 +408,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="20" FULLNAME="/myDCMotor_0" HWVERSION="1.0" INSTANCE="myDCMotor_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="myDCMotor" VLNV="xilinx.com:user:myDCMotor:1.0">
+    <MODULE COREREVISION="21" FULLNAME="/myDCMotor_0" HWVERSION="1.0" INSTANCE="myDCMotor_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="myDCMotor" VLNV="xilinx.com:user:myDCMotor:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -623,9 +623,9 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="distance" RIGHT="0" SIGIS="undef" SIGNAME="myMAXSONAR_0_distance">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="myBuzzer_0" PORT="distance"/>
-            <CONNECTION INSTANCE="myOLEDrgb_0" PORT="distance"/>
             <CONNECTION INSTANCE="myDCMotor_0" PORT="distance"/>
+            <CONNECTION INSTANCE="myOLEDrgb_0" PORT="distance"/>
+            <CONNECTION INSTANCE="myBuzzer_0" PORT="distance"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="4" NAME="s00_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="myMAXSONAR_0_s00_axi_awaddr">
@@ -793,7 +793,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="74" FULLNAME="/myOLEDrgb_0" HWVERSION="1.0" INSTANCE="myOLEDrgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="myOLEDrgb" VLNV="xilinx.com:user:myOLEDrgb:1.0">
+    <MODULE COREREVISION="75" FULLNAME="/myOLEDrgb_0" HWVERSION="1.0" INSTANCE="myOLEDrgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="myOLEDrgb" VLNV="xilinx.com:user:myOLEDrgb:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -2357,11 +2357,11 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M04_ACLK"/>
-            <CONNECTION INSTANCE="myBuzzer_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="myMAXSONAR_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="myOLEDrgb_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="mySwitch_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="myDCMotor_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="myOLEDrgb_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="myBuzzer_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -3881,11 +3881,11 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M04_ARESETN"/>
-            <CONNECTION INSTANCE="myBuzzer_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="myMAXSONAR_0" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="myOLEDrgb_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="mySwitch_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="myDCMotor_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="myOLEDrgb_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="myBuzzer_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sun Dec 15 20:23:46 2024
+// Date        : Sun Dec 15 23:42:06 2024
 // Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_myBuzzer_0_0/design_1_myBuzzer_0_0_sim_netlist.v
@@ -184,9 +184,10 @@ module design_1_myBuzzer_0_0_BeepMaker
   wire \counter[29]_i_1_n_0 ;
   wire \counter[2]_i_1_n_0 ;
   wire \counter[30]_i_10_n_0 ;
+  wire \counter[30]_i_11_n_0 ;
   wire \counter[30]_i_2_n_0 ;
   wire \counter[30]_i_3_n_0 ;
-  wire \counter[30]_i_4_n_0 ;
+  wire \counter[30]_i_5_n_0 ;
   wire \counter[30]_i_6_n_0 ;
   wire \counter[30]_i_7_n_0 ;
   wire \counter[30]_i_8_n_0 ;
@@ -328,154 +329,154 @@ module design_1_myBuzzer_0_0_BeepMaker
        (.I0(oBUZ0_carry__2_n_0),
         .I1(counter[0]),
         .O(\counter[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[10]_i_1 
        (.I0(counter0[10]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[11]_i_1 
        (.I0(counter0[11]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[12]_i_1 
        (.I0(counter0[12]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[13]_i_1 
        (.I0(counter0[13]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[14]_i_1 
        (.I0(counter0[14]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[15]_i_1 
        (.I0(counter0[15]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[16]_i_1 
        (.I0(counter0[16]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[17]_i_1 
        (.I0(counter0[17]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[18]_i_1 
        (.I0(counter0[18]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[19]_i_1 
        (.I0(counter0[19]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[1]_i_1 
        (.I0(counter0[1]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[20]_i_1 
        (.I0(counter0[20]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[21]_i_1 
        (.I0(counter0[21]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[22]_i_1 
        (.I0(counter0[22]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[23]_i_1 
        (.I0(counter0[23]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[24]_i_1 
        (.I0(counter0[24]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[25]_i_1 
        (.I0(counter0[25]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[26]_i_1 
        (.I0(counter0[26]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[27]_i_1 
        (.I0(counter0[27]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[28]_i_1 
        (.I0(counter0[28]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[29]_i_1 
        (.I0(counter0[29]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[2]_i_1 
@@ -483,22 +484,29 @@ module design_1_myBuzzer_0_0_BeepMaker
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[2]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hEFEFEFEE)) 
+    .INIT(32'hFFBBFFBA)) 
     \counter[30]_i_1 
        (.I0(\counter[30]_i_3_n_0 ),
-        .I1(\counter[30]_i_4_n_0 ),
-        .I2(threshold110_out),
+        .I1(threshold110_out),
+        .I2(\counter[30]_i_5_n_0 ),
         .I3(\counter[30]_i_6_n_0 ),
         .I4(\counter[30]_i_7_n_0 ),
         .O(oBUZ1));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \counter[30]_i_10 
-       (.I0(distance[6]),
-        .I1(distance[7]),
+       (.I0(distance[1]),
+        .I1(distance[2]),
         .O(\counter[30]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h1F)) 
+    \counter[30]_i_11 
+       (.I0(distance[2]),
+        .I1(distance[1]),
+        .I2(distance[3]),
+        .O(\counter[30]_i_11_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[30]_i_2 
@@ -506,55 +514,56 @@ module design_1_myBuzzer_0_0_BeepMaker
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[30]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hECEDCDCDECCDCDCD)) 
+    .INIT(64'h1414144414041444)) 
     \counter[30]_i_3 
-       (.I0(distance[3]),
-        .I1(\counter[30]_i_8_n_0 ),
-        .I2(distance[4]),
-        .I3(distance[1]),
-        .I4(distance[2]),
+       (.I0(\counter[30]_i_8_n_0 ),
+        .I1(distance[4]),
+        .I2(distance[3]),
+        .I3(distance[2]),
+        .I4(distance[1]),
         .I5(distance[0]),
         .O(\counter[30]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h000037FC00000000)) 
+    .INIT(64'h00000000000007C0)) 
     \counter[30]_i_4 
        (.I0(distance[0]),
-        .I1(distance[3]),
-        .I2(distance[1]),
-        .I3(distance[2]),
-        .I4(\counter[30]_i_8_n_0 ),
-        .I5(distance[4]),
-        .O(\counter[30]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h11111002)) 
-    \counter[30]_i_5 
-       (.I0(distance[4]),
-        .I1(\counter[30]_i_8_n_0 ),
+        .I1(distance[1]),
         .I2(distance[2]),
-        .I3(distance[1]),
-        .I4(distance[3]),
+        .I3(distance[3]),
+        .I4(distance[4]),
+        .I5(\counter[30]_i_8_n_0 ),
         .O(threshold110_out));
   LUT6 #(
-    .INIT(64'h00000000010F8000)) 
+    .INIT(64'h0300000000103030)) 
+    \counter[30]_i_5 
+       (.I0(distance[0]),
+        .I1(\counter[30]_i_9_n_0 ),
+        .I2(distance[5]),
+        .I3(\counter[30]_i_10_n_0 ),
+        .I4(distance[3]),
+        .I5(distance[4]),
+        .O(\counter[30]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'hFFFFC813)) 
     \counter[30]_i_6 
-       (.I0(\counter[30]_i_9_n_0 ),
-        .I1(distance[2]),
-        .I2(distance[4]),
-        .I3(distance[3]),
-        .I4(distance[5]),
-        .I5(\counter[30]_i_10_n_0 ),
+       (.I0(distance[1]),
+        .I1(distance[3]),
+        .I2(distance[2]),
+        .I3(distance[4]),
+        .I4(\counter[30]_i_8_n_0 ),
         .O(\counter[30]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h0400044004400040)) 
+    .INIT(64'h0404400004044444)) 
     \counter[30]_i_7 
-       (.I0(\counter[30]_i_10_n_0 ),
+       (.I0(\counter[30]_i_9_n_0 ),
         .I1(distance[5]),
-        .I2(distance[4]),
-        .I3(distance[3]),
-        .I4(\counter[30]_i_9_n_0 ),
-        .I5(distance[2]),
+        .I2(distance[3]),
+        .I3(distance[0]),
+        .I4(distance[4]),
+        .I5(\counter[30]_i_11_n_0 ),
         .O(\counter[30]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \counter[30]_i_8 
@@ -562,55 +571,56 @@ module design_1_myBuzzer_0_0_BeepMaker
         .I1(distance[6]),
         .I2(distance[5]),
         .O(\counter[30]_i_8_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \counter[30]_i_9 
-       (.I0(distance[1]),
-        .I1(distance[0]),
+       (.I0(distance[6]),
+        .I1(distance[7]),
         .O(\counter[30]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[3]_i_1 
        (.I0(counter0[3]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[4]_i_1 
        (.I0(counter0[4]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[5]_i_1 
        (.I0(counter0[5]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[6]_i_1 
        (.I0(counter0[6]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[7]_i_1 
        (.I0(counter0[7]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[8]_i_1 
        (.I0(counter0[8]),
         .I1(oBUZ0_carry__2_n_0),
         .O(\counter[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \counter[9]_i_1 
@@ -818,76 +828,76 @@ module design_1_myBuzzer_0_0_BeepMaker
         .O(NLW_oBUZ0_carry__0_O_UNCONNECTED[3:0]),
         .S({oBUZ0_carry__0_i_5_n_0,oBUZ0_carry__0_i_6_n_0,oBUZ0_carry__0_i_7_n_0,oBUZ0_carry__0_i_8_n_0}));
   LUT5 #(
-    .INIT(32'h7F770700)) 
+    .INIT(32'h2FFF0222)) 
     oBUZ0_carry__0_i_1
-       (.I0(\counter[30]_i_3_n_0 ),
-        .I1(\counter[30]_i_6_n_0 ),
-        .I2(\counter[30]_i_4_n_0 ),
-        .I3(counter[14]),
+       (.I0(counter[14]),
+        .I1(\counter[30]_i_3_n_0 ),
+        .I2(\counter[30]_i_6_n_0 ),
+        .I3(\counter[30]_i_5_n_0 ),
         .I4(counter[15]),
         .O(oBUZ0_carry__0_i_1_n_0));
   LUT5 #(
-    .INIT(32'hAFBFAA2A)) 
+    .INIT(32'hEFFF02AA)) 
     oBUZ0_carry__0_i_2
-       (.I0(counter[13]),
-        .I1(\counter[30]_i_7_n_0 ),
-        .I2(\counter[30]_i_3_n_0 ),
+       (.I0(counter[12]),
+        .I1(\counter[30]_i_5_n_0 ),
+        .I2(\counter[30]_i_7_n_0 ),
         .I3(\counter[30]_i_6_n_0 ),
-        .I4(counter[12]),
+        .I4(counter[13]),
         .O(oBUZ0_carry__0_i_2_n_0));
   LUT5 #(
-    .INIT(32'h7F070F00)) 
+    .INIT(32'h2AFF002A)) 
     oBUZ0_carry__0_i_3
-       (.I0(oBUZ0_carry_i_9_n_0),
-        .I1(\counter[30]_i_3_n_0 ),
-        .I2(\counter[30]_i_4_n_0 ),
-        .I3(counter[11]),
-        .I4(counter[10]),
+       (.I0(counter[10]),
+        .I1(\counter[30]_i_6_n_0 ),
+        .I2(oBUZ0_carry_i_9_n_0),
+        .I3(\counter[30]_i_3_n_0 ),
+        .I4(counter[11]),
         .O(oBUZ0_carry__0_i_3_n_0));
   LUT5 #(
-    .INIT(32'h00FB00A2)) 
+    .INIT(32'h32332022)) 
     oBUZ0_carry__0_i_4
-       (.I0(counter[9]),
-        .I1(\counter[30]_i_6_n_0 ),
+       (.I0(counter[8]),
+        .I1(\counter[30]_i_3_n_0 ),
         .I2(threshold110_out),
-        .I3(\counter[30]_i_4_n_0 ),
-        .I4(counter[8]),
+        .I3(\counter[30]_i_5_n_0 ),
+        .I4(counter[9]),
         .O(oBUZ0_carry__0_i_4_n_0));
   LUT5 #(
-    .INIT(32'h95000095)) 
+    .INIT(32'h87000087)) 
     oBUZ0_carry__0_i_5
-       (.I0(counter[15]),
+       (.I0(\counter[30]_i_5_n_0 ),
         .I1(\counter[30]_i_6_n_0 ),
-        .I2(\counter[30]_i_3_n_0 ),
-        .I3(\counter[30]_i_4_n_0 ),
+        .I2(counter[15]),
+        .I3(\counter[30]_i_3_n_0 ),
         .I4(counter[14]),
         .O(oBUZ0_carry__0_i_5_n_0));
   LUT5 #(
-    .INIT(32'h50000595)) 
+    .INIT(32'h00A00857)) 
     oBUZ0_carry__0_i_6
-       (.I0(counter[13]),
+       (.I0(\counter[30]_i_6_n_0 ),
         .I1(\counter[30]_i_7_n_0 ),
-        .I2(\counter[30]_i_3_n_0 ),
-        .I3(\counter[30]_i_6_n_0 ),
+        .I2(\counter[30]_i_5_n_0 ),
+        .I3(counter[13]),
         .I4(counter[12]),
         .O(oBUZ0_carry__0_i_6_n_0));
   LUT5 #(
-    .INIT(32'h95000095)) 
+    .INIT(32'h90000999)) 
     oBUZ0_carry__0_i_7
-       (.I0(counter[10]),
-        .I1(\counter[30]_i_3_n_0 ),
-        .I2(oBUZ0_carry_i_9_n_0),
-        .I3(\counter[30]_i_4_n_0 ),
-        .I4(counter[11]),
+       (.I0(\counter[30]_i_3_n_0 ),
+        .I1(counter[11]),
+        .I2(\counter[30]_i_6_n_0 ),
+        .I3(oBUZ0_carry_i_9_n_0),
+        .I4(counter[10]),
         .O(oBUZ0_carry__0_i_7_n_0));
   LUT5 #(
-    .INIT(32'hAA100045)) 
+    .INIT(32'hF000020D)) 
     oBUZ0_carry__0_i_8
-       (.I0(\counter[30]_i_4_n_0 ),
+       (.I0(\counter[30]_i_5_n_0 ),
         .I1(threshold110_out),
-        .I2(\counter[30]_i_6_n_0 ),
-        .I3(counter[8]),
-        .I4(counter[9]),
+        .I2(\counter[30]_i_3_n_0 ),
+        .I3(counter[9]),
+        .I4(counter[8]),
         .O(oBUZ0_carry__0_i_8_n_0));
   CARRY4 oBUZ0_carry__1
        (.CI(oBUZ0_carry__0_n_0),
@@ -897,33 +907,33 @@ module design_1_myBuzzer_0_0_BeepMaker
         .O(NLW_oBUZ0_carry__1_O_UNCONNECTED[3:0]),
         .S({oBUZ0_carry__1_i_5_n_0,oBUZ0_carry__1_i_6_n_0,oBUZ0_carry__1_i_7_n_0,oBUZ0_carry__1_i_8_n_0}));
   LUT6 #(
-    .INIT(64'hFFFDFFF1F0F10000)) 
+    .INIT(64'hFFFFFFA3AAAA0002)) 
     oBUZ0_carry__1_i_1
-       (.I0(\counter[30]_i_7_n_0 ),
-        .I1(\counter[30]_i_6_n_0 ),
-        .I2(threshold110_out),
+       (.I0(counter[22]),
+        .I1(\counter[30]_i_7_n_0 ),
+        .I2(\counter[30]_i_5_n_0 ),
         .I3(oBUZ0_carry__1_i_9_n_0),
-        .I4(counter[22]),
+        .I4(threshold110_out),
         .I5(counter[23]),
         .O(oBUZ0_carry__1_i_1_n_0));
   LUT5 #(
-    .INIT(32'hAF3FAA2A)) 
+    .INIT(32'hCFFF02AA)) 
     oBUZ0_carry__1_i_2
-       (.I0(counter[21]),
-        .I1(\counter[30]_i_7_n_0 ),
-        .I2(\counter[30]_i_3_n_0 ),
+       (.I0(counter[20]),
+        .I1(\counter[30]_i_5_n_0 ),
+        .I2(\counter[30]_i_7_n_0 ),
         .I3(\counter[30]_i_6_n_0 ),
-        .I4(counter[20]),
+        .I4(counter[21]),
         .O(oBUZ0_carry__1_i_2_n_0));
   LUT6 #(
-    .INIT(64'h00FF00F100F30000)) 
+    .INIT(64'h0F0C0F0F0C000C04)) 
     oBUZ0_carry__1_i_3
        (.I0(\counter[30]_i_7_n_0 ),
-        .I1(\counter[30]_i_6_n_0 ),
-        .I2(threshold110_out),
-        .I3(\counter[30]_i_4_n_0 ),
-        .I4(counter[19]),
-        .I5(counter[18]),
+        .I1(counter[18]),
+        .I2(\counter[30]_i_3_n_0 ),
+        .I3(threshold110_out),
+        .I4(\counter[30]_i_5_n_0 ),
+        .I5(counter[19]),
         .O(oBUZ0_carry__1_i_3_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -932,33 +942,33 @@ module design_1_myBuzzer_0_0_BeepMaker
         .I1(counter[17]),
         .O(oBUZ0_carry__1_i_4_n_0));
   LUT6 #(
-    .INIT(64'h0102010058585859)) 
+    .INIT(64'h00020F00000CF0F1)) 
     oBUZ0_carry__1_i_5
-       (.I0(counter[22]),
-        .I1(oBUZ0_carry__1_i_9_n_0),
+       (.I0(\counter[30]_i_7_n_0 ),
+        .I1(\counter[30]_i_5_n_0 ),
         .I2(threshold110_out),
-        .I3(\counter[30]_i_6_n_0 ),
-        .I4(\counter[30]_i_7_n_0 ),
-        .I5(counter[23]),
+        .I3(oBUZ0_carry__1_i_9_n_0),
+        .I4(counter[23]),
+        .I5(counter[22]),
         .O(oBUZ0_carry__1_i_5_n_0));
   LUT5 #(
-    .INIT(32'h08009195)) 
+    .INIT(32'h08A00057)) 
     oBUZ0_carry__1_i_6
-       (.I0(counter[20]),
-        .I1(\counter[30]_i_3_n_0 ),
-        .I2(\counter[30]_i_6_n_0 ),
-        .I3(\counter[30]_i_7_n_0 ),
-        .I4(counter[21]),
+       (.I0(\counter[30]_i_6_n_0 ),
+        .I1(\counter[30]_i_7_n_0 ),
+        .I2(\counter[30]_i_5_n_0 ),
+        .I3(counter[21]),
+        .I4(counter[20]),
         .O(oBUZ0_carry__1_i_6_n_0));
   LUT6 #(
-    .INIT(64'hAAAA101001004445)) 
+    .INIT(64'hFF000004005000AB)) 
     oBUZ0_carry__1_i_7
-       (.I0(\counter[30]_i_4_n_0 ),
-        .I1(threshold110_out),
-        .I2(\counter[30]_i_6_n_0 ),
-        .I3(\counter[30]_i_7_n_0 ),
-        .I4(counter[18]),
-        .I5(counter[19]),
+       (.I0(threshold110_out),
+        .I1(\counter[30]_i_7_n_0 ),
+        .I2(\counter[30]_i_5_n_0 ),
+        .I3(\counter[30]_i_3_n_0 ),
+        .I4(counter[19]),
+        .I5(counter[18]),
         .O(oBUZ0_carry__1_i_7_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -967,14 +977,14 @@ module design_1_myBuzzer_0_0_BeepMaker
         .I1(counter[16]),
         .O(oBUZ0_carry__1_i_8_n_0));
   LUT6 #(
-    .INIT(64'h000037000000FC00)) 
+    .INIT(64'h1144104414441444)) 
     oBUZ0_carry__1_i_9
-       (.I0(distance[0]),
-        .I1(distance[2]),
-        .I2(distance[1]),
-        .I3(distance[4]),
-        .I4(\counter[30]_i_8_n_0 ),
-        .I5(distance[3]),
+       (.I0(\counter[30]_i_8_n_0 ),
+        .I1(distance[4]),
+        .I2(distance[2]),
+        .I3(distance[3]),
+        .I4(distance[0]),
+        .I5(distance[1]),
         .O(oBUZ0_carry__1_i_9_n_0));
   CARRY4 oBUZ0_carry__2
        (.CI(oBUZ0_carry__1_n_0),
@@ -1025,12 +1035,12 @@ module design_1_myBuzzer_0_0_BeepMaker
         .I1(counter[24]),
         .O(oBUZ0_carry__2_i_7_n_0));
   LUT5 #(
-    .INIT(32'h7F770700)) 
+    .INIT(32'h2FFF0222)) 
     oBUZ0_carry_i_1
-       (.I0(\counter[30]_i_3_n_0 ),
-        .I1(\counter[30]_i_6_n_0 ),
-        .I2(\counter[30]_i_4_n_0 ),
-        .I3(counter[6]),
+       (.I0(counter[6]),
+        .I1(\counter[30]_i_3_n_0 ),
+        .I2(\counter[30]_i_6_n_0 ),
+        .I3(\counter[30]_i_5_n_0 ),
         .I4(counter[7]),
         .O(oBUZ0_carry_i_1_n_0));
   LUT2 #(
@@ -1048,18 +1058,18 @@ module design_1_myBuzzer_0_0_BeepMaker
   LUT4 #(
     .INIT(16'hFFD0)) 
     oBUZ0_carry_i_4
-       (.I0(\counter[30]_i_3_n_0 ),
+       (.I0(\counter[30]_i_6_n_0 ),
         .I1(oBUZ0_carry_i_9_n_0),
         .I2(counter[0]),
         .I3(counter[1]),
         .O(oBUZ0_carry_i_4_n_0));
   LUT5 #(
-    .INIT(32'h95000095)) 
+    .INIT(32'h87000087)) 
     oBUZ0_carry_i_5
-       (.I0(counter[7]),
+       (.I0(\counter[30]_i_5_n_0 ),
         .I1(\counter[30]_i_6_n_0 ),
-        .I2(\counter[30]_i_3_n_0 ),
-        .I3(\counter[30]_i_4_n_0 ),
+        .I2(counter[7]),
+        .I3(\counter[30]_i_3_n_0 ),
         .I4(counter[6]),
         .O(oBUZ0_carry_i_5_n_0));
   LUT2 #(
@@ -1077,27 +1087,26 @@ module design_1_myBuzzer_0_0_BeepMaker
   LUT4 #(
     .INIT(16'h002D)) 
     oBUZ0_carry_i_8
-       (.I0(\counter[30]_i_3_n_0 ),
+       (.I0(\counter[30]_i_6_n_0 ),
         .I1(oBUZ0_carry_i_9_n_0),
         .I2(counter[0]),
         .I3(counter[1]),
         .O(oBUZ0_carry_i_8_n_0));
-  LUT6 #(
-    .INIT(64'h0000000007FF8000)) 
+  LUT5 #(
+    .INIT(32'h00005F80)) 
     oBUZ0_carry_i_9
-       (.I0(distance[2]),
-        .I1(\counter[30]_i_9_n_0 ),
-        .I2(distance[3]),
-        .I3(distance[4]),
-        .I4(distance[5]),
-        .I5(\counter[30]_i_10_n_0 ),
+       (.I0(distance[3]),
+        .I1(\counter[30]_i_10_n_0 ),
+        .I2(distance[4]),
+        .I3(distance[5]),
+        .I4(\counter[30]_i_9_n_0 ),
         .O(oBUZ0_carry_i_9_n_0));
   LUT6 #(
     .INIT(64'h0055005700AA00AA)) 
     oBUZ_i_1
        (.I0(oBUZ0_carry__2_n_0),
         .I1(\counter[30]_i_7_n_0 ),
-        .I2(\counter[30]_i_6_n_0 ),
+        .I2(\counter[30]_i_5_n_0 ),
         .I3(threshold110_out),
         .I4(oBUZ0_carry__1_i_9_n_0),
         .I5(wBUZ),
@@ -1369,7 +1378,7 @@ module design_1_myBuzzer_0_0_myBuzzer_v1_0_S00_AXI
         .D(\axi_araddr[3]_i_1_n_0 ),
         .Q(axi_araddr[3]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -1906,7 +1915,7 @@ module design_1_myBuzzer_0_0_myBuzzer_v1_0_S00_AXI
         .D(reg_data_out[9]),
         .Q(s00_axi_rdata[9]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'h08F8)) 
     axi_rvalid_i_1
@@ -1921,7 +1930,7 @@ module design_1_myBuzzer_0_0_myBuzzer_v1_0_S00_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     axi_wready_i_1
@@ -1960,7 +1969,7 @@ module design_1_myBuzzer_0_0_myBuzzer_v1_0_S00_AXI
         .I2(s00_axi_wstrb[3]),
         .I3(p_0_in[0]),
         .O(p_1_in[31]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg2[31]_i_2 

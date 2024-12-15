@@ -268,3 +268,923 @@ CRITICAL WARNING: [IP_Flow 19-3667] Component file 'f:/01_SoC/myOLEDrgb/tb_oled_
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_testbench (Test Bench)': File 'f:/01_SoC/myOLEDrgb/tb_oled_behav.wcfg' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 72 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+delete_bd_objs [get_bd_intf_nets axi_gpio_0_GPIO] [get_bd_intf_nets ps7_0_axi_periph_M04_AXI] [get_bd_cells axi_gpio_0]
+delete_bd_objs [get_bd_intf_ports sws_4bits]
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:myOLEDrgb:1.0 [get_ips  design_1_myOLEDrgb_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myOLEDrgb_0_0 (myOLEDrgb_v1.0 1.0) from revision 71 to revision 72
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myOLEDrgb_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_myOLEDrgb_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 13.941 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 {design_1_xbar_0_synth_1 design_1_myOLEDrgb_0_0_synth_1}
+[Sun Dec 15 21:31:45 2024] Launched design_1_xbar_0_synth_1, design_1_myOLEDrgb_0_0_synth_1...
+Run output will be captured here:
+design_1_xbar_0_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_xbar_0_synth_1/runme.log
+design_1_myOLEDrgb_0_0_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_myOLEDrgb_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+delete_bd_objs [get_bd_cells axi_gpio_0]
+create_peripheral xilinx.com user mySwitch 1.0 -dir F:/01_SoC/TermProject/../ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:mySwitch:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:mySwitch:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:mySwitch:1.0]
+set_property  ip_repo_paths  {F:/01_SoC/TermProject/../ip_repo/mySwitch_1.0 F:/01_SoC/ip_repo} [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'f:/01_SoC/ip_repo/mySwitch_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+ipx::edit_ip_in_project -upgrade true -name edit_mySwitch_v1_0 -directory F:/01_SoC/TermProject/../ip_repo f:/01_SoC/ip_repo/mySwitch_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'f:/01_SoC/ip_repo/mySwitch_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/mySwitch_1.0/hdl/mySwitch_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/mySwitch_1.0/hdl/mySwitch_v1_0.v:]
+ERROR: [BD 5-104] A block design must be open to run this command. Please create/open a block design.
+ERROR: [Common 17-39] 'get_bd_intf_ports' failed due to earlier errors.
+ERROR: [Ip 78-125] Tcl Error in evaluating proc can_apply_rule : ERROR: [Common 17-39] 'get_bd_intf_ports' failed due to earlier errors.
+
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/mySwitch_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/mySwitch_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'iRQ' of definition 'xilinx.com:signal:interrupt:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+INFO: [IP_Flow 19-4728] Bus Interface 'iRQ': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'.
+ipx::infer_bus_interface iRQ xilinx.com:signal:interrupt_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'iRQ' of definition 'xilinx.com:signal:interrupt:1.0' (from TCL Argument).
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::infer_bus_interface iRQ xilinx.com:signal:interrupt_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'iRQ' of definition 'xilinx.com:signal:interrupt:1.0' (from TCL Argument).
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/mySwitch_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo/mySwitch_1.0
+CRITICAL WARNING: [IP_Flow 19-1681] Failed to reload user IP repository 'f:/01_SoC/ip_repo/mySwitch_1.0'. ''f:/01_SoC/ip_repo/mySwitch_1.0' is not valid: Path is contained within another repository.'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+0
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:mySwitch:1.0 mySwitch_0
+endgroup
+report_ip_status -name ip_status 
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/mySwitch_0/S00_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins mySwitch_0/S00_AXI]
+Slave segment </mySwitch_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C4_0000 [ 64K ]>
+regenerate_bd_layout
+set_property  ip_repo_paths  f:/01_SoC/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  design_1_mySwitch_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_mySwitch_0_0 (mySwitch_v1.0 1.0) from revision 1 to revision 2
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'iRQ' (xilinx.com:signal:interrupt:1.0)
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'design_1_mySwitch_0_0'.
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'SW'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'iRQ'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_mySwitch_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_mySwitch_0_0' has identified issues that may require user intervention. Please review the upgrade log 'f:/01_SoC/TermProject/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_mySwitch_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/mySwitch_0/SW
+
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_mySwitch_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 15.237 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 {design_1_xbar_0_synth_1 design_1_mySwitch_0_0_synth_1}
+[Sun Dec 15 21:44:03 2024] Launched design_1_xbar_0_synth_1, design_1_mySwitch_0_0_synth_1...
+Run output will be captured here:
+design_1_xbar_0_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_xbar_0_synth_1/runme.log
+design_1_mySwitch_0_0_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_mySwitch_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
+endgroup
+connect_bd_net [get_bd_pins mySwitch_0/iRQ] [get_bd_pins processing_system7_0/IRQ_F2P]
+create_bd_port -dir I SW
+set_property location {274 72} [get_bd_ports SW]
+connect_bd_net [get_bd_ports SW] [get_bd_pins mySwitch_0/SW]
+regenerate_bd_layout
+undo
+INFO: [Common 17-17] undo 'regenerate_bd_layout'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_ports SW] [get_bd_pins mySwitch_0/SW]'
+undo
+INFO: [Common 17-17] undo 'set_property location {274 72} [get_bd_ports SW]'
+connect_bd_net [get_bd_ports SW] [get_bd_pins mySwitch_0/SW]
+regenerate_bd_layout
+validate_bd_design
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_nets SW_1] [get_bd_ports SW]
+create_bd_port -dir I -from 3 -to 0 SW
+connect_bd_net [get_bd_ports SW] [get_bd_pins mySwitch_0/SW]
+regenerate_bd_layout
+validate_bd_design
+report_ip_status -name ip_status 
+open_hw
+close_hw
+save_bd_design
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 16.046 MB.
+[Sun Dec 15 21:46:35 2024] Launched design_1_processing_system7_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_processing_system7_0_0_synth_1/runme.log
+synth_1: F:/01_SoC/TermProject/TermProject.runs/synth_1/runme.log
+[Sun Dec 15 21:46:35 2024] Launched impl_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2192.848 ; gain = 0.000
+file copy -force F:/01_SoC/TermProject/TermProject.runs/impl_1/design_1_wrapper.sysdef F:/01_SoC/TermProject/TermProject.sdk/design_1_wrapper.hdf
+
+ipx::edit_ip_in_project -upgrade true -name mySwitch_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/mySwitch_v1_0_project f:/01_SoC/ip_repo/mySwitch_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/mySwitch_1.0/hdl/mySwitch_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/mySwitch_1.0/hdl/mySwitch_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/mySwitch_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/mySwitch_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::infer_bus_interface IRQ xilinx.com:signal:interrupt_rtl:1.0 [ipx::current_core]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'iRQ' of definition 'xilinx.com:signal:interrupt:1.0' (from TCL Argument).
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:mySwitch:1.0 [get_ips  design_1_mySwitch_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_mySwitch_0_0 (mySwitch_v1.0 1.0) from revision 2 to revision 3
+INFO: [IP_Flow 19-4702] Upgrade has renamed port 'iRQ' as 'IRQ'
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_mySwitch_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_mySwitch_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 16.752 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 design_1_mySwitch_0_0_synth_1
+[Sun Dec 15 22:13:49 2024] Launched design_1_mySwitch_0_0_synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/design_1_mySwitch_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name myOLEDrgb_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/myOLEDrgb_v1_0_project f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/init_controller.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/myOLEDrgb_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/spi_master.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/myOLEDrgb_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/tb_oled_spi.v:]
+update_compile_order -fileset sources_1
+current_project TermProject
+current_project myOLEDrgb_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 73 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:myOLEDrgb:1.0 [get_ips  design_1_myOLEDrgb_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myOLEDrgb_0_0 (myOLEDrgb_v1.0 1.0) from revision 72 to revision 73
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myOLEDrgb_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_myOLEDrgb_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 16.904 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 design_1_myOLEDrgb_0_0_synth_1
+[Sun Dec 15 22:18:38 2024] Launched design_1_myOLEDrgb_0_0_synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/design_1_myOLEDrgb_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::edit_ip_in_project -upgrade true -name myMAXSONAR_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/myMAXSONAR_v1_0_project f:/01_SoC/ip_repo/myMAXSONAR_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myMAXSONAR_1.0/hdl/myMAXSONAR_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myMAXSONAR_1.0/hdl/myMAXSONAR_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myMAXSONAR_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myMAXSONAR_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 14 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:myMAXSONAR:1.0 [get_ips  design_1_myMAXSONAR_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myMAXSONAR_0_0 (myMAXSONAR_v1.0 1.0) from revision 13 to revision 14
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myMAXSONAR_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_myMAXSONAR_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 17.642 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 design_1_myMAXSONAR_0_0_synth_1
+[Sun Dec 15 22:24:03 2024] Launched design_1_myMAXSONAR_0_0_synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/design_1_myMAXSONAR_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sun Dec 15 22:24:31 2024] Launched synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/synth_1/runme.log
+[Sun Dec 15 22:24:31 2024] Launched impl_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/impl_1/runme.log
+file copy -force F:/01_SoC/TermProject/TermProject.runs/impl_1/design_1_wrapper.sysdef F:/01_SoC/TermProject/TermProject.sdk/design_1_wrapper.hdf
+
+ipx::edit_ip_in_project -upgrade true -name myOLEDrgb_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/myOLEDrgb_v1_0_project f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/init_controller.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/myOLEDrgb_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/spi_master.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/myOLEDrgb_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/tb_oled_spi.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 74 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:myOLEDrgb:1.0 [get_ips  design_1_myOLEDrgb_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myOLEDrgb_0_0 (myOLEDrgb_v1.0 1.0) from revision 73 to revision 74
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myOLEDrgb_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_myOLEDrgb_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 18.871 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 design_1_myOLEDrgb_0_0_synth_1
+[Sun Dec 15 22:34:35 2024] Launched design_1_myOLEDrgb_0_0_synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/design_1_myOLEDrgb_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name mySwitch_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/mySwitch_v1_0_project f:/01_SoC/ip_repo/mySwitch_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/mySwitch_1.0/hdl/mySwitch_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/mySwitch_1.0/hdl/mySwitch_v1_0.v:]
+update_compile_order -fileset sources_1
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:mySwitch:1.0 [get_ips  design_1_mySwitch_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/01_SoC/TermProject/TermProject.runs/design_1_mySwitch_0_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_mySwitch_0_0 (mySwitch_v1.0 1.0) from revision 3 to revision 4
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_mySwitch_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_mySwitch_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 19.608 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 design_1_mySwitch_0_0_synth_1
+[Sun Dec 15 22:42:41 2024] Launched design_1_mySwitch_0_0_synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/design_1_mySwitch_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:mySwitch:1.0 [get_ips  design_1_mySwitch_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/01_SoC/TermProject/TermProject.runs/design_1_mySwitch_0_0_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_1_mySwitch_0_0 to use current project options
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_mySwitch_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name myDCMotor_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/myDCMotor_v1_0_project f:/01_SoC/ip_repo/myDCMotor_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/PWM.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/clock_divider.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/myDCMotor_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/pwm_controller.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/myDCMotor_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/tb_pwm_controller.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myDCMotor_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 20 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:myDCMotor:1.0 [get_ips  design_1_myDCMotor_0_3] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myDCMotor_0_3 (myDCMotor_v1.0 1.0) from revision 19 to revision 20
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myDCMotor_0_3] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_myDCMotor_0_3] }
+catch { config_ip_cache -export [get_ips -all design_1_mySwitch_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 19.608 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 {design_1_myDCMotor_0_3_synth_1 design_1_mySwitch_0_0_synth_1}
+[Sun Dec 15 22:43:46 2024] Launched design_1_myDCMotor_0_3_synth_1, design_1_mySwitch_0_0_synth_1...
+Run output will be captured here:
+design_1_myDCMotor_0_3_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_myDCMotor_0_3_synth_1/runme.log
+design_1_mySwitch_0_0_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_mySwitch_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sun Dec 15 22:44:39 2024] Launched synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/synth_1/runme.log
+[Sun Dec 15 22:44:39 2024] Launched impl_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/impl_1/runme.log
+file copy -force F:/01_SoC/TermProject/TermProject.runs/impl_1/design_1_wrapper.sysdef F:/01_SoC/TermProject/TermProject.sdk/design_1_wrapper.hdf
+
+ipx::edit_ip_in_project -upgrade true -name myOLEDrgb_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/myOLEDrgb_v1_0_project f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/init_controller.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/myOLEDrgb_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/spi_master.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/myOLEDrgb_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myOLEDrgb_1.0/hdl/tb_oled_spi.v:]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myOLEDrgb_1.0/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 75 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+ipx::edit_ip_in_project -upgrade true -name myDCMotor_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/myDCMotor_v1_0_project f:/01_SoC/ip_repo/myDCMotor_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/PWM.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/clock_divider.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/myDCMotor_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/pwm_controller.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/myDCMotor_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myDCMotor_1.0/hdl/tb_pwm_controller.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myDCMotor_1.0/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 21 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {design_1_myOLEDrgb_0_0 design_1_myDCMotor_0_3}] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myDCMotor_0_3 (myDCMotor_v1.0 1.0) from revision 20 to revision 21
+INFO: [IP_Flow 19-3422] Upgraded design_1_myOLEDrgb_0_0 (myOLEDrgb_v1.0 1.0) from revision 74 to revision 75
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {design_1_myOLEDrgb_0_0 design_1_myDCMotor_0_3}] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_myOLEDrgb_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_myDCMotor_0_3] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 20.141 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 {design_1_myOLEDrgb_0_0_synth_1 design_1_myDCMotor_0_3_synth_1}
+[Sun Dec 15 23:26:43 2024] Launched design_1_myOLEDrgb_0_0_synth_1, design_1_myDCMotor_0_3_synth_1...
+Run output will be captured here:
+design_1_myOLEDrgb_0_0_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_myOLEDrgb_0_0_synth_1/runme.log
+design_1_myDCMotor_0_3_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_myDCMotor_0_3_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::edit_ip_in_project -upgrade true -name myBuzzer_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/myBuzzer_v1_0_project f:/01_SoC/ip_repo/myBuzzer_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myBuzzer_1.0/hdl/BeepMaker.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myBuzzer_1.0/hdl/myBuzzer_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myBuzzer_1.0/hdl/myBuzzer_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myBuzzer_1.0/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 11 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:myBuzzer:1.0 [get_ips  design_1_myBuzzer_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myBuzzer_0_0 (myBuzzer_v1.0 1.0) from revision 10 to revision 11
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myBuzzer_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_myBuzzer_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 21.272 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 design_1_myBuzzer_0_0_synth_1
+[Sun Dec 15 23:27:59 2024] Launched design_1_myBuzzer_0_0_synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/design_1_myBuzzer_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sun Dec 15 23:29:03 2024] Launched synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/synth_1/runme.log
+[Sun Dec 15 23:29:03 2024] Launched impl_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/impl_1/runme.log
+file copy -force F:/01_SoC/TermProject/TermProject.runs/impl_1/design_1_wrapper.sysdef F:/01_SoC/TermProject/TermProject.sdk/design_1_wrapper.hdf
+
+ipx::edit_ip_in_project -upgrade true -name myBuzzer_v1_0_project -directory F:/01_SoC/TermProject/TermProject.tmp/myBuzzer_v1_0_project f:/01_SoC/ip_repo/myBuzzer_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/01_SoC/ip_repo'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myBuzzer_1.0/hdl/BeepMaker.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myBuzzer_1.0/hdl/myBuzzer_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [f:/01_SoC/ip_repo/myBuzzer_1.0/hdl/myBuzzer_v1_0.v:]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'f:/01_SoC/ip_repo/myBuzzer_1.0/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 12 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path f:/01_SoC/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'f:/01_SoC/ip_repo'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:mySimpleIO:1.0'. The one found in IP location 'f:/01_SoC/ip_repo/mySimpleIO_1.0' will take precedence over the same IP in location f:/01_SoC/ip_repo/myLED_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:myBuzzer:1.0 [get_ips  design_1_myBuzzer_0_0] -log ip_upgrade.log
+Upgrading 'F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myBuzzer_0_0 (myBuzzer_v1.0 1.0) from revision 11 to revision 12
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'F:/01_SoC/TermProject/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myBuzzer_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <F:\01_SoC\TermProject\TermProject.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myMAXSONAR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myOLEDrgb_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myBuzzer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myDCMotor_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mySwitch_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_myBuzzer_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = a63199ff8af91886; cache size = 21.481 MB.
+export_ip_user_files -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 design_1_myBuzzer_0_0_synth_1
+[Sun Dec 15 23:41:30 2024] Launched design_1_myBuzzer_0_0_synth_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/design_1_myBuzzer_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/design_1.bd] -directory F:/01_SoC/TermProject/TermProject.ip_user_files/sim_scripts -ip_user_files_dir F:/01_SoC/TermProject/TermProject.ip_user_files -ipstatic_source_dir F:/01_SoC/TermProject/TermProject.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/modelsim} {questa=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/questa} {riviera=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/riviera} {activehdl=F:/01_SoC/TermProject/TermProject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/01_SoC/TermProject/TermProject.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sun Dec 15 23:41:43 2024] Launched design_1_myBuzzer_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_myBuzzer_0_0_synth_1: F:/01_SoC/TermProject/TermProject.runs/design_1_myBuzzer_0_0_synth_1/runme.log
+synth_1: F:/01_SoC/TermProject/TermProject.runs/synth_1/runme.log
+[Sun Dec 15 23:41:43 2024] Launched impl_1...
+Run output will be captured here: F:/01_SoC/TermProject/TermProject.runs/impl_1/runme.log
+file copy -force F:/01_SoC/TermProject/TermProject.runs/impl_1/design_1_wrapper.sysdef F:/01_SoC/TermProject/TermProject.sdk/design_1_wrapper.hdf
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 16 00:22:26 2024...

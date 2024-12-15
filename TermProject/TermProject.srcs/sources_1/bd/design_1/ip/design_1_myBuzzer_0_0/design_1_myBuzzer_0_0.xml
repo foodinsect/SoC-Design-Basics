@@ -581,11 +581,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 15 11:23:17 UTC 2024</spirit:value>
+            <spirit:value>Sun Dec 15 14:41:28 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16923b2c</spirit:value>
+            <spirit:value>9:471bdf91</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -596,7 +596,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16923b2c</spirit:value>
+            <spirit:value>9:471bdf91</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -612,11 +612,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 15 11:23:17 UTC 2024</spirit:value>
+            <spirit:value>Sun Dec 15 14:41:28 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16923b2c</spirit:value>
+            <spirit:value>9:471bdf91</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -632,11 +632,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 15 11:23:17 UTC 2024</spirit:value>
+            <spirit:value>Sun Dec 15 14:41:28 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8ae340cb</spirit:value>
+            <spirit:value>9:db6aa476</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -652,11 +652,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 15 11:23:17 UTC 2024</spirit:value>
+            <spirit:value>Sun Dec 15 14:41:28 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8ae340cb</spirit:value>
+            <spirit:value>9:db6aa476</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -670,11 +670,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Dec 15 11:23:46 UTC 2024</spirit:value>
+            <spirit:value>Sun Dec 15 14:42:06 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:16923b2c</spirit:value>
+            <spirit:value>9:471bdf91</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1055,15 +1055,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/e048/hdl/BeepMaker.v</spirit:name>
+        <spirit:name>../../ipshared/6ffe/hdl/BeepMaker.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e048/hdl/myBuzzer_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/6ffe/hdl/myBuzzer_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e048/hdl/myBuzzer_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/6ffe/hdl/myBuzzer_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1078,15 +1078,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/e048/hdl/BeepMaker.v</spirit:name>
+        <spirit:name>../../ipshared/6ffe/hdl/BeepMaker.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e048/hdl/myBuzzer_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/6ffe/hdl/myBuzzer_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/e048/hdl/myBuzzer_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/6ffe/hdl/myBuzzer_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1195,7 +1195,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>myBuzzer_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>10</xilinx:coreRevision>
+      <xilinx:coreRevision>12</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@63053d7c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@128a4ba1_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
@@ -1333,6 +1333,28 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@43bbf5ba_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@75dfa329_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@471767be_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ccc9c79_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b954a5e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@269942a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e0e1471_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@689fda1c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a6653ca_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42d5ef60_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30093567_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d9d1a23_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54b715cc_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a50012d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@265d8805_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@548a0621_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52159f40_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e05f09b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ba96553_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55eae6df_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7da23341_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79915956_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@775024c9_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fdee64_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6727ddf8_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myBuzzer_1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -1367,7 +1389,7 @@
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a63f3fc"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4d426f17"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cba8e12c"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d083b829"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="529fdf42"/>
