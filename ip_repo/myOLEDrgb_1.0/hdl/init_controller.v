@@ -21,7 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module spi_controller(
+module init_controller(
     input wire clk_i,               // System clock
     input wire rstn_i,              // Asynchronous reset (active low)
     input wire start_i,             // Start initialization signal
@@ -397,7 +397,6 @@ module spi_controller(
                 end
 
                 DONE: begin
-                    
                     init_done <= 1; // Mark operation complete
                 end
             endcase

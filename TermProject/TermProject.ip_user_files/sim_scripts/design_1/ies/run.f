@@ -16,14 +16,6 @@
 -makelib ies_lib/xpm \
   "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ipshared/bbc1/hdl/PWM.v" \
-  "../../../bd/design_1/ipshared/bbc1/hdl/clock_divider.v" \
-  "../../../bd/design_1/ipshared/bbc1/hdl/myDCMotor_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/bbc1/hdl/pwm_controller.v" \
-  "../../../bd/design_1/ipshared/bbc1/hdl/myDCMotor_v1_0.v" \
-  "../../../bd/design_1/ip/design_1_myDCMotor_0_2/sim/design_1_myDCMotor_0_2.v" \
--endlib
 -makelib ies_lib/axi_infrastructure_v1_1_0 \
   "../../../../TermProject.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 -endlib
@@ -78,6 +70,28 @@
   "../../../bd/design_1/ipshared/5ec7/hdl/spi_master.v" \
   "../../../bd/design_1/ipshared/5ec7/hdl/myOLEDrgb_v1_0.v" \
   "../../../bd/design_1/ip/design_1_myOLEDrgb_0_0/sim/design_1_myOLEDrgb_0_0.v" \
+  "../../../bd/design_1/ipshared/e048/hdl/BeepMaker.v" \
+  "../../../bd/design_1/ipshared/e048/hdl/myBuzzer_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/e048/hdl/myBuzzer_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_myBuzzer_0_0/sim/design_1_myBuzzer_0_0.v" \
+  "../../../bd/design_1/ipshared/53bd/hdl/PWM.v" \
+  "../../../bd/design_1/ipshared/53bd/hdl/clock_divider.v" \
+  "../../../bd/design_1/ipshared/53bd/hdl/myDCMotor_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/53bd/hdl/pwm_controller.v" \
+  "../../../bd/design_1/ipshared/53bd/hdl/myDCMotor_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_myDCMotor_0_3/sim/design_1_myDCMotor_0_3.v" \
+-endlib
+-makelib ies_lib/axi_lite_ipif_v3_0_4 \
+  "../../../../TermProject.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/interrupt_control_v3_1_4 \
+  "../../../../TermProject.srcs/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/axi_gpio_v2_0_21 \
+  "../../../../TermProject.srcs/sources_1/bd/design_1/ipshared/9c6e/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_axi_gpio_0_0/sim/design_1_axi_gpio_0_0.vhd" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_19 \
   "../../../../TermProject.srcs/sources_1/bd/design_1/ipshared/c83a/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

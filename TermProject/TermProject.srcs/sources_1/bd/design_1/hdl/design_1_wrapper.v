@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sat Dec 14 23:11:32 2024
+//Date        : Sun Dec 15 20:30:41 2024
 //Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -12,7 +12,6 @@
 module design_1_wrapper
    (CS,
     DC,
-    DC_PWM,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -40,10 +39,12 @@ module design_1_wrapper
     RES,
     RX,
     SCK,
-    VCCEN);
+    VCCEN,
+    buzzer,
+    oPWM,
+    sws_4bits_tri_i);
   output CS;
   output DC;
-  output [1:0]DC_PWM;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -72,10 +73,12 @@ module design_1_wrapper
   output RX;
   output SCK;
   output VCCEN;
+  output buzzer;
+  output oPWM;
+  input [3:0]sws_4bits_tri_i;
 
   wire CS;
   wire DC;
-  wire [1:0]DC_PWM;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -104,11 +107,13 @@ module design_1_wrapper
   wire RX;
   wire SCK;
   wire VCCEN;
+  wire buzzer;
+  wire oPWM;
+  wire [3:0]sws_4bits_tri_i;
 
   design_1 design_1_i
        (.CS(CS),
         .DC(DC),
-        .DC_PWM(DC_PWM),
         .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
@@ -136,5 +141,8 @@ module design_1_wrapper
         .RES(RES),
         .RX(RX),
         .SCK(SCK),
-        .VCCEN(VCCEN));
+        .VCCEN(VCCEN),
+        .buzzer(buzzer),
+        .oPWM(oPWM),
+        .sws_4bits_tri_i(sws_4bits_tri_i));
 endmodule

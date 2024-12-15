@@ -6,9 +6,6 @@
 # Block Designs: bd/design_1/design_1.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_myDCMotor_0_2/design_1_myDCMotor_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_myDCMotor_0_2 || ORIG_REF_NAME==design_1_myDCMotor_0_2} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_0 || ORIG_REF_NAME==design_1_processing_system7_0_0} -quiet] -quiet
 
@@ -26,6 +23,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rst_ps
 
 # IP: bd/design_1/ip/design_1_myOLEDrgb_0_0/design_1_myOLEDrgb_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_myOLEDrgb_0_0 || ORIG_REF_NAME==design_1_myOLEDrgb_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_myBuzzer_0_0/design_1_myBuzzer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_myBuzzer_0_0 || ORIG_REF_NAME==design_1_myBuzzer_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_myDCMotor_0_3/design_1_myDCMotor_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_myDCMotor_0_3 || ORIG_REF_NAME==design_1_myDCMotor_0_3} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_0 || ORIG_REF_NAME==design_1_axi_gpio_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet

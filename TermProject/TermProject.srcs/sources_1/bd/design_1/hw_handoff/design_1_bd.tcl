@@ -160,11 +160,12 @@ proc create_root_design { parentCell } {
 
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
+  set sws_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sws_4bits ]
+
 
   # Create ports
   set CS [ create_bd_port -dir O CS ]
   set DC [ create_bd_port -dir O DC ]
-  set DC_PWM [ create_bd_port -dir O -from 1 -to 0 DC_PWM ]
   set MOSI [ create_bd_port -dir O MOSI ]
   set PMODEN [ create_bd_port -dir O PMODEN ]
   set PWM [ create_bd_port -dir I PWM ]
@@ -172,6 +173,18 @@ proc create_root_design { parentCell } {
   set RX [ create_bd_port -dir O RX ]
   set SCK [ create_bd_port -dir O SCK ]
   set VCCEN [ create_bd_port -dir O VCCEN ]
+  set buzzer [ create_bd_port -dir O buzzer ]
+  set oPWM [ create_bd_port -dir O oPWM ]
+
+  # Create instance: axi_gpio_0, and set properties
+  set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
+  set_property -dict [ list \
+   CONFIG.GPIO_BOARD_INTERFACE {sws_4bits} \
+   CONFIG.USE_BOARD_FLOW {true} \
+ ] $axi_gpio_0
+
+  # Create instance: myBuzzer_0, and set properties
+  set myBuzzer_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:myBuzzer:1.0 myBuzzer_0 ]
 
   # Create instance: myDCMotor_0, and set properties
   set myDCMotor_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:myDCMotor:1.0 myDCMotor_0 ]
@@ -660,25 +673,29 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {3} \
+   CONFIG.NUM_MI {5} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_50M, and set properties
   set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
 
   # Create interface connections
+  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports sws_4bits] [get_bd_intf_pins axi_gpio_0/GPIO]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins myMAXSONAR_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins myOLEDrgb_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins myDCMotor_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins myBuzzer_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M04_AXI]
 
   # Create port connections
   connect_bd_net -net PWM_1 [get_bd_ports PWM] [get_bd_pins myMAXSONAR_0/PWM]
-  connect_bd_net -net myDCMotor_0_PWM [get_bd_ports DC_PWM] [get_bd_pins myDCMotor_0/PWM]
+  connect_bd_net -net myBuzzer_0_buzzer [get_bd_ports buzzer] [get_bd_pins myBuzzer_0/buzzer]
+  connect_bd_net -net myDCMotor_0_oPWM [get_bd_ports oPWM] [get_bd_pins myDCMotor_0/PWM]
   connect_bd_net -net myMAXSONAR_0_RX [get_bd_ports RX] [get_bd_pins myMAXSONAR_0/RX]
-  connect_bd_net -net myMAXSONAR_0_distance [get_bd_pins myDCMotor_0/distance] [get_bd_pins myMAXSONAR_0/distance] [get_bd_pins myOLEDrgb_0/distance]
+  connect_bd_net -net myMAXSONAR_0_distance [get_bd_pins myBuzzer_0/distance] [get_bd_pins myDCMotor_0/distance] [get_bd_pins myMAXSONAR_0/distance] [get_bd_pins myOLEDrgb_0/distance]
   connect_bd_net -net myOLEDrgb_0_CS [get_bd_ports CS] [get_bd_pins myOLEDrgb_0/CS]
   connect_bd_net -net myOLEDrgb_0_DC [get_bd_ports DC] [get_bd_pins myOLEDrgb_0/DC]
   connect_bd_net -net myOLEDrgb_0_MOSI [get_bd_ports MOSI] [get_bd_pins myOLEDrgb_0/MOSI]
@@ -686,11 +703,13 @@ proc create_root_design { parentCell } {
   connect_bd_net -net myOLEDrgb_0_RES [get_bd_ports RES] [get_bd_pins myOLEDrgb_0/RES]
   connect_bd_net -net myOLEDrgb_0_SCK [get_bd_ports SCK] [get_bd_pins myOLEDrgb_0/SCK]
   connect_bd_net -net myOLEDrgb_0_VCCEN [get_bd_ports VCCEN] [get_bd_pins myOLEDrgb_0/VCCEN]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins myDCMotor_0/s00_axi_aclk] [get_bd_pins myMAXSONAR_0/s00_axi_aclk] [get_bd_pins myOLEDrgb_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins myBuzzer_0/s00_axi_aclk] [get_bd_pins myDCMotor_0/s00_axi_aclk] [get_bd_pins myMAXSONAR_0/s00_axi_aclk] [get_bd_pins myOLEDrgb_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins myDCMotor_0/s00_axi_aresetn] [get_bd_pins myMAXSONAR_0/s00_axi_aresetn] [get_bd_pins myOLEDrgb_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins myBuzzer_0/s00_axi_aresetn] [get_bd_pins myDCMotor_0/s00_axi_aresetn] [get_bd_pins myMAXSONAR_0/s00_axi_aresetn] [get_bd_pins myOLEDrgb_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 
   # Create address segments
+  create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C30000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs myBuzzer_0/S00_AXI/S00_AXI_reg] SEG_myBuzzer_0_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C20000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs myDCMotor_0/S00_AXI/S00_AXI_reg] SEG_myDCMotor_0_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs myMAXSONAR_0/S00_AXI/S00_AXI_reg] SEG_myMAXSONAR_0_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs myOLEDrgb_0/S00_AXI/S00_AXI_reg] SEG_myOLEDrgb_0_S00_AXI_reg

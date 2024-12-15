@@ -106,7 +106,7 @@ spi_master spi(
 	.busy_o		(spi_busy)
 );
 
-spi_controller controller(
+init_controller controller(
     .clk_i			(s00_axi_aclk),         // System clock
     .rstn_i			(s00_axi_aresetn),      // Asynchronous reset (active low)
     .start_i		(init_start),           // Start initialization signal
