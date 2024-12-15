@@ -266,7 +266,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>81736ee9</spirit:value>
+            <spirit:value>4f455e19</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>81736ee9</spirit:value>
+            <spirit:value>4f455e19</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -357,7 +357,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>y</spirit:name>
+        <spirit:name>distance</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -724,7 +724,7 @@
       <spirit:file>
         <spirit:name>hdl/myMAXSONAR_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f2c95b77</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c170a00f</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -853,8 +853,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>myMAXSONAR_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>10</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-12-10T20:58:51Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>13</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-12-14T12:36:04Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@18a19f87_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@b81562d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
@@ -979,14 +979,56 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@571ed53a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@243f262e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@135a807b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@212bdd5e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31a2e8ea_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@406b4c7_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1019a207_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3874ccbd_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fffd74b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1df44363_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22668ab_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@626db693_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e14f964_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@521fbefc_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17ca2c6d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b364c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40a55d91_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18fab5b0_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@670c5770_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@498eb07_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56869e4a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45138fc8_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b9252de_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ffedd1e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@550bcc70_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42eec767_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cf5e0e8_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25f58444_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46cb72de_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c53064_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1699b2f0_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49005209_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@592b35a0_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e798b4a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6503ea26_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4642ed2f_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@469df144_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@541268af_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65289f12_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ad93906_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ad037ce_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38fff429_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67646433_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6913a928_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3de9b700_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myMAXSONAR_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="616027be"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cd2b6017"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="854c9a01"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="414978b3"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="a19d2047"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="2e811c89"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="072902f2"/>
     </xilinx:packagingInfo>

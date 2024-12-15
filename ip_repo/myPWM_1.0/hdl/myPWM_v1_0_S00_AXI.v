@@ -15,10 +15,7 @@
 	)
 	(
 		// Users to add ports here
-		output [11:0] oDuty0,
-		output [11:0] oDuty1,
-		output [11:0] oDuty2,
-		output [11:0] oDuty3,
+		output wire [11:0] oDuty,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -401,10 +398,7 @@
 	end    
 
 	// Add user logic here
-	assign oDuty0[11:0] = slv_reg0[11:0];
-	assign oDuty1[11:0] = slv_reg1[11:0];
-	assign oDuty2[11:0] = slv_reg2[11:0];
-	assign oDuty3[11:0] = slv_reg3[11:0];
+	assign oDuty[11:0] = slv_reg0[11:0];
 	// User logic ends
 
 	endmodule

@@ -15,7 +15,7 @@
 	)
 	(
 		// Users to add ports here
-
+		output wire [1:0] PWM,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -41,27 +41,20 @@
 		output wire [C_S00_AXI_DATA_WIDTH-1 : 0] s00_axi_rdata,
 		output wire [1 : 0] s00_axi_rresp,
 		output wire  s00_axi_rvalid,
-		input wire  s00_axi_rready,
+		input wire  s00_axi_rready
 
-		output [3:0] oPWM
+		
 	);
 	
-	wire [11:0] wDuty0;
-	wire [11:0] wDuty1;
-	wire [11:0] wDuty2;
-	wire [11:0] wDuty3;
-
-	wire [3:0]  wPWM;
+	wire [1:0] wPWM;
+	wire [11:0] wDuty;
 
 // Instantiation of Axi Bus Interface S00_AXI
 	myPWM_v1_0_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) myPWM_v1_0_S00_AXI_inst (
-		.oDuty0(wDuty0),
-		.oDuty1(wDuty1),
-		.oDuty2(wDuty2),
-		.oDuty3(wDuty3),
+		.oDuty(wDuty),
 
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
@@ -87,42 +80,24 @@
 	);
 
 	// Add user logic here
-	PWM pwm0(
+	PWM pwm_forward(
 		.inReset(s00_axi_aresetn),
 		.iCLK(s00_axi_aclk),
-		.iDuty(wDuty0[11:0]),
+		.iDuty(wDuty[11:0]),
 
 		.oPWM(wPWM[0])
 	);
 
-	// Add user logic here
-	PWM pwm1(
+	PWM pwm_reverse(
 		.inReset(s00_axi_aresetn),
 		.iCLK(s00_axi_aclk),
-		.iDuty(wDuty1[11:0]),
+		.iDuty(wDuty[11:0]),
 
 		.oPWM(wPWM[1])
 	);
+	assign PWM[0] = wPWM[0];
+	assign PWM[1] = ~wPWM[1];
 
-	// Add user logic here
-	PWM pwm2(
-		.inReset(s00_axi_aresetn),
-		.iCLK(s00_axi_aclk),
-		.iDuty(wDuty2[11:0]),
-
-		.oPWM(wPWM[2])
-	);
-
-	// Add user logic here
-	PWM pwm3(
-		.inReset(s00_axi_aresetn),
-		.iCLK(s00_axi_aclk),
-		.iDuty(wDuty3[11:0]),
-
-		.oPWM(wPWM[3])
-	);
-
-	assign oPWM[3:0] = wPWM[3:0];
 	// User logic ends
 
 	endmodule
