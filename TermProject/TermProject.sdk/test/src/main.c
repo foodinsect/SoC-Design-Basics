@@ -11,26 +11,30 @@
 #include "myoledrgb.h"
 #include "mydcmotor.h"
 #include "mymaxsonar.h"
-#include "xgpio.h"
+#include "mybuzzer.h"
+#include "myswitch.h"
 
 #include "stdio.h"
 #include "xparameters.h"
 #include "xil_io.h"
 #include "xil_printf.h"
+#include "xscugic.h"
 
 
-XGpio Gpio;		// 4 LED
+XScuGic INTCInst;  // Interrupt Controller instance
 
-// Base address of the OLED controller
+// Base address
 #define OLED_BASEADDR XPAR_MYOLEDRGB_0_S00_AXI_BASEADDR
 #define MAXSONAR_BASEADDR XPAR_MYMAXSONAR_0_S00_AXI_BASEADDR
 #define DCMOTOR_BASEADDR XPAR_MYDCMOTOR_0_S00_AXI_BASEADDR
 #define BUZZER_BASEADDR XPAR_MYBUZZER_0_S00_AXI_BASEADDR
+#define SWITCH_BASEADDR XPAR_MYSWITCH_0_S00_AXI_BASEADDR
 
 // OLED register offsets
-#define INIT_START  0x00  // INIT_START
-#define MODE    	0x04  // MODE
-#define INIT_DONE   0x08  // INIT DONE
+#define INIT_START  		0x00  // INIT_START
+
+// MAXSONAR register offsets
+#define M_EN  				0x0C  // INIT_START
 
 // DC Motor register offsets
 #define D_DUTY  			0x00
@@ -42,48 +46,14 @@ XGpio Gpio;		// 4 LED
 #define B_BUZZER  			0x04
 #define B_EN  				0x08
 
+// Switch register offsets
+#define S_STATE  		0x00
+#define S_IRQ_CLEAR  	0x04
 
 void Delay(unsigned int delay) {
     volatile unsigned int d;
     for (d = 0; d < delay; d++);
 }
-
-void OnOFF(unsigned int value) {
-    // 비트 분리
-    unsigned int dc_motor_state = (value >> 0) & 0x1; // 첫 번째 비트 (LSB)
-    unsigned int buzzer_state = (value >> 1) & 0x1;   // 두 번째 비트
-    unsigned int device_3_state = (value >> 2) & 0x1; // 세 번째 비트
-    unsigned int device_4_state = (value >> 3) & 0x1; // 네 번째 비트
-
-    // DC 모터 제어
-    if (dc_motor_state) {
-        MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 1);  // Start
-    } else {
-        MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 0);  // Stop
-    }
-
-    // Buzzer 제어
-    if (buzzer_state) {
-        MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 1);    // Start
-    } else {
-        MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 0);    // Stop
-    }
-
-    // Device 3 제어
-    if (device_3_state) {
-        // Device 3 활성화 로직
-    } else {
-        // Device 3 비활성화 로직
-    }
-
-    // Device 4 제어
-    if (device_4_state) {
-        // Device 4 활성화 로직
-    } else {
-        // Device 4 비활성화 로직
-    }
-}
-
 
 void StartINIT(unsigned int value) {
     if (value)
@@ -92,28 +62,157 @@ void StartINIT(unsigned int value) {
     	MYOLEDRGB_mWriteReg(OLED_BASEADDR, INIT_START, 0);
 }
 
-void SetMODE(unsigned int value) {
-	MYOLEDRGB_mWriteReg(OLED_BASEADDR, MODE, value);  // Reset Inactive
+void SetDIVFACT(unsigned int value) {
+    if (value)
+    	MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_DIV_FACTOR, value);  // Start
+    else
+    	MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_DIV_FACTOR, 5000);
+}
+
+void INIT(){
+	MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 1);  // DC Motor ON
+	MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 1);  // Buzzer ON
+	MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 1);  // DC Motor ON
+
+}
+
+/////////////////////////////////////////////////////
+// Switch interrupt handler
+/////////////////////////////////////////////////////
+
+void SwitchISR(void *arg) {
+    static int prev_state = 0;  // 이전 스위치 상태 저장
+    int switch_state, changed_bits;
+
+    // 스위치 상태 읽기
+    switch_state = MYSWITCH_mReadReg(SWITCH_BASEADDR, S_STATE);
+
+    // 변경된 비트 감지
+    changed_bits = switch_state ^ prev_state;  // XOR: 변경된 비트만 1로 설정
+
+    // 하위 4비트만 출력 (바이너리 형식)
+    int lower4 = switch_state & 0xF;  // 하위 4비트 마스킹
+    xil_printf("Switch Interrupt Triggered! Switch State = ");
+
+    for (int i = 3; i >= 0; i--) {  // 상위 비트부터 출력
+        xil_printf("%d", (lower4 >> i) & 0x1);  // 비트를 오른쪽으로 시프트 후 LSB만 추출
+    }
+    xil_printf("\n");
+
+
+    // 각 비트별 동작 (변경된 비트만 처리)
+    if (changed_bits & 0x1) {  // Bit 0이 바뀐 경우
+        if (switch_state & 0x1) {
+            xil_printf("Bit 0: DC Motor ON\n");
+            MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 1);  // DC Motor ON
+        } else {
+            xil_printf("Bit 0: DC Motor OFF\n");
+            MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 0);  // DC Motor OFF
+        }
+    }
+
+    if (changed_bits & 0x2) {  // Bit 1이 바뀐 경우
+        if (switch_state & 0x2) {
+            xil_printf("Bit 1: Buzzer ON\n");
+            MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 1);  // Buzzer ON
+        } else {
+            xil_printf("Bit 1: Buzzer OFF\n");
+            MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 0);  // Buzzer OFF
+        }
+    }
+
+    if (changed_bits & 0x4) {  // Bit 2이 바뀐 경우
+    	if (switch_state & 0x4) {
+			xil_printf("Bit 2: MAXSONAR ON\n");
+			MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 1);  // MAXSONAR ON
+		} else {
+			xil_printf("Bit 2: MAXSONAR OFF\n");
+			MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 0);  // MAXSONAR OFF
+		}
+    }
+
+    if (changed_bits & 0x8) {  // Bit 3이 바뀐 경우
+
+    }
+
+    // 이전 상태 저장
+    prev_state = switch_state;
+
+    // 인터럽트 플래그 클리어
+    MYSWITCH_mWriteReg(SWITCH_BASEADDR, S_IRQ_CLEAR, 1);
+    Delay(1000);
+    MYSWITCH_mWriteReg(SWITCH_BASEADDR, S_IRQ_CLEAR, 0);
+}
+
+/////////////////////////////////////////////////////
+// GIC related interrupt setting
+/////////////////////////////////////////////////////
+
+void InitGIC_Interrupt()
+{
+	XScuGic_Config *IntcConfig;
+
+	IntcConfig = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+
+	XScuGic_CfgInitialize(
+			&INTCInst,
+			IntcConfig,
+			IntcConfig-> CpuBaseAddress	);
+
+	XScuGic_SetPriorityTriggerType(
+			&INTCInst,
+			XPAR_FABRIC_MYSWITCH_0_IRQ_INTR,
+			0,
+			3	);
+
+
+    // 스위치 인터럽트 설정
+    XScuGic_Connect(
+        &INTCInst,
+		XPAR_FABRIC_MYSWITCH_0_IRQ_INTR, // 스위치 IP의 인터럽트 ID
+        (Xil_ExceptionHandler)SwitchISR,         // 스위치 핸들러 함수
+        NULL
+    );
+
+    XScuGic_Enable(
+        &INTCInst,
+		XPAR_FABRIC_MYSWITCH_0_IRQ_INTR
+    );
+
+    xil_printf("Switch Interrupt Initialized.\n");
+}
+
+/////////////////////////////////////////////////////
+// ARM Cortex related interrupt setting
+/////////////////////////////////////////////////////
+
+void InitCortex_Interrupt()
+{
+	Xil_ExceptionRegisterHandler(
+			XIL_EXCEPTION_ID_INT,
+			(Xil_ExceptionHandler)XScuGic_InterruptHandler,
+			&INTCInst	);
+
+	Xil_ExceptionEnable();
+
 }
 
 int main() {
-	XGpio_Initialize(&Gpio, XPAR_AXI_GPIO_0_DEVICE_ID);
 
+	InitGIC_Interrupt();
+	InitCortex_Interrupt();
+
+	INIT();
+	SetDIVFACT(5000);
 	printf("Start\n");
 
-	Delay(30000);
+	Delay(50000);
 	StartINIT(1);
 	Delay(30000);
 	StartINIT(0);
 
 
-	xil_printf("INIT DONE : %d\n",MYOLEDRGB_mReadReg(OLED_BASEADDR, INIT_DONE) & 0x1);
-
-
 	while (1) {
-		// Read SW state
-//		sw_state = XGpio_DiscreteRead(&Gpio, 1);
-//		OnOFF(sw_state);
 		Delay(1e8);
 	};
 

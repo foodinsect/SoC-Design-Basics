@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:myMAXSONAR:1.0
-// IP Revision: 13
+// IP Revision: 14
 
 (* X_CORE_INFO = "myMAXSONAR_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_myMAXSONAR_0_0,myMAXSONAR_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_1_myMAXSONAR_0_0,myMAXSONAR_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=myMAXSONAR,x_ipVersion=1.0,x_ipCoreRevision=13,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
+(* CORE_GENERATION_INFO = "design_1_myMAXSONAR_0_0,myMAXSONAR_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=myMAXSONAR,x_ipVersion=1.0,x_ipCoreRevision=14,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_myMAXSONAR_0_0 (
   PWM,

@@ -269,7 +269,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c646a352</spirit:value>
+            <spirit:value>8e360dde</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -288,7 +288,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c646a352</spirit:value>
+            <spirit:value>8e360dde</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -345,7 +345,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>910f5993</spirit:value>
+            <spirit:value>f9ca5fe1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -818,7 +818,7 @@
       <spirit:file>
         <spirit:name>hdl/myOLEDrgb_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_302bcd5d</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_ab6e1918</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -916,12 +916,6 @@
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
       </spirit:file>
-      <spirit:file>
-        <spirit:name>../../myOLEDrgb/tb_oled_behav.wcfg</spirit:name>
-        <spirit:fileType>unknown</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
-      </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
   <spirit:description>My new AXI IP</spirit:description>
@@ -990,8 +984,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>myOLEDrgb_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>71</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-12-14T02:34:58Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>74</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-12-15T13:34:23Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@240a5363_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3dbbe136_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
@@ -2267,13 +2261,63 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1472a7ce_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3c0e538f_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7369cf8c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@227c61cd_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b42d133_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f5cfa2b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a0ffc51_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7870a33d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7812cc87_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a868602_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12bc11ed_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ecb4e8b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18e0b37e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22cf157c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71a7caee_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28bebc1c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ad0a4b8_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@424443c1_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@557a2787_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f114322_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58e5c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39840c29_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2687998_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34daf3d2_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3222e114_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@545fa036_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69aee170_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18e6bc32_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44c68cd4_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7de9d666_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@657403ac_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a95cc6b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5537f6d2_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27b8c7b3_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2137090b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e0a8d7a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a541c0d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@437e632d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a1e012c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bb60f1b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b6e3b99_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c65772e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cd9ff5e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23703337_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46d346f0_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10a69180_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39f9e47a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1333fb97_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7277019b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78d43662_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@483968e5_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dda387e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@442f1a33_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myOLEDrgb_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="9bdbf060"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="11344bb0"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="50a2eaf7"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="f77faaf0"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e7b50784"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c65c29a0"/>

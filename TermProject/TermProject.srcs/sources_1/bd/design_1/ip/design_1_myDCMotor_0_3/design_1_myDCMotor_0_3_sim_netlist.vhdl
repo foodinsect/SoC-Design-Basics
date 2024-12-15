@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sun Dec 15 20:30:19 2024
+-- Date        : Sun Dec 15 22:44:13 2024
 -- Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_myDCMotor_0_3/design_1_myDCMotor_0_3_sim_netlist.vhdl
@@ -16,9 +16,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_myDCMotor_0_3_PWM is
   port (
-    wPWM : out STD_LOGIC;
+    PWM : out STD_LOGIC;
     CLK : in STD_LOGIC;
     rPWM_reg_0 : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -46,6 +47,7 @@ architecture STRUCTURE of design_1_myDCMotor_0_3_PWM is
   signal rPWM1_carry_n_1 : STD_LOGIC;
   signal rPWM1_carry_n_2 : STD_LOGIC;
   signal rPWM1_carry_n_3 : STD_LOGIC;
+  signal wPWM : STD_LOGIC;
   signal NLW_rPWM1_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_rPWM1_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_rPWM1_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
@@ -57,6 +59,15 @@ architecture STRUCTURE of design_1_myDCMotor_0_3_PWM is
   attribute SOFT_HLUTNM of \rCount[6]_i_2\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \rCount[7]_i_2\ : label is "soft_lutpair1";
 begin
+PWM_INST_0: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => wPWM,
+      I1 => Q(0),
+      O => PWM
+    );
 \rCount[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -710,8 +721,8 @@ counter1_carry_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => counter2(11),
       I1 => counter2(10),
-      I2 => counter_reg(9),
-      I3 => counter2(9),
+      I2 => counter2(9),
+      I3 => counter_reg(9),
       I4 => counter_reg(10),
       I5 => counter_reg(11),
       O => counter1_carry_i_1_n_0
@@ -723,8 +734,8 @@ counter1_carry_i_2: unisim.vcomponents.LUT6
         port map (
       I0 => counter2(8),
       I1 => counter2(7),
-      I2 => counter_reg(6),
-      I3 => counter2(6),
+      I2 => counter2(6),
+      I3 => counter_reg(6),
       I4 => counter_reg(7),
       I5 => counter_reg(8),
       O => counter1_carry_i_2_n_0
@@ -748,10 +759,10 @@ counter1_carry_i_4: unisim.vcomponents.LUT6
     )
         port map (
       I0 => counter_reg(0),
-      I1 => counter_reg(2),
+      I1 => counter2(2),
       I2 => counter_reg(1),
       I3 => counter2(1),
-      I4 => counter2(2),
+      I4 => counter_reg(2),
       I5 => Q(0),
       O => counter1_carry_i_4_n_0
     );
@@ -1201,7 +1212,6 @@ entity design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI is
     axi_arready_reg_0 : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_rvalid : out STD_LOGIC;
-    PWM : out STD_LOGIC;
     \slv_reg1_reg[31]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     Q : out STD_LOGIC_VECTOR ( 30 downto 0 );
     \slv_reg1_reg[29]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -1211,9 +1221,9 @@ entity design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI is
     \slv_reg1_reg[13]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \slv_reg1_reg[9]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     S : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    \slv_reg2_reg[0]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
-    wPWM : in STD_LOGIC;
     \axi_rdata_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
@@ -1231,7 +1241,6 @@ entity design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI is
 end design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI;
 
 architecture STRUCTURE of design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI is
-  signal Motor_en : STD_LOGIC;
   signal \^q\ : STD_LOGIC_VECTOR ( 30 downto 0 );
   signal aw_en_i_1_n_0 : STD_LOGIC;
   signal aw_en_reg_n_0 : STD_LOGIC;
@@ -1325,6 +1334,7 @@ architecture STRUCTURE of design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI is
   signal \slv_reg2[23]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg2[31]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg2[7]_i_1_n_0\ : STD_LOGIC;
+  signal \^slv_reg2_reg[0]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \slv_reg2_reg_n_0_[10]\ : STD_LOGIC;
   signal \slv_reg2_reg_n_0_[11]\ : STD_LOGIC;
   signal \slv_reg2_reg_n_0_[12]\ : STD_LOGIC;
@@ -1385,9 +1395,9 @@ architecture STRUCTURE of design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI is
   signal \slv_reg_wren__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \slv_reg2[31]_i_2\ : label is "soft_lutpair4";
 begin
   Q(30 downto 0) <= \^q\(30 downto 0);
   axi_arready_reg_0 <= \^axi_arready_reg_0\;
@@ -1396,15 +1406,7 @@ begin
   s00_axi_aresetn_0 <= \^s00_axi_aresetn_0\;
   s00_axi_bvalid <= \^s00_axi_bvalid\;
   s00_axi_rvalid <= \^s00_axi_rvalid\;
-PWM_INST_0: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => Motor_en,
-      I1 => wPWM,
-      O => PWM
-    );
+  \slv_reg2_reg[0]_0\(0) <= \^slv_reg2_reg[0]_0\(0);
 aw_en_i_1: unisim.vcomponents.LUT6
     generic map(
       INIT => X"F7FFC4CCC4CCC4CC"
@@ -1617,7 +1619,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => slv_reg3(0),
-      I1 => Motor_en,
+      I1 => \^slv_reg2_reg[0]_0\(0),
       I2 => sel0(1),
       I3 => slv_reg1(0),
       I4 => sel0(0),
@@ -2216,14 +2218,14 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
     );
 \axi_rdata[31]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AFA0C0C0"
+      INIT => X"AFC0A0C0"
     )
         port map (
       I0 => slv_reg3(31),
       I1 => \slv_reg2_reg_n_0_[31]\,
       I2 => sel0(1),
-      I3 => \^q\(30),
-      I4 => sel0(0),
+      I3 => sel0(0),
+      I4 => \^q\(30),
       O => \axi_rdata[31]_i_2_n_0\
     );
 \axi_rdata[31]_i_3\: unisim.vcomponents.LUT6
@@ -3545,7 +3547,7 @@ counter2_carry_i_4: unisim.vcomponents.LUT1
       C => s00_axi_aclk,
       CE => \slv_reg2[7]_i_1_n_0\,
       D => s00_axi_wdata(0),
-      Q => Motor_en,
+      Q => \^slv_reg2_reg[0]_0\(0),
       R => \^s00_axi_aresetn_0\
     );
 \slv_reg2_reg[10]\: unisim.vcomponents.FDRE
@@ -5704,8 +5706,10 @@ entity design_1_myDCMotor_0_3_myDCMotor_v1_0 is
 end design_1_myDCMotor_0_3_myDCMotor_v1_0;
 
 architecture STRUCTURE of design_1_myDCMotor_0_3_myDCMotor_v1_0 is
+  signal Motor_en : STD_LOGIC;
   signal clk : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_1 : STD_LOGIC;
+  signal myDCMotor_v1_0_S00_AXI_inst_n_39 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_40 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_41 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_42 : STD_LOGIC;
@@ -5726,6 +5730,7 @@ architecture STRUCTURE of design_1_myDCMotor_0_3_myDCMotor_v1_0 is
   signal myDCMotor_v1_0_S00_AXI_inst_n_57 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_58 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_59 : STD_LOGIC;
+  signal myDCMotor_v1_0_S00_AXI_inst_n_6 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_60 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_61 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_62 : STD_LOGIC;
@@ -5733,12 +5738,9 @@ architecture STRUCTURE of design_1_myDCMotor_0_3_myDCMotor_v1_0 is
   signal myDCMotor_v1_0_S00_AXI_inst_n_64 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_65 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_66 : STD_LOGIC;
-  signal myDCMotor_v1_0_S00_AXI_inst_n_67 : STD_LOGIC;
   signal myDCMotor_v1_0_S00_AXI_inst_n_7 : STD_LOGIC;
-  signal myDCMotor_v1_0_S00_AXI_inst_n_8 : STD_LOGIC;
   signal pwm_duty : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal slv_reg1 : STD_LOGIC_VECTOR ( 31 downto 1 );
-  signal wPWM : STD_LOGIC;
 begin
 DUTY: entity work.design_1_myDCMotor_0_3_pwm_controller
      port map (
@@ -5751,54 +5753,54 @@ PWM_gen: entity work.design_1_myDCMotor_0_3_PWM
      port map (
       CLK => clk,
       D(7 downto 0) => pwm_duty(7 downto 0),
-      rPWM_reg_0 => myDCMotor_v1_0_S00_AXI_inst_n_1,
-      wPWM => wPWM
+      PWM => PWM,
+      Q(0) => Motor_en,
+      rPWM_reg_0 => myDCMotor_v1_0_S00_AXI_inst_n_1
     );
 clk_div: entity work.design_1_myDCMotor_0_3_clock_divider
      port map (
       CLK => clk,
       Q(30 downto 0) => slv_reg1(31 downto 1),
-      S(3) => myDCMotor_v1_0_S00_AXI_inst_n_64,
-      S(2) => myDCMotor_v1_0_S00_AXI_inst_n_65,
-      S(1) => myDCMotor_v1_0_S00_AXI_inst_n_66,
-      S(0) => myDCMotor_v1_0_S00_AXI_inst_n_67,
+      S(3) => myDCMotor_v1_0_S00_AXI_inst_n_63,
+      S(2) => myDCMotor_v1_0_S00_AXI_inst_n_64,
+      S(1) => myDCMotor_v1_0_S00_AXI_inst_n_65,
+      S(0) => myDCMotor_v1_0_S00_AXI_inst_n_66,
       clk_out_reg_0 => myDCMotor_v1_0_S00_AXI_inst_n_1,
-      \counter1_carry__0_i_1_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_44,
-      \counter1_carry__0_i_1_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_45,
-      \counter1_carry__0_i_1_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_46,
-      \counter1_carry__0_i_1_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_47,
-      \counter1_carry__0_i_3_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_48,
-      \counter1_carry__0_i_3_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_49,
-      \counter1_carry__0_i_3_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_50,
-      \counter1_carry__0_i_3_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_51,
-      \counter1_carry__0_i_4_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_52,
-      \counter1_carry__0_i_4_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_53,
-      \counter1_carry__0_i_4_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_54,
-      \counter1_carry__0_i_4_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_55,
-      \counter1_carry__1_i_2_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_7,
-      \counter1_carry__1_i_2_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_8,
-      \counter1_carry__1_i_3_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_40,
-      \counter1_carry__1_i_3_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_41,
-      \counter1_carry__1_i_3_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_42,
-      \counter1_carry__1_i_3_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_43,
-      counter1_carry_i_1_0(3) => myDCMotor_v1_0_S00_AXI_inst_n_56,
-      counter1_carry_i_1_0(2) => myDCMotor_v1_0_S00_AXI_inst_n_57,
-      counter1_carry_i_1_0(1) => myDCMotor_v1_0_S00_AXI_inst_n_58,
-      counter1_carry_i_1_0(0) => myDCMotor_v1_0_S00_AXI_inst_n_59,
-      counter1_carry_i_3_0(3) => myDCMotor_v1_0_S00_AXI_inst_n_60,
-      counter1_carry_i_3_0(2) => myDCMotor_v1_0_S00_AXI_inst_n_61,
-      counter1_carry_i_3_0(1) => myDCMotor_v1_0_S00_AXI_inst_n_62,
-      counter1_carry_i_3_0(0) => myDCMotor_v1_0_S00_AXI_inst_n_63,
+      \counter1_carry__0_i_1_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_43,
+      \counter1_carry__0_i_1_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_44,
+      \counter1_carry__0_i_1_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_45,
+      \counter1_carry__0_i_1_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_46,
+      \counter1_carry__0_i_3_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_47,
+      \counter1_carry__0_i_3_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_48,
+      \counter1_carry__0_i_3_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_49,
+      \counter1_carry__0_i_3_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_50,
+      \counter1_carry__0_i_4_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_51,
+      \counter1_carry__0_i_4_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_52,
+      \counter1_carry__0_i_4_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_53,
+      \counter1_carry__0_i_4_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_54,
+      \counter1_carry__1_i_2_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_6,
+      \counter1_carry__1_i_2_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_7,
+      \counter1_carry__1_i_3_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_39,
+      \counter1_carry__1_i_3_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_40,
+      \counter1_carry__1_i_3_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_41,
+      \counter1_carry__1_i_3_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_42,
+      counter1_carry_i_1_0(3) => myDCMotor_v1_0_S00_AXI_inst_n_55,
+      counter1_carry_i_1_0(2) => myDCMotor_v1_0_S00_AXI_inst_n_56,
+      counter1_carry_i_1_0(1) => myDCMotor_v1_0_S00_AXI_inst_n_57,
+      counter1_carry_i_1_0(0) => myDCMotor_v1_0_S00_AXI_inst_n_58,
+      counter1_carry_i_3_0(3) => myDCMotor_v1_0_S00_AXI_inst_n_59,
+      counter1_carry_i_3_0(2) => myDCMotor_v1_0_S00_AXI_inst_n_60,
+      counter1_carry_i_3_0(1) => myDCMotor_v1_0_S00_AXI_inst_n_61,
+      counter1_carry_i_3_0(0) => myDCMotor_v1_0_S00_AXI_inst_n_62,
       s00_axi_aclk => s00_axi_aclk
     );
 myDCMotor_v1_0_S00_AXI_inst: entity work.design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
      port map (
-      PWM => PWM,
       Q(30 downto 0) => slv_reg1(31 downto 1),
-      S(3) => myDCMotor_v1_0_S00_AXI_inst_n_64,
-      S(2) => myDCMotor_v1_0_S00_AXI_inst_n_65,
-      S(1) => myDCMotor_v1_0_S00_AXI_inst_n_66,
-      S(0) => myDCMotor_v1_0_S00_AXI_inst_n_67,
+      S(3) => myDCMotor_v1_0_S00_AXI_inst_n_63,
+      S(2) => myDCMotor_v1_0_S00_AXI_inst_n_64,
+      S(1) => myDCMotor_v1_0_S00_AXI_inst_n_65,
+      S(0) => myDCMotor_v1_0_S00_AXI_inst_n_66,
       axi_arready_reg_0 => s00_axi_arready,
       axi_awready_reg_0 => s00_axi_awready,
       \axi_rdata_reg[7]_0\(7 downto 0) => pwm_duty(7 downto 0),
@@ -5818,33 +5820,33 @@ myDCMotor_v1_0_S00_AXI_inst: entity work.design_1_myDCMotor_0_3_myDCMotor_v1_0_S
       s00_axi_wdata(31 downto 0) => s00_axi_wdata(31 downto 0),
       s00_axi_wstrb(3 downto 0) => s00_axi_wstrb(3 downto 0),
       s00_axi_wvalid => s00_axi_wvalid,
-      \slv_reg1_reg[13]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_56,
-      \slv_reg1_reg[13]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_57,
-      \slv_reg1_reg[13]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_58,
-      \slv_reg1_reg[13]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_59,
-      \slv_reg1_reg[17]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_52,
-      \slv_reg1_reg[17]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_53,
-      \slv_reg1_reg[17]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_54,
-      \slv_reg1_reg[17]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_55,
-      \slv_reg1_reg[21]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_48,
-      \slv_reg1_reg[21]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_49,
-      \slv_reg1_reg[21]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_50,
-      \slv_reg1_reg[21]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_51,
-      \slv_reg1_reg[25]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_44,
-      \slv_reg1_reg[25]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_45,
-      \slv_reg1_reg[25]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_46,
-      \slv_reg1_reg[25]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_47,
-      \slv_reg1_reg[29]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_40,
-      \slv_reg1_reg[29]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_41,
-      \slv_reg1_reg[29]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_42,
-      \slv_reg1_reg[29]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_43,
-      \slv_reg1_reg[31]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_7,
-      \slv_reg1_reg[31]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_8,
-      \slv_reg1_reg[9]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_60,
-      \slv_reg1_reg[9]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_61,
-      \slv_reg1_reg[9]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_62,
-      \slv_reg1_reg[9]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_63,
-      wPWM => wPWM
+      \slv_reg1_reg[13]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_55,
+      \slv_reg1_reg[13]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_56,
+      \slv_reg1_reg[13]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_57,
+      \slv_reg1_reg[13]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_58,
+      \slv_reg1_reg[17]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_51,
+      \slv_reg1_reg[17]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_52,
+      \slv_reg1_reg[17]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_53,
+      \slv_reg1_reg[17]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_54,
+      \slv_reg1_reg[21]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_47,
+      \slv_reg1_reg[21]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_48,
+      \slv_reg1_reg[21]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_49,
+      \slv_reg1_reg[21]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_50,
+      \slv_reg1_reg[25]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_43,
+      \slv_reg1_reg[25]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_44,
+      \slv_reg1_reg[25]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_45,
+      \slv_reg1_reg[25]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_46,
+      \slv_reg1_reg[29]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_39,
+      \slv_reg1_reg[29]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_40,
+      \slv_reg1_reg[29]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_41,
+      \slv_reg1_reg[29]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_42,
+      \slv_reg1_reg[31]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_6,
+      \slv_reg1_reg[31]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_7,
+      \slv_reg1_reg[9]_0\(3) => myDCMotor_v1_0_S00_AXI_inst_n_59,
+      \slv_reg1_reg[9]_0\(2) => myDCMotor_v1_0_S00_AXI_inst_n_60,
+      \slv_reg1_reg[9]_0\(1) => myDCMotor_v1_0_S00_AXI_inst_n_61,
+      \slv_reg1_reg[9]_0\(0) => myDCMotor_v1_0_S00_AXI_inst_n_62,
+      \slv_reg2_reg[0]_0\(0) => Motor_en
     );
 end STRUCTURE;
 library IEEE;

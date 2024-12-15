@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sun Dec 15 20:30:19 2024
+// Date        : Sun Dec 15 22:44:13 2024
 // Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_myDCMotor_0_3/design_1_myDCMotor_0_3_sim_netlist.v
@@ -113,17 +113,21 @@ endmodule
 
 (* ORIG_REF_NAME = "PWM" *) 
 module design_1_myDCMotor_0_3_PWM
-   (wPWM,
+   (PWM,
     CLK,
     rPWM_reg_0,
+    Q,
     D);
-  output wPWM;
+  output PWM;
   input CLK;
   input rPWM_reg_0;
+  input [0:0]Q;
   input [7:0]D;
 
   wire CLK;
   wire [7:0]D;
+  wire PWM;
+  wire [0:0]Q;
   wire [7:0]p_0_in__0;
   wire \rCount[6]_i_2_n_0 ;
   wire \rCount[7]_i_2_n_0 ;
@@ -150,6 +154,12 @@ module design_1_myDCMotor_0_3_PWM
   wire [3:0]NLW_rPWM1_carry__0_CO_UNCONNECTED;
   wire [3:1]NLW_rPWM1_carry__0_O_UNCONNECTED;
 
+  LUT2 #(
+    .INIT(4'hB)) 
+    PWM_INST_0
+       (.I0(wPWM),
+        .I1(Q),
+        .O(PWM));
   LUT1 #(
     .INIT(2'h1)) 
     \rCount[0]_i_1 
@@ -663,8 +673,8 @@ module design_1_myDCMotor_0_3_clock_divider
     counter1_carry_i_1
        (.I0(counter2[11]),
         .I1(counter2[10]),
-        .I2(counter_reg[9]),
-        .I3(counter2[9]),
+        .I2(counter2[9]),
+        .I3(counter_reg[9]),
         .I4(counter_reg[10]),
         .I5(counter_reg[11]),
         .O(counter1_carry_i_1_n_0));
@@ -673,8 +683,8 @@ module design_1_myDCMotor_0_3_clock_divider
     counter1_carry_i_2
        (.I0(counter2[8]),
         .I1(counter2[7]),
-        .I2(counter_reg[6]),
-        .I3(counter2[6]),
+        .I2(counter2[6]),
+        .I3(counter_reg[6]),
         .I4(counter_reg[7]),
         .I5(counter_reg[8]),
         .O(counter1_carry_i_2_n_0));
@@ -692,10 +702,10 @@ module design_1_myDCMotor_0_3_clock_divider
     .INIT(64'h4004100180082002)) 
     counter1_carry_i_4
        (.I0(counter_reg[0]),
-        .I1(counter_reg[2]),
+        .I1(counter2[2]),
         .I2(counter_reg[1]),
         .I3(counter2[1]),
-        .I4(counter2[2]),
+        .I4(counter_reg[2]),
         .I5(Q[0]),
         .O(counter1_carry_i_4_n_0));
   CARRY4 counter2_carry
@@ -1012,10 +1022,12 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0
   input s00_axi_bready;
   input s00_axi_rready;
 
+  wire Motor_en;
   wire PWM;
   wire clk;
   wire [7:0]distance;
   wire myDCMotor_v1_0_S00_AXI_inst_n_1;
+  wire myDCMotor_v1_0_S00_AXI_inst_n_39;
   wire myDCMotor_v1_0_S00_AXI_inst_n_40;
   wire myDCMotor_v1_0_S00_AXI_inst_n_41;
   wire myDCMotor_v1_0_S00_AXI_inst_n_42;
@@ -1036,6 +1048,7 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0
   wire myDCMotor_v1_0_S00_AXI_inst_n_57;
   wire myDCMotor_v1_0_S00_AXI_inst_n_58;
   wire myDCMotor_v1_0_S00_AXI_inst_n_59;
+  wire myDCMotor_v1_0_S00_AXI_inst_n_6;
   wire myDCMotor_v1_0_S00_AXI_inst_n_60;
   wire myDCMotor_v1_0_S00_AXI_inst_n_61;
   wire myDCMotor_v1_0_S00_AXI_inst_n_62;
@@ -1043,9 +1056,7 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0
   wire myDCMotor_v1_0_S00_AXI_inst_n_64;
   wire myDCMotor_v1_0_S00_AXI_inst_n_65;
   wire myDCMotor_v1_0_S00_AXI_inst_n_66;
-  wire myDCMotor_v1_0_S00_AXI_inst_n_67;
   wire myDCMotor_v1_0_S00_AXI_inst_n_7;
-  wire myDCMotor_v1_0_S00_AXI_inst_n_8;
   wire [7:0]pwm_duty;
   wire s00_axi_aclk;
   wire [2:0]s00_axi_araddr;
@@ -1065,7 +1076,6 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
   wire [31:1]slv_reg1;
-  wire wPWM;
 
   design_1_myDCMotor_0_3_pwm_controller DUTY
        (.Q(pwm_duty),
@@ -1075,25 +1085,25 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0
   design_1_myDCMotor_0_3_PWM PWM_gen
        (.CLK(clk),
         .D(pwm_duty),
-        .rPWM_reg_0(myDCMotor_v1_0_S00_AXI_inst_n_1),
-        .wPWM(wPWM));
+        .PWM(PWM),
+        .Q(Motor_en),
+        .rPWM_reg_0(myDCMotor_v1_0_S00_AXI_inst_n_1));
   design_1_myDCMotor_0_3_clock_divider clk_div
        (.CLK(clk),
         .Q(slv_reg1),
-        .S({myDCMotor_v1_0_S00_AXI_inst_n_64,myDCMotor_v1_0_S00_AXI_inst_n_65,myDCMotor_v1_0_S00_AXI_inst_n_66,myDCMotor_v1_0_S00_AXI_inst_n_67}),
+        .S({myDCMotor_v1_0_S00_AXI_inst_n_63,myDCMotor_v1_0_S00_AXI_inst_n_64,myDCMotor_v1_0_S00_AXI_inst_n_65,myDCMotor_v1_0_S00_AXI_inst_n_66}),
         .clk_out_reg_0(myDCMotor_v1_0_S00_AXI_inst_n_1),
-        .counter1_carry__0_i_1_0({myDCMotor_v1_0_S00_AXI_inst_n_44,myDCMotor_v1_0_S00_AXI_inst_n_45,myDCMotor_v1_0_S00_AXI_inst_n_46,myDCMotor_v1_0_S00_AXI_inst_n_47}),
-        .counter1_carry__0_i_3_0({myDCMotor_v1_0_S00_AXI_inst_n_48,myDCMotor_v1_0_S00_AXI_inst_n_49,myDCMotor_v1_0_S00_AXI_inst_n_50,myDCMotor_v1_0_S00_AXI_inst_n_51}),
-        .counter1_carry__0_i_4_0({myDCMotor_v1_0_S00_AXI_inst_n_52,myDCMotor_v1_0_S00_AXI_inst_n_53,myDCMotor_v1_0_S00_AXI_inst_n_54,myDCMotor_v1_0_S00_AXI_inst_n_55}),
-        .counter1_carry__1_i_2_0({myDCMotor_v1_0_S00_AXI_inst_n_7,myDCMotor_v1_0_S00_AXI_inst_n_8}),
-        .counter1_carry__1_i_3_0({myDCMotor_v1_0_S00_AXI_inst_n_40,myDCMotor_v1_0_S00_AXI_inst_n_41,myDCMotor_v1_0_S00_AXI_inst_n_42,myDCMotor_v1_0_S00_AXI_inst_n_43}),
-        .counter1_carry_i_1_0({myDCMotor_v1_0_S00_AXI_inst_n_56,myDCMotor_v1_0_S00_AXI_inst_n_57,myDCMotor_v1_0_S00_AXI_inst_n_58,myDCMotor_v1_0_S00_AXI_inst_n_59}),
-        .counter1_carry_i_3_0({myDCMotor_v1_0_S00_AXI_inst_n_60,myDCMotor_v1_0_S00_AXI_inst_n_61,myDCMotor_v1_0_S00_AXI_inst_n_62,myDCMotor_v1_0_S00_AXI_inst_n_63}),
+        .counter1_carry__0_i_1_0({myDCMotor_v1_0_S00_AXI_inst_n_43,myDCMotor_v1_0_S00_AXI_inst_n_44,myDCMotor_v1_0_S00_AXI_inst_n_45,myDCMotor_v1_0_S00_AXI_inst_n_46}),
+        .counter1_carry__0_i_3_0({myDCMotor_v1_0_S00_AXI_inst_n_47,myDCMotor_v1_0_S00_AXI_inst_n_48,myDCMotor_v1_0_S00_AXI_inst_n_49,myDCMotor_v1_0_S00_AXI_inst_n_50}),
+        .counter1_carry__0_i_4_0({myDCMotor_v1_0_S00_AXI_inst_n_51,myDCMotor_v1_0_S00_AXI_inst_n_52,myDCMotor_v1_0_S00_AXI_inst_n_53,myDCMotor_v1_0_S00_AXI_inst_n_54}),
+        .counter1_carry__1_i_2_0({myDCMotor_v1_0_S00_AXI_inst_n_6,myDCMotor_v1_0_S00_AXI_inst_n_7}),
+        .counter1_carry__1_i_3_0({myDCMotor_v1_0_S00_AXI_inst_n_39,myDCMotor_v1_0_S00_AXI_inst_n_40,myDCMotor_v1_0_S00_AXI_inst_n_41,myDCMotor_v1_0_S00_AXI_inst_n_42}),
+        .counter1_carry_i_1_0({myDCMotor_v1_0_S00_AXI_inst_n_55,myDCMotor_v1_0_S00_AXI_inst_n_56,myDCMotor_v1_0_S00_AXI_inst_n_57,myDCMotor_v1_0_S00_AXI_inst_n_58}),
+        .counter1_carry_i_3_0({myDCMotor_v1_0_S00_AXI_inst_n_59,myDCMotor_v1_0_S00_AXI_inst_n_60,myDCMotor_v1_0_S00_AXI_inst_n_61,myDCMotor_v1_0_S00_AXI_inst_n_62}),
         .s00_axi_aclk(s00_axi_aclk));
   design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI myDCMotor_v1_0_S00_AXI_inst
-       (.PWM(PWM),
-        .Q(slv_reg1),
-        .S({myDCMotor_v1_0_S00_AXI_inst_n_64,myDCMotor_v1_0_S00_AXI_inst_n_65,myDCMotor_v1_0_S00_AXI_inst_n_66,myDCMotor_v1_0_S00_AXI_inst_n_67}),
+       (.Q(slv_reg1),
+        .S({myDCMotor_v1_0_S00_AXI_inst_n_63,myDCMotor_v1_0_S00_AXI_inst_n_64,myDCMotor_v1_0_S00_AXI_inst_n_65,myDCMotor_v1_0_S00_AXI_inst_n_66}),
         .axi_arready_reg_0(s00_axi_arready),
         .axi_awready_reg_0(s00_axi_awready),
         .\axi_rdata_reg[7]_0 (pwm_duty),
@@ -1113,14 +1123,14 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0
         .s00_axi_wdata(s00_axi_wdata),
         .s00_axi_wstrb(s00_axi_wstrb),
         .s00_axi_wvalid(s00_axi_wvalid),
-        .\slv_reg1_reg[13]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_56,myDCMotor_v1_0_S00_AXI_inst_n_57,myDCMotor_v1_0_S00_AXI_inst_n_58,myDCMotor_v1_0_S00_AXI_inst_n_59}),
-        .\slv_reg1_reg[17]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_52,myDCMotor_v1_0_S00_AXI_inst_n_53,myDCMotor_v1_0_S00_AXI_inst_n_54,myDCMotor_v1_0_S00_AXI_inst_n_55}),
-        .\slv_reg1_reg[21]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_48,myDCMotor_v1_0_S00_AXI_inst_n_49,myDCMotor_v1_0_S00_AXI_inst_n_50,myDCMotor_v1_0_S00_AXI_inst_n_51}),
-        .\slv_reg1_reg[25]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_44,myDCMotor_v1_0_S00_AXI_inst_n_45,myDCMotor_v1_0_S00_AXI_inst_n_46,myDCMotor_v1_0_S00_AXI_inst_n_47}),
-        .\slv_reg1_reg[29]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_40,myDCMotor_v1_0_S00_AXI_inst_n_41,myDCMotor_v1_0_S00_AXI_inst_n_42,myDCMotor_v1_0_S00_AXI_inst_n_43}),
-        .\slv_reg1_reg[31]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_7,myDCMotor_v1_0_S00_AXI_inst_n_8}),
-        .\slv_reg1_reg[9]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_60,myDCMotor_v1_0_S00_AXI_inst_n_61,myDCMotor_v1_0_S00_AXI_inst_n_62,myDCMotor_v1_0_S00_AXI_inst_n_63}),
-        .wPWM(wPWM));
+        .\slv_reg1_reg[13]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_55,myDCMotor_v1_0_S00_AXI_inst_n_56,myDCMotor_v1_0_S00_AXI_inst_n_57,myDCMotor_v1_0_S00_AXI_inst_n_58}),
+        .\slv_reg1_reg[17]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_51,myDCMotor_v1_0_S00_AXI_inst_n_52,myDCMotor_v1_0_S00_AXI_inst_n_53,myDCMotor_v1_0_S00_AXI_inst_n_54}),
+        .\slv_reg1_reg[21]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_47,myDCMotor_v1_0_S00_AXI_inst_n_48,myDCMotor_v1_0_S00_AXI_inst_n_49,myDCMotor_v1_0_S00_AXI_inst_n_50}),
+        .\slv_reg1_reg[25]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_43,myDCMotor_v1_0_S00_AXI_inst_n_44,myDCMotor_v1_0_S00_AXI_inst_n_45,myDCMotor_v1_0_S00_AXI_inst_n_46}),
+        .\slv_reg1_reg[29]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_39,myDCMotor_v1_0_S00_AXI_inst_n_40,myDCMotor_v1_0_S00_AXI_inst_n_41,myDCMotor_v1_0_S00_AXI_inst_n_42}),
+        .\slv_reg1_reg[31]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_6,myDCMotor_v1_0_S00_AXI_inst_n_7}),
+        .\slv_reg1_reg[9]_0 ({myDCMotor_v1_0_S00_AXI_inst_n_59,myDCMotor_v1_0_S00_AXI_inst_n_60,myDCMotor_v1_0_S00_AXI_inst_n_61,myDCMotor_v1_0_S00_AXI_inst_n_62}),
+        .\slv_reg2_reg[0]_0 (Motor_en));
 endmodule
 
 (* ORIG_REF_NAME = "myDCMotor_v1_0_S00_AXI" *) 
@@ -1131,7 +1141,6 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
     axi_arready_reg_0,
     s00_axi_bvalid,
     s00_axi_rvalid,
-    PWM,
     \slv_reg1_reg[31]_0 ,
     Q,
     \slv_reg1_reg[29]_0 ,
@@ -1141,9 +1150,9 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
     \slv_reg1_reg[13]_0 ,
     \slv_reg1_reg[9]_0 ,
     S,
+    \slv_reg2_reg[0]_0 ,
     s00_axi_rdata,
     s00_axi_aclk,
-    wPWM,
     \axi_rdata_reg[7]_0 ,
     s00_axi_aresetn,
     s00_axi_awvalid,
@@ -1161,7 +1170,6 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
   output axi_arready_reg_0;
   output s00_axi_bvalid;
   output s00_axi_rvalid;
-  output PWM;
   output [1:0]\slv_reg1_reg[31]_0 ;
   output [30:0]Q;
   output [3:0]\slv_reg1_reg[29]_0 ;
@@ -1171,9 +1179,9 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
   output [3:0]\slv_reg1_reg[13]_0 ;
   output [3:0]\slv_reg1_reg[9]_0 ;
   output [3:0]S;
+  output [0:0]\slv_reg2_reg[0]_0 ;
   output [31:0]s00_axi_rdata;
   input s00_axi_aclk;
-  input wPWM;
   input [7:0]\axi_rdata_reg[7]_0 ;
   input s00_axi_aresetn;
   input s00_axi_awvalid;
@@ -1186,8 +1194,6 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
   input [2:0]s00_axi_araddr;
   input [3:0]s00_axi_wstrb;
 
-  wire Motor_en;
-  wire PWM;
   wire [30:0]Q;
   wire [3:0]S;
   wire aw_en_i_1_n_0;
@@ -1302,6 +1308,7 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
   wire \slv_reg2[23]_i_1_n_0 ;
   wire \slv_reg2[31]_i_1_n_0 ;
   wire \slv_reg2[7]_i_1_n_0 ;
+  wire [0:0]\slv_reg2_reg[0]_0 ;
   wire \slv_reg2_reg_n_0_[10] ;
   wire \slv_reg2_reg_n_0_[11] ;
   wire \slv_reg2_reg_n_0_[12] ;
@@ -1360,14 +1367,7 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
   wire \slv_reg7[7]_i_1_n_0 ;
   wire slv_reg_rden__0;
   wire slv_reg_wren__0;
-  wire wPWM;
 
-  LUT2 #(
-    .INIT(4'h8)) 
-    PWM_INST_0
-       (.I0(Motor_en),
-        .I1(wPWM),
-        .O(PWM));
   LUT6 #(
     .INIT(64'hF7FFC4CCC4CCC4CC)) 
     aw_en_i_1
@@ -1492,7 +1492,6 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
     axi_awready_i_1
        (.I0(s00_axi_aresetn),
         .O(s00_axi_aresetn_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     axi_awready_i_2
@@ -1527,7 +1526,7 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[0]_i_2 
        (.I0(slv_reg3[0]),
-        .I1(Motor_en),
+        .I1(\slv_reg2_reg[0]_0 ),
         .I2(sel0[1]),
         .I3(slv_reg1),
         .I4(sel0[0]),
@@ -1983,13 +1982,13 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
         .I5(slv_reg4[30]),
         .O(\axi_rdata[30]_i_3_n_0 ));
   LUT5 #(
-    .INIT(32'hAFA0C0C0)) 
+    .INIT(32'hAFC0A0C0)) 
     \axi_rdata[31]_i_2 
        (.I0(slv_reg3[31]),
         .I1(\slv_reg2_reg_n_0_[31] ),
         .I2(sel0[1]),
-        .I3(Q[30]),
-        .I4(sel0[0]),
+        .I3(sel0[0]),
+        .I4(Q[30]),
         .O(\axi_rdata[31]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2926,6 +2925,7 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
         .I3(s00_axi_wstrb[3]),
         .I4(p_0_in[1]),
         .O(\slv_reg2[31]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg2[31]_i_2 
@@ -2947,7 +2947,7 @@ module design_1_myDCMotor_0_3_myDCMotor_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
-        .Q(Motor_en),
+        .Q(\slv_reg2_reg[0]_0 ),
         .R(s00_axi_aresetn_0));
   FDRE \slv_reg2_reg[10] 
        (.C(s00_axi_aclk),

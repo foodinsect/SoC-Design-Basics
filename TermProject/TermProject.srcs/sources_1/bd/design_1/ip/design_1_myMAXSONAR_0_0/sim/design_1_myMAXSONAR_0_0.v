@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:myMAXSONAR:1.0
-// IP Revision: 13
+// IP Revision: 14
 
 `timescale 1ns/1ps
 

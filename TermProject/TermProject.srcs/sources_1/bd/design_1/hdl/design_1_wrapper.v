@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sun Dec 15 20:30:41 2024
+//Date        : Sun Dec 15 22:43:44 2024
 //Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -39,10 +39,10 @@ module design_1_wrapper
     RES,
     RX,
     SCK,
+    SW,
     VCCEN,
     buzzer,
-    oPWM,
-    sws_4bits_tri_i);
+    oPWM);
   output CS;
   output DC;
   inout [14:0]DDR_addr;
@@ -72,10 +72,10 @@ module design_1_wrapper
   output RES;
   output RX;
   output SCK;
+  input [3:0]SW;
   output VCCEN;
   output buzzer;
   output oPWM;
-  input [3:0]sws_4bits_tri_i;
 
   wire CS;
   wire DC;
@@ -106,10 +106,10 @@ module design_1_wrapper
   wire RES;
   wire RX;
   wire SCK;
+  wire [3:0]SW;
   wire VCCEN;
   wire buzzer;
   wire oPWM;
-  wire [3:0]sws_4bits_tri_i;
 
   design_1 design_1_i
        (.CS(CS),
@@ -141,8 +141,8 @@ module design_1_wrapper
         .RES(RES),
         .RX(RX),
         .SCK(SCK),
+        .SW(SW),
         .VCCEN(VCCEN),
         .buzzer(buzzer),
-        .oPWM(oPWM),
-        .sws_4bits_tri_i(sws_4bits_tri_i));
+        .oPWM(oPWM));
 endmodule

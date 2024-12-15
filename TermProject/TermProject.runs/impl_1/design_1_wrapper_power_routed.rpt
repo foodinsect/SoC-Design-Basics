@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Dec 15 20:32:41 2024
+| Date             : Sun Dec 15 22:46:28 2024
 | Host             : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.004 |        3 |       --- |             --- |
-| Slice Logic             |     0.005 |     5018 |       --- |             --- |
-|   LUT as Logic          |     0.005 |     2029 |     53200 |            3.81 |
-|   CARRY4                |    <0.001 |      209 |     13300 |            1.57 |
-|   Register              |    <0.001 |     2034 |    106400 |            1.91 |
-|   F7/F8 Muxes           |    <0.001 |       38 |     53200 |            0.07 |
+| Slice Logic             |     0.005 |     5213 |       --- |             --- |
+|   LUT as Logic          |     0.005 |     2020 |     53200 |            3.80 |
+|   CARRY4                |    <0.001 |      203 |     13300 |            1.53 |
+|   Register              |    <0.001 |     2173 |    106400 |            2.04 |
+|   F7/F8 Muxes           |    <0.001 |      131 |     53200 |            0.25 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
-|   Others                |     0.000 |      221 |       --- |             --- |
-| Signals                 |     0.007 |     4050 |       --- |             --- |
+|   Others                |     0.000 |      214 |       --- |             --- |
+| Signals                 |     0.007 |     4053 |       --- |             --- |
 | I/O                     |    <0.001 |       15 |       125 |           12.00 |
 | PS7                     |     1.399 |        1 |       --- |             --- |
 | Static Power            |     0.141 |          |           |                 |
@@ -152,13 +152,13 @@ Table of Contents
 +--------------------------+-----------+
 | design_1_wrapper         |     1.415 |
 |   design_1_i             |     1.414 |
-|     myMAXSONAR_0         |     0.010 |
-|       inst               |     0.010 |
-|     myOLEDrgb_0          |     0.001 |
-|       inst               |     0.001 |
+|     myMAXSONAR_0         |     0.009 |
+|       inst               |     0.009 |
+|     myOLEDrgb_0          |     0.002 |
+|       inst               |     0.002 |
 |     processing_system7_0 |     1.400 |
 |       inst               |     1.400 |
-|     ps7_0_axi_periph     |     0.003 |
+|     ps7_0_axi_periph     |     0.002 |
 |       s00_couplers       |     0.002 |
 +--------------------------+-----------+
 

@@ -73,7 +73,7 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir F:/01_SoC/TermProject/TermProject.cache/wt [current_project]
   set_property parent.project_path F:/01_SoC/TermProject/TermProject.xpr [current_project]
-  set_property ip_repo_paths F:/01_SoC/ip_repo [current_project]
+  set_property ip_repo_paths f:/01_SoC/ip_repo [current_project]
   update_ip_catalog
   set_property ip_output_repo F:/01_SoC/TermProject/TermProject.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
