@@ -692,7 +692,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net myBuzzer_0_buzzer [get_bd_ports buzzer] [get_bd_pins myBuzzer_0/buzzer]
   connect_bd_net -net myDCMotor_0_oPWM [get_bd_ports oPWM] [get_bd_pins myDCMotor_0/PWM]
   connect_bd_net -net myMAXSONAR_0_RX [get_bd_ports RX] [get_bd_pins myMAXSONAR_0/RX]
-  connect_bd_net -net myMAXSONAR_0_distance [get_bd_pins myBuzzer_0/distance] [get_bd_pins myDCMotor_0/distance] [get_bd_pins myMAXSONAR_0/distance] [get_bd_pins myOLEDrgb_0/distance]
   connect_bd_net -net myOLEDrgb_0_CS [get_bd_ports CS] [get_bd_pins myOLEDrgb_0/CS]
   connect_bd_net -net myOLEDrgb_0_DC [get_bd_ports DC] [get_bd_pins myOLEDrgb_0/DC]
   connect_bd_net -net myOLEDrgb_0_MOSI [get_bd_ports MOSI] [get_bd_pins myOLEDrgb_0/MOSI]

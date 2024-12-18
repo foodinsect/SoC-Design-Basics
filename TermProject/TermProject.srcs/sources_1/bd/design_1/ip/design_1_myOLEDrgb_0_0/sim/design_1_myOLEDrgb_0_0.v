@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:myOLEDrgb:1.0
-// IP Revision: 75
+// IP Revision: 83
 
 `timescale 1ns/1ps
 
@@ -61,7 +61,6 @@ module design_1_myOLEDrgb_0_0 (
   RES,
   VCCEN,
   PMODEN,
-  distance,
   s00_axi_awaddr,
   s00_axi_awprot,
   s00_axi_awvalid,
@@ -92,7 +91,6 @@ output wire DC;
 output wire RES;
 output wire VCCEN;
 output wire PMODEN;
-input wire [7 : 0] distance;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [5 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
@@ -151,7 +149,6 @@ input wire s00_axi_aresetn;
     .RES(RES),
     .VCCEN(VCCEN),
     .PMODEN(PMODEN),
-    .distance(distance),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
     .s00_axi_awvalid(s00_axi_awvalid),

@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sun Dec 15 22:44:12 2024
+-- Date        : Wed Dec 18 18:26:50 2024
 -- Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_mySwitch_0_0/design_1_mySwitch_0_0_sim_netlist.vhdl
+--               F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_mySwitch_0_0/design_1_mySwitch_0_0_sim_netlist.vhdl
 -- Design      : design_1_mySwitch_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1914,6 +1914,7 @@ architecture STRUCTURE of design_1_mySwitch_0_0_mySwitch_v1_0 is
   signal IRQ_Clear : STD_LOGIC;
   signal SW_z : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal SW_zz : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal SW_zzz : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal prevSW : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal rIRQ_i_1_n_0 : STD_LOGIC;
   signal rIRQ_i_2_n_0 : STD_LOGIC;
@@ -1984,6 +1985,38 @@ begin
       Q => SW_zz(3),
       R => '0'
     );
+\SW_zzz_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => SW_zz(0),
+      Q => SW_zzz(0),
+      R => '0'
+    );
+\SW_zzz_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => SW_zz(1),
+      Q => SW_zzz(1),
+      R => '0'
+    );
+\SW_zzz_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => SW_zz(2),
+      Q => SW_zzz(2),
+      R => '0'
+    );
+\SW_zzz_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => SW_zz(3),
+      Q => SW_zzz(3),
+      R => '0'
+    );
 mySwitch_v1_0_S00_AXI_inst: entity work.design_1_mySwitch_0_0_mySwitch_v1_0_S00_AXI
      port map (
       Q(0) => IRQ_Clear,
@@ -2010,7 +2043,7 @@ mySwitch_v1_0_S00_AXI_inst: entity work.design_1_mySwitch_0_0_mySwitch_v1_0_S00_
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => SW_zz(0),
+      D => SW_zzz(0),
       Q => prevSW(0),
       R => '0'
     );
@@ -2018,7 +2051,7 @@ mySwitch_v1_0_S00_AXI_inst: entity work.design_1_mySwitch_0_0_mySwitch_v1_0_S00_
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => SW_zz(1),
+      D => SW_zzz(1),
       Q => prevSW(1),
       R => '0'
     );
@@ -2026,7 +2059,7 @@ mySwitch_v1_0_S00_AXI_inst: entity work.design_1_mySwitch_0_0_mySwitch_v1_0_S00_
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => SW_zz(2),
+      D => SW_zzz(2),
       Q => prevSW(2),
       R => '0'
     );
@@ -2034,7 +2067,7 @@ mySwitch_v1_0_S00_AXI_inst: entity work.design_1_mySwitch_0_0_mySwitch_v1_0_S00_
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => SW_zz(3),
+      D => SW_zzz(3),
       Q => prevSW(3),
       R => '0'
     );

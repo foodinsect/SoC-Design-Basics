@@ -19,7 +19,7 @@
 #include "xil_io.h"
 #include "xil_printf.h"
 #include "xscugic.h"
-
+#include "stdint.h"
 
 XScuGic INTCInst;  // Interrupt Controller instance
 
@@ -32,19 +32,24 @@ XScuGic INTCInst;  // Interrupt Controller instance
 
 // OLED register offsets
 #define INIT_START  		0x00  // INIT_START
+#define O_DISTANCE 	 		0x04  // INIT_START
+#define O_COLOR  			0x08  // INIT_START
+#define O_RST  				0x0C  // INIT_START
 
 // MAXSONAR register offsets
-#define M_EN  				0x0C  // INIT_START
+#define M_EN  				0x00  // INIT_START
+#define M_DISTANCE 			0x04  // INIT_START
 
 // DC Motor register offsets
-#define D_DUTY  			0x00
+#define D_DISTANCE  		0x00
 #define D_DIV_FACTOR  		0x04
 #define D_EN  				0x08
+#define D_DUTY  			0x0C
 
 // Buzzer register offsets
-#define B_DISTANCE  		0x00
-#define B_BUZZER  			0x04
-#define B_EN  				0x08
+#define B_MODE  			0x00
+#define B_EN  				0x04
+#define B_Buzzer  			0x08
 
 // Switch register offsets
 #define S_STATE  		0x00
@@ -70,11 +75,64 @@ void SetDIVFACT(unsigned int value) {
 }
 
 void INIT(){
-	MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 1);  // DC Motor ON
-	MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 1);  // Buzzer ON
-	MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 1);  // DC Motor ON
-
+	MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 0);  // DC Motor ON
+	MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 0);  // Buzzer ON
+	MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 0);  // DC Motor ON
+	MYOLEDRGB_mWriteReg(OLED_BASEADDR, O_RST, 0);  // OLEDrgb RSTN HIGH
 }
+
+// Function to determine mode based on input y
+uint8_t get_mode(uint8_t y) {
+    if (y < 10) {
+        return 0; // Mode 0
+    } else if (y < 25) {
+        return 1; // Mode 1
+    } else if (y < 40) {
+        return 2; // Mode 2
+    } else if (y < 55) {
+        return 3; // Mode 3
+    } else {
+        return 4; // Mode 4
+    }
+}
+
+
+// Function to determine color based on input y
+uint16_t get_color(uint8_t y) {
+    if (y < 10) {
+        return 0xF800; // Red
+    } else if (y < 25) {
+        return 0xFC00; // Orange
+    } else if (y < 40) {
+        return 0xFFE0; // Yellow
+    } else if (y < 55) {
+        return 0x7FE0; // Light Green
+    } else {
+        return 0x07E0; // Green
+    }
+}
+
+void Distance(){
+	unsigned int Distance;
+    Distance = MYMAXSONAR_mReadReg(MAXSONAR_BASEADDR, M_DISTANCE); // Read distance value
+
+    // Saturation: Clamp Distance to the range 0 to 63
+    if (Distance > 63) {
+        Distance = 63;
+    } else if (Distance < 0) {
+        Distance = 0;
+    }
+
+    uint16_t color = get_color(Distance); // Call the function with input y
+    uint8_t mode = get_mode(Distance);   // Call the mode function with input y
+
+    MYOLEDRGB_mWriteReg(OLED_BASEADDR, 		O_DISTANCE, Distance);  // Write to OLED
+    MYOLEDRGB_mWriteReg(OLED_BASEADDR, 		O_COLOR, 	color);  	// Write to OLED
+    MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, 	D_DISTANCE, Distance);  // DC Motor ON
+    MYBUZZER_mWriteReg(BUZZER_BASEADDR, 	B_MODE, 	mode);  	// Buzzer ON
+}
+
+
 
 /////////////////////////////////////////////////////
 // Switch interrupt handler
@@ -89,16 +147,6 @@ void SwitchISR(void *arg) {
 
     // 변경된 비트 감지
     changed_bits = switch_state ^ prev_state;  // XOR: 변경된 비트만 1로 설정
-
-    // 하위 4비트만 출력 (바이너리 형식)
-    int lower4 = switch_state & 0xF;  // 하위 4비트 마스킹
-    xil_printf("Switch Interrupt Triggered! Switch State = ");
-
-    for (int i = 3; i >= 0; i--) {  // 상위 비트부터 출력
-        xil_printf("%d", (lower4 >> i) & 0x1);  // 비트를 오른쪽으로 시프트 후 LSB만 추출
-    }
-    xil_printf("\n");
-
 
     // 각 비트별 동작 (변경된 비트만 처리)
     if (changed_bits & 0x1) {  // Bit 0이 바뀐 경우
@@ -132,7 +180,20 @@ void SwitchISR(void *arg) {
     }
 
     if (changed_bits & 0x8) {  // Bit 3이 바뀐 경우
+    	if (switch_state & 0x8) {
+	    	printf("Bit 3: OLED ON \n");
 
+	    	Delay(100000);
+	    	StartINIT(1);
+	    	Delay(30000);
+	    	StartINIT(0);
+
+		} else {
+			xil_printf("Bit 3: OLED OFF\n");
+			MYOLEDRGB_mWriteReg(OLED_BASEADDR, O_RST, 1);  // OLEDrgb RST HIGH
+			Delay(1000);
+			MYOLEDRGB_mWriteReg(OLED_BASEADDR, O_RST, 0);  // OLEDrgb RST LOW
+		}
     }
 
     // 이전 상태 저장
@@ -141,6 +202,7 @@ void SwitchISR(void *arg) {
     // 인터럽트 플래그 클리어
     MYSWITCH_mWriteReg(SWITCH_BASEADDR, S_IRQ_CLEAR, 1);
     Delay(1000);
+    printf("\n");
     MYSWITCH_mWriteReg(SWITCH_BASEADDR, S_IRQ_CLEAR, 0);
 }
 
@@ -201,19 +263,18 @@ int main() {
 
 	InitGIC_Interrupt();
 	InitCortex_Interrupt();
-
 	INIT();
 	SetDIVFACT(5000);
-	printf("Start\n");
 
-	Delay(50000);
-	StartINIT(1);
-	Delay(30000);
-	StartINIT(0);
+	xil_printf("Waiting for Start SW to be set...\n");
+
+    // Wait for switch bit3 to be set to 1
+    while (!(MYSWITCH_mReadReg(SWITCH_BASEADDR, S_STATE) & 0x8)) {
+    }
 
 
 	while (1) {
-		Delay(1e8);
+		Distance();
 	};
 
 	xil_printf("End\n");

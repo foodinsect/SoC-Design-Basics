@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:myOLEDrgb:1.0
-// IP Revision: 75
+// IP Revision: 83
 
 (* X_CORE_INFO = "myOLEDrgb_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_myOLEDrgb_0_0,myOLEDrgb_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_1_myOLEDrgb_0_0,myOLEDrgb_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=myOLEDrgb,x_ipVersion=1.0,x_ipCoreRevision=75,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=6}" *)
+(* CORE_GENERATION_INFO = "design_1_myOLEDrgb_0_0,myOLEDrgb_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=myOLEDrgb,x_ipVersion=1.0,x_ipCoreRevision=83,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=6}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_myOLEDrgb_0_0 (
   CS,
@@ -62,7 +62,6 @@ module design_1_myOLEDrgb_0_0 (
   RES,
   VCCEN,
   PMODEN,
-  distance,
   s00_axi_awaddr,
   s00_axi_awprot,
   s00_axi_awvalid,
@@ -93,7 +92,6 @@ output wire DC;
 output wire RES;
 output wire VCCEN;
 output wire PMODEN;
-input wire [7 : 0] distance;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [5 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
@@ -152,7 +150,6 @@ input wire s00_axi_aresetn;
     .RES(RES),
     .VCCEN(VCCEN),
     .PMODEN(PMODEN),
-    .distance(distance),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
     .s00_axi_awvalid(s00_axi_awvalid),

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:myMAXSONAR:1.0
-// IP Revision: 14
+// IP Revision: 18
 
 `timescale 1ns/1ps
 
@@ -56,7 +56,6 @@
 module design_1_myMAXSONAR_0_0 (
   PWM,
   RX,
-  distance,
   s00_axi_awaddr,
   s00_axi_awprot,
   s00_axi_awvalid,
@@ -82,7 +81,6 @@ module design_1_myMAXSONAR_0_0 (
 
 input wire PWM;
 output wire RX;
-output wire [7 : 0] distance;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [4 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
@@ -136,7 +134,6 @@ input wire s00_axi_aresetn;
   ) inst (
     .PWM(PWM),
     .RX(RX),
-    .distance(distance),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
     .s00_axi_awvalid(s00_axi_awvalid),

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sun Dec 15 23:41:28 2024
+//Date        : Wed Dec 18 20:12:57 2024
 //Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -83,7 +83,6 @@ module design_1
   wire myBuzzer_0_buzzer;
   wire myDCMotor_0_oPWM;
   wire myMAXSONAR_0_RX;
-  wire [7:0]myMAXSONAR_0_distance;
   wire myOLEDrgb_0_CS;
   wire myOLEDrgb_0_DC;
   wire myOLEDrgb_0_MOSI;
@@ -264,7 +263,6 @@ module design_1
   assign oPWM = myDCMotor_0_oPWM;
   design_1_myBuzzer_0_0 myBuzzer_0
        (.buzzer(myBuzzer_0_buzzer),
-        .distance(myMAXSONAR_0_distance),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(ps7_0_axi_periph_M03_AXI_ARADDR[3:0]),
         .s00_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
@@ -288,7 +286,6 @@ module design_1
         .s00_axi_wvalid(ps7_0_axi_periph_M03_AXI_WVALID));
   design_1_myDCMotor_0_3 myDCMotor_0
        (.PWM(myDCMotor_0_oPWM),
-        .distance(myMAXSONAR_0_distance),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(ps7_0_axi_periph_M02_AXI_ARADDR[4:0]),
         .s00_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
@@ -313,7 +310,6 @@ module design_1
   design_1_myMAXSONAR_0_0 myMAXSONAR_0
        (.PWM(PWM_1),
         .RX(myMAXSONAR_0_RX),
-        .distance(myMAXSONAR_0_distance),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[4:0]),
         .s00_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
@@ -343,7 +339,6 @@ module design_1
         .RES(myOLEDrgb_0_RES),
         .SCK(myOLEDrgb_0_SCK),
         .VCCEN(myOLEDrgb_0_VCCEN),
-        .distance(myMAXSONAR_0_distance),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[5:0]),
         .s00_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),

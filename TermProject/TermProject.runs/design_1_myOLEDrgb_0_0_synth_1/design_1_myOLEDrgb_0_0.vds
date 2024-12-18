@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Dec 15 23:26:45 2024
-# Process ID: 27320
+# Start of session at: Wed Dec 18 18:28:57 2024
+# Process ID: 28844
 # Current directory: F:/01_SoC/TermProject/TermProject.runs/design_1_myOLEDrgb_0_0_synth_1
 # Command line: vivado.exe -log design_1_myOLEDrgb_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_myOLEDrgb_0_0.tcl
 # Log file: F:/01_SoC/TermProject/TermProject.runs/design_1_myOLEDrgb_0_0_synth_1/design_1_myOLEDrgb_0_0.vds
@@ -20,31 +20,30 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 31976 
+INFO: Helper process launched with PID 13300 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 756.348 ; gain = 176.480
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 755.543 ; gain = 177.277
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_myOLEDrgb_0_0' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_myOLEDrgb_0_0/synth/design_1_myOLEDrgb_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'myOLEDrgb_v1_0' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/myOLEDrgb_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myOLEDrgb_v1_0' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/8fe8/hdl/myOLEDrgb_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'myOLEDrgb_v1_0_S00_AXI' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/myOLEDrgb_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myOLEDrgb_v1_0_S00_AXI' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/8fe8/hdl/myOLEDrgb_v1_0_S00_AXI.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 3 - type: integer 
-INFO: [Synth 8-226] default block is never used [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/myOLEDrgb_v1_0_S00_AXI.v:257]
-INFO: [Synth 8-226] default block is never used [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/myOLEDrgb_v1_0_S00_AXI.v:493]
-INFO: [Synth 8-6155] done synthesizing module 'myOLEDrgb_v1_0_S00_AXI' (1#1) [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/myOLEDrgb_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6157] synthesizing module 'spi_master' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/spi_master.v:24]
+INFO: [Synth 8-226] default block is never used [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/8fe8/hdl/myOLEDrgb_v1_0_S00_AXI.v:260]
+INFO: [Synth 8-226] default block is never used [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/8fe8/hdl/myOLEDrgb_v1_0_S00_AXI.v:496]
+INFO: [Synth 8-6155] done synthesizing module 'myOLEDrgb_v1_0_S00_AXI' (1#1) [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/8fe8/hdl/myOLEDrgb_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'spi_master' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/8fe8/hdl/spi_master.v:23]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter IDLE bound to: 2'b00 
 	Parameter TRANSFER bound to: 2'b01 
 	Parameter DONE bound to: 2'b10 
-INFO: [Synth 8-155] case statement is not full and has no default [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/spi_master.v:93]
-INFO: [Synth 8-6155] done synthesizing module 'spi_master' (2#1) [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/spi_master.v:24]
-WARNING: [Synth 8-7023] instance 'spi' of module 'spi_master' has 10 connections declared, but only 8 given [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/myOLEDrgb_v1_0.v:91]
-INFO: [Synth 8-6157] synthesizing module 'spi_controller' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:24]
+INFO: [Synth 8-155] case statement is not full and has no default [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/8fe8/hdl/spi_master.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'spi_master' (2#1) [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/8fe8/hdl/spi_master.v:23]
+INFO: [Synth 8-6157] synthesizing module 'spi_controller' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:24]
 	Parameter IDLE bound to: 5'b00000 
 	Parameter RES_WAIT bound to: 5'b00001 
 	Parameter INIT bound to: 5'b00010 
@@ -67,20 +66,17 @@ INFO: [Synth 8-6157] synthesizing module 'spi_controller' [f:/01_SoC/TermProject
 	Parameter SEND_DRECT_CMD bound to: 5'b10011 
 	Parameter NEXT_DRECT_CMD bound to: 5'b10100 
 	Parameter WAIT_DRECT bound to: 5'b10101 
-	Parameter DONE bound to: 5'b10110 
-INFO: [Synth 8-155] case statement is not full and has no default [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:193]
-WARNING: [Synth 8-6014] Unused sequential element Color_index_reg was removed.  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:181]
-WARNING: [Synth 8-6014] Unused sequential element data_index_reg was removed.  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:184]
-WARNING: [Synth 8-5788] Register data_o_reg in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:225]
-WARNING: [Synth 8-5788] Register rect_cmds_reg[4] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
-WARNING: [Synth 8-5788] Register rect_cmds_reg[5] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
-WARNING: [Synth 8-5788] Register rect_cmds_reg[6] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
-WARNING: [Synth 8-5788] Register rect_cmds_reg[7] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
-WARNING: [Synth 8-5788] Register rect_cmds_reg[8] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
-WARNING: [Synth 8-5788] Register rect_cmds_reg[9] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
-WARNING: [Synth 8-5788] Register rect_cmds_reg[10] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
-INFO: [Synth 8-6155] done synthesizing module 'spi_controller' (3#1) [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'myOLEDrgb_v1_0' (4#1) [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/myOLEDrgb_v1_0.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:113]
+WARNING: [Synth 8-5788] Register data_o_reg in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:145]
+WARNING: [Synth 8-5788] Register rect_cmds_reg[4] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
+WARNING: [Synth 8-5788] Register rect_cmds_reg[5] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
+WARNING: [Synth 8-5788] Register rect_cmds_reg[6] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
+WARNING: [Synth 8-5788] Register rect_cmds_reg[7] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
+WARNING: [Synth 8-5788] Register rect_cmds_reg[8] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
+WARNING: [Synth 8-5788] Register rect_cmds_reg[9] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
+WARNING: [Synth 8-5788] Register rect_cmds_reg[10] in module spi_controller is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
+INFO: [Synth 8-6155] done synthesizing module 'spi_controller' (3#1) [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'myOLEDrgb_v1_0' (4#1) [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/8fe8/hdl/myOLEDrgb_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_myOLEDrgb_0_0' (5#1) [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_myOLEDrgb_0_0/synth/design_1_myOLEDrgb_0_0.v:57]
 WARNING: [Synth 8-3331] design spi_controller has unconnected port spi_busy_i
 WARNING: [Synth 8-3331] design myOLEDrgb_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
@@ -90,7 +86,7 @@ WARNING: [Synth 8-3331] design myOLEDrgb_v1_0_S00_AXI has unconnected port S_AXI
 WARNING: [Synth 8-3331] design myOLEDrgb_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design myOLEDrgb_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 823.250 ; gain = 243.383
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 822.805 ; gain = 244.539
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -103,10 +99,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 823.250 ; gain = 243.383
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 822.805 ; gain = 244.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 823.250 ; gain = 243.383
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 822.805 ; gain = 244.539
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -114,33 +110,33 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 944.809 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 943.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 946.785 ; gain = 1.977
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 944.980 ; gain = 1.980
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 946.785 ; gain = 366.918
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 944.980 ; gain = 366.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 946.785 ; gain = 366.918
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 944.980 ; gain = 366.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 946.785 ; gain = 366.918
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 944.980 ; gain = 366.715
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_master'
-INFO: [Synth 8-4471] merging register 'rect_cmds_reg[8][7:0]' into 'rect_cmds_reg[5][7:0]' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
-INFO: [Synth 8-4471] merging register 'rect_cmds_reg[9][7:0]' into 'rect_cmds_reg[6][7:0]' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
-INFO: [Synth 8-4471] merging register 'rect_cmds_reg[10][7:0]' into 'rect_cmds_reg[7][7:0]' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/b8bf/hdl/init_controller.v:306]
+INFO: [Synth 8-4471] merging register 'rect_cmds_reg[8][7:0]' into 'rect_cmds_reg[5][7:0]' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
+INFO: [Synth 8-4471] merging register 'rect_cmds_reg[9][7:0]' into 'rect_cmds_reg[6][7:0]' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
+INFO: [Synth 8-4471] merging register 'rect_cmds_reg[10][7:0]' into 'rect_cmds_reg[7][7:0]' [f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v:226]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_controller'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -151,7 +147,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_c
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'spi_master'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 946.785 ; gain = 366.918
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 944.980 ; gain = 366.715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -177,13 +173,11 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 17    
 	  16 Input     32 Bit        Muxes := 16    
-	   5 Input     16 Bit        Muxes := 1     
 	   3 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
-	  23 Input      8 Bit        Muxes := 4     
-	   2 Input      8 Bit        Muxes := 1     
-	  23 Input      6 Bit        Muxes := 1     
-	  23 Input      5 Bit        Muxes := 1     
+	  22 Input      8 Bit        Muxes := 5     
+	  22 Input      6 Bit        Muxes := 1     
+	  22 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 2     
 	   3 Input      4 Bit        Muxes := 1     
@@ -191,7 +185,7 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 11    
 	   3 Input      1 Bit        Muxes := 5     
-	  23 Input      1 Bit        Muxes := 17    
+	  22 Input      1 Bit        Muxes := 17    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -236,21 +230,16 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 7     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   5 Input     16 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
-	  23 Input      8 Bit        Muxes := 4     
-	  23 Input      6 Bit        Muxes := 1     
-	  23 Input      5 Bit        Muxes := 1     
+	  22 Input      8 Bit        Muxes := 5     
+	  22 Input      6 Bit        Muxes := 1     
+	  22 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 1     
 	  11 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-	  23 Input      1 Bit        Muxes := 17    
-Module myOLEDrgb_v1_0 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
+	  22 Input      1 Bit        Muxes := 17    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -274,20 +263,8 @@ WARNING: [Synth 8-3331] design myOLEDrgb_v1_0_S00_AXI has unconnected port S_AXI
 WARNING: [Synth 8-3331] design myOLEDrgb_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
 WARNING: [Synth 8-3331] design myOLEDrgb_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design myOLEDrgb_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[6][0]' (FDE) to 'inst/controller/rect_cmds_reg[6][1]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[5][0]' (FDE) to 'inst/controller/rect_cmds_reg[6][6]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[7][0]' (FDE) to 'inst/controller/rect_cmds_reg[6][6]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[6][1]' (FDE) to 'inst/controller/rect_cmds_reg[6][2]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[5][1]' (FDE) to 'inst/controller/rect_cmds_reg[6][6]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[7][1]' (FDE) to 'inst/controller/rect_cmds_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[6][2]' (FDE) to 'inst/controller/rect_cmds_reg[6][3]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[5][2]' (FDE) to 'inst/controller/rect_cmds_reg[6][6]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[7][2]' (FDE) to 'inst/controller/rect_cmds_reg[7][3]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[6][3]' (FDE) to 'inst/controller/rect_cmds_reg[6][4]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[5][3]' (FDE) to 'inst/controller/rect_cmds_reg[6][6]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[5][4]' (FDE) to 'inst/controller/rect_cmds_reg[6][6]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[7][4]' (FDE) to 'inst/controller/rect_cmds_reg[7][5]'
 INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[5][5]' (FDE) to 'inst/controller/rect_cmds_reg[6][6]'
+INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[7][5]' (FDE) to 'inst/controller/rect_cmds_reg[6][6]'
 INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[6][6]' (FDE) to 'inst/controller/rect_cmds_reg[6][7]'
 INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[5][6]' (FDE) to 'inst/controller/rect_cmds_reg[6][7]'
 INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[7][6]' (FDE) to 'inst/controller/rect_cmds_reg[6][7]'
@@ -297,10 +274,8 @@ INFO: [Synth 8-3886] merging instance 'inst/myOLEDrgb_v1_0_S00_AXI_inst/axi_rres
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/myOLEDrgb_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'inst/myOLEDrgb_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/myOLEDrgb_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/myOLEDrgb_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'inst/controller/rect_cmds_reg[4][6]' (FDE) to 'inst/controller/rect_cmds_reg[4][7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/controller/rect_cmds_reg[4][7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 946.785 ; gain = 366.918
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 944.980 ; gain = 366.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -327,13 +302,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 946.785 ; gain = 366.918
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 944.980 ; gain = 366.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 946.785 ; gain = 366.918
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 944.980 ; gain = 366.715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -345,7 +320,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 947.152 ; gain = 367.285
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 950.090 ; gain = 371.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -369,7 +344,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 952.855 ; gain = 372.988
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.746 ; gain = 377.480
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -382,7 +357,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 952.855 ; gain = 372.988
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.746 ; gain = 377.480
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -394,25 +369,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 952.855 ; gain = 372.988
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.746 ; gain = 377.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 952.855 ; gain = 372.988
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.746 ; gain = 377.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 952.855 ; gain = 372.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.746 ; gain = 377.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 952.855 ; gain = 372.988
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.746 ; gain = 377.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -430,58 +405,58 @@ Report Cell Usage:
 +------+-------+------+
 |1     |CARRY4 |    16|
 |2     |LUT1   |     4|
-|3     |LUT2   |    47|
-|4     |LUT3   |    19|
-|5     |LUT4   |    52|
-|6     |LUT5   |    28|
-|7     |LUT6   |   266|
-|8     |MUXF7  |    66|
+|3     |LUT2   |    49|
+|4     |LUT3   |    17|
+|5     |LUT4   |    45|
+|6     |LUT5   |    26|
+|7     |LUT6   |   261|
+|8     |MUXF7  |    67|
 |9     |MUXF8  |    32|
 |10    |FDCE   |    69|
 |11    |FDPE   |     2|
-|12    |FDRE   |   603|
-|13    |FDSE   |     6|
+|12    |FDRE   |   600|
+|13    |FDSE   |    23|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------------------+-----------------------+------+
 |      |Instance                        |Module                 |Cells |
 +------+--------------------------------+-----------------------+------+
-|1     |top                             |                       |  1210|
-|2     |  inst                          |myOLEDrgb_v1_0         |  1210|
-|3     |    controller                  |spi_controller         |   306|
-|4     |    myOLEDrgb_v1_0_S00_AXI_inst |myOLEDrgb_v1_0_S00_AXI |   855|
+|1     |top                             |                       |  1211|
+|2     |  inst                          |myOLEDrgb_v1_0         |  1211|
+|3     |    controller                  |spi_controller         |   305|
+|4     |    myOLEDrgb_v1_0_S00_AXI_inst |myOLEDrgb_v1_0_S00_AXI |   857|
 |5     |    spi                         |spi_master             |    49|
 +------+--------------------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 952.855 ; gain = 372.988
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.746 ; gain = 377.480
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 952.855 ; gain = 249.453
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 952.855 ; gain = 372.988
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 955.746 ; gain = 255.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.746 ; gain = 377.480
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 114 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 115 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 961.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 962.195 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+46 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 961.230 ; gain = 659.055
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 961.230 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 962.195 ; gain = 661.520
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 962.195 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'F:/01_SoC/TermProject/TermProject.runs/design_1_myOLEDrgb_0_0_synth_1/design_1_myOLEDrgb_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_myOLEDrgb_0_0, cache-ID = d532a1b5fbbf8e24
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_myOLEDrgb_0_0, cache-ID = bb581df87d62b074
 INFO: [Coretcl 2-1174] Renamed 4 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 961.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 962.195 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'F:/01_SoC/TermProject/TermProject.runs/design_1_myOLEDrgb_0_0_synth_1/design_1_myOLEDrgb_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_myOLEDrgb_0_0_utilization_synth.rpt -pb design_1_myOLEDrgb_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 15 23:27:09 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 18 18:29:20 2024...

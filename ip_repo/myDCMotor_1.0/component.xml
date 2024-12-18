@@ -266,7 +266,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>81caed50</spirit:value>
+            <spirit:value>7205db06</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>81caed50</spirit:value>
+            <spirit:value>7205db06</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -345,23 +345,6 @@
       </spirit:view>
     </spirit:views>
     <spirit:ports>
-      <spirit:port>
-        <spirit:name>distance</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">7</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
       <spirit:port>
         <spirit:name>PWM</spirit:name>
         <spirit:wire>
@@ -738,7 +721,7 @@
       <spirit:file>
         <spirit:name>hdl/myDCMotor_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_cc41b8f3</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_05315072</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -888,8 +871,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>myDCMotor_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>21</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-12-15T14:26:25Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>31</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-12-18T11:10:52Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@10aed448_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@47def6f7_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
@@ -1204,14 +1187,183 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@310cc71_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@54a21495_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7bf2a238_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d40936c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a51104f_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e2b71b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@89f4048_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@632aa959_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@786dfe2a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fe92e1a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65b41c59_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e98d934_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bc9b73b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a9445f3_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a4be28d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55defc9f_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2210f942_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e0fbdc_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5365e507_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79f348e9_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73f4d201_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4006a51a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65c1d1fe_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ddd96ec_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ca1499a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31a980e6_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19f1ef3e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10822f36_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78529d72_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13035596_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4519def1_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38bcb7a5_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2884a32d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34b11ef8_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fa80e1_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77577e16_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2200c54e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2df8e38b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b0a321a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ace61fe_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62e9850_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@229f297_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76fc9c38_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34619b5f_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5772dddc_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2ffd5a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f50ddaf_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f25d2c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a19dac6_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36ac1b74_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a914ec3_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@747ebe8d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4590471f_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49c37b3c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78862952_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d7e7249_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d190fbf_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c8e6d41_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1259644_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@563897e5_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@142bd967_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52b0680_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@576e24b3_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ebf682f_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aed2392_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43a8fd81_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@235df651_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1701e453_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a083a67_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5179207b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1437a9e0_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47955c93_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@700562c8_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@701815d1_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23b45062_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77c66d93_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@367e47d4_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e847332_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7121a35d_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f95b2cf_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c3a2c9a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6589ac51_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c8c15c5_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@139cfe1a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4215d4a5_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39817ce9_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f78dfd6_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fdab25a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@292d6603_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e354768_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e3adbc4_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@911c5c6_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66079f92_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4abb2144_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52fe1511_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21be60f7_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@112f2b47_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17658c33_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c11a61a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b2140e3_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66ac4df6_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29d4a4b6_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3848e66b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a6fbabc_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53c6f158_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bae94f1_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28f2b896_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22546256_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51e724f9_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b985975_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49be321_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ac4d563_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54981cfd_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bc18a10_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@747ff653_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f5c9c90_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@386fc5ae_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d48c4fb_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b04adc_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb7cded_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66dff611_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@91327c_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bcf4559_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5421cbc5_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a155afa_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dab5766_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d735867_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a92db62_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a9f9af6_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a170159_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5da23179_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@706081d5_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74e9b2b7_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40646b75_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f699ba7_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47db2398_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69fd9512_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c135d34_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f538b50_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ea1a126_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f39cdef_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32e43d1e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@579e1bdd_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a5c400b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fe400a5_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64b0e9f1_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6019b9e8_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@266f18b3_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e8fa04f_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41903172_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bbdbc17_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@661d2f0a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75c7e3bd_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73d80d6b_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ae4cc5e_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40599e03_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f808a14_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12a8b435_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38cbe986_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5055028a_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f1828f9_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@160c6caa_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42d25b10_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ef4bfbf_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34532b96_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d9f0483_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bbe4102_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@433e8bcb_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33753fdb_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@714290cd_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44e7c300_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f59b263_ARCHIVE_LOCATION">f:/01_SoC/ip_repo/myDCMotor_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="206b0a70"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2e6b605b"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="e05fa1c8"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6b30ab80"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="3314d1a3"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="2e811c89"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="f5056eee"/>
     </xilinx:packagingInfo>

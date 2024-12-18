@@ -48,13 +48,12 @@
 
 
 // IP VLNV: xilinx.com:user:myDCMotor:1.0
-// IP Revision: 21
+// IP Revision: 31
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_myDCMotor_0_3 (
-  distance,
   PWM,
   s00_axi_awaddr,
   s00_axi_awprot,
@@ -79,7 +78,6 @@ module design_1_myDCMotor_0_3 (
   s00_axi_aresetn
 );
 
-input wire [7 : 0] distance;
 output wire PWM;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [4 : 0] s00_axi_awaddr;
@@ -132,7 +130,6 @@ input wire s00_axi_aresetn;
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_S00_AXI_ADDR_WIDTH(5)  // Width of S_AXI address bus
   ) inst (
-    .distance(distance),
     .PWM(PWM),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),

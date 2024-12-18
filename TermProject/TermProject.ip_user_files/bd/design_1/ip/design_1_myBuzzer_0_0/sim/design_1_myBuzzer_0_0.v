@@ -48,13 +48,12 @@
 
 
 // IP VLNV: xilinx.com:user:myBuzzer:1.0
-// IP Revision: 12
+// IP Revision: 15
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_myBuzzer_0_0 (
-  distance,
   buzzer,
   s00_axi_awaddr,
   s00_axi_awprot,
@@ -79,7 +78,6 @@ module design_1_myBuzzer_0_0 (
   s00_axi_aresetn
 );
 
-input wire [7 : 0] distance;
 output wire buzzer;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [3 : 0] s00_axi_awaddr;
@@ -132,7 +130,6 @@ input wire s00_axi_aresetn;
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_S00_AXI_ADDR_WIDTH(4)  // Width of S_AXI address bus
   ) inst (
-    .distance(distance),
     .buzzer(buzzer),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),

@@ -48,14 +48,13 @@
 
 
 // IP VLNV: xilinx.com:user:myDCMotor:1.0
-// IP Revision: 21
+// IP Revision: 31
 
 (* X_CORE_INFO = "myDCMotor_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_myDCMotor_0_3,myDCMotor_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "design_1_myDCMotor_0_3,myDCMotor_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=myDCMotor,x_ipVersion=1.0,x_ipCoreRevision=21,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
+(* CORE_GENERATION_INFO = "design_1_myDCMotor_0_3,myDCMotor_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=myDCMotor,x_ipVersion=1.0,x_ipCoreRevision=31,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_myDCMotor_0_3 (
-  distance,
   PWM,
   s00_axi_awaddr,
   s00_axi_awprot,
@@ -80,7 +79,6 @@ module design_1_myDCMotor_0_3 (
   s00_axi_aresetn
 );
 
-input wire [7 : 0] distance;
 output wire PWM;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [4 : 0] s00_axi_awaddr;
@@ -133,7 +131,6 @@ input wire s00_axi_aresetn;
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_S00_AXI_ADDR_WIDTH(5)  // Width of S_AXI address bus
   ) inst (
-    .distance(distance),
     .PWM(PWM),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
