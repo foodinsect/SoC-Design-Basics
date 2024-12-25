@@ -34,7 +34,7 @@ The flow diagram below illustrates the overall system process, from sensing dist
 
 The block design highlights the key components and their interconnections within the Zynq FPGA:
 
-![Block Design](https://velog.velcdn.com/images/foodinsect/post/58213a39-474d-4b30-b4d7-234e8b76d64b/image.png)
+![Block Design](https://velog.velcdn.com/images/foodinsect/post/4a726505-831a-4957-a4cb-d39a519e3672/image.jpg)
 
 ### Key Components
 - **PS-PL Communication:**  
@@ -58,14 +58,14 @@ The block design highlights the key components and their interconnections within
 3. **Distance Conversion:**
    - Convert the measured pulse width into distance values (in inches).
 
-![Pmod MAXSONAR](https://velog.velcdn.com/images/foodinsect/post/7cc1c9ee-4d13-451b-8892-8b50a2684fac/image.png)
+![Pmod MAXSONAR](https://velog.velcdn.com/images/foodinsect/post/8ba85c47-a155-460d-937a-2c61e40b8b5d/image.jpg)
 
 ---
 
 ### OLEDrgb Display
 The OLEDrgb module is used to visualize distance data. The Finite State Machine (FSM) for this module ensures real-time updates of the display.
 
-![Pmod OLEDrgb](https://velog.velcdn.com/images/foodinsect/post/5c3daced-c904-4899-93cd-a898947c2c71/image.png)  
+![Pmod OLEDrgb](https://velog.velcdn.com/images/foodinsect/post/85e499d3-53b9-4f46-9ded-811f05b5a3a3/image.jpg)
 ![OLEDrgb FSM](https://velog.velcdn.com/images/foodinsect/post/0b56f9c6-85cb-4946-bfe5-fc10939953c9/image.png)
 
 ---
@@ -73,14 +73,14 @@ The OLEDrgb module is used to visualize distance data. The Finite State Machine 
 ### DC Motor Control
 The motor speed is adjusted based on the calculated distance, ensuring safety and proper response to objects detected by the MAXSONAR module.
 
-![DC Motor](https://velog.velcdn.com/images/foodinsect/post/b2e46481-8c18-495e-b9eb-4d143bb15ca6/image.png)
+![DC Motor](https://velog.velcdn.com/images/foodinsect/post/b2108888-c45d-4085-942f-5ac3c31a49d9/image.jpg)
 
 ---
 
 ### Buzzer IP
 The Buzzer IP generates different frequencies of warning sounds corresponding to predefined safety zones.
 
-![Buzzer](https://velog.velcdn.com/images/foodinsect/post/52e2c6e7-aae5-48cb-8d58-35eadf578b42/image.png)
+![Buzzer](https://velog.velcdn.com/images/foodinsect/post/296c9edd-3e4a-4326-977d-53e87eea2956/image.jpg)
 
 ---
 
@@ -88,7 +88,7 @@ The Buzzer IP generates different frequencies of warning sounds corresponding to
 
 The interrupt mechanism ensures synchronization between different IPs and modules. Switch IP triggers interrupts that are processed in the PS to control the overall system.
 
-![Interrupt](https://velog.velcdn.com/images/foodinsect/post/c1f5e470-9226-443d-bab2-701b648868a3/image.png)
+![Interrupt](https://velog.velcdn.com/images/foodinsect/post/1147cbec-85a0-4ae5-8e99-9377ff39bbd5/image.jpg)
 
 ---
 
@@ -96,8 +96,8 @@ The interrupt mechanism ensures synchronization between different IPs and module
 
 The following diagrams depict the main logic and data handling flow within the system:
 
-![Main Logic](https://velog.velcdn.com/images/foodinsect/post/7b7ed04d-6a9e-47e2-b1c0-1ccde0dccac9/image.png)  
-![Data Handling](https://velog.velcdn.com/images/foodinsect/post/785fee36-c51f-47e3-8d6f-3dda8eed14a8/image.png)
+![Main Logic](https://velog.velcdn.com/images/foodinsect/post/adcd7b5f-5767-4086-81b2-de2a6683d68f/image.jpg)
+![Data Handling](https://velog.velcdn.com/images/foodinsect/post/93807caf-6da8-4d8e-b139-d1980a5f8f81/image.jpg)
 
 ---
 
