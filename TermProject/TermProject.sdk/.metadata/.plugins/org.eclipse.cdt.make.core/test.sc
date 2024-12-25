@@ -872,6 +872,8 @@
 </instance>
 <instance id="xilinx.gnu.armv7.exe.debug.1211753075;xilinx.gnu.armv7.exe.debug.1211753075.;xilinx.gnu.armv7.c.toolchain.compiler.debug.1992687152;xilinx.gnu.armv7.c.compiler.input.1603270261">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="#undef __ARM_FEATURE_QBIT" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_SAT" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_FP16_FML" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_CMSE" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_LDREX" removed="true"/>

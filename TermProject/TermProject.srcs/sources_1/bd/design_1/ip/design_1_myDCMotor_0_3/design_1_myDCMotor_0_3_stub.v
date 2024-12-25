@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Dec 18 20:11:34 2024
+// Date        : Thu Dec 19 12:36:25 2024
 // Host        : DESKTOP-2TI4DL6 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_myDCMotor_0_3 -prefix
-//               design_1_myDCMotor_0_3_ design_1_myDCMotor_0_3_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_myDCMotor_0_3/design_1_myDCMotor_0_3_stub.v
 // Design      : design_1_myDCMotor_0_3
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 3
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -38,7 +37,6 @@ update_ip_catalog
 set_property ip_output_repo f:/01_SoC/TermProject/TermProject.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet F:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci
-set_property used_in_implementation false [get_files -all f:/01_SoC/TermProject/TermProject.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -48,8 +46,6 @@ set_property used_in_implementation false [get_files -all f:/01_SoC/TermProject/
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 set cached_ip [config_ip_cache -export -no_bom  -dir F:/01_SoC/TermProject/TermProject.runs/design_1_xbar_0_synth_1 -new_name design_1_xbar_0 -ip [get_ips design_1_xbar_0]]

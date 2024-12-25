@@ -27,8 +27,8 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
-  "../../../bd/design_1/ipshared/21d6/hdl/myMAXSONAR_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/21d6/hdl/myMAXSONAR_v1_0.v" \
+  "../../../bd/design_1/ipshared/795e/hdl/myMAXSONAR_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/795e/hdl/myMAXSONAR_v1_0.v" \
   "../../../bd/design_1/ip/design_1_myMAXSONAR_0_0/sim/design_1_myMAXSONAR_0_0.v" \
 -endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
@@ -65,20 +65,20 @@
   "../../../bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_1/ipshared/8fe8/hdl/myOLEDrgb_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/OLEDrgb_1.0/hdl/spi_controller.v" \
-  "../../../bd/design_1/ipshared/8fe8/hdl/spi_master.v" \
-  "../../../bd/design_1/ipshared/8fe8/hdl/myOLEDrgb_v1_0.v" \
+  "../../../bd/design_1/ipshared/5559/hdl/myOLEDrgb_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/5559/hdl/spi_controller.v" \
+  "../../../bd/design_1/ipshared/5559/hdl/spi_master.v" \
+  "../../../bd/design_1/ipshared/5559/hdl/myOLEDrgb_v1_0.v" \
   "../../../bd/design_1/ip/design_1_myOLEDrgb_0_0/sim/design_1_myOLEDrgb_0_0.v" \
-  "../../../bd/design_1/ipshared/de0a/hdl/BeepMaker.v" \
-  "../../../bd/design_1/ipshared/de0a/hdl/myBuzzer_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/de0a/hdl/myBuzzer_v1_0.v" \
+  "../../../bd/design_1/ipshared/d1fa/hdl/BeepMaker.v" \
+  "../../../bd/design_1/ipshared/d1fa/hdl/myBuzzer_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/d1fa/hdl/myBuzzer_v1_0.v" \
   "../../../bd/design_1/ip/design_1_myBuzzer_0_0/sim/design_1_myBuzzer_0_0.v" \
-  "../../../bd/design_1/ipshared/580a/hdl/PWM.v" \
-  "../../../bd/design_1/ipshared/580a/hdl/clock_divider.v" \
-  "../../../bd/design_1/ipshared/580a/hdl/myDCMotor_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/580a/hdl/pwm_controller.v" \
-  "../../../bd/design_1/ipshared/580a/hdl/myDCMotor_v1_0.v" \
+  "../../../bd/design_1/ipshared/56bf/hdl/PWM.v" \
+  "../../../bd/design_1/ipshared/56bf/hdl/clock_divider.v" \
+  "../../../bd/design_1/ipshared/56bf/hdl/myDCMotor_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/56bf/hdl/pwm_controller.v" \
+  "../../../bd/design_1/ipshared/56bf/hdl/myDCMotor_v1_0.v" \
   "../../../bd/design_1/ip/design_1_myDCMotor_0_3/sim/design_1_myDCMotor_0_3.v" \
   "../../../bd/design_1/ipshared/4244/hdl/mySwitch_v1_0_S00_AXI.v" \
   "../../../bd/design_1/ipshared/4244/hdl/mySwitch_v1_0.v" \

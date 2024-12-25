@@ -20,10 +20,10 @@ preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 290 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 610 -y 440 -defaultsOSRD
 preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 230 -y 770 -defaultsOSRD
 preplace inst mySwitch_0 -pg 1 -lvl 3 -x 950 -y 510 -defaultsOSRD
-preplace inst myOLEDrgb_0 -pg 1 -lvl 3 -x 950 -y 120 -defaultsOSRD
-preplace inst myBuzzer_0 -pg 1 -lvl 3 -x 950 -y 340 -defaultsOSRD
-preplace inst myDCMotor_0 -pg 1 -lvl 3 -x 950 -y 760 -defaultsOSRD
 preplace inst myMAXSONAR_0 -pg 1 -lvl 3 -x 950 -y 910 -defaultsOSRD
+preplace inst myDCMotor_0 -pg 1 -lvl 3 -x 950 -y 760 -defaultsOSRD
+preplace inst myBuzzer_0 -pg 1 -lvl 3 -x 950 -y 340 -defaultsOSRD
+preplace inst myOLEDrgb_0 -pg 1 -lvl 3 -x 950 -y 120 -defaultsOSRD
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 410 440 210 790
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 400 430
 preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 450 220 800
@@ -41,13 +41,13 @@ preplace netloc myMAXSONAR_0_RX 1 3 1 NJ 910
 preplace netloc mySwitch_0_iRQ 1 0 4 10 180 NJ 180 810J 420 1070
 preplace netloc SW_1 1 0 3 NJ 660 NJ 660 820J
 preplace netloc processing_system7_0_DDR 1 1 3 430J 230 820J 240 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N 300
 preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 760 440n
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 460J 240 770J 260 1080J
 preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 760 100n
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 460J 240 770J 260 1080J
 preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 400n
 preplace netloc ps7_0_axi_periph_M03_AXI 1 2 1 780 320n
 preplace netloc ps7_0_axi_periph_M04_AXI 1 2 1 N 480
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N 300
 levelinfo -pg 1 -10 230 610 950 1100
 pagesize -pg 1 -db -bbox -sgen -110 0 1220 1000
 "

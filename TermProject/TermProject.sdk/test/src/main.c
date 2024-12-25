@@ -23,7 +23,7 @@
 
 XScuGic INTCInst;  // Interrupt Controller instance
 
-// Base address
+// Base address definitions for peripherals
 #define OLED_BASEADDR XPAR_MYOLEDRGB_0_S00_AXI_BASEADDR
 #define MAXSONAR_BASEADDR XPAR_MYMAXSONAR_0_S00_AXI_BASEADDR
 #define DCMOTOR_BASEADDR XPAR_MYDCMOTOR_0_S00_AXI_BASEADDR
@@ -44,7 +44,6 @@ XScuGic INTCInst;  // Interrupt Controller instance
 #define D_DISTANCE  		0x00
 #define D_DIV_FACTOR  		0x04
 #define D_EN  				0x08
-#define D_DUTY  			0x0C
 
 // Buzzer register offsets
 #define B_MODE  			0x00
@@ -55,11 +54,13 @@ XScuGic INTCInst;  // Interrupt Controller instance
 #define S_STATE  		0x00
 #define S_IRQ_CLEAR  	0x04
 
+// Function to introduce a delay
 void Delay(unsigned int delay) {
     volatile unsigned int d;
     for (d = 0; d < delay; d++);
 }
 
+// Function to start or stop OLED initialization
 void StartINIT(unsigned int value) {
     if (value)
     	MYOLEDRGB_mWriteReg(OLED_BASEADDR, INIT_START, 1);  // Start
@@ -67,6 +68,7 @@ void StartINIT(unsigned int value) {
     	MYOLEDRGB_mWriteReg(OLED_BASEADDR, INIT_START, 0);
 }
 
+// Function to set division factor for PWM
 void SetDIVFACT(unsigned int value) {
     if (value)
     	MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_DIV_FACTOR, value);  // Start
@@ -74,11 +76,12 @@ void SetDIVFACT(unsigned int value) {
     	MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_DIV_FACTOR, 5000);
 }
 
+// Function to initialize all peripherals
 void INIT(){
-	MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 0);  // DC Motor ON
-	MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 0);  // Buzzer ON
-	MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 0);  // DC Motor ON
-	MYOLEDRGB_mWriteReg(OLED_BASEADDR, O_RST, 0);  // OLEDrgb RSTN HIGH
+	MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 0);  	// DC Motor ON
+	MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 0);  		// Buzzer ON
+	MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 0);  	// DC Motor ON
+	MYOLEDRGB_mWriteReg(OLED_BASEADDR, O_RST, 0);  		// OLEDrgb RSTN LOW
 }
 
 // Function to determine mode based on input y
@@ -112,6 +115,7 @@ uint16_t get_color(uint8_t y) {
     }
 }
 
+// Function to process distance data and update peripherals
 void Distance(){
 	unsigned int Distance;
     Distance = MYMAXSONAR_mReadReg(MAXSONAR_BASEADDR, M_DISTANCE); // Read distance value
@@ -139,54 +143,57 @@ void Distance(){
 /////////////////////////////////////////////////////
 
 void SwitchISR(void *arg) {
-    static int prev_state = 0;  // 이전 스위치 상태 저장
+    static int prev_state = 0;  // Store previous switch state
     int switch_state, changed_bits;
 
-    // 스위치 상태 읽기
+    // Read switch state
     switch_state = MYSWITCH_mReadReg(SWITCH_BASEADDR, S_STATE);
 
-    // 변경된 비트 감지
-    changed_bits = switch_state ^ prev_state;  // XOR: 변경된 비트만 1로 설정
+    // Detect changed bits
+    changed_bits = switch_state ^ prev_state;  // XOR to detect changes
 
-    // 각 비트별 동작 (변경된 비트만 처리)
-    if (changed_bits & 0x1) {  // Bit 0이 바뀐 경우
+    // Handle bit 0 change
+    if (changed_bits & 0x1) {
         if (switch_state & 0x1) {
             xil_printf("Bit 0: DC Motor ON\n");
-            MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 1);  // DC Motor ON
+            MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 1);  // Enable DC motor
         } else {
             xil_printf("Bit 0: DC Motor OFF\n");
-            MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 0);  // DC Motor OFF
+            MYDCMOTOR_mWriteReg(DCMOTOR_BASEADDR, D_EN, 0);  // Disable DC motor
         }
     }
 
-    if (changed_bits & 0x2) {  // Bit 1이 바뀐 경우
+    // Handle bit 1 change
+    if (changed_bits & 0x2) {
         if (switch_state & 0x2) {
             xil_printf("Bit 1: Buzzer ON\n");
-            MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 1);  // Buzzer ON
+            MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 1);  // Enable buzzer
         } else {
             xil_printf("Bit 1: Buzzer OFF\n");
-            MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 0);  // Buzzer OFF
+            MYBUZZER_mWriteReg(BUZZER_BASEADDR, B_EN, 0);  // Disable buzzer
         }
     }
 
-    if (changed_bits & 0x4) {  // Bit 2이 바뀐 경우
+    // Handle bit 2 change
+    if (changed_bits & 0x4) {
     	if (switch_state & 0x4) {
 			xil_printf("Bit 2: MAXSONAR ON\n");
-			MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 1);  // MAXSONAR ON
+			MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 1);  // Enable MAXSONAR
 		} else {
 			xil_printf("Bit 2: MAXSONAR OFF\n");
-			MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 0);  // MAXSONAR OFF
+			MYMAXSONAR_mWriteReg(MAXSONAR_BASEADDR, M_EN, 0);  // Disable MAXSONAR
 		}
     }
 
-    if (changed_bits & 0x8) {  // Bit 3이 바뀐 경우
+    // Handle bit 3 change
+    if (changed_bits & 0x8) {
     	if (switch_state & 0x8) {
 	    	printf("Bit 3: OLED ON \n");
 
 	    	Delay(100000);
-	    	StartINIT(1);
+	    	StartINIT(1);	// Enable Start OLED initialization
 	    	Delay(30000);
-	    	StartINIT(0);
+	    	StartINIT(0);	// Disable Start OLED initialization
 
 		} else {
 			xil_printf("Bit 3: OLED OFF\n");
@@ -196,10 +203,10 @@ void SwitchISR(void *arg) {
 		}
     }
 
-    // 이전 상태 저장
+    // Update previous state
     prev_state = switch_state;
 
-    // 인터럽트 플래그 클리어
+    // Clear interrupt flag
     MYSWITCH_mWriteReg(SWITCH_BASEADDR, S_IRQ_CLEAR, 1);
     Delay(1000);
     printf("\n");
@@ -228,11 +235,11 @@ void InitGIC_Interrupt()
 			3	);
 
 
-    // 스위치 인터럽트 설정
+	// Connect switch interrupt handler
     XScuGic_Connect(
         &INTCInst,
-		XPAR_FABRIC_MYSWITCH_0_IRQ_INTR, // 스위치 IP의 인터럽트 ID
-        (Xil_ExceptionHandler)SwitchISR,         // 스위치 핸들러 함수
+		XPAR_FABRIC_MYSWITCH_0_IRQ_INTR,
+        (Xil_ExceptionHandler)SwitchISR,
         NULL
     );
 
@@ -274,7 +281,7 @@ int main() {
 
 
 	while (1) {
-		Distance();
+		Distance();			// Process distance data in an infinite loop
 	};
 
 	xil_printf("End\n");
