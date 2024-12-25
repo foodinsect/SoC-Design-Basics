@@ -1,8 +1,17 @@
 
-
 # Distance Detection and Response System
 
 This project leverages the Zynq FPGA board to design and implement a **distance detection and response system** using the AXI4 Bus and Pmod modules. The system measures the distance between the MAXSONAR ultrasonic sensor and an object, processes the data, and controls peripheral modules such as OLEDrgb, DC Motor, and Buzzer.
+
+---
+
+## Project Demo
+
+🎥 **Watch the project in action:**  
+[![Project Demo](https://img.youtube.com/vi/b44WuucF_50/0.jpg)](https://youtu.be/b44WuucF_50)  
+Click on the thumbnail or [here](https://youtu.be/b44WuucF_50) to view the demo video.
+
+---
 
 ## Project Features
 
@@ -96,7 +105,7 @@ The interrupt mechanism ensures synchronization between different IPs and module
 
 The following diagrams depict the main logic and data handling flow within the system:
 
-![Main Logic](https://velog.velcdn.com/images/foodinsect/post/adcd7b5f-5767-4086-81b2-de2a6683d68f/image.jpg)
+![Main Logic](https://velog.velcdn.com/images/foodinsect/post/adcd7b5f-5767-4086-81b2-de2a6683d68f/image.jpg)  
 ![Data Handling](https://velog.velcdn.com/images/foodinsect/post/93807caf-6da8-4d8e-b139-d1980a5f8f81/image.jpg)
 
 ---
@@ -129,4 +138,3 @@ The following diagrams depict the main logic and data handling flow within the s
 - Achieved real-time performance with stable data processing and accurate distance response.
 - Demonstrated a fully functional system with clear safety zone visualization and adaptive motor and sound control.
 
----
